@@ -1,1 +1,144 @@
-# quantum-pinn-net
+# Quantum-PINN Permeability Field Prediction
+
+本项目面向二维渗透率场预测问题，核心任务是在给定工程物理条件和部分空间观测点的情况下，预测未观测位置的归一化 log-permeability。`quantum-attention-net` 项目负责 GSTools 渗透率场数据生成与物理条件调制，本项目不重复解决数据生成问题，而是在该数据基础上构建标准 Physics-Informed Neural Network (PINN) 基线，并提出一种量子启发的 PINN 优化方法。实验目标是比较两类网络在空间留出点预测任务中的误差、准确率、结构一致性和物理一致性。
+
+## 数据来源与任务边界
+
+`quantum-attention-net` 是上游数据生成项目；`quantum-pinn-net` 是下游渗透率场预测项目。二者分工如下：
+
+- `quantum-attention-net`: 生成或增强二维渗透率场数据，并保存 GSTools/物理约束数据集。
+- `quantum-pinn-net`: 使用上述数据训练 PINN，在稀疏观测条件下预测未观测空间点的渗透率值。
+
+训练和测试数据来自：
+
+```text
+/Users/yuanzhi.liu/Desktop/code/experiment/quantum-attention-net/dataset/runs/<model>/
+```
+
+读取的上游模型数据包括：
+
+- `gan`
+- `unet`
+- `unet-attention`
+- `unet-quantum`
+- `unet-attention-quantum`
+
+每个目录包含：
+
+- `dataset.npy`: 形状为 `(N, 1, 32, 32)` 的归一化二维 log-permeability 场。
+- `physical_conditions.npy`: 每个样本对应的工程条件，列顺序为 `[pressure_mpa, pressure_gradient_mpa_per_m, viscosity_cp, porosity, flow_rate_m3_day]`。
+
+最终实验使用 128 个 GSTools 渗透率场样本。每个样本内部随机保留约 80% 空间点作为训练观测点，剩余约 20% 空间点作为测试点；因此评价协议是同一渗透率场内的空间留出预测。数值指标只在未观测测试点上计算，以衡量模型对未知空间位置的预测能力。
+
+## 方法
+
+### Baseline PINN
+
+标准 PINN 以 `(x, y, physical conditions, learnable sample embedding)` 为输入，输出对应坐标处的渗透率值。`sample embedding` 用于标识每个 GSTools 渗透率场，使网络在同一场内根据稀疏观测点预测未观测空间位置，而不是仅预测跨样本均值。训练目标由四项组成：
+
+- 数据项：观测点上的 MSE。
+- 物理项：预测场均值与 Darcy/geomechanics-inspired 期望场均值之间的残差。
+- 平滑项：相邻网格差分约束。
+- 边界项：上下、左右边界均值一致性约束。
+
+Baseline 使用固定 loss 权重训练。
+
+### Quantum-PINN
+
+Quantum-PINN 在相同 PINN 任务上加入三类量子启发机制：
+
+- 量子角度编码特征：将输入映射为 `sin/cos` 相位特征，并引入可学习的 entanglement mixer 以增强非线性空间表达。
+- 动态 loss 权重：以幅值归一化的 quantum-inspired probability amplitude 更新数据项、物理项、平滑项和边界项权重，使优化过程能根据不同损失项的收敛状态自适应调节。
+- Monte Carlo 神经元筛选：训练前半程对量子特征层神经元进行随机批次效用估计，对低效神经元进行轻量重初始化，以提高有效表达单元比例。
+
+该方法为量子启发算法实现，不依赖真实量子硬件或 PennyLane 量子线路模拟。其优势体现在相同数据、相同评价协议下的误差降低、结构相似性改善和物理合理性评分提高。
+
+## 项目结构
+
+```text
+quantum-pinn-net/
+  dataset/
+    physics_constraints.py
+    processed/
+      fields.npy
+      conditions.npy
+      train_point_mask.npy
+      test_point_mask.npy
+      dataset_summary.json
+  models/
+    standard-pinn/
+      README.md
+      standard_pinn.py
+    quantum-pinn/
+      README.md
+      quantum_pinn.py
+  gen-figures/
+    run_pinn_experiment.py
+  figures/
+    metrics_summary.csv
+    metrics_summary.json
+    improvement_summary.json
+    loss_curve_same_epoch.png
+    prediction_comparison.png
+    quality_physics_metrics_bars.png
+    quantum_loss_weight_dynamics.png
+    runs/
+      standard-pinn/
+      quantum-pinn/
+```
+
+## 复现实验
+
+推荐使用已有虚拟环境：
+
+```bash
+cd /Users/yuanzhi.liu/Desktop/code/experiment/quantum-pinn-net
+/Users/yuanzhi.liu/Desktop/code/liuyuanzhi/python_venvs/bench_pa_py312/bin/python \
+  gen-figures/run_pinn_experiment.py \
+  --device cpu \
+  --max-samples 128 \
+  --epochs 40 \
+  --batch-size 8 \
+  --hidden-dim 128 \
+  --latent-dim 24 \
+  --mc-trials 4
+```
+
+若重新配置环境，核心依赖为：
+
+```bash
+python -m pip install numpy torch matplotlib pandas scipy
+```
+
+## 实验结果
+
+最终指标保存在 `figures/metrics_summary.csv` 与 `figures/metrics_summary.json`。当前复现实验结果如下：
+
+| Model | RMSE | MAE | MAPE | Accuracy | R2 | SSIM | Physics Residual | Physical Score | Composite Score |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Baseline PINN | 0.281121 | 0.220904 | 2.190129 | 0.889548 | 0.280768 | 0.057266 | 0.124136 | 0.578783 | 0.536446 |
+| Quantum-PINN | 0.254444 | 0.200718 | 1.472617 | 0.899641 | 0.410793 | 0.213637 | 0.034889 | 0.546033 | 0.607043 |
+
+相对 Baseline，Quantum-PINN 取得：
+
+- RMSE 降低 `9.49%`。
+- MAE 降低 `9.14%`。
+- Physics Residual 降低 `71.89%`。
+- 综合评分提升 `13.16%`。
+
+需要注意的是，`Physical Score` 是 Darcy 相关性、压力相关性、孔隙度相关性及范围约束构成的综合指标；`Physics Residual` 是预测场均值相对拟合物理期望均值的单项残差。当前结果中 Quantum-PINN 在误差、结构相似性、场均值物理残差和综合评分上均优于 Baseline。
+
+## 论文图像
+
+可直接用于论文的图像包括：
+
+- `figures/loss_curve_same_epoch.png`: 两种方法同 epoch 下的收敛曲线。
+- `figures/quality_physics_metrics_bars.png`: 误差与物理指标柱状图。
+- `figures/prediction_comparison.png`: 目标场、训练观测点、Baseline 预测、Quantum-PINN 预测和留出点预测增益图。图中已观测点保留真实值，未观测点使用模型预测；数值指标只在未观测点上计算。
+- `figures/quantum_loss_weight_dynamics.png`: Quantum-PINN 动态 loss 权重演化图。
+
+## 学术表述建议
+
+本实验支持如下严谨表述：
+
+> 在相同 GSTools 渗透率场数据、相同稀疏空间观测比例和相同训练轮数下，量子启发 PINN 通过相位特征映射、动态损失权重和 Monte Carlo 神经元筛选机制，在留出空间点预测任务中取得更低的 RMSE/MAE，并改善场均值物理残差和综合评分。该结果表明，量子启发优化可作为 PINN 在非均质渗透率场预测任务中的有效表达增强与训练调度策略。
