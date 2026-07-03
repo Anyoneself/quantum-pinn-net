@@ -34,7 +34,7 @@
 
 ### Baseline PINN
 
-标准 PINN 以 `(x, y, physical conditions, learnable sample embedding)` 为输入，输出对应坐标处的渗透率值。`sample embedding` 用于标识每个 GSTools 渗透率场，使网络在同一场内根据稀疏观测点预测未观测空间位置，而不是仅预测跨样本均值。训练目标由四项组成：
+标准 PINN 以 `(x, y, physical conditions, learnable sample embedding)` 为输入，输出对应坐标处的渗透率值。`sample embedding` 用于标识每个 GSTools 渗透率场，使网络在同一场内根据稀疏观测点预测未观测空间位置，而不是仅预测跨样本均值。为了避免弱 Baseline 造成不公平对比，当前 Baseline 使用固定 Fourier 坐标特征、SiLU 残差 MLP 和 LayerNorm，形成强经典 PINN 基线；但它仍使用固定 loss 权重，不引入量子特征、残差自适应权重或 Monte Carlo 神经元筛选。训练目标由四项组成：
 
 - 数据项：观测点上的 MSE。
 - 物理项：预测场均值与 Darcy/geomechanics-inspired 期望场均值之间的残差。
@@ -43,15 +43,16 @@
 
 Baseline 使用固定 loss 权重训练。
 
-### Quantum-PINN
+### RBA-QPINN
 
-Quantum-PINN 在相同 PINN 任务上加入三类量子启发机制：
+RBA-QPINN 在相同 PINN 任务上加入四类量子启发与残差自适应机制：
 
 - 量子角度编码特征：将输入映射为 `sin/cos` 相位特征，并引入可学习的 entanglement mixer 以增强非线性空间表达。
 - 动态 loss 权重：以幅值归一化的 quantum-inspired probability amplitude 更新数据项、物理项、平滑项和边界项权重，使优化过程能根据不同损失项的收敛状态自适应调节。
-- Monte Carlo 神经元筛选：训练前半程对量子特征层神经元进行随机批次效用估计，对低效神经元进行轻量重初始化，以提高有效表达单元比例。
+- 残差自适应逐点权重：仅基于训练观测点残差更新逐点注意力权重，并在连续高残差区域内增强训练权重，避免使用测试点标签造成数据泄漏。
+- Monte Carlo 神经元筛选：训练前半程对量子特征层神经元进行随机批次效用估计，效用定义为 `mean_abs_activation * sqrt(activation_variance + eps)`，对低效神经元进行轻量重初始化，以提高有效表达单元比例。
 
-该方法为量子启发算法实现，不依赖真实量子硬件或 PennyLane 量子线路模拟。其优势体现在相同数据、相同评价协议下的误差降低、结构相似性改善和物理合理性评分提高。
+该方法为量子启发算法实现，不依赖真实量子硬件或 PennyLane 量子线路模拟。其优势体现在相同数据、相同评价协议下的误差降低、结构相似性改善和物理残差降低。
 
 ## 项目结构
 
@@ -82,6 +83,8 @@ quantum-pinn-net/
     prediction_comparison.png
     quality_physics_metrics_bars.png
     quantum_loss_weight_dynamics.png
+    residual_point_weight_dynamics.png
+    adaptive_sampling_weight_map.png
     runs/
       standard-pinn/
       quantum-pinn/
@@ -101,7 +104,25 @@ cd /Users/yuanzhi.liu/Desktop/code/experiment/quantum-pinn-net
   --batch-size 8 \
   --hidden-dim 128 \
   --latent-dim 24 \
-  --mc-trials 4
+  --mc-trials 4 \
+  --residual-resample-period 5 \
+  --residual-replace-ratio 0.20 \
+  --run-ablations
+```
+
+默认会启用 RBA-QPINN 的残差自适应逐点权重，并在 `--run-ablations` 模式下训练以下消融模型：
+
+- Baseline PINN
+- Quantum Feature PINN
+- Quantum + Loss Balancer
+- Quantum + Loss + MC
+- RBA-QPINN w/o MC
+- Full RBA-QPINN
+
+若需要只运行 Baseline 与 Full RBA-QPINN 的核心对比，可去掉 `--run-ablations`。若需要复现实验中的旧版 Quantum-PINN，可添加：
+
+```bash
+--no-adaptive-residual-weights
 ```
 
 若重新配置环境，核心依赖为：
@@ -126,7 +147,7 @@ python -m pip install numpy torch matplotlib pandas scipy
 - Physics Residual 降低 `71.89%`。
 - 综合评分提升 `13.16%`。
 
-需要注意的是，`Physical Score` 是 Darcy 相关性、压力相关性、孔隙度相关性及范围约束构成的综合指标；`Physics Residual` 是预测场均值相对拟合物理期望均值的单项残差。当前结果中 Quantum-PINN 在误差、结构相似性、场均值物理残差和综合评分上均优于 Baseline。
+需要注意的是，上表为引入 RBA-QPINN 增强前的已保存结果。`Physical Score` 是 Darcy 相关性、压力相关性、孔隙度相关性及范围约束构成的综合指标；`Physics Residual` 是预测场均值相对拟合物理期望均值的单项残差。当前已保存结果中 Quantum-PINN 在误差、结构相似性、场均值物理残差和综合评分上均优于 Baseline。
 
 ## 论文图像
 
@@ -134,8 +155,20 @@ python -m pip install numpy torch matplotlib pandas scipy
 
 - `figures/loss_curve_same_epoch.png`: 两种方法同 epoch 下的收敛曲线。
 - `figures/quality_physics_metrics_bars.png`: 误差与物理指标柱状图。
-- `figures/prediction_comparison.png`: 目标场、训练观测点、Baseline 预测、Quantum-PINN 预测和留出点预测增益图。图中已观测点保留真实值，未观测点使用模型预测；数值指标只在未观测点上计算。
+- `figures/ablation_table.png` / `figures/ablation_table.csv`: 消融实验指标表。
+- `figures/error_boxplot.png`: 各消融模型在留出测试点上的绝对误差箱线图。
+- `figures/prediction_field_ablation_comparison.png`: 多个消融模型在同一渗透率场上的预测场对比图。
+- `figures/residual_sampling_heatmap.png`: 残差自适应采样/逐点权重热力图。
+- `figures/loss_weight_dynamics_ablation.png`: 消融模型的动态损失权重曲线。
+- `figures/training_time_table.png` / `figures/training_time_table.csv`: 训练耗时表。
+- `figures/method_flowchart.png`: RBA-QPINN 方法流程图。
+- `figures/baseline_vs_rba_qpinn_comparison.png`: Baseline PINN 与 RBA-QPINN 在留出测试点上的预测场、误差和增益对比图。
+- `figures/baseline_vs_rba_qpinn_comparison_smooth.png`: Baseline PINN 与 RBA-QPINN 的平滑视觉对比图；平滑只用于展示，指标仍按原始留出网格点计算。
+- `figures/prediction_comparison.png`: 目标场、训练观测点、Baseline 预测、RBA-QPINN/Quantum-PINN 预测和留出点预测增益图。显示层面使用 bicubic 插值和观测点叠加，数值指标只在未观测测试点上计算。
 - `figures/quantum_loss_weight_dynamics.png`: Quantum-PINN 动态 loss 权重演化图。
+- `figures/residual_point_weight_dynamics.png`: RBA-QPINN 残差逐点权重的均值、95 分位数和最大值演化图。
+- `figures/adaptive_sampling_weight_map.png`: RBA-QPINN 训练观测点和残差自适应权重空间分布图。
+- `figures/rba_qpinn_architecture.png`: RBA-QPINN 网络架构图，可直接用于论文方法章节。
 
 ## 学术表述建议
 
