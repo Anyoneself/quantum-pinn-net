@@ -1,0 +1,484 @@
+{
+  "deck_name": "defense_ppt_rba_qpinn",
+  "language": "Chinese",
+  "goal": "生成一份论文答辩风格 PPT：前半部分高密度介绍方荣等 RBA-PINN 论文的方法原理、理论解释和 PDE 实验，后半部分扩展到用户自己的 RBA-QPINN 非均质渗透率场预测实验。",
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 6,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "approved high-density Slide 5 prompt in current Codex conversation",
+    "size": "16:9 landscape, generated image saved by Codex image_gen default path then copied to origin_image/slide_05.png",
+    "quality": "built-in default",
+    "model_config": "built-in image generation default",
+    "approved_sample_path": "origin_image/slide_05.png",
+    "input_context_preparation": "approved sample image viewed with view_image; local required figures must be inspected with view_image before built-in generation",
+    "handoff_rule": "Use the same built-in image_gen backend and generate mode; return a blocker if unavailable. Match the approved sample's high-density academic defense style."
+  },
+  "approved_style_reference": {
+    "path": "origin_image/slide_05.png",
+    "role": "approved sample slide style reference",
+    "fidelity": "match palette, typography, high information density, formulas, tables, algorithm boxes, and academic defense mood only; do not copy the exact layout unless requested"
+  },
+  "style": {
+    "name": "高密度科研答辩风",
+    "visual_direction": "formal Chinese academic thesis defense deck with high information density, evidence-driven layouts, formulas, algorithm diagrams, compact tables, and strong visual hierarchy",
+    "color_palette": "clean white background; deep academic blue #003F8F headers and section bars; pale blue #EAF2FF and pale gray #F5F7FA panels; restrained red #B5121B only for key conclusions or warnings; black #111111 and dark gray #333333 body text; thin gray borders #D8DEE8",
+    "typography": "bold Chinese sans-serif titles, compact readable Chinese body text, formula blocks in serif/math style when needed, table text dense but legible, left-aligned hierarchy",
+    "texture_and_finish": "flat clean academic slide, light panel shading, thin borders, no decorative gradients, no cartoon style",
+    "density_rule": "Each method/evidence slide should be information-rich: include formulas, algorithm steps, parameter tables, mechanism callouts, and concise bullets where relevant. Avoid sparse three-card pages.",
+    "deck_consistency": "same palette, typography, panel system, blue headers, red key mechanism emphasis, and high-density academic mood across the deck"
+  },
+  "deck_context": {
+    "source_summary": "方荣等论文提出 RBA-PINN，用 DBSCAN 高残差区域重采样和自适应注意力掩码协同优化 PINN 的采样分布与逐点损失权重，并用 NTK 特征谱解释其对高梯度区域学习和收敛稳定性的改善。用户项目将该思想迁移到二维非均质渗透率场空间留出预测，并加入量子启发相位特征、动态损失平衡和 Monte Carlo 神经元效用筛选。",
+    "core_claim": "RBA-PINN 的关键不是简单追逐最大残差点，而是识别连续高残差物理区域、动态增强难训练点权重，并保持全局覆盖；该思想可扩展到非均质渗透率场预测中的 RBA-QPINN 框架。",
+    "canonical_terms": [
+      "PINN",
+      "RBA-PINN",
+      "残差自适应",
+      "DBSCAN 密度聚类",
+      "自适应注意力掩码",
+      "NTK 特征谱",
+      "RBA-QPINN",
+      "非均质渗透率场",
+      "空间留出预测"
+    ]
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "基于残差自适应调整 PINN 方法求解偏微分方程",
+      "role": "cover",
+      "intent": "开场：明确本次答辩先介绍 RBA-PINN 论文，再扩展到 RBA-QPINN 实验。",
+      "key_points": [
+        "论文方法解读：RBA-PINN 的采样、权重与 NTK 机制",
+        "实验扩展：非均质渗透率场中的 RBA-QPINN",
+        "汇报结构：论文原理 -> PDE 实验 -> 自己的实验扩展"
+      ],
+      "local_context": {
+        "required_background": "论文来源：方荣、琚然、杨凤莲，《基于残差自适应调整 PINN 方法求解偏微分方程》，广西师范大学学报（自然科学版）网络首发，2026-06-29。不要生成真实期刊 Logo。"
+      },
+      "layout": {
+        "composition": "高密度封面但不拥挤：左侧大标题和论文信息，右侧用抽象 PDE 解场、残差热力图和算法箭头组合成学术视觉背景，底部放 3 段汇报结构。",
+        "content_zones": "top-left title, middle-left paper metadata, right scientific visual, bottom agenda strip",
+        "spacing": "保持严肃答辩封面，不做营销 hero"
+      },
+      "visual_elements": {
+        "main_visual": "PDE 解场曲面、残差热力图、蓝色算法箭头、局部红色高残差区域",
+        "supporting_elements": "三段式汇报结构标签：论文方法、理论解释、实验扩展"
+      },
+      "constraints": [
+        "不要伪造期刊 Logo、学校 Logo 或作者单位标识",
+        "封面仍保持论文答辩严肃风格",
+        "中文题名必须清晰可读"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "研究背景：为什么 PINN 需要残差自适应",
+      "role": "context / problem",
+      "intent": "说明传统 PINN 的优势与痛点，为 RBA-PINN 的方法设计铺垫。",
+      "key_points": [
+        "PINN 将控制方程、初边值条件嵌入损失函数",
+        "非线性强耦合 PDE 中常出现收敛慢与高梯度区域拟合不足",
+        "已有改进路线集中在损失权重优化和配置点自适应采样",
+        "核心问题：全局权重难定位空间难点，逐点残差又易受噪声影响"
+      ],
+      "local_context": {
+        "required_background": "论文引言指出 SA-PINN、LA-PINN、RAR、RAD、RAR-D 等方法分别从损失权重或自适应采样改进 PINN，但仍存在孤立高残差点、噪声点干扰、计算负担和空间连续性不足等问题。"
+      },
+      "layout": {
+        "composition": "左侧为 PINN 基本结构和损失函数分解，右侧为两条研究路线对比表，中下方放痛点矩阵。",
+        "content_zones": "title header; left PINN mechanism; right method taxonomy; bottom problem statement strip",
+        "spacing": "信息密度高但分区明确"
+      },
+      "visual_elements": {
+        "main_visual": "PINN 输入 x,t -> 神经网络 -> u_hat -> PDE 残差/边界/初值损失的结构图",
+        "supporting_elements": "两列表格：损失权重优化 vs 配置点采样；四个痛点标签"
+      },
+      "constraints": [
+        "将 SA-PINN、LA-PINN、RAR、RAD、RAR-D 作为文献路线标签展示",
+        "不要加入论文未提到的性能数字",
+        "保持高密度方法综述页"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "论文贡献总览：RBA-PINN 的协同优化框架",
+      "role": "paper contribution overview",
+      "intent": "把论文贡献压缩成可答辩的三层框架。",
+      "key_points": [
+        "样本空间：DBSCAN 识别连续高残差候选区域",
+        "权重空间：自适应注意力掩码动态增强难训练点",
+        "理论空间：NTK 特征谱解释收敛稳定性改善",
+        "验证空间：Burgers、Allen-Cahn、Navier-Stokes 三类 PDE"
+      ],
+      "local_context": {
+        "required_background": "RBA-PINN 的核心创新是让样本分布优化与损失权重动态调整协同工作，而不是只改变采样或只改变损失权重。"
+      },
+      "layout": {
+        "composition": "中心闭环图：残差计算 -> 阈值筛选 -> DBSCAN 区域 -> 动态重采样 -> 自适应权重 -> PINN 训练；右侧放三层贡献表。",
+        "content_zones": "left large workflow diagram, right contribution stack, bottom one-sentence thesis",
+        "spacing": "闭环箭头清楚，贡献表紧凑"
+      },
+      "visual_elements": {
+        "main_visual": "高密度闭环算法图",
+        "supporting_elements": "贡献三层：采样层、权重层、理论层；底部结论条"
+      },
+      "constraints": [
+        "不要把 RBA-PINN 说成量子方法，量子扩展在后半部分再讲",
+        "强调协同优化，不要只讲 DBSCAN"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "方法一：自适应注意力掩码与逐点损失权重",
+      "role": "method explanation",
+      "intent": "细讲 RBA-PINN 的逐点权重机制和梯度下降/上升训练结构。",
+      "key_points": [
+        "对残差点、边界点、初始条件点分别设置非负自适应权重",
+        "掩码函数 m(lambda) 将权重映射为损失项乘法系数",
+        "网络参数 w 梯度下降，自适应权重 lambda 梯度上升",
+        "准静态小学习率调节避免极小极大优化震荡"
+      ],
+      "local_context": {
+        "required_background": "论文中损失由 N_r、N_b、N_0 三部分组成；lambda_r、lambda_b、lambda_0 为可训练自适应权重。m(lambda) 非负、可微、严格单调递增。若未掩码损失非零，对应权重梯度非负，残差越大权重增长越快。"
+      },
+      "layout": {
+        "composition": "三栏高密度方法页：左栏损失函数分解，中栏梯度下降/上升更新公式，右栏机制解释和稳定性条件。",
+        "content_zones": "title; formula panels; update-rule diagram; mechanism callouts; bottom conclusion",
+        "spacing": "公式与说明成组排列，不要大面积留白"
+      },
+      "visual_elements": {
+        "main_visual": "公式块：L = L_r + L_b + L_0；w 更新向下箭头，lambda 更新向上箭头",
+        "supporting_elements": "点权重从浅蓝到红色增强的示意图；准静态调节说明框"
+      },
+      "constraints": [
+        "公式可简化但必须准确表达梯度下降/上升思想",
+        "中文解释要密集清晰",
+        "避免把该页做成单纯概念卡片"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "方法二：DBSCAN 高残差区域识别与动态重采样",
+      "role": "algorithm / process",
+      "intent": "已批准样张：细讲自适应阈值、DBSCAN 聚类和动态替换采样闭环。",
+      "key_points": [
+        "残差阈值由粗到细搜索并构造高残差候选集",
+        "DBSCAN 区分核心点、边界点和噪声点",
+        "候选区域保留连续高残差物理结构",
+        "动态替换采样在局部聚焦与全局覆盖之间折中"
+      ],
+      "local_context": {
+        "required_background": "批准样张已保存为 origin_image/slide_05.png；这页不再重新生成。"
+      },
+      "layout": {
+        "composition": "使用已批准样张，不改变内容。",
+        "content_zones": "approved sample"
+      },
+      "visual_elements": {
+        "main_visual": "approved sample image"
+      },
+      "constraints": [
+        "这页样张已通过，作为风格参考，不重新生成"
+      ],
+      "sample_approved": true
+    },
+    {
+      "number": 6,
+      "title": "理论解释：NTK 特征谱与条件数改善",
+      "role": "theory / evidence",
+      "intent": "用高密度理论图解释为什么逐点自适应权重能改善训练动态。",
+      "key_points": [
+        "NTK 描述宽神经网络在连续时间极限下的输出演化",
+        "标准全局加权主要整体缩放特征值",
+        "逐点自适应权重引入非线性谱变换",
+        "尾部特征值提高后可缓解频谱偏置并改善条件数"
+      ],
+      "local_context": {
+        "required_background": "论文推导 K(tau) 矩阵，并说明 RBA-PINN 的逐点自适应掩码 m(lambda) 会改变 NTK 特征谱相对分布；动态放大高频误差分量相关的小特征值，从而优化 Hessian 条件数。"
+      },
+      "layout": {
+        "composition": "左侧推导链条：梯度流 -> NTK 矩阵 -> 误差衰减；中间谱分布对比；右侧条件数演化和机制结论。",
+        "content_zones": "formula derivation strip, eigenspectrum chart schematic, condition number chart schematic, conclusion strip",
+        "spacing": "理论页高密度但逻辑从左到右"
+      },
+      "visual_elements": {
+        "main_visual": "两张概念图：PINN vs RBA-PINN 的 NTK 特征谱，条件数随训练演化",
+        "supporting_elements": "公式块：du/dτ ≈ -KΓ(u-v)，误差以 exp(-μ_i τ) 衰减"
+      },
+      "constraints": [
+        "不要伪造精确曲线数值",
+        "可以用概念曲线表达谱尾部提高和条件数更稳定",
+        "公式清楚，中文不乱码"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "我的代码工作：RBA-QPINN 实验流水线",
+      "role": "code workflow / implementation evidence",
+      "intent": "展示当前仓库如何从数据、模型、训练脚本到图表产物形成完整实验闭环。",
+      "key_points": [
+        "数据缓存：dataset/processed 保存 fields、conditions、train/test mask",
+        "训练入口：gen-figures/run_pinn_experiment.py 统一训练、评估和保存结果",
+        "模型实现：standard_pinn.py 与 quantum_pinn.py 分别实现基线和量子启发 PINN",
+        "消融配置：MethodSpec 管理 6 组模型路径",
+        "输出产物：metrics_summary、prediction maps、ablation figures、training time table"
+      ],
+      "local_context": {
+        "required_background": "代码结构：dataset/processed/fields.npy、conditions.npy、train_point_mask.npy、test_point_mask.npy；models/standard-pinn/standard_pinn.py；models/quantum-pinn/quantum_pinn.py；gen-figures/run_pinn_experiment.py；gen-figures/generate_extended_paper_figures.py；figures/metrics_summary.json、ablation_table.png、prediction_comparison.png、baseline_vs_rba_qpinn_comparison_smooth.png。MethodSpec 包含 Baseline PINN、Quantum Feature PINN、Quantum + Loss Balancer、Quantum + Loss + MC、RBA-QPINN w/o MC、Full RBA-QPINN。训练协议：128 个 32x32 GSTools 渗透率场，约 80% 空间点训练、20% 留出测试。"
+      },
+      "layout": {
+        "composition": "高密度代码工作页：左侧文件树与数据资产，中间实验流水线 DAG，右侧 MethodSpec 消融矩阵和输出产物清单，底部放复现实验命令与结论。",
+        "content_zones": "file tree panel, data protocol panel, training/evaluation pipeline, method ablation matrix, output artifacts strip",
+        "spacing": "像代码答辩页，信息密集但用蓝色标题条分组"
+      },
+      "visual_elements": {
+        "main_visual": "代码实验流水线：上游数据 -> processed npy -> spatial masks -> model zoo -> train/evaluate -> figures outputs",
+        "supporting_elements": "文件路径标签、MethodSpec 表格、输出文件清单、空间留出图和方法流程图作为证据"
+      },
+      "required_images": [
+        {
+          "path": "../figures/spatial_mask_density.png",
+          "role": "strict input asset: spatial mask density generated by project code",
+          "fidelity": "preserve figure labels, color maps, train/held-out panels, and layout"
+        },
+        {
+          "path": "../figures/method_flowchart.png",
+          "role": "strict input asset: RBA-QPINN method flow generated by project code",
+          "fidelity": "preserve labels, arrows, boxes, colors, and relationships"
+        }
+      ],
+      "source_image_rules": "Embed both supplied figures as evidence panels. Do not redraw or replace them.",
+      "constraints": [
+        "本页必须展示代码文件名和产物路径",
+        "不要再展示论文 PDE 实验表格",
+        "保留空间留出协议和模型消融路径",
+        "中文和代码路径必须可读"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "我的实验结果：消融指标与主结论",
+      "role": "project experiment / data evidence",
+      "intent": "用当前代码生成的真实指标和图表替代论文 PDE 实验结果，展示项目实验成果。",
+      "key_points": [
+        "最佳误差模型：Quantum Feature PINN",
+        "RMSE：0.0288 -> 0.0175，降低 39.17%",
+        "MAE：0.0210 -> 0.0102，降低 51.25%",
+        "R2：0.9925 -> 0.9972，SSIM：0.9987 -> 0.9995",
+        "严谨结论：Full RBA-QPINN 仍需优化模块协同，不宣称所有指标最优"
+      ],
+      "local_context": {
+        "required_background": "metrics_summary.json：Baseline PINN RMSE 0.0287988、MAE 0.0209878、R2 0.992452、SSIM 0.998704、Composite Score 0.885945；Quantum Feature PINN RMSE 0.0175186、MAE 0.0102310、R2 0.997207、SSIM 0.999525、Composite Score 0.888144。improvement_summary.json：RMSE 降低 39.169%，MAE 降低 51.253%，Composite Score 提升 0.248%。training_time_table.csv：Baseline 22.85s，Quantum Feature 14.40s，Full RBA-QPINN 19.79s。"
+      },
+      "layout": {
+        "composition": "项目实验结果页：顶部四个关键指标卡，左侧消融指标表，中间模块贡献柱状图，右侧空间预测可视化，下方训练时间/限制说明与主结论。",
+        "content_zones": "metric cards, ablation table, module contribution chart, qualitative comparison, caveat and next-step strip",
+        "spacing": "多图并列但保持关键数值可读"
+      },
+      "visual_elements": {
+        "main_visual": "ablation_table, ablation_module_contribution, and baseline_vs_rba_qpinn_comparison_smooth as strict evidence figures",
+        "supporting_elements": "RMSE/MAE/R2/SSIM metric cards, training time mini table, red caveat strip"
+      },
+      "required_images": [
+        {
+          "path": "../figures/ablation_table.png",
+          "role": "strict input asset: project ablation metrics table",
+          "fidelity": "preserve model names, metric values, table structure, colors, and labels"
+        },
+        {
+          "path": "../figures/ablation_module_contribution.png",
+          "role": "strict input asset: project module contribution chart",
+          "fidelity": "preserve chart data, axes, labels, legend, bars, colors, and title"
+        },
+        {
+          "path": "../figures/baseline_vs_rba_qpinn_comparison_smooth.png",
+          "role": "strict input asset: project qualitative comparison figure",
+          "fidelity": "preserve field panels, error maps, labels, colors, title, and metric text"
+        }
+      ],
+      "source_image_rules": "Embed the supplied project result figures visibly as strict evidence. Do not synthesize replacement charts or alter values.",
+      "constraints": [
+        "不要再展示 Burgers、Allen-Cahn、Navier-Stokes 论文实验",
+        "必须展示当前项目的真实指标与图表",
+        "必须保留严谨表述：当前最佳误差模型是 Quantum Feature PINN，不是 Full RBA-QPINN",
+        "不要夸大为所有指标全面最优"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "从论文到本项目：方法迁移到非均质渗透率场预测",
+      "role": "transition / task mapping",
+      "intent": "把论文 PDE 正问题和用户项目的渗透率场空间留出预测建立清晰映射。",
+      "key_points": [
+        "论文任务：经典 PDE 正问题求解",
+        "本项目任务：稀疏观测下的二维非均质渗透率场预测",
+        "共同难点：高梯度区域、频谱偏置、高残差点训练不足",
+        "迁移策略：残差自适应思想 + 量子启发相位特征"
+      ],
+      "local_context": {
+        "required_background": "本项目数据包含 128 个 GSTools 渗透率场样本，每个样本 32 x 32；约 80% 空间点训练、约 20% 空间点测试，只在未观测点计算指标；物理条件含 pressure_mpa、pressure_gradient_mpa_per_m、viscosity_cp、porosity、flow_rate_m3_day。"
+      },
+      "layout": {
+        "composition": "左侧论文 PDE 任务，右侧本项目渗透率场任务，中间用映射桥接；底部放空间留出协议和物理条件表。",
+        "content_zones": "left paper task, center transfer arrow, right project task, bottom protocol table",
+        "spacing": "图表嵌入为证据，不要让图片占满全页"
+      },
+      "visual_elements": {
+        "main_visual": "任务迁移桥：PDE residual adaptive -> permeability field holdout prediction",
+        "supporting_elements": "空间掩码密度图和预测对比图作为严格输入资产"
+      },
+      "required_images": [
+        {
+          "path": "../figures/spatial_mask_density.png",
+          "role": "strict input asset: spatial train/test mask density evidence",
+          "fidelity": "preserve the figure content, labels, colors, data, and layout"
+        },
+        {
+          "path": "../figures/prediction_comparison.png",
+          "role": "strict input asset: permeability prediction task example",
+          "fidelity": "preserve the figure content, labels, colors, data, and layout"
+        }
+      ],
+      "source_image_rules": "Embed both supplied project figures visibly as evidence panels. Do not redraw or replace them.",
+      "constraints": [
+        "清楚区分论文任务和本项目任务",
+        "不要声称本项目完全复现论文 PDE 实验",
+        "必须保留两张输入图的主体内容"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "扩展方法：RBA-QPINN 网络结构",
+      "role": "extended method / architecture",
+      "intent": "介绍用户项目中的量子启发 PINN 扩展结构。",
+      "key_points": [
+        "输入：坐标、5 维工程条件、可学习样本嵌入",
+        "量子角度编码和 entanglement mixer 增强非线性空间表达",
+        "动态 loss 权重平衡数据、物理、平滑和边界项",
+        "残差逐点权重和 Monte Carlo 神经元筛选强化训练调度"
+      ],
+      "local_context": {
+        "required_background": "RBA-QPINN 是量子启发算法实现，不依赖真实量子硬件或 PennyLane 量子线路模拟；现有代码中包含量子角度编码、动态损失权重、残差逐点权重和 Monte Carlo 神经元效用筛选。"
+      },
+      "layout": {
+        "composition": "中心放 RBA-QPINN 架构图，四周放模块解释与公式片段，右侧放训练流程闭环。",
+        "content_zones": "central architecture figure, module callouts, workflow side panel, bottom method conclusion",
+        "spacing": "架构图主体要大，解释框紧凑围绕"
+      },
+      "visual_elements": {
+        "main_visual": "RBA-QPINN architecture as strict input asset",
+        "supporting_elements": "method_flowchart as secondary strict input asset; formula snippets for quantum features and loss weighting"
+      },
+      "required_images": [
+        {
+          "path": "../figures/rba_qpinn_architecture.png",
+          "role": "strict input asset: RBA-QPINN architecture",
+          "fidelity": "preserve labels, module relationships, arrows, colors, and structure"
+        },
+        {
+          "path": "../figures/method_flowchart.png",
+          "role": "strict input asset: RBA-QPINN method workflow",
+          "fidelity": "preserve labels, arrows, module relationships, colors, and structure"
+        }
+      ],
+      "source_image_rules": "Use both supplied figures as evidence; do not synthesize replacement diagrams.",
+      "constraints": [
+        "明确这是 quantum-inspired，不是真实量子硬件实验",
+        "不得改变输入架构图的标签含义"
+      ]
+    },
+    {
+      "number": 11,
+      "title": "扩展实验：结果、消融与可视化证据",
+      "role": "extended experiment / data evidence",
+      "intent": "展示用户项目已有实验的关键指标和严谨结论。",
+      "key_points": [
+        "最佳误差模型 Quantum Feature PINN 相比 Baseline RMSE 降低 39.17%",
+        "MAE 降低 51.25%，R2 和 SSIM 同步提升",
+        "消融结果显示量子特征是当前最主要误差收益来源",
+        "严谨表述：Full RBA-QPINN 的模块协同仍需继续优化"
+      ],
+      "local_context": {
+        "required_background": "metrics_summary.json 中 Baseline PINN RMSE 0.0287988、MAE 0.0209878、R2 0.992452、SSIM 0.998704；Quantum Feature PINN RMSE 0.0175186、MAE 0.0102310、R2 0.997207、SSIM 0.999525。improvement_summary.json 给出 RMSE reduction 39.17%，MAE reduction 51.25%。"
+      },
+      "layout": {
+        "composition": "三块证据：左侧指标表，中间相对 Baseline 误差降低图，右侧空间预测对比；底部放严谨结论与限制。",
+        "content_zones": "metrics figure, ablation table, qualitative comparison, caveat strip",
+        "spacing": "三图并列但要保留主要标签可读"
+      },
+      "visual_elements": {
+        "main_visual": "relative_error_reduction_vs_baseline and ablation_table as strict evidence figures",
+        "supporting_elements": "baseline_vs_rba_qpinn_comparison_smooth as qualitative evidence"
+      },
+      "required_images": [
+        {
+          "path": "../figures/ablation_table.png",
+          "role": "strict input asset: ablation metrics table",
+          "fidelity": "preserve model names, metric values, colors, and table layout"
+        },
+        {
+          "path": "../figures/relative_error_reduction_vs_baseline.png",
+          "role": "strict input asset: relative error reduction chart",
+          "fidelity": "preserve chart data, axes, labels, bars, percentages, and source note"
+        },
+        {
+          "path": "../figures/baseline_vs_rba_qpinn_comparison_smooth.png",
+          "role": "strict input asset: qualitative spatial reconstruction comparison",
+          "fidelity": "preserve spatial fields, labels, colors, and comparison panels"
+        }
+      ],
+      "source_image_rules": "Embed the supplied figures as evidence panels; do not redraw or relabel the charts.",
+      "constraints": [
+        "必须保留严谨表述：当前最佳误差模型不是 Full RBA-QPINN",
+        "不要夸大为所有指标全面最优",
+        "输入图表的数值和标签不能被改写"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "总结：论文启发、实验扩展与后续工作",
+      "role": "summary / Q&A",
+      "intent": "收束论文方法、用户实验扩展和后续工作。",
+      "key_points": [
+        "RBA-PINN：DBSCAN 高残差区域重采样 + 自适应注意力掩码",
+        "理论支撑：逐点权重重塑 NTK 特征谱并改善条件数",
+        "实验扩展：将残差自适应迁移到 RBA-QPINN 渗透率场预测",
+        "后续工作：完善 DBSCAN 重采样闭环、调优模块协同、扩大随机种子与跨数据源验证"
+      ],
+      "local_context": {
+        "required_background": "总结页要强调论文方法是主要内容，用户项目是扩展验证。后续工作应具体，不要空泛。"
+      },
+      "layout": {
+        "composition": "三段式高密度总结：论文贡献、实验扩展、下一步工作；右侧放模块贡献和残差热力图作为证据背景。",
+        "content_zones": "three summary blocks, evidence figures, Q&A footer",
+        "spacing": "保持答辩收束感，文字略多但层级清楚"
+      },
+      "visual_elements": {
+        "main_visual": "three-block conclusion framework",
+        "supporting_elements": "ablation module contribution and residual sampling heatmap as strict input assets"
+      },
+      "required_images": [
+        {
+          "path": "../figures/ablation_module_contribution.png",
+          "role": "strict input asset: module contribution evidence",
+          "fidelity": "preserve chart data, labels, colors, and visual content"
+        },
+        {
+          "path": "../figures/residual_sampling_heatmap.png",
+          "role": "strict input asset: residual adaptive sampling or weight heatmap",
+          "fidelity": "preserve heatmap content, labels, colors, and layout"
+        }
+      ],
+      "source_image_rules": "Use supplied figures as supporting evidence, not as loose inspiration.",
+      "constraints": [
+        "总结页不要过度装饰",
+        "明确后续工作和当前限制",
+        "保持论文优先、实验扩展其次的叙事"
+      ]
+    }
+  ]
+}

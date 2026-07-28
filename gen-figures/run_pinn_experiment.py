@@ -39,6 +39,7 @@ from physics_constraints import (  # noqa: E402
     expected_log_perm_index,
     summarize_physical_conditions,
 )
+from darcy_physics import darcy_flow_loss  # noqa: E402
 
 
 def load_module(module_path: Path, module_name: str) -> Any:
@@ -82,6 +83,8 @@ METRIC_COLUMNS = [
     "R2",
     "SSIM",
     "Physics Residual",
+    "Darcy Continuity Residual",
+    "Darcy Flux Imbalance",
     "Physical Score",
     "Darcy Corr",
     "Pressure Corr",
@@ -103,15 +106,29 @@ class MethodSpec:
 
 CORE_METHODS = [
     MethodSpec("standard-pinn", "Baseline PINN", "standard"),
-    MethodSpec("rba-qpinn", "RBA-QPINN", "quantum", True, True, True),
+    MethodSpec("rba-qpinn", "Full RBA-QPINN", "quantum", True, True, True),
 ]
 
-ABLATION_METHODS = [
+PAPER_METHODS = [
     MethodSpec("standard-pinn", "Baseline PINN", "standard"),
     MethodSpec("quantum-feature", "Quantum Feature PINN", "quantum"),
     MethodSpec("quantum-loss", "Quantum + Loss Balancer", "quantum", True),
     MethodSpec("quantum-mc", "Quantum + Loss + MC", "quantum", True, False, True),
-    MethodSpec("rba-no-mc", "RBA-QPINN w/o MC", "quantum", True, True, False),
+    MethodSpec("rba-no-mc", "Quantum + Loss + RBA", "quantum", True, True, False),
+    MethodSpec("rba-qpinn", "Full RBA-QPINN", "quantum", True, True, True),
+]
+
+ABLATION_METHODS = [
+    MethodSpec("standard-pinn", "Baseline PINN", "standard"),
+    MethodSpec("standard-loss", "Classical + Loss Balancer", "standard", True),
+    MethodSpec("standard-rba", "Classical + RBA", "standard", False, True),
+    MethodSpec("standard-loss-rba", "Classical + Loss + RBA", "standard", True, True),
+    MethodSpec("quantum-feature", "Quantum Feature PINN", "quantum"),
+    MethodSpec("quantum-mc-only", "Quantum + MC", "quantum", False, False, True),
+    MethodSpec("quantum-rba", "Quantum + RBA", "quantum", False, True, False),
+    MethodSpec("quantum-loss", "Quantum + Loss Balancer", "quantum", True),
+    MethodSpec("quantum-mc", "Quantum + Loss + MC", "quantum", True, False, True),
+    MethodSpec("rba-no-mc", "Quantum + Loss + RBA", "quantum", True, True, False),
     MethodSpec("rba-qpinn", "Full RBA-QPINN", "quantum", True, True, True),
 ]
 
@@ -128,7 +145,8 @@ class Config:
     depth: int = 4
     latent_dim: int = 16
     learning_rate: float = 1e-3
-    train_ratio: float = 0.8
+    train_ratio: float = 0.70
+    validation_ratio: float = 0.10
     max_samples: int = 0
     device: str = "auto"
     mc_trials: int = 6
@@ -144,7 +162,13 @@ class Config:
     residual_correction_power: float = 2.0
     residual_correction_strength: float = 0.95
     run_ablations: bool = False
+    paper_ablations: bool = False
+    fail_if_output_exists: bool = False
     fast: bool = False
+    darcy_physics: bool = True
+    darcy_iterations: int = 16
+    darcy_continuity_weight: float = 0.02
+    darcy_flux_weight: float = 0.01
 
 
 def parse_args() -> Config:
@@ -162,6 +186,7 @@ def parse_args() -> Config:
     parser.add_argument("--latent-dim", type=int, default=Config.latent_dim)
     parser.add_argument("--learning-rate", type=float, default=Config.learning_rate)
     parser.add_argument("--train-ratio", type=float, default=Config.train_ratio)
+    parser.add_argument("--validation-ratio", type=float, default=Config.validation_ratio)
     parser.add_argument("--max-samples", type=int, default=Config.max_samples)
     parser.add_argument("--device", default=Config.device, choices=["auto", "cpu", "cuda", "mps"])
     parser.add_argument("--mc-trials", type=int, default=Config.mc_trials)
@@ -177,11 +202,24 @@ def parse_args() -> Config:
     parser.add_argument("--residual-correction-power", type=float, default=Config.residual_correction_power)
     parser.add_argument("--residual-correction-strength", type=float, default=Config.residual_correction_strength)
     parser.add_argument("--run-ablations", action="store_true")
+    parser.add_argument("--paper-ablations", action="store_true")
+    parser.add_argument("--fail-if-output-exists", action="store_true")
     parser.add_argument("--fast", action="store_true")
+    parser.add_argument("--no-darcy-physics", action="store_true")
+    parser.add_argument("--darcy-iterations", type=int, default=Config.darcy_iterations)
+    parser.add_argument("--darcy-continuity-weight", type=float, default=Config.darcy_continuity_weight)
+    parser.add_argument("--darcy-flux-weight", type=float, default=Config.darcy_flux_weight)
     args = parser.parse_args()
     args_dict = vars(args)
     args_dict["adaptive_residual_weights"] = not args_dict.pop("no_adaptive_residual_weights")
+    args_dict["darcy_physics"] = not args_dict.pop("no_darcy_physics")
     config = Config(**args_dict)
+    if config.train_ratio <= 0.0 or config.validation_ratio <= 0.0:
+        raise ValueError("train_ratio and validation_ratio must both be positive")
+    if config.train_ratio + config.validation_ratio >= 1.0:
+        raise ValueError("train_ratio + validation_ratio must be less than 1")
+    if config.run_ablations and config.paper_ablations:
+        raise ValueError("Choose either --run-ablations or --paper-ablations, not both")
     if config.fast:
         config.epochs = min(config.epochs, 10)
         config.batch_size = min(config.batch_size, 6)
@@ -247,12 +285,25 @@ def load_source_data(source_root: Path, max_samples: int) -> tuple[np.ndarray, n
     return x_fields, x_conditions, x_sources
 
 
-def make_spatial_masks(fields: np.ndarray, train_ratio: float, seed: int) -> tuple[np.ndarray, np.ndarray]:
+def make_spatial_masks(
+    fields: np.ndarray,
+    train_ratio: float,
+    validation_ratio: float,
+    seed: int,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     rng = np.random.default_rng(seed + 2027)
     random_values = rng.random(fields.shape)
     train_mask = random_values < train_ratio
-    test_mask = ~train_mask
-    return train_mask.astype(np.float32), test_mask.astype(np.float32)
+    validation_mask = np.logical_and(
+        random_values >= train_ratio,
+        random_values < train_ratio + validation_ratio,
+    )
+    test_mask = random_values >= train_ratio + validation_ratio
+    return (
+        train_mask.astype(np.float32),
+        validation_mask.astype(np.float32),
+        test_mask.astype(np.float32),
+    )
 
 
 def normalize_conditions(train: np.ndarray, test: np.ndarray) -> tuple[np.ndarray, np.ndarray, dict[str, Any]]:
@@ -269,6 +320,7 @@ class FieldDataset(Dataset[dict[str, torch.Tensor]]):
         conditions_raw: np.ndarray,
         expected_mean: np.ndarray,
         train_mask: np.ndarray,
+        validation_mask: np.ndarray,
         test_mask: np.ndarray,
     ) -> None:
         self.fields = torch.from_numpy(fields.astype(np.float32))
@@ -277,6 +329,7 @@ class FieldDataset(Dataset[dict[str, torch.Tensor]]):
         self.expected_mean = torch.from_numpy(expected_mean.astype(np.float32))
         self.sample_index = torch.arange(fields.shape[0], dtype=torch.long)
         self.train_mask = torch.from_numpy(train_mask.astype(np.float32))
+        self.validation_mask = torch.from_numpy(validation_mask.astype(np.float32))
         self.test_mask = torch.from_numpy(test_mask.astype(np.float32))
         self.point_weight = torch.ones_like(self.train_mask)
 
@@ -291,6 +344,7 @@ class FieldDataset(Dataset[dict[str, torch.Tensor]]):
             "expected_mean": self.expected_mean[idx],
             "sample_index": self.sample_index[idx],
             "train_mask": self.train_mask[idx],
+            "validation_mask": self.validation_mask[idx],
             "test_mask": self.test_mask[idx],
             "point_weight": self.point_weight[idx],
         }
@@ -463,6 +517,7 @@ def compute_losses(
     coords: torch.Tensor,
     mask_name: str,
     use_point_weights: bool = False,
+    config: Config | None = None,
 ) -> tuple[dict[str, torch.Tensor], torch.Tensor]:
     fields = batch["field"].to(coords.device)
     conditions = batch["condition"].to(coords.device)
@@ -479,11 +534,27 @@ def compute_losses(
     data_loss = ((pred - target).square() * mask).sum() / (mask.sum() + 1e-8)
     mean_loss = F.mse_loss(pred.mean(dim=(1, 2, 3)), expected_mean)
     smoothness, boundary = finite_difference_losses(pred)
+    zero = pred.new_zeros(())
+    darcy_continuity = zero
+    darcy_flux = zero
+    physics_loss = mean_loss
+    if config is not None and config.darcy_physics:
+        darcy = darcy_flow_loss(pred, iterations=config.darcy_iterations)
+        darcy_continuity = darcy.continuity
+        darcy_flux = darcy.flux_balance
+        physics_loss = (
+            mean_loss
+            + config.darcy_continuity_weight * darcy_continuity
+            + config.darcy_flux_weight * darcy_flux
+        )
     losses = {
         "data": data_loss,
-        "physics": mean_loss,
+        "physics": physics_loss,
         "smoothness": smoothness,
         "boundary": boundary,
+        "physics_mean": mean_loss,
+        "darcy_continuity": darcy_continuity,
+        "darcy_flux": darcy_flux,
     }
     return losses, pred
 
@@ -511,6 +582,9 @@ def train_model(
         "physics_loss": [],
         "smoothness_loss": [],
         "boundary_loss": [],
+        "physics_mean_loss": [],
+        "darcy_continuity_loss": [],
+        "darcy_flux_loss": [],
         "loss_weights": [],
         "residual_point_weights": [],
         "residual_clusters": [],
@@ -522,12 +596,21 @@ def train_model(
     for epoch in range(1, config.epochs + 1):
         model.train()
         loss_sums = {name: 0.0 for name in fixed_weights}
+        diagnostic_names = ["physics_mean", "darcy_continuity", "darcy_flux"]
+        diagnostic_sums = {name: 0.0 for name in diagnostic_names}
         total_sum = 0.0
         batch_count = 0
         last_losses_float = dict(fixed_weights)
         for batch in train_loader:
             optimizer.zero_grad(set_to_none=True)
-            losses, _ = compute_losses(model, batch, coords, "train_mask", use_point_weights=adaptive_map is not None)
+            losses, _ = compute_losses(
+                model,
+                batch,
+                coords,
+                "train_mask",
+                use_point_weights=adaptive_map is not None,
+                config=config,
+            )
             if balancer is None:
                 weights = {name: torch.tensor(weight, device=coords.device) for name, weight in fixed_weights.items()}
             else:
@@ -541,6 +624,8 @@ def train_model(
             last_losses_float = {name: float(losses[name].detach().cpu()) for name in fixed_weights}
             for name in fixed_weights:
                 loss_sums[name] += last_losses_float[name]
+            for name in diagnostic_names:
+                diagnostic_sums[name] += float(losses[name].detach().cpu())
 
         scheduler.step()
         if balancer is not None:
@@ -561,7 +646,7 @@ def train_model(
             )
             train_loader.dataset.update_point_weight(adaptive_map.snapshot())
 
-        val_loss = evaluate_val_loss(model, val_loader, coords, fixed_weights)
+        val_loss = evaluate_val_loss(model, val_loader, coords, fixed_weights, config)
         if val_loss < best_val:
             best_val = val_loss
             best_state = {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
@@ -570,6 +655,8 @@ def train_model(
         history["val_loss"].append(val_loss)
         for name in fixed_weights:
             history[f"{name}_loss"].append(loss_sums[name] / max(batch_count, 1))
+        for name in diagnostic_names:
+            history[f"{name}_loss"].append(diagnostic_sums[name] / max(batch_count, 1))
         history["loss_weights"].append(weight_snapshot)
         if adaptive_map is not None:
             history["residual_point_weights"].append(adaptive_map.history[-1])
@@ -582,7 +669,8 @@ def train_model(
         print(
             f"{method.key} epoch {epoch:03d}/{config.epochs} "
             f"train={history['train_loss'][-1]:.6f} val={val_loss:.6f} "
-            f"physics={history['physics_loss'][-1]:.6f} mc={reinitialized}",
+            f"physics={history['physics_loss'][-1]:.6f} "
+            f"darcy={history['darcy_continuity_loss'][-1]:.6f} mc={reinitialized}",
             flush=True,
         )
 
@@ -599,12 +687,13 @@ def evaluate_val_loss(
     val_loader: DataLoader,
     coords: torch.Tensor,
     fixed_weights: dict[str, float],
+    config: Config,
 ) -> float:
     model.eval()
     total = 0.0
     count = 0
     for batch in val_loader:
-        losses, _ = compute_losses(model, batch, coords, "test_mask")
+        losses, _ = compute_losses(model, batch, coords, "validation_mask", config=config)
         weighted = sum(fixed_weights[name] * losses[name] for name in fixed_weights)
         total += float(weighted.detach().cpu())
         count += 1
@@ -707,6 +796,7 @@ def compute_metrics(
     expected_mean: np.ndarray,
     physical_config: PhysicalConfig,
     test_mask: np.ndarray,
+    darcy_iterations: int = 16,
 ) -> dict[str, float | str]:
     err = pred - real
     mask = test_mask.astype(bool)
@@ -724,6 +814,13 @@ def compute_metrics(
     ssim_value = simple_ssim(real, pred)
     pred_mean = pred.reshape(pred.shape[0], -1).mean(axis=1)
     physics_residual = float(np.mean(np.abs(pred_mean - expected_mean)))
+    with torch.no_grad():
+        darcy = darcy_flow_loss(
+            torch.from_numpy(pred[:, None].astype(np.float32)),
+            iterations=darcy_iterations,
+        )
+    darcy_continuity = float(torch.sqrt(darcy.continuity).cpu())
+    darcy_flux_imbalance = float(torch.sqrt(darcy.flux_balance).cpu())
     physical = evaluate_physical_reasonability(
         pred,
         conditions,
@@ -742,6 +839,8 @@ def compute_metrics(
         "R2": r2,
         "SSIM": ssim_value,
         "Physics Residual": physics_residual,
+        "Darcy Continuity Residual": darcy_continuity,
+        "Darcy Flux Imbalance": darcy_flux_imbalance,
         "Physical Score": physical["physical_score"],
         "Darcy Corr": physical["darcy_corr"],
         "Pressure Corr": physical["pressure_corr"],
@@ -749,6 +848,26 @@ def compute_metrics(
         "Range Score": physical["range_score"],
         "Composite Score": composite,
     }
+
+
+def compute_per_sample_errors(
+    real: np.ndarray,
+    pred: np.ndarray,
+    test_mask: np.ndarray,
+) -> list[dict[str, float | int]]:
+    rows: list[dict[str, float | int]] = []
+    for sample_index in range(real.shape[0]):
+        mask = test_mask[sample_index].astype(bool)
+        error = pred[sample_index][mask] - real[sample_index][mask]
+        rows.append(
+            {
+                "sample_index": sample_index,
+                "point_count": int(mask.sum()),
+                "RMSE": float(np.sqrt(np.mean(error**2))),
+                "MAE": float(np.mean(np.abs(error))),
+            }
+        )
+    return rows
 
 
 def apply_observed_residual_correction(
@@ -1352,14 +1471,18 @@ def save_ablation_outputs(
 def save_run_artifacts(
     run_dir: Path,
     model: nn.Module,
-    prediction: np.ndarray,
+    raw_prediction: np.ndarray,
+    corrected_prediction: np.ndarray,
     target: np.ndarray,
+    test_mask: np.ndarray,
     history: dict[str, Any],
-    metrics: dict[str, float | str],
+    raw_metrics: dict[str, float | str],
+    corrected_metrics: dict[str, float | str],
     config: Config,
 ) -> None:
     run_dir.mkdir(parents=True, exist_ok=True)
-    np.save(run_dir / "predicted_log_perm.npy", prediction)
+    np.save(run_dir / "raw_predicted_log_perm.npy", raw_prediction)
+    np.save(run_dir / "corrected_predicted_log_perm.npy", corrected_prediction)
     np.save(run_dir / "target_log_perm.npy", target)
     torch.save(model.state_dict(), run_dir / "model.pt")
     serializable_history = dict(history)
@@ -1369,9 +1492,20 @@ def save_run_artifacts(
     summary = {
         "config": asdict(config),
         "history": serializable_history,
-        "metrics": metrics,
+        "metrics": {
+            "raw": raw_metrics,
+            "corrected": corrected_metrics,
+        },
     }
     (run_dir / "run_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    (run_dir / "per_sample_metrics_raw.json").write_text(
+        json.dumps(compute_per_sample_errors(target, raw_prediction, test_mask), indent=2),
+        encoding="utf-8",
+    )
+    (run_dir / "per_sample_metrics_corrected.json").write_text(
+        json.dumps(compute_per_sample_errors(target, corrected_prediction, test_mask), indent=2),
+        encoding="utf-8",
+    )
 
 
 def build_model(method: MethodSpec, input_dim: int, fields: np.ndarray, config: Config, device: torch.device) -> nn.Module:
@@ -1398,11 +1532,18 @@ def main() -> None:
     device = pick_device(config.device)
     output_dir = (BASE_DIR / config.output_dir).resolve()
     processed_dir = (BASE_DIR / config.processed_dir).resolve()
+    if config.fail_if_output_exists and output_dir.exists() and any(output_dir.iterdir()):
+        raise FileExistsError(f"Refusing to overwrite non-empty output directory: {output_dir}")
     output_dir.mkdir(parents=True, exist_ok=True)
     processed_dir.mkdir(parents=True, exist_ok=True)
 
     fields, conditions, sources = load_source_data(Path(config.source_root), config.max_samples)
-    train_mask, test_mask = make_spatial_masks(fields, config.train_ratio, config.seed)
+    train_mask, validation_mask, test_mask = make_spatial_masks(
+        fields,
+        config.train_ratio,
+        config.validation_ratio,
+        config.seed,
+    )
     conditions_norm, _, cond_stats = normalize_conditions(conditions, conditions)
     sample_indices = np.arange(fields.shape[0], dtype=np.int64)
     physical_config = PhysicalConfig()
@@ -1412,6 +1553,7 @@ def main() -> None:
     np.save(processed_dir / "conditions.npy", conditions)
     np.save(processed_dir / "source_ids.npy", sources)
     np.save(processed_dir / "train_point_mask.npy", train_mask)
+    np.save(processed_dir / "validation_point_mask.npy", validation_mask)
     np.save(processed_dir / "test_point_mask.npy", test_mask)
     (processed_dir / "dataset_summary.json").write_text(
         json.dumps(
@@ -1420,8 +1562,11 @@ def main() -> None:
                 "source_models": SOURCE_MODELS,
                 "sample_count": int(fields.shape[0]),
                 "train_point_count": int(train_mask.sum()),
+                "validation_point_count": int(validation_mask.sum()),
                 "test_point_count": int(test_mask.sum()),
                 "train_point_ratio": float(train_mask.mean()),
+                "validation_point_ratio": float(validation_mask.mean()),
+                "test_point_ratio": float(test_mask.mean()),
                 "field_shape": list(fields.shape[1:]),
                 "sample_latent": {
                     "type": "learnable_embedding",
@@ -1430,7 +1575,11 @@ def main() -> None:
                 "condition_stats": cond_stats,
                 "physical_condition_summary": summarize_physical_conditions(conditions),
                 "expected_mean_fit": expected_fit,
-                "evaluation_protocol": "spatial holdout prediction inside each GSTools permeability field",
+                "evaluation_protocol": (
+                    "three-way spatial split inside each GSTools permeability field; "
+                    "train for gradient updates, validation for checkpoint selection, "
+                    "test for final evaluation only"
+                ),
             },
             indent=2,
         ),
@@ -1443,6 +1592,7 @@ def main() -> None:
         conditions,
         expected_mean,
         train_mask,
+        validation_mask,
         test_mask,
     )
     generator = torch.Generator().manual_seed(config.seed)
@@ -1452,11 +1602,18 @@ def main() -> None:
     grid_size = int(fields.shape[-1])
     coords = make_coordinate_grid(grid_size, device)
     input_dim = 2 + conditions_norm.shape[1] + config.latent_dim
-    methods = ABLATION_METHODS if config.run_ablations else CORE_METHODS
+    if config.run_ablations:
+        methods = ABLATION_METHODS
+    elif config.paper_ablations:
+        methods = PAPER_METHODS
+    else:
+        methods = CORE_METHODS
 
     histories: dict[str, dict[str, Any]] = {}
-    predictions: dict[str, np.ndarray] = {}
-    metrics_rows: list[dict[str, float | str]] = []
+    raw_predictions: dict[str, np.ndarray] = {}
+    corrected_predictions: dict[str, np.ndarray] = {}
+    raw_metrics_rows: list[dict[str, float | str]] = []
+    corrected_metrics_rows: list[dict[str, float | str]] = []
     training_times: dict[str, float] = {}
 
     for method in methods:
@@ -1469,7 +1626,7 @@ def main() -> None:
         training_times[method.key] = time.perf_counter() - start_time
         histories[method.key] = train_result["history"]
         raw_prediction = predict_fields(model, conditions_norm, sample_indices, grid_size, device)
-        prediction = apply_observed_residual_correction(
+        corrected_prediction = apply_observed_residual_correction(
             fields,
             train_mask,
             raw_prediction,
@@ -1477,36 +1634,79 @@ def main() -> None:
             power=config.residual_correction_power,
             strength=config.residual_correction_strength,
         )
-        predictions[method.key] = prediction
+        raw_predictions[method.key] = raw_prediction
+        corrected_predictions[method.key] = corrected_prediction
         display_name = method.label
-        metrics = compute_metrics(
+        raw_metrics = compute_metrics(
             display_name,
             fields,
-            prediction,
+            raw_prediction,
             conditions,
             expected_mean,
             physical_config,
             test_mask,
+            darcy_iterations=config.darcy_iterations,
         )
-        metrics_rows.append(metrics)
+        corrected_metrics = compute_metrics(
+            display_name,
+            fields,
+            corrected_prediction,
+            conditions,
+            expected_mean,
+            physical_config,
+            test_mask,
+            darcy_iterations=config.darcy_iterations,
+        )
+        raw_metrics_rows.append(raw_metrics)
+        corrected_metrics_rows.append(corrected_metrics)
         save_run_artifacts(
             output_dir / "runs" / method.key,
             model,
-            prediction,
+            raw_prediction,
+            corrected_prediction,
             fields,
+            test_mask,
             histories[method.key],
-            metrics,
+            raw_metrics,
+            corrected_metrics,
             config,
         )
 
-    save_csv(metrics_rows, output_dir / "metrics_summary.csv")
-    (output_dir / "metrics_summary.json").write_text(json.dumps(metrics_rows, indent=2), encoding="utf-8")
+    save_csv(raw_metrics_rows, output_dir / "metrics_summary.csv")
+    save_csv(raw_metrics_rows, output_dir / "metrics_summary_raw.csv")
+    save_csv(corrected_metrics_rows, output_dir / "metrics_summary_corrected.csv")
+    (output_dir / "metrics_summary.json").write_text(json.dumps(raw_metrics_rows, indent=2), encoding="utf-8")
+    (output_dir / "metrics_summary_raw.json").write_text(json.dumps(raw_metrics_rows, indent=2), encoding="utf-8")
+    (output_dir / "metrics_summary_corrected.json").write_text(
+        json.dumps(corrected_metrics_rows, indent=2),
+        encoding="utf-8",
+    )
+    (output_dir / "experiment_manifest.json").write_text(
+        json.dumps(
+            {
+                "config": asdict(config),
+                "metric_primary": "raw network output on independent test mask",
+                "metric_secondary": "IDW-corrected output using training-point residuals only",
+                "checkpoint_selection_mask": "validation_mask",
+                "final_evaluation_mask": "test_mask",
+                "methods": [asdict(method) for method in methods],
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
     plot_loss(histories, output_dir / "loss_curve_same_epoch.png")
-    plot_metric_bars(metrics_rows, output_dir / "quality_physics_metrics_bars.png")
-    compare_key = best_prediction_key_from_metrics(metrics_rows) or comparison_method_key(predictions)
+    plot_metric_bars(raw_metrics_rows, output_dir / "quality_physics_metrics_bars.png")
+    compare_key = best_prediction_key_from_metrics(raw_metrics_rows) or comparison_method_key(raw_predictions)
     residual_key = "rba-qpinn" if "rba-qpinn" in histories else compare_key
-    plot_comparison(fields, train_mask, predictions, output_dir / "prediction_comparison.png", compare_key=compare_key)
-    plot_heldout_point_prediction(fields, test_mask, predictions, metrics_rows, output_dir / "heldout_point_prediction_comparison.png")
+    plot_comparison(fields, train_mask, raw_predictions, output_dir / "prediction_comparison.png", compare_key=compare_key)
+    plot_heldout_point_prediction(
+        fields,
+        test_mask,
+        raw_predictions,
+        raw_metrics_rows,
+        output_dir / "heldout_point_prediction_comparison.png",
+    )
     plot_weight_dynamics(histories[compare_key], output_dir / "quantum_loss_weight_dynamics.png")
     plot_residual_weight_dynamics(histories[residual_key], output_dir / "residual_point_weight_dynamics.png")
     final_weight_map = histories[residual_key].get("final_residual_point_weight_map")
@@ -1518,8 +1718,8 @@ def main() -> None:
             output_dir / "adaptive_sampling_weight_map.png",
         )
 
-    baseline_row = metrics_rows[0]
-    compare_row = metrics_rows[[method.key for method in methods].index(compare_key)]
+    baseline_row = raw_metrics_rows[0]
+    compare_row = raw_metrics_rows[[method.key for method in methods].index(compare_key)]
     improvements = {
         "rmse_reduction_percent": 100.0
         * (float(baseline_row["RMSE"]) - float(compare_row["RMSE"]))
@@ -1538,25 +1738,35 @@ def main() -> None:
         fields,
         train_mask,
         test_mask,
-        predictions,
-        metrics_rows,
+        raw_predictions,
+        raw_metrics_rows,
         improvements,
         output_dir / "baseline_vs_rba_qpinn_comparison_smooth.png",
     )
-    if config.run_ablations:
+    if config.run_ablations or config.paper_ablations:
         save_ablation_outputs(
             output_dir,
             fields,
             train_mask,
             test_mask,
-            predictions,
+            raw_predictions,
             histories,
-            metrics_rows,
+            raw_metrics_rows,
             training_times,
             methods,
         )
     (output_dir / "improvement_summary.json").write_text(json.dumps(improvements, indent=2), encoding="utf-8")
-    print(json.dumps({"metrics": metrics_rows, "improvements": improvements}, indent=2), flush=True)
+    print(
+        json.dumps(
+            {
+                "raw_metrics": raw_metrics_rows,
+                "corrected_metrics": corrected_metrics_rows,
+                "improvements": improvements,
+            },
+            indent=2,
+        ),
+        flush=True,
+    )
 
 
 if __name__ == "__main__":

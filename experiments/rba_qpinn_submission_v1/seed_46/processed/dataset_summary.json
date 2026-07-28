@@ -1,0 +1,78 @@
+{
+  "source_root": "/Users/yuanzhi.liu/Desktop/code/experiment/quantum-attention-net",
+  "source_models": [
+    "gan",
+    "unet",
+    "unet-attention",
+    "unet-quantum",
+    "unet-attention-quantum"
+  ],
+  "sample_count": 128,
+  "train_point_count": 92113,
+  "validation_point_count": 13030,
+  "test_point_count": 25929,
+  "train_point_ratio": 0.7027664184570312,
+  "validation_point_ratio": 0.0994110107421875,
+  "test_point_ratio": 0.19782257080078125,
+  "field_shape": [
+    32,
+    32
+  ],
+  "sample_latent": {
+    "type": "learnable_embedding",
+    "latent_dim": 24
+  },
+  "condition_stats": {
+    "mean": [
+      30.175142288208008,
+      0.012014624662697315,
+      1.0129529237747192,
+      0.2209831029176712,
+      119.10794067382812
+    ],
+    "std": [
+      4.9193291664123535,
+      0.0017477149376645684,
+      0.1450234204530716,
+      0.017758481204509735,
+      18.536802291870117
+    ]
+  },
+  "physical_condition_summary": {
+    "pressure_mpa": {
+      "mean": 30.175140380859375,
+      "std": 4.919328212738037,
+      "min": 19.759416580200195,
+      "max": 41.833457946777344
+    },
+    "pressure_gradient_mpa_per_m": {
+      "mean": 0.01201462373137474,
+      "std": 0.0017477049259468913,
+      "min": 0.00645044818520546,
+      "max": 0.016581043601036072
+    },
+    "viscosity_cp": {
+      "mean": 1.0129529237747192,
+      "std": 0.1450233906507492,
+      "min": 0.679157555103302,
+      "max": 1.3855559825897217
+    },
+    "porosity": {
+      "mean": 0.22098305821418762,
+      "std": 0.017758473753929138,
+      "min": 0.17273710668087006,
+      "max": 0.2689359784126282
+    },
+    "flow_rate_m3_day": {
+      "mean": 119.10794067382812,
+      "std": 18.53680419921875,
+      "min": 69.08055114746094,
+      "max": 167.99725341796875
+    }
+  },
+  "expected_mean_fit": {
+    "slope": -0.0910008255139856,
+    "intercept": 0.00017173057195112566
+  },
+  "evaluation_protocol": "three-way spatial split inside each GSTools permeability field; train for gradient updates, validation for checkpoint selection, test for final evaluation only"
+}

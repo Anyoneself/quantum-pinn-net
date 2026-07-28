@@ -1,0 +1,417 @@
+{
+  "run_status": "slides_recorded",
+  "deck_name": "defense_ppt_rba_qpinn",
+  "selected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "approved high-density Slide 5 prompt in current Codex conversation",
+    "size": "16:9 landscape, generated image saved by Codex image_gen default path then copied to origin_image/slide_05.png",
+    "quality": "built-in default",
+    "model_config": "built-in image generation default",
+    "approved_sample_path": "/Users/yuanzhi.liu/Desktop/quantum-pinn-net/defense_ppt_rba_qpinn/origin_image/slide_05.png",
+    "input_context_preparation": "approved sample image viewed with view_image; local required figures must be inspected with view_image before built-in generation",
+    "handoff_rule": "Use the same built-in image_gen backend and generate mode; return a blocker if unavailable. Match the approved sample's high-density academic defense style."
+  },
+  "max_concurrent_slides": 6,
+  "slides": [
+    {
+      "slide_id": "slide_01",
+      "number": 1,
+      "title": "论文背景：为什么要做 RBA-PINN",
+      "job": "prompts/slide_01.json",
+      "out": "origin_image/slide_01.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_01",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_01.json",
+        "prompt_sha256": "0e7bf7dadd82fc5f277a58c8e6ded8853824833d362dd60af3a3a040dea24abe",
+        "dispatched_at": "2026-07-08T05:21:19Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_01",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0b03d35381e77cd5016a4dd5716fdc8191a2111a15f7c3f656.png",
+        "selected_source_sha256": "14cabd8451a697b4f898c36e229b42f06f5a0cfc2d606084a3871a2fad44ef00",
+        "final_image": "origin_image/slide_01.png",
+        "final_image_sha256": "14cabd8451a697b4f898c36e229b42f06f5a0cfc2d606084a3871a2fad44ef00",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 1.",
+        "recorded_at": "2026-07-08T05:22:42Z"
+      }
+    },
+    {
+      "slide_id": "slide_02",
+      "number": 2,
+      "title": "传统权重调整方法与论文提出的方法",
+      "job": "prompts/slide_02.json",
+      "out": "origin_image/slide_02.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_02",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_02.json",
+        "prompt_sha256": "98dc34a5b9b47b4ffb5dd705fc5eeae7ff35cac7d1833c6efe46f672e0a0c994",
+        "dispatched_at": "2026-07-08T05:21:19Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_02",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0b03d35381e77cd5016a4dd5ed78908191af63872deddad771.png",
+        "selected_source_sha256": "ae053b5ee06f9f79da67a37cda29d7ea10ea060684f1d964b48eb6fe5089c038",
+        "final_image": "origin_image/slide_02.png",
+        "final_image_sha256": "ae053b5ee06f9f79da67a37cda29d7ea10ea060684f1d964b48eb6fe5089c038",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 2.",
+        "recorded_at": "2026-07-08T05:22:42Z"
+      }
+    },
+    {
+      "slide_id": "slide_03",
+      "number": 3,
+      "title": "自适应降权的方法原理",
+      "job": "prompts/slide_03.json",
+      "out": "origin_image/slide_03.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_03",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_03.json",
+        "prompt_sha256": "55a3358f43c24d73b95166bd2318f72820a79e3f72d36a9d73bb8d41bdc06237",
+        "dispatched_at": "2026-07-08T05:21:19Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_03",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0b03d35381e77cd5016a4dd66d83008191acfc3b8ad7a0afa1.png",
+        "selected_source_sha256": "f2106683ac44b1e872b3691bb6a77241da81e6358a7225095f832cdab9df5d81",
+        "final_image": "origin_image/slide_03.png",
+        "final_image_sha256": "f2106683ac44b1e872b3691bb6a77241da81e6358a7225095f832cdab9df5d81",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 3.",
+        "recorded_at": "2026-07-08T05:22:42Z"
+      }
+    },
+    {
+      "slide_id": "slide_04",
+      "number": 4,
+      "title": "论文如何应用自适应降权方法",
+      "job": "prompts/slide_04.json",
+      "out": "origin_image/slide_04.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_04",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_04.json",
+        "prompt_sha256": "1e83ddb0aa067de52f023f12fa44acfadc4ba772f7be98d9a05c5a8c017cf03d",
+        "dispatched_at": "2026-07-08T05:21:19Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_04",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0b03d35381e77cd5016a4dd6f85ca48191ba4fc4ae16d94ba9.png",
+        "selected_source_sha256": "d69c76ed5f400c39b888315237829d533dff12fe048cbaaf136120aaf02d0728",
+        "final_image": "origin_image/slide_04.png",
+        "final_image_sha256": "d69c76ed5f400c39b888315237829d533dff12fe048cbaaf136120aaf02d0728",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 4.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_05",
+      "number": 5,
+      "title": "DBSCAN 原理介绍",
+      "job": "prompts/slide_05.json",
+      "out": "origin_image/slide_05.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_05",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_05.json",
+        "prompt_sha256": "92fb885cfcb928315c63d5af16fbd94da73f85342e405a5c8cb43e4dbe80a87c",
+        "dispatched_at": "2026-07-08T05:21:19Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_05",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0b03d35381e77cd5016a4dd7862e4c8191875f235e75365676.png",
+        "selected_source_sha256": "ce2deca4d178f6c9cd101f90fa41968928b4176d8475ca6df955d32bd0eee52c",
+        "final_image": "origin_image/slide_05.png",
+        "final_image_sha256": "ce2deca4d178f6c9cd101f90fa41968928b4176d8475ca6df955d32bd0eee52c",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 5.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_06",
+      "number": 6,
+      "title": "论文如何应用 DBSCAN 进行采样",
+      "job": "prompts/slide_06.json",
+      "out": "origin_image/slide_06.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_06",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_06.json",
+        "prompt_sha256": "cf6ff1a79051dc7027a88d32000dfb6bc75e709f19fa04b39eb1397316376010",
+        "dispatched_at": "2026-07-08T05:21:19Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_06",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0b03d35381e77cd5016a4dd8108b308191b9274bbd718f7cf6.png",
+        "selected_source_sha256": "f3f582c9e3a15018038debafa574c34bd99e773d51b7dbadc69d64e68bf57193",
+        "final_image": "origin_image/slide_06.png",
+        "final_image_sha256": "f3f582c9e3a15018038debafa574c34bd99e773d51b7dbadc69d64e68bf57193",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 6.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_07",
+      "number": 7,
+      "title": "残差阈值原理介绍",
+      "job": "prompts/slide_07.json",
+      "out": "origin_image/slide_07.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_07",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_07.json",
+        "prompt_sha256": "7cc8382be6acc84c1c22a059c8e129f46d5b91c2c6e9cdca831888ed0f29cd77",
+        "dispatched_at": "2026-07-08T05:21:20Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_07",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0c811efca2cdd194016a4dd90b3920819190c3025f2620e45e.png",
+        "selected_source_sha256": "05da9c649a7f659602535fc2d1c8190da2a3936608f3c432b38bb889509993d3",
+        "final_image": "origin_image/slide_07.png",
+        "final_image_sha256": "05da9c649a7f659602535fc2d1c8190da2a3936608f3c432b38bb889509993d3",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 7.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_08",
+      "number": 8,
+      "title": "论文残差阈值介绍",
+      "job": "prompts/slide_08.json",
+      "out": "origin_image/slide_08.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_08",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_08.json",
+        "prompt_sha256": "668dfb5c117d29171e0aca9437229f58469fc8c64427e39fa1effa344c119a52",
+        "dispatched_at": "2026-07-08T05:21:20Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_08",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0c811efca2cdd194016a4dd9ac7b7c8191ae456933e431c0d7.png",
+        "selected_source_sha256": "2443f442d1ce68d2c0ebedc528d38b432c512c1c17ff7dee92aaad7f1fe86122",
+        "final_image": "origin_image/slide_08.png",
+        "final_image_sha256": "2443f442d1ce68d2c0ebedc528d38b432c512c1c17ff7dee92aaad7f1fe86122",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 8.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_09",
+      "number": 9,
+      "title": "论文网络架构图一：前向网络与加权损失",
+      "job": "prompts/slide_09.json",
+      "out": "origin_image/slide_09.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_09",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_09.json",
+        "prompt_sha256": "e9ac22abcfba61151965cdcb66c5fe695c7ba70c5250fd715f67379ec7dd8ae3",
+        "dispatched_at": "2026-07-08T05:21:20Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_09",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0c811efca2cdd194016a4dda491f6c819199f8efd2ea762e13.png",
+        "selected_source_sha256": "ad0c655122dded81f9b7c8b64d820b011d51bb998419a3ef6553ab562bfcfa9c",
+        "final_image": "origin_image/slide_09.png",
+        "final_image_sha256": "ad0c655122dded81f9b7c8b64d820b011d51bb998419a3ef6553ab562bfcfa9c",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 9.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_10",
+      "number": 10,
+      "title": "论文网络架构图二：训练更新闭环",
+      "job": "prompts/slide_10.json",
+      "out": "origin_image/slide_10.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_10",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_10.json",
+        "prompt_sha256": "8ae6e050b1abdd66b43b7f9dcbfaa263d8fb6e5780564f5cf35abad2a872268e",
+        "dispatched_at": "2026-07-08T05:21:20Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_10",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0c811efca2cdd194016a4ddada8208819195ddf4afe18c9160.png",
+        "selected_source_sha256": "1c5d94ad83a413261b84bf9b080de77da35227660962925b9c404a648d746926",
+        "final_image": "origin_image/slide_10.png",
+        "final_image_sha256": "1c5d94ad83a413261b84bf9b080de77da35227660962925b9c404a648d746926",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 10.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_11",
+      "number": 11,
+      "title": "代码工作：解决的问题与创新点",
+      "job": "prompts/slide_11.json",
+      "out": "origin_image/slide_11.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_11",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_11.json",
+        "prompt_sha256": "e922522ac09fda5ae7f0efcb6557dd2240ff11fa9716e74cd9b4f8748a394cf0",
+        "dispatched_at": "2026-07-08T05:21:20Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_11",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_0c811efca2cdd194016a4ddb76bb248191ae653e746b8d2de6.png",
+        "selected_source_sha256": "aee91166a9731982090c7237ac05d0664b1a0193fd0f83d391dbbf80459254a7",
+        "final_image": "origin_image/slide_11.png",
+        "final_image_sha256": "aee91166a9731982090c7237ac05d0664b1a0193fd0f83d391dbbf80459254a7",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 11.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    },
+    {
+      "slide_id": "slide_12",
+      "number": 12,
+      "title": "实验结果图：真实指标与相对改善",
+      "job": "prompts/slide_12.json",
+      "out": "origin_image/slide_12.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "parent-narrative-slide_12",
+        "agent_nickname": "ParentNarrative",
+        "prompt": "prompts/slide_12.json",
+        "prompt_sha256": "d5fa0245e5cfc96d628c531adc3104148202c56a408ab401ca407c7c2d9bcd7d",
+        "dispatched_at": "2026-07-08T05:21:20Z"
+      },
+      "result": {
+        "agent_id": "parent-narrative-slide_12",
+        "backend_used": "built-in image tool",
+        "selected_source": "/Users/yuanzhi.liu/.codex/generated_images/2b0ef0ab-4bb2-5d4b-89e3-eab6dd1869ec/ig_022f8e1102fce3a6016a4ddc814d148191b0f2b7129e3a506e.png",
+        "selected_source_sha256": "93690db1eae9927448355bdfa7709af5e0ca13f43181585931257b29f5133fc5",
+        "final_image": "origin_image/slide_12.png",
+        "final_image_sha256": "93690db1eae9927448355bdfa7709af5e0ca13f43181585931257b29f5133fc5",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Regenerated according to user 12-slide narrative; slide 12.",
+        "recorded_at": "2026-07-08T05:22:43Z"
+      }
+    }
+  ],
+  "updated_at": "2026-07-08T05:22:43Z"
+}

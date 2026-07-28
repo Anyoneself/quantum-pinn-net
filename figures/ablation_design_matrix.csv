@@ -1,0 +1,12 @@
+Method,Quantum,Loss,MC,RBA
+Baseline PINN,0,0,0,0
+Classical + Loss Balancer,0,1,0,0
+Classical + RBA,0,0,0,1
+Classical + Loss + RBA,0,1,0,1
+Quantum Feature PINN,1,0,0,0
+Quantum + MC,1,0,1,0
+Quantum + RBA,1,0,0,1
+Quantum + Loss Balancer,1,1,0,0
+Quantum + Loss + MC,1,1,1,0
+Quantum + Loss + RBA,1,1,0,1
+Full RBA-QPINN,1,1,1,1

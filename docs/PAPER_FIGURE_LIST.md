@@ -23,22 +23,25 @@
 7. `figures/ablation_study_summary.png`
    - Main ablation summary for the full module path.
 
-8. `figures/ablation_module_contribution.png`
+8. `figures/ablation_design_matrix.png`
+   - Ablation design matrix showing which modules are enabled in each variant.
+
+9. `figures/ablation_module_contribution.png`
    - Relative contribution of each module over the baseline.
 
-9. `figures/ablation_metric_heatmap.png`
+10. `figures/ablation_metric_heatmap.png`
    - Metric heatmap for all ablation variants.
 
-10. `figures/error_boxplot.png`
+11. `figures/error_boxplot.png`
    - Held-out error distribution across methods.
 
-11. `figures/parity_scatter_best_vs_baseline.png`
+12. `figures/parity_scatter_best_vs_baseline.png`
    - Prediction-target parity plot for baseline and best improved model.
 
-12. `figures/metric_ranking_bars.png`
+13. `figures/metric_ranking_bars.png`
    - Metric-wise ranking of all compared methods.
 
-13. `figures/residual_sampling_heatmap.png`
+14. `figures/residual_sampling_heatmap.png`
     - Residual-adaptive sampling/weight distribution.
 
 ## Supplementary figures

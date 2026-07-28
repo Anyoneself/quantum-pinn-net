@@ -1,0 +1,1249 @@
+
+
+===== PAGE 1 =====
+广西师范大学学报(自然科学版)
+Journal of Guangxi Normal University(Natural Science Edition)
+ISSN 1001-6600,CN 45-1067/N
+《广西师范大学学报(自然科学版)》网络首发论文
+题目： 基于残差自适应调整PINN方法求解偏微分方程
+作者： 方荣，琚然，杨凤莲
+DOI： 10.16088/j.issn.1001-6600.2026040803
+收稿日期： 2026-04-08
+网络首发日期： 2026-06-29
+引用格式： 方荣，琚然，杨凤莲．基于残差自适应调整PINN方法求解偏微分方程[J/OL]．广
+西师范大学学报(自然科学版).
+https://doi.org/10.16088/j.issn.1001-6600.2026040803
+网络首发：在编辑部工作流程中，稿件从录用到出版要经历录用定稿、排版定稿、整期汇编定稿等阶
+段。录用定稿指内容已经确定，且通过同行评议、主编终审同意刊用的稿件。排版定稿指录用定稿按照期
+刊特定版式（包括网络呈现版式）排版后的稿件，可暂不确定出版年、卷、期和页码。整期汇编定稿指出
+版年、卷、期、页码均已确定的印刷或数字出版的整期汇编稿件。录用定稿网络首发稿件内容必须符合《出
+版管理条例》和《期刊出版管理规定》的有关规定；学术研究成果具有创新性、科学性和先进性，符合编
+辑部对刊文的录用要求，不存在学术不端行为及其他侵权行为；稿件内容应基本符合国家有关书刊编辑、
+出版的技术标准，正确使用和统一规范语言文字、符号、数字、外文字母、法定计量单位及地图标注等。
+为确保录用定稿网络首发的严肃性，录用定稿一经发布，不得修改论文题目、作者、机构名称和学术内容，
+只可基于编辑规范进行少量文字的修改。
+出版确认：纸质期刊编辑部通过与《中国学术期刊（光盘版）》电子杂志社有限公司签约，在《中国
+学术期刊（网络版）》出版传播平台上创办与纸质期刊内容一致的网络版，以单篇或整期出版形式，在印刷
+出版之前刊发论文的录用定稿、排版定稿、整期汇编定稿。因为《中国学术期刊（网络版）》是国家新闻出
+版广电总局批准的网络连续型出版物（ISSN 2096-4188，CN 11-6037/Z），所以签约期刊的网络版上网络首
+发论文视为正式出版。
+
+
+===== PAGE 2 =====
+网络首发时间：2026-06-29 16:19:45 网络首发地址：https://link.cnki.net/urlid/45.1067.N.20260629.0919.001
+广西师范大学学报（自然科学版）
+DOI:10.16088/j.issn.1001-6600.2026040803
+基于残差自适应调整 PINN 方法求解偏微分方程
+方 荣，琚 然，杨凤莲*
+（河海大学 数学学院，江苏 南京 210000）
+摘要：物理信息神经网络（PINN）是求解偏微分方程的重要工具。针对 PINN 求解非线性强耦合方程时收敛速度慢
+及高梯度区域拟合精度不足的问题，本文提出一种基于残差信息自适应的物理信息神经网络（RBA-PINN）。该方法
+通过优化样本分布并动态调整损失函数权重从而提升模型性能。一方面引入DBSCAN密度聚类算法，从高残差候选
+区域中提取高密度点，并结合自适应阈值搜索策略实现配置点的动态重采样；另一方面，引入自适应注意力掩码机
+制，同步更新梯度调节各配置点的损失权重，使模型聚焦于难训练点。此外，根据神经正切核（（ NTK）理论，并通过
+实验证明该算法能有效重塑NTK特征谱分布，提高尾部特征值，并优化损失函数Hessian矩阵的条件数，保障模型
+收敛的稳健性。实验结果表明，在求解Burgers、Allen-Cahn和Navier-Stokes方程时RBA-PINN的损失收敛性优于传
+统PINN、SA-PINN及RAR-D等方法，其𝐿 相对误差较对比方法降低约1个数量级。
+2
+关键词：物理信息神经网络；自适应采样；残差信息；神经正切核；DBSCAN密度聚类
+中图分类号：O24 文献标志码：A 文章编号：1001-6600 (202x)xx -xxxx-xx
+近年来，以深度学习为代表的人工智能技术在计算机视觉[1]、自然语言处理[2]等领域取得突破性
+进展，并逐步扩展到其他领域。Raissi等[3]提出一种新的求解偏微分方程（partial differential equation,
+PDE）的深度学习技术，即物理信息神经网络（physics-informed neural network, PINN）。PINN通过
+将控制方程、初边值条件等嵌入神经网络损失函数，实现物理规律与数据驱动的有机融合。因其无
+网格特性，PINN在流体力学[4-5]、机械工程[6]、地下水动力学[7]等多个领域取得广泛应用，为数值计
+算和深度学习的融合开辟了新方向。
+针对PINN在处理非线性强耦合方程时常面临收敛速度慢、求解精度低等问题[8]，部分学者主要
+从损失权重优化与配置点自适应采样2个角度展开改进。在损失权重优化方面，McClenny等[9]提出
+SA-PINN，通过梯度上升算法动态调整权重，使神经网络精准拟合方程中的刚性区域; Zhou 等[10]在
+理论上对 SA-PINN 进行敏感度分析。然而 SA-PINN 容易将高梯度和高噪声区域内的采样点误判为
+难训练特征点，对其赋予极高权重，导致网络对局部噪声或高梯度区域的部分采样点过拟合，破坏
+整体平滑性。Song等[11]在SA-PINN的基础上提出LA-PINN，该方法通过子网络为不同损失项中的
+残差点赋予权重，并引入多网络对抗训练来优化权重分配策略。在配置点自适应采样方面，Lu等[12]
+提出RAR方法，在每次迭代后均会于残差较大处新增配置点。然而，该策略仅考虑残差幅值，忽略
+了残差点的空间分布特征。Nabian 等[13]在此基础上提出 RAD 方法，将残差信息转化为概率分布，
+并依此分布在数据集上重新采样，从而替换原始训练数据。Wu等[14]则结合RAR[12]和RAD[13]方法，
+提出RAR-D自适应采样方法，通过残差大小构建概率模型，实现配置点的自适应采样。张凌海等[15]
+提出一种自适应残差点算法，通过PDE残差及梯度联合分布构造概率密度函数，在训练中进一步改
+善残差点的分布情况。
+现有采样策略往往仅关注孤立的离散高残差点，易受局部噪声干扰，且逐轮更新点集会显著增
+加计算负担。为解决上述问题，本文提出一种基于残差信息自适应的物理信息神经网络（residual-
+based adaptive PINN, RBA-PINN），不同于传统点对点采样，本文引入DBSCAN[16]密度聚类算法，从
+筛选的高残差离散点集中识别空间聚集特征，并通过自适应阈值搜索策略控制点集规模，在显著提
+高区域关注度的同时降低计算开销。其次，结合自适应注意力掩码机制，使模型在样本空间和损失
+权重空间中聚焦于难训练点，实现样本分布与损失权重的协同优化。最终，相较于原始 PINN 及现
+有改进方法，RBA-PINN的求解精度和收敛效率均得到显著提升。
+1 模型与方法
+1.1 RBA-PINN方法
+考虑初边值问题
+ u(x,t)= f(x,t), xΩ,t(0,T]，
+x,t
+ u(x,t)=g(x,t), xΩ,t(0,T]，
+x,t
+收稿日期：2026-04-08 修回日期：2026-06-09
+基金项目：国家自然科学基金（12271140）
+通信作者: 杨凤莲(1982—),女 ,福建三明人 ,河海大学副教授，博士。E-mail: yangfenglian@hhu.edu.cn
+
+
+===== PAGE 3 =====
+http://xuebao.gxnu.edu.cn
+u ( x , 0 ) = h ( x ) , x  Ω ，
+式中： Ω 为闭包； u ( x , t ) 为待求解； x  Ω 为空间向量变量； t 为时间； 
+x ,t
+和 
+x ,t
+为微分算子。微
+分方程数据由强制函数 f :Ω→R、边界条件函数g:Ω(0,T]→R以及初始条件函数 h : Ω → R 提
+供。RBA-PINN的模型框架如图1所示。
+本文采用以空间变量 x 和时间变量 t 为输入的深度神经网络，以其输出 u ( x , t ; w ) 来逼近需要求
+解的函数 u ( x , t ) ，而 
+x ,t
+( u ( x , t ; w ) ) 与 
+x ,t
+( u ( x , t ; w ) ) 的值可通过反向模式的自动微分快速且准确地
+计算得出。
+受SA-PINN思想启发，RBA-PINN同样引入一个乘法型软注意力掩码，用于对损失项中的可
+训练权重进行自适应调整。与SA-PINN逐点放大所有高残差样本点权重的做法不同，RBA-PINN
+将自适应权重残差点的选取与空间密度聚类算法DBSCAN相结合，使权重的放大能够聚焦于物理
+场中高梯度区域内的样本点，避免在解的特定区域进行硬编码赋权，遵循神经网络自适应理念，损
+失函数中的自适应权重通过梯度上升算法与网络权重同步更新。RBA-PINN采用损失函数
+ ( w , λ
+r
+, λ
+b
+, λ
+0
+) =
+r
+( w , λ
+r
+) +
+b
+( w , λ
+b
+) +
+0
+( w , λ
+0
+) ，
+式中
+r
+( 1r , , Nr r )   λ =  、
+b
+( 1b , , Nb b )   λ =  和
+0
+( 10 , , N0 0 )   λ =  分别为残差点、边界条件点和初始条件
+点的可训练非负自适应权重。损失项具体形式为
+r
+( ,
+r
+) 1
+2
+N
+i
+r
+1
+m ( ir )
+xt
+u ( u ir , t ir ; ) f ( x ir , t ir ) 2    w λ = 
+=
+ w  − ，
+(w,λ )= 1  Nb m ( i) u ( xi,ti;w )−g ( xi,ti)2 ，
+b b 2 b xt  b b  b b
+i=1
+ (w,λ )= 1  N0 m ( i) u ( xi,0;w ) −h ( xi)2 ，
+0 0 2 0 0 0
+i=1
+式中自适应掩码函数m(λ):[0,+]→[0,+]为非负、可微且严格单调递增函数，其作用是将自适应
+权重λ 映射为对不同残差点的加权系数，包括sigmoid型函数、softplus函数和多项式函数等。
+RBA-PINN的一个关键特征是损失函数(w,λ ,λ ,λ )在通常情况下需针对网络权重
+r b 0
+w 进行最小
+化，而针对自适应权重λ 、λ 和λ 则需要进行最大化。对应的梯度下降与上升更新步骤如下：
+r b 0
+wk+1 =wk −  ( wk,λk,λk,λk) ，
+k w r b 0
+λk+1 =λk +r  ( wk,λk,λk,λk) ， （1）
+r r k λ r b 0
+r
+kb 1 kb bk
+b
+( k , kr , kb , k0 )  λ + = λ + 
+λ
+ w λ λ λ
+图 1 RBA-PINN架构
+Fig. 1 Architecture of RBA-PINN
+，
+λk+1 =λk +0  ( wk,λk,λk,λk) ，
+0 0 k λ r b 0
+0
+
+
+===== PAGE 4 =====
+广西师范大学学报（自然科学版）
+式中：
+k
+0   为第 k 步迭代时神经网络权重的学习率；对于 p = r , b , 0 (r , b , 0 分别对应残差、边
+界、初始条件)， pk 0   为自适应权重各自对应的学习率。此外，各自适应权重的梯度表达式分别
+为
+r
+( k , kr , kb , k0 )
+1
+2
+m
+m
+(
+(
+kr
+) k ,1
+r
+) ,N r
+t
+t
+u
+u
+( i i x , t ;
+r r
+( i i x , t ;
+r r
+) k
+) k
+f
+f
+( ) 1 1 x , t
+r r
+( N N x , t r
+r r
+2
+) r 2
+
+
+
+λ
+ w λ λ λ =
+
+
+ 
+
+x
+x
+
+
+
+w
+w
+
+
+−
+−
+
+，
+b
+( k , kr , kb , k0 )
+1
+2
+m
+m
+(
+(
+kb
+) k ,1
+b
+) ,N b
+t
+t
+u
+u
+( i i x , t ;
+b b
+( i i x , t ;
+b b
+) k
+) k
+g
+g
+( ) 1 1 x , t
+b b
+( N N x , t b
+b b
+2
+) b 2
+
+
+
+λ
+ w λ λ λ =
+
+
+ 
+
+x
+x
+
+
+
+w
+w
+
+
+−
+−
+
+，
+0
+( k , kr , kb , k0 )
+1
+2
+m
+m
+(
+(
+k0
+) k ,1
+0
+) ,N 0
+u
+u
+( 1 x , 0 ;
+0
+( i x , 0 ;
+0
+) k
+) k
+h
+h
+( ) 1 1 x , t
+0 0
+( N N x , t 0
+0 0
+2
+) 0 2
+
+
+
+λ
+ w λ λ λ =
+
+
+ w
+
+w
+−
+−
+
+。
+上述式子中假设掩码函数严格单调递增，即 m ( λ )  0 ，得到 
+λ r
+ 、 
+λ b
+、 
+λ 0
+ 0 ，且任一梯度分量
+为零的充要条件是对应的未掩码损失为零，这表明若对应未掩码损失非零，则所对应上式中的权重
+序列 { λ k∣r k = 1 , 2 ,  、 } { λ k∣b k = 1 , 2 , } 、 { λ k∣0 k = 1 , 2 , } 均单调递增。此外，若对应未掩码损失越大，则权
+重梯度 
+λ r
+ 、 
+λ b
+、 
+λ 0
+的幅值也越大。同时，通过为不同损失项设定特定学习率 pk  调度策略，可
+灵活调控权重更新步长。此外，在优化过程中，神经网络权重 w （与自适应权重λ （采用不同学习率调
+度策略。神经网络学习率设定较大以保证收敛速度，而自适应权重的梯度上升学习率
+
+设定较小。
+这种更新机制确保权重调整过程的准静态性，避免极小极大优化中的震荡现象，同时也满足1.3节
+NTK分析中的稳定性假设。该机制通过动态提升高残差项的损失惩罚权重，强制神经网络在迭代过
+程中逐步聚焦于训练难点，从而显著提升模型对高残差区域、边界条件及初始条件的拟合精度与鲁
+棒性。
+1.2 基于残差信息的自适应采样方法
+1.2.1 采样区域生成
+在训练神经网络时，目前主流的配置点采样方法是随机采样[17]和均匀采样[13]，但随机采样易出
+现点簇效应，均匀采样则无法适配解的空间梯度变化特征。本文利用网络训练过程中产生的残差信
+息 r ( x ; w ) 来指导训练配置点的动态更新与替换。
+引入阈值，定义点集
+r r
+ | ( ; )
+r
+,   Ω = x r x w  x  S ，式中 S 是原始的样本点集合，阈值 的取值
+会直接影响点集 Ω
+r
+的构成。 Ω
+r
+中的样本点在空间分布上并非离散分布，而是呈明显空间聚集特征，
+尤其当方程的解存在突变情况，或解的梯度变化较为陡峭时，这种聚集现象会表现得格外明显。同
+时，不同采样区域内的配置点残差分布特征存在差异，配置点数量也各不相同，导致各区域的模型
+优化难度呈现显著差异，样本点的残差信息分布情况存在差异，点的数量也各不相同，这就使得各
+个区域的优化难度有所区别。基于随机梯度下降基本规则，为了让优化过程更具针对性、更高效，
+应在优化难度更高的区域增加采样点数量。所以在生成采样区域时，先对筛选得到的离散点集 Ω
+r
+进
+行聚类处理，将空间上分布较为密集的点归为同一类别，每个类别对应一个候选区域。该聚类过程
+称为基于密度的聚类。本文选用DBSCAN密度聚类算法思想来实现高残差点的空间聚类。
+对于给定的数据集D={x , ,x }，DBSCAN聚类算法依靠距离半径和最小点数s这2个参数
+1 n
+来定义点的密度。针对数据集中的每个点，若以该点为中心、以（为半径划定的邻域内包含至少s
+个其他样本点，则这个点就被定义为核心点。其余不满足核心点条件的点称为非核心点，包括边界
+点和噪声点。需要注意的是，这类聚合而成的类别中，除了核心点，还可能包含一些边界点，这类
+边界点自身不满足核心点的判定条件，但属于其他核心点的邻点范围，因此也会被归入相应类别。
+该聚类方法的大致过程如算法1所示。
+
+
+===== PAGE 5 =====
+http://xuebao.gxnu.edu.cn
+算法 1 自适应采样方法
+Input: Ω
+r
+、、 s
+Output: { R e
+1
+, R e
+2
+, ..., R e
+k
+}
+Step 1 Density-based point classification
+for x  Ω
+r
+:
+Let N (x) be the -neighborhood of x
+
+if ( ) s
+
+N x  , then x become x
+co re
+else if  x
+co re
+ Ω
+r
+such that xN (x ), then
+ core
+x become x
+b o rd er
+else x become x
+n o ise
+end for
+Step 2 Cluster formation via BFS
+set j = 0
+for x
+co re
+:
+j= j+1, create cluster Ω
+r, j
+, and push x to stack
+core
+while stack is not empty:
+pop a core point, and add its -neighborhood to Ω
+r, j
+push any unassigned core points in the neighborhood to stack
+end while
+end for
+Step 3: Geometric filtering
+for i = 1 , 2 ,  , k do:
+GenerateRe =c(Ω )
+i r,i
+Remove points in R e
+i
+that exceed the boundaries of the domain
+end for
+return { R e
+1
+, R e
+2
+, ..., R e
+k
+}
+在上述采样区域的生成流程中，残差阈值 的作用是筛选高残差候选点，仅保留绝对残差损失
+较高的配置点，使后续采样操作可精准聚焦于模型预测偏差较大的物理关键特征区域。距离半径
+与最小点数s共同控制聚类算法的灵敏度，越大、s越小，则聚类越宽松，形成大范围区域，反之
+则聚类更精细，区域划分更零散。
+若配置点数据集 S 是通过网格采样生成的，由于样本分布规则且密度均匀，参数和 s 可固定设
+置，而残差阈值
+r
+（的选需需结合当前神经网络的训练状态动态自适应调整。本文采取自适应阈值机
+制来确定，将的设置转化为对超参数M 的控制，通过迭代搜索找到最优阈值，使最终筛选出的
+r r
+点集 Ω
+r
+的样本数量恰好超过 M ，即 M 的大小决定了候选样本点的数量下限。迭代公式为
+(n
+r
+) A (n )   = ， (2)
+式中：A=max r(x;) 为原始样本集S中的最大绝对残差；为超参数，用于调控搜索精度，越接
+xS
+近1，残差阈值的搜索步长越小，搜索越精细；上标 n 代表迭代搜索的次数， n 持续递增，直至筛选
+出高残差点集Ω （的样本数量满足要求。与直接选取绝对残差最大的前
+r
+M （个点的方式相比，这种自
+适应阈值更新遵循先疏后密逻辑，即初始阶段残差阈值较高，筛选出的高残差点范围较宽，保留区
+域的空间聚集特征，后续逐步缩小阈值，逐步精准锁定局部高残差核心区域，更利于保持候选区域
+的空间完整性。同时，超参数的引入让该机制可适配不同偏微分方程的残差分布特征，具备更强
+的泛化能力。
+1.2.2 采样与训练
+确定采样区域后，目标是在不显著增加计算成本的前提下，引导模型聚焦于高残差分布的关键
+特征区域。训练数据集D由边界点集S 和区域内部点集S 组成。每次迭代从候选区域的凸包c(Ω )
+b r r
+内抽取新样本集S 替换同等数量的旧样本。为避免因反复替换高残差点导致配置点集的空间分布失
+r
+
+
+===== PAGE 6 =====
+广西师范大学学报（自然科学版）
+衡并阻碍网络学习全局特征，本文将内部点集 S
+r
+（划分为固定部分S （与动动部分
+1
+S
+2
+（。通过预设比
+
+控制2部分样本保留与替换的逻辑，公式为
+S i+r 1 = ( S i1 \ P i1 )  ( ( S i2 \ P i2 )  S ri ) = S i+1 1  S i+2 1 ， (3)
+式中 P i1 与 P i2 的样本数量比值为 : (1 )   − 。该分区策略通过调节参数，实现模型对全局物理特征的
+维持与局部高残差难点区域的精准捕获之间的灵活平衡。RBA-PINN的完整训练流程如算法2所示。
+算法2 RBA-PINN
+输入：初始数据集 D 、候选集 S 、自适应参数、最小核心点数 s 、最小点样本数 M 、自
+适应替换比 、循环迭代次数  Ite r 、Adam 优化代次数 M
+1
+、L-BFGS 优化器迭代
+次数 M
+2
+输出：训练完成的 RBA-PINN 模型及偏微分方程的预测解 N N
+θ
+。
+具体步骤：
+1) 构建神经网络NN , 并初始化网络参数θ；
+
+2) 对 i = 1 到 Ite r ，执行以下循环；
+① 使用Adam优化器对网络进行预设次数的训练；
+② 使用L-BFGS优化器精调参数(固定 不动，只用L-BFGS优化网络参数 w )，直
+至模型收敛；
+③ 根据公式(2)生成点集 Ω
+r
+，并通过DBSCAN算法划分候选区域；
+④ 在候选区域的凸包 c ( Ω
+r
+) 内，基于残差分布进行采样，得到样本集 S
+r
+；
+⑤ （按照公式(3)更新内部训练数据集S ；
+r
+结束循环；
+3)
+返回优化后的网络参数θ*。
+为了直观体现DBSCAN聚类方法在复杂残差环境下的采样优势，本文对比3种典型策略在含噪
+声残差场景下采样情况,具体可视化结果如图2所示。
+图 2(a)展示了均匀随机采样结果，可见采样点主要分布在物理场变化平缓的区域，难以有效捕
+捉具有关键物理意义的高梯度特征。图 2(b)则对应逐点加权采样，该方法倾向于将有限的采样资源
+分配给残差绝对值最大的点。从图 2(b)可以看出，在高梯度区域及局部异常噪声点附近，该方法所
+采集的样本点缺乏代表性，忽略了真正连续的物理演化过程。图2(c)展示了DBSCAN聚类采样的结
+果，可见采样点集中分布于具有高空间密度的连续高残差区域。该可视化结果表明，经过DBSCAN
+聚类选取的样本点不仅在数值上具有良好的代表性，而且在物理空间上保持了结构完整性。
+(a) 均匀随机采样 (b) 逐点加权采样 (c) DBSCAN聚类采样
+图（2 不同配置点采样策略的可视化对比
+Fig 2 Visual comparison of different collocation point sampling strategies
+
+
+===== PAGE 7 =====
+http://xuebao.gxnu.edu.cn
+1.3 RBA-PINN神经正切核分析
+本文通过研究 RBA-PINN 的神经正切核（neural tangent kernel，NTK），探究其训练动态特性。
+首先推导出 RBA-PINN 的 NTK 矩阵表达式，随后利用该表达式，在神经网络宽度趋于无穷大的情
+况下，分析自适应权重对模型训练动态过程的调控机制。
+式(1)可改写为：
+k 1
+k
+k
+( k , kr , kb , k0 )
+
+w + − w
+= − 
+w
+ w λ λ λ 。 (4)
+当学习率
+k
+ 趋于0的极限情况下，上述表达式可导出梯度流微分方程
+dw()
+=− (w(),λ (),λ (),λ ()) ，
+d w r b 0
+式中 k
+k
+0   =  为训练时间，是连续变量。可通过研究该微分方程探究梯度下降优化算法收敛特性。
+在学习率趋于0的极限条件下，NTK矩阵可精准刻画宽神经网络的训练动态过程，即网络输出
+u(x,t;w())随训练时间的演化规律，为分析RBA-PINN的收敛机制提供理论基础。
+考虑如下简化的偏微分方程问题：
+
+x ,t
+ u ( x , t )  = f ( x , t ) , x   ，
+u(x,t)=g(x,t), x。
+对时间演化问题，时间t可以认为是变量 x 的分量之一，而边界子集Γ通常包含t=0时刻的初
+始条件。给定残差点  x ri  N
+i= 1
+和边界条件点  x bi  N
+i= 1
+，定义响应向量为
+r
+( )
+x
+u ( x r1 ; ( ) ) , ,
+x
+u ( x rN ; ( ) ) T    u =     w    w   ，
+b
+( ) u ( x b1 ; ( ) ) , , u ( x bN
+b
+; ( ) ) T    u =  w  w  。
+同理，定义数据向量为
+v
+r
+=  f ( x r1 ) , , f ( x rN
+r
+)  T ， v
+b
+=  g ( x b1 ) , , g ( x bN
+b
+)  T 。
+根据上述定义，为区分单个响应向量 u ip ( )  与单个数据向量 v ip ，记u ()= ( up(), ,up () )，
+p 1 Np
+v
+p
+= ( v p1 , , v pN
+p
+) ，式中 p  { r , b } 。
+训练时间时刻的损失函数可以写成(w(),(),())= 1   N q m ( q() ) wq()−vq 2 ，因
+r b 2 j j j
+q=r,b j=1
+此式(4)可写为
+dw =− N q  uq()m ( q() )( uq()−vq) =−JT()Γ () ( u ()−v )，
+d w j j j j q q q q
+q=r,b j=1 q=r,b
+式中：
+q
+( )  J 为向量u ()关于参数w的雅可比矩阵；
+q
+q  { r , b } ;
+q
+( )  Γ 为第时刻第 q 类数据的自适
+应参数对角矩阵，对角线元素为 m ( q1 ( ) ) , , m ( qN
+q
+( ) )      ，维度为 N
+q
+ N
+q
+。因此可以推导出
+du () dw()
+p =J () =J ()JT()Γ () ( u ()−v ) ，式中q{r,b}。
+d p d p q q q q
+定义矩阵
+p q
+( )
+p
+( ) Tq ( ) , q { r , b }    K = J J  。矩阵的维度为N N ，其第(i，j)元素为
+q p
+dui () duj()
+( K ) ()= ui ()T  uj()=  p  q ，
+pq ij w p w q dw dw
+wW
+可知矩阵K ()是对称半正定的，并且对于
+pp
+p 、 q  { r , b } ，有K ()=(K ())T。
+pq qp
+将上述结果整合为微分方程(5)，方程(5)描述了在学习率趋于0的情况下，RBA-PINN输出的
+演化过程为
+du()
+=−K()(u()−v)，
+(5)
+d
+式中：
+
+
+===== PAGE 8 =====
+广西师范大学学报（自然科学版）
+( ) r
+b
+(
+(
+)
+)
+, r
+b
+
+
+
+u =
+ u
+u
+
+v =
+ v
+v
+ K ()Γ () K ()Γ ()
+；K()= rr r rb b  。
+K ()Γ () K ()Γ ()
+br r bb b
+( )  K 是RBA-PINN的神经正切核矩阵。
+根据Jacot等[18]的神经正切核理论，在神经网络隐藏层宽度趋于无穷大且学习率趋于0的近似
+连续时间极限情况下，网络进入惰性训练状态。此时，网络参数相较于初始化状态的变化量极小，
+NTK矩阵 ( )  K 在整个训练过程中变化微小[19]，可近似收敛到一个恒定值，等于其在训练初始时刻
+的取值 K ( 0 ) 。尽管实际应用中RBA-PINN网络是有限宽网络，其NTK矩阵在训练中会发生演化，
+但在网络宽度足够大，整体过参数化的条件下，训练初期的NTK特征谱分布仍对模型的收敛起主
+导作用[20]。
+在特定正则化条件及学习率趋于0的极限条件下，PINN在整个训练过程中NTK矩阵会收敛至一
+个恒定值，即在整个训练过程中，矩阵
+p q
+( )
+p q
+,
+p
+( )
+p
+  K  K Γ  Γ 以及K ()均为定值，且等于它
+bb
+们在训练初始时刻 ( 0 )  = 的各自取值。因此，本文作出如下合理假设：对于宽度很大的RBA-PINN，
+在小学习率条件下，NTK矩阵与自适应权重在训练过程中变化微小。此外，还可以简化近似：对于
+常微分方程系统（5）进行解耦处理：
+du ()
+p −K Γ  ( u ()−v ) ，
+d pp p p
+式中 p 、 q  { r , b } 。
+对 p  { r , b } ，矩阵 K
+p p
+为实对称半正定矩阵，其可以对角化，且特征值均非负。进一步假设 K
+p p
+为正定矩阵，则 K
+p p
+ 可对角化，且所有特征值均为正。由此可以推测，在对神经网络权重进行适当
+初始化后，可令 u
+p
+( 0 )  0 （，将常微分方程（5）的解表示为
+p
+( ) ( e pp p )
+p
+  u = I − − K Γ v （，该式可重写为
+p
+( )
+p
+T e
+p
+  u − v = − Q − M  v ，即 (
+p
+( )
+p
+) e
+p
+  Q u − v = − − M Q v ，式中：p{r,b}；Q是矩阵K Γ 的特征向
+pp p
+量矩阵；M是由K Γ 的特征值
+pp p
+1p , , Np p    构成的对角矩阵。这表明，训练误差 u pi ( ) v pi  − 以 e pi  − 的
+速率衰减。
+对于标准加权损失函数对应的情形，每个损失分量的所有自适应权重均相等，即Γ =I。在此
+p p
+情形下，NTK矩阵的特征值
+p
+ 会被
+p
+ 简单缩放，即对于 i = 1 ,  , N
+p
+，有p =pp。另一方面，自
+i i i
+适应权重对NTK矩阵特征值产生的变换作用是非线性的。
+总体而言，相比于传统加权方法仅对NTK特征值进行简单的整体线性缩放，RBA-PINN方法通
+过逐点自适应掩码m()引入非线性谱变换机制。这种逐点加权策略不仅调整了各损失项的数值量级，
+更重要的是重塑 NTK 矩阵的特征值相对分布结构。通过动态放大对应高频误差分量的微小特征值，
+RBA-PINN有效优化损失函数Hessian矩阵的条件数，从而缓解标准PINN普遍存在的频谱偏置病态
+问题[21]。这种对特征值谱的拉平效应，使网络摆脱对低频物理特征分量的过度拟合，显著加速对难
+以收敛的高频复杂物理特征的学习与拟合过程。
+为了直观证实上述理论分析，本文显式计算NTK矩阵及其在训练过程中的特征谱与条件数演化
+过程，具体实验如图3 所示。在相同初始化随机种子下，取 100 个样本点计算网络对参数的雅可比
+矩阵J，构建正切核矩阵K=JTJ，对该矩阵进行迹归一化K=K/Tr(K)。
+如图3(a)的特征值分布所示，PINN存在严重频谱偏置，尾部特征值衰减极快。然而RBA-PINN
+利用残差掩码动态调整难训练区域内点的权重，显著提高尾部特征值并弥合谱间隙，有效防止最小
+特征值的坍缩。同时，图3(b)记录了矩阵条件数的演化轨迹。由于神经网络根据损失函数拟合数学
+物理方程解的优化参数过程属于高度非凸优化，且NTK核矩阵最小特征值对局部曲率极为敏感，导
+致各方法的条件数均存在震荡行为。经指数动动平均平滑后可观察到，RBA-PINN 始终维持结构更
+低、更稳定的条件数演化轨迹，这从数学上保证网络的所有参数能够以更均匀、更稳健的速率收敛。
+
+
+===== PAGE 9 =====
+http://xuebao.gxnu.edu.cn
+(a) NTK矩阵特征谱分布 (b) NTK矩阵条件数演化
+图（3不同方法下的神经正切核特征谱分布与条件数演化对比
+Fig .3 Comparison of NTK eigenspectrum distribution and condition number evolution under different methods
+2 数值实验
+本章通过数值实验验证 RBA-PINN 在 3 类经典偏微分方程基准测试问题上的求解性能与鲁棒
+性。实验采用的主要性能评价指标为 L
+2
+相对误差，其定义为
+L
+2
+相 对 误 差 =
+N
+i=
+1
+u − ˆu 2 /
+N
+i=
+1
+ˆu 2 ，
+式中： u 为RBA-PINN预测解； ˆu 为精确解。
+关于模型中掩码函数 m ( )  的参数设置以及自适应替换比  的选取，本文采用先定界后精选的
+方法。首先，基于损失项的数量级分布，通过预实验确定掩码函数增益系数的合理取值区间，以保
+证自适应权重对损失梯度的缩放作用处于稳定区间。随后，对自适应替换比 等关键超参数开展局
+部消融实验，确定其最优取值。本文实验基于PyTorch框架，使用Python 3.9.0编写，并在NVIDIA
+GeForce RTX 4060 GPU上运行。
+本文使用的网络为全连接网络，3类方程数值算 的网络结构基本设置如表1所示，采用Adam-
+L-BFGS 两阶段联合优化，先通过 Adam 优化器进行初步训练，再通过 L-BFGS 优化器进行精细调
+参，优化器具体参数设置将在具体算 部分进行说明。
+表1（实验基本设置
+Tab. 1 Configuration for experiments
+方程 输入层 隐藏层 循环迭代次数 隐藏层神经元数 输出层
+Burgers （ x , ）t 8 5 20 u
+Allen-Cahn （x,t） 4 4 128 ( u , v )
+Navier-Stokes （ t , x , y ） 4 5 100 ( P ,  )
+2.1消融实验
+消融实验的目的是通过逐步动除或保留模型中的关键模块，评估各组件对整体性能的贡献。在
+本研究中，RBA-PINN包含2个核心机制，即基于DBSCAN的自适应采样方法与逐点自适应加权策
+略。其中，DBSCAN 自适应采样利用空间密度聚类方法，优先选取位于连续高残差区域的样本点，
+保证采样点在物理空间上具有结构完整性。逐点自适应加权是通过梯度上升算法同步更新损失项中
+各样本点的可训练权重，使模型自动聚焦于难以拟合的区域，而非仅依赖残差绝对值。
+为了展示二者各自的效能及其协同作用，本节设计以下消融设置：第一组为仅使用自适应权重，
+动除DBSCAN采样；第二组为仅使用DBSCAN采样，动除自适应权重机制；第三组为经典的自适
+
+
+===== PAGE 10 =====
+广西师范大学学报（自然科学版）
+应采样方法RAR；第四组为完整RBA-PINN。此外，以PINN作为性能基准，所有对比实验均在相
+同条件下进行，以Allen-Cahn方程为测试用 。
+消融实验结果表明，RBA-PINN 的性能提升来源于自适应采样与自适应权重 2 个模块的协同作
+用。仅使用自适应权重的 L
+2
+误差为 2.05×10⁻²，仅使用 DBSCAN 采样的 L
+2
+误差为 2.03×10⁻¹。RAR
+的误差低于 DBSCAN+PINN，但 2 个机制协同作用后，RBA-PINN 的L 误差明显低于 RAR，说明
+2
+权重自适应在求解方程具有重要贡献，DBSCAN聚类方法则进一步提高求解精度。表2中粗体为最
+优结果。
+表 2 采样方法和自适应权重分析
+Table 2 Analysis of sampling methods and adaptive weight
+方法 损失 L 相对误差
+2
+PINN 8.14×10-3 5.12×10-1
+权重自适应+PINN 5.61×10-4 2.05×10-2
+DBSCAN+PINN 9.22×10-3 2.03×10-1
+RAR 8.34×10-4 6.10×10-2
+RBA-PINN 5.20×10-4 5.10×10-3
+2.2 Burgers方程
+考虑黏性Burgers方程(6)
+u +uu −(0.01/)u =0,x[−1,1],t[0,1]， (6)
+t x xx
+u ( 0 , x ) s in ( x )  = − ，
+u ( t , − 1 ) = u ( t , 1 ) = 0 。
+网络训练采用两阶段优化策略，首先使用Adam优化器进行8 000次迭代，学习率设为0.005，随后
+切换至L-BFGS优化器进行10 000次精细调节，学习率设为0.8。算法的外层循环次数设为 i t e r = 4 ，
+自适应替换比 设为 0 .1  = 。数据集的采样配置为初始条件点数 N
+0
+= 1 0 0 ，边界条件点数 N
+b
+= 2 0 0 ，
+内部配置点数 N
+r
+= 6 0 0 0 。针对自适应加权机制，配置点权重初始化为[0,1]区间内的均匀分布，其
+对应的学习率设定为
+k
+0 .0 0 0 5  = 。掩码函数为m()=130/[1+e−5(x−1)]。
+RBA-PINN求解Burgers方程的实验结果如图4、图5以及表3、表4所示。从表3的对比数据
+可以看出，本文提出的RBA-PINN方法在 L
+2
+相对误差指标上表现出显著优势， L
+2
+相对误差为
+2.4010-4。与传统PINN及gPINN相比， L
+2
+相对误差降低约2个数量级；与SA-PINN和RAR方
+法相比， L
+2
+相对误差降低约1个数量级；即便是与改进后的RAR-D相比， L
+2
+相对误差也仅为其约
+50%。
+图 4(b)展示了预测误差的时空分布与 RBA-PINN 能够准确捕捉解的演化趋势。结合图 5(c)的权
+重分布可视化结果，观察到自适应权重的空间分布与方程解的梯度特征高度匹配，在方程解的梯度
+发生剧烈变化的局部区域，配置点的采样密度更高，且被分配更大的自适应损失权重。这表明RBA-
+PINN 结合了残差大小与残差梯度的双重优势，能够自动识别并强化对高损失、难求解区域的学习，
+从而实现更优的拟合效果。
+图5(a)给出t=0.25、0.50和0.75时刻解的空间切片对比，预测解与解析解的空间分布高度吻
+合，无明显偏差。由于L-BFGS阶段的损失值远小于Adam阶段且下降幅度显著，图5(b)仅展示L-
+BFGS阶段的误差迭代曲线。对比不同配置点数量N 的实验结果可知，在合理范围内增加内部配置
+r
+点数量，能显著提升模型的求解精度与收敛稳定性。当内部配置点 N
+r
+=6 000时，模型在约9 000
+至10 000次迭代区间内收敛至最优L 误差状态，且模型性能趋于稳定。
+2
+
+
+===== PAGE 11 =====
+http://xuebao.gxnu.edu.cn
+最后，实验进一步探究自适应替换比 对RBA-PINN求解精度的影响规律。当 { 0 .0 6 , 0 .0 8 ,  
+0 .1 0 , 0 .1 2 , 0 .1 4 } 时，实验结果表4如所示。实验结果表明，当自适应替换比 =0.10时，模型能够
+取得最小 L
+2
+相对误差，验证了该最优参数取值的合理性与有效性。
+(a) 精确解 (b) 预测解 (c) 预测误差
+图（4 RBA-PINN求解Burgers方程的结果
+Fig. 4 Solution of RBA-PINN solving Burgers
+(a) 各时刻切片
+(b) 误差迭代 (c) 配置点权重
+图（5（RBA-PINN求解Burgers方程详情
+Fig. 5 Details of RBA-PINN solving Burgers
+
+
+===== PAGE 12 =====
+广西师范大学学报（自然科学版）
+表（3 不同方法求解Burgers方程比较
+Tab. 3 Comparison of different methods for solving Burgers equation
+方法 损失 L
+2
+相对误差
+PINN 8.14×10-3 2.28×10-2
+LA-PINN 7.21×10-5 5.82×10-4
+SA-PINN 5.61×10-4 3.15×10-3
+RAR 8.34×10-4 6.10×10-3
+RAR-D 1.21×10-4 6.01×10-4
+gPINN[22] 6.10×10-3 1.18×10-2
+RBA-PINN 2.21×10-5 2.40×10-4
+表 4 不同值RBA-PINN求解Burgers方程比较
+Tab. 4 Comparison of solving Burgers equation by RBA-PINN with different  values
+自适应替换比 损失 L
+2
+相对误差
+0.06 1.88×10-4 8.71×10-4
+0.08 8.96×10-5 5.66×10-4
+0.10 2.21×10-5 2.40×10-4
+0.12 4.68×10-4 1.02×10-3
+0.14 6.98×10-4 3.21×10-3
+2.3 Allen-Cahn方程
+Allen-Cahn 方程是描述两相体系界面演化扩散行为的经典相场模型，在流体力学、材料科学及
+图像处理等领域具有重要理论研究意义与工程应用价值。考虑以下具有周期性边界条件的一维Allen-
+Cahn方程(7)
+u
+t
+2
+x
+u
+2
+f ( u ) , t [ 0 ,1 ] , x [ 1 ,1 ] 
+
+
+=
+
+
++   − ， (7)
+方程的初始条件和边界条件为
+u(0,x)=x2cos(x), x[−1,1]，
+u ( t , x + 1 ) = u ( t , x − 1 ) , t  [ 0 ,1 ] , x  [ − 1 ,1 ] ，
+式中：0为扩散系数； f(u)表示关于 u 的非线性函数。本文设定 1 0 4  = − ， f ( u ) = 5 u − 5 u 3 。
+网络训练采用两阶段优化策略，首先使用Adam优化器，迭代8 000次，学习率设为0.005，随
+后切换至L-BFGS优化器，迭代10 000次，学习率设为0.8，算法的外层循环次数设为 i t e r = 5 ，自
+适应替换比 设定为=0.08（。数据集配置点采样设置为初始条件点数N =100（，边界条件点数
+0
+N =512（，内部残差点配置数量
+b
+N
+r
+= 8 0 0 0 （。针对自适应加权机制，权重（初始化为 [ 0 ,1 ] （均匀分布，
+其学习率设为
+k
+0 .0 0 0 5  = 。掩码函数 m ( )  选取与2.1节Burgers方程实验一致。
+RBA-PINN求解Allen-Cahn方程的实验结果如图6、图7及表5、表6所示。从表5的对比数据
+可以看出，RBA-PINN方法在精度上表现优异，其 L
+2
+相对误差降至5.10×10-3。与传统PINN及gPINN
+相比，精度提升约2个数量级；相较于SA-PINN和RAR方法，提升约1个数量级；即使与改进后
+的RAR-D相比，RBA-PINN依然展现出更优的收敛精度。
+图 6(b)给出RBA-PINN 求解 Allen-Cahn方程的预测解，图7(a)给出 t=0.12、0.25、0.50 和 0.75
+时刻的解切片对比，预测解与解析解高度吻合。如图7(b)所示，当配置点数量N =8 000时，模型在
+r
+约9 000至10 000次迭代区间内收敛至最佳状态。图7(c)展示了配置点权重的空间分布，颜色越亮，
+点越大代表权重越高。可以看出自适应权重的空间分布形态与方程解的梯度变化高度一致，在方程
+解的相界面变化剧烈的高梯度区域，配置点的采样密度更高，且被赋予更大的自适应损失权重，有
+效强化了网络对相界面高频演化特征的捕捉与学习能力。
+
+
+===== PAGE 13 =====
+http://xuebao.gxnu.edu.cn
+最后，本节探究自适应替换比 对求解精度的影响。当 { 0 .0 4 , 0 .0 6 , 0 .0 8 , 0 .1 0 }   的情况，结果
+如表6所示。实验表明，当自适应替换比 0 .0 8  = 时，模型能够取得最小的 L
+2
+相对误差，验证了该
+参数设置的合理性。
+(a)精确解 (b)预测解 (c)预测误差
+图（6 RBA-PINN求解Allen-Cahn方程的结果
+Fig. 6 Solution of RBA-PINN solving Allen-Cahn
+(a) 各时刻切片
+(b) 误差迭代 (c) 配置点权重
+图（7（RBA-PINN求解Allen-Cahn方程详情
+Fig. 7 Details of RBA-PINN solving Allen-Cahn
+
+
+===== PAGE 14 =====
+广西师范大学学报（自然科学版）
+表（5不同方法求解Allen-Cahn方程比较
+Tab. 5 Comparison of different methods for solving Allen-Cahn equation
+方法 损失 L
+2
+相对误差
+PINN 9.81×10-2 5.12×10-1
+SA-PINN 7.61×10-3 2.05×10-2
+LA-PINN 8.20×10-4 7.46×10-3
+RAR 9.43×10-3 6.10×10-2
+RAR-D 1.21×10-3 8.21×10-3
+gPINN 6.10×10-3 9.18×10-2
+RBA-PINN 5.20×10-4 5.10×10-3
+表（6不同值RBA-PINN求解Allen-Cahn方程比较
+Tab. 6 Comparison of solving Allen-Cahn equation by RBA-PINN with different  values
+自适应替换比 损失 L
+2
+相对误差
+0.04 2.18×10-3 7.10×10-2
+0.06 8.96×10-4 1.10×10-2
+0.08 5.20×10-4 5.10×10-3
+0.1 4.68×10-4 9.14×10-3
+0.12 6.98×10-4 3.21×10-2
+2.4 Navier-Stokes方程
+考虑二维非定常Navier-Stokes方程(8)
+u
+x
++ v
+y
+= 0
+，
+u
+t 1
+(
+u u
+x
+v u
+y
+)
+= P
+x 2
+(
+u
+xx
+u
+yy
+)
+  + + − + + ， (8)
+v
+t 1
+(
+u u
+x
+v u
+y
+)
+P
+y 2
+(
+v
+xx
+v
+yy
+)
+  + +
+=
+− + + ，
+式中： u ( t , x , y ) 为速度场的 x 分量； v ( t , x , y ) 为 y 分量； P ( t , x , y ) 为压力；=1；
+1 2
+0 .0 1  = 。以
+二维无压黏性流体绕圆柱流动为典型测试问题，在不同雷诺数( R e u D /  =
+
+)区间内，流场会呈现出
+丰富的非线性动态演化特性。假设自由流速度取 u
+
+= 1 ，圆柱直径 D = 1 ，运动黏度 v = 0 .0 1 ，左边界
+施加均匀来流速度，右边界位于圆柱下游 25 倍直径处并设置零压出流条件，上下边界则在
+[ − 1 5 , 2 5 ]  [ − 8 , 8 ] 的计算域内采用周期性边界条件。
+模型的输出为压力场 P 与流函数 。引入流函数可直接满足不可压缩条件，从而避免直接约束 
+不可压缩条件，有效降低模型的训练难度与计算成本。网络训练采用两阶段优化策略，使用Adam优
+化器，迭代5 000次，学习率设为0.001，随后切换至L-BFGS优化器，迭代5 000次，学习率设为
+0.01，算法的外层循环次数设为 i t e r = 5 ，自适应替换比 设定为 0 .0 5  = 。数据集配置点采样配置为
+边界点数量N =200，上下左右各 50 个，配置点数量N =5 000。针对自适应加权机制，权重初
+b r
+始化为[0,1]均匀分布，其学习率设为 =0.005。掩码函数选取形式为m()=12/[1+e−5(−1)]。
+k
+RBA-PINN求解Navier-Stokes方程的实验结果如图8、图9及表7、表8所示。从表7看出RBA-
+PINN在速度场u(t, x, y)和v(t, x, y)上能够取得较为明显的提升，压力场 p ( t , x , y ) 的求解误差也显
+著优于PINN，误差精度提升近1个数量级。相较于RAR-D也有小幅度提升。PINN及SA-PINN即
+使进行10 000次迭代训练后也无法准确捕捉流场的关键特征，求解误差较大。RBA-PINN仅通过
+5 000 次总迭代即可准确捕捉绕圆柱流场的速度场与压力场特征，取得更优的求解精度与收敛效率，
+充分体现了RBA-PINN在求解复杂非线性流体力学方程时的显著优势。
+
+
+===== PAGE 15 =====
+http://xuebao.gxnu.edu.cn
+从图9(d)看出配置点自适应损失权重主要集中在 x  [1 , 3 、] y  [ − 1 , − 0 .5 ] 以及 x  [1 , 3 ] 、 y  [ 0 , 0 .5 ]
+区域，而u、 v 、 P 恰好均在此区域数值变化剧烈，流场梯度较大，这表明RBA-PINN能够自动聚
+焦于流场梯度较大的求解困难区域。结合图 8 的误差分布可见，压力场 P 的压力场的最大预测误差
+主要集中在圆柱周围的流场急剧变化边缘区域，表明模型对压力场的高频局部特征捕捉能力仍有进
+一步提升空间。而对于速度场 u 和 v ，RBA-PINN 不仅准确捕捉到强剪切流动特征，在边界层等临
+界区域也实现高精度预测，充分验证了RBA-PINN方法在处理流体力学中高梯度、强非线性间断问
+题上的显著优势。
+(a)P精确解 (b)P预测解 (c) P 预测误差
+(d) u 精确解 (e) u 预测解 (f)u预测误差
+(g) v 精确解 (h) v 预测解 (i)v 预测误差
+图（8（RBA-PINN求解Navier-Stokes方程的结果
+Fig. 8 Solution of RBA-PINN solving Navier-Stokes
+(a)u误差迭代 (b)v 误差迭代
+
+
+===== PAGE 16 =====
+广西师范大学学报（自然科学版）
+(c) P 误差迭代 (d) 配置点权重
+图 9 RBA-PINN求解Navier-Stokes方程详情
+Fig. 9 Details of RBA-PINN solving Navier-Stokes
+表（7（不同方法求解Navier-Stokes方程比较
+Tab. 7 Comparison of different methods for solving Navier-Stokes equation
+方法 e
+P
+PINN 4.25×10-1 9.33×10-1 5.30×10-1
+SA-PINN 8.36×10-2 1.24×10-1 2.25×10-1
+RAR-D 3.36×10-2 1.90×10-2 9.23×10-2
+RBA-PINN 1.20×10-2 9.26×10-3 6.24×10-2
+表 8（不同 值RBA-PINN求解Navier-Stokes方程比较
+Tab. 8 Comparison of solving Navier-Stokes equation by RBA-PINN with different values
+自适应替换比 e
+u
+e
+P
+0.02 2.28×10-2 3.95×10-2 1.05×10-1
+0.04 1.10×10-2 1.95×10-2 8.26×10-2
+0.05 8.20×10-3 9.26×10-3 6.24×10-2
+0.06 9.80×10-3 9.94×10-3 7.80×10-2
+0.08 1.48×10-2 2.24×10-2 9.92×10-2
+2.5 求解效率对比实验
+以求解Allen-Cahn方程为 ，验证RBA-PINN的求解效率。使用RBA-PINN、PINN、
+SA-PINN、RAR-D和LA-PINN这5个模型分别求解方程，以 L
+2
+误差达到10-2作为收敛指标，分别
+对不同模型达到10-2的 L
+2
+误差需要的训练时间进行对比，实验结果如表9所示。RBA-PINN的总训
+练时间较SA-PINN增加10%，这一额外开销主要来源于DBSCAN密度聚类过程的耗时。与同样结
+合残差注意力机制的LA-PINN相比，RBA-PINN在精度相当的情况下，训练时间缩短，表示
+DBSCAN聚类采样策略的计算效率优势。
+表（9 不同模型方法达到10-2的L 误差需要的训练时间
+2
+Tab 9 Training time required for different model methods to achieve an L
+2
+-error of 10-2
+方法 迭代次数 时间/ min L
+2
+相对误差
+PINN 20 000 25.17 5.23×10-1
+SA-PINN 16 000 44.29 2.05×10-2
+RAR-D 16 500 42.33 1.00×10-2
+LA-PINN 12 000 52.21 1.00×10-2
+RBA-PINN 12 500 49.77 1.01×10-2
+
+
+===== PAGE 17 =====
+http://xuebao.gxnu.edu.cn
+3 结束语
+针对物理信息神经网络（PINN）在求解偏微分方程时存在收敛速度慢、频谱偏置引发的高梯度
+区域拟合精度不足等问题，本文提出一种残差信息自适应物理信息神经网络（RBA-PINN）。该方法
+构建一种样本分布优化与损失权重动态调整协同驱动学习策略，采用DBSCAN密度聚类与自适应阈
+值搜索相结合的方法，实现对残差较高且物理特征显著区域的有效识别与采样点动态加密；同时，
+引入基于梯度同步更新的自适应注意力掩码机制，通过动态分配配置点权重，引导网络在样本空间
+与权重空间 2 个维度聚焦于高损失、高求解难度区域。在理论分析方面，结合神经正切核（NTK）
+理论，通过实验说明 RBA-PINN 对损失函数 Hessian 矩阵条件数的优化作用。在数值实验方面，选
+取 Burgers 方程、Allen-Cahn 方程和 Navier-Stokes 方程这 3 类经典偏微分方程作为测试基准，系统
+验证 RBA-PINN 在求解精度、收敛效率和鲁棒性方面的优势。实验结果表明，与传统 PINN、SA-
+PINN及RAR-D等主流方法相比，RBA-PINN在L 相对误差上降低约1个数量级。进一步对自适应
+2
+替换比 、内部配置点数量等关键超参数进行敏感性分析，证实RBA-PINN在不同参数配置下具有
+良好的鲁棒性。目前掩码函数的选需仍依赖经验分析，后续研究将重点关注掩码函数形式与残差空
+间分布之间内在理论映射关系的探索，以期降低人工调参成本，实现模型超参数的自适应优化及计
+算资源的智能分配。
+参 考 文 献
+[1] 张 凯, 赵兴刚, 张黎明，等. 智能油田开发中的大数据及智能优化理论和方法研究现状及展望[J]. 中
+国石油大学学报(自然科学版), 2020, 44(4): 28-38. DOI: 10.3969/j.issn.1673-5005.2020.04.004
+[2] Wang Y T, Cheung S W, Chung E T, et al. Deep multiscale model learning[J]. Journal of Computational
+Physics, 2020, 406: 109071. DOI: 10.1016/j.jcp.2019.109071.
+[3] Raissi M, Perdikaris P, Karniadakis G E. Physics-informed neural networks: a deep learning framework for
+solving forward and inverse problems involving nonlinear partial differential equations[J]. Journal of
+Computational Physics, 2019, 378: 686-707. DOI: 10.1016/j.jcp.2018.10.045.
+[4] 高飞, 郭晓斌, 袁冬芳, 等. 改进PINNs方法求解边界层对流占优扩散方程[J]. 广西师范大学学报(自
+然科学版), 2023, 41(6): 33-50. DOI: 10.16088/j.issn.1001-6600.2023032203.
+[5] 韩烁, 江林峰, 杨建斌. 基于注意力机制PINNs方法求解圣维南方程[J]. 广西师范大学学报(自然科学
+版), 2025, 43(4): 58-68. DOI: 10.16088/j.issn.1001-6600.2024061802.
+[6] Wada K, Suzuki K, Yonekura K. Physics-guided training of GAN to improve accuracy in airfoil design
+synthesis[J]. Computer Methods in Applied Mechanics and Engineering, 2024, 421: 116746. DOI:
+10.1016/j.cma.2024.116746.
+[7] Zhang Z, Yan X, Liu P Y, et al. A physics-informed convolutional neural network for the simulation and
+prediction of two-phase Darcy flows in heterogeneous porous media[J]. Journal of Computational Physics,
+2023, 477: 111919. DOI: 10.1016/j.jcp.2023.111919.
+[8] Wang S F, Wang H W, Perdikaris P. On the eigenvector bias of Fourier feature networks: from regression to
+solving multi-scale PDEs with physics-informed neural networks[J]. Computer Methods in Applied
+Mechanics and Engineering, 2021, 384: 113938. DOI: 10.1016/j.cma.2021.113938.
+[9] McClenny L D, Braga-Neto U M. Self-adaptive physics-informed neural networks[J]. Journal of
+Computational Physics, 2023, 474: 111722. DOI: 10.1016/j.jcp.2022.111722.
+[10] Zhou H, Wu H, Sheil B, et al. A self-adaptive physics-informed neural networks method for large strain
+consolidation analysis[J]. Computers and Geotechnics, 2025, 181: 107131. DOI: 10.1016/j.compgeo.
+2025.107131.
+[11] Song Y J, Wang H, Yang H, et al. Loss-attentional physics-informed neural networks[J]. Journal of
+Computational Physics, 2024, 501: 112781. DOI: 10.1016/j.jcp.2024.112781.
+[12] Lu L, Meng X H, Mao Z P, et al. DeepXDE: a deep learning library for solving differential equations[J].
+SIAM Review, 2021, 63(1): 208-228. DOI: 10.1137/19M1274067.
+[13] Nabian M A, Gladstone R J, Meidani H. Efficient training of physics-informed neural networks via
+importance sampling[J]. Computer-Aided Civil and Infrastructure Engineering, 2021, 36(8): 962-977. DOI:
+10.1111/mice.12685.
+[14] Wu C X, Zhu M, Tan Q Y, et al. A comprehensive study of non-adaptive and residual-based adaptive sampling
+for physics-informed neural networks[J]. Computer Methods in Applied Mechanics and Engineering, 2023,
+403: 115671. DOI: 10.1016/j.cma.2022.115671.
+[15] 张凌海, 周彬, 罗毅, 等. 物理信息神经网络的一种自适应配置点算法[J]. 力学学报, 2024, 56(10):
+
+
+===== PAGE 18 =====
+广西师范大学学报（自然科学版）
+3069-3083. DOI: 10.6052/0459-1879-24-244.
+[16] Ram A, Jalal S, Jalal A S, et al. A density based algorithm for discovering density varied clusters in large
+spatial databases[J]. International Journal of Computer Applications, 2010, 3(6): 1-4. DOI:10.5120/739-
+1038.
+[17] Mahmud M S, Huang J Z, Salloum S, et al. A survey of data partitioning and sampling methods to support
+big data analysis[J]. Big Data Mining and Analytics, 2020, 3(2): 85-101. DOI: 10.26599/BDMA.
+2019.9020015.
+[18] Jacot A, Gabriel F, Hongler C. Neural tangent kernel: convergence and generalization in neural networks
+(invited paper)[C]//Proceedings of the 53rd Annual ACM SIGACT Symposium on Theory of Computing.
+ACM, 2021: 6. DOI: 10.1145/3406325.3465355.
+[19] Chizat L, Oyallon E, Bach F. On lazy training in differentiable programming[C]//Advances in Neural
+Information Processing Systems. 2019, 32: 2937-2947.
+[20] Wang S F, Teng Y J, Perdikaris P. Understanding and mitigating gradient flow pathologies in physics-informed
+neural networks[J]. SIAM Journal on Scientific Computing, 2021, 43(5): A3055-A3081. DOI:10.1137/
+20m1318043.
+[21] 谢翔，江林峰，杨凤莲．基于自适应权重两阶段 PINNs 方法求解偏微分方程[J]．广西师范大学学报(自
+然科学版)，2026，44(2): 175-189. DOI：10.16088/j.issn.1001-6600.2025050801
+[22] Yu J, Lu L, Meng X H, et al. Gradient-enhanced physics-informed neural networks for forward and inverse
+PDE problems[J]. Computer Methods in Applied Mechanics and Engineering, 2022, 393: 114823. DOI:
+10.1016/j.cma.2022.114823.
+Residual adaptive adjustment PINN method for solving partial
+differential equations
+Fang Rong, Ju Ran, Yang Fenglian*
+(School of Mathematics, Hohai University, Nanjing Jiangsu 210000, China)
+Abstract: Physics-Informed Neural Network (PINN) serves as an important tool for solving partial differential equation (PDE).
+To address the issues of slow convergence and insufficient fitting accuracy in high-gradient regions when PINN is applied to
+strongly nonlinear coupled equations, this paper proposes a Residual-Based Adaptive PINN (RBA-PINN). The method
+improves model performance by optimizing the sample distribution and dynamically adjusting the weights of the loss function.
+On the one hand, the DBSCAN density clustering algorithm is introduced to extract high-density points from high-residual
+candidate regions, and a self-adaptive threshold search strategy is combined to realize dynamic resampling of collocation points.
+On the other hand, an adaptive attention mask mechanism is introduced to adjust the loss weight of each collocation point
+through synchronous gradient updates, enabling the model to focus on hard-to-train points. Furthermore, according to the
+Neural Tangent Kernel (NTK) theory, experimental results show that this algorithm can effectively reshape the eigenvalue
+spectrum distribution of the NTK, increase the tail eigenvalues, and optimize the condition number of the Hessian matrix of
+the loss function, thereby ensuring the robustness of model convergence. Experimental results show that the RBA-PINN
+achieves significantly higher prediction accuracy than traditional PINN, SA-PINN, and RAR-D methods when solving the
+Burgers, Allen-Cahn, and Navier-Stokes equations, with its L₂ relative error reduced by approximately one order of magnitude
+compared to the baseline methods.
+Keywords: physics-informed neural network; adaptive sampling; residual information; neural tangent kernel; DBSCAN

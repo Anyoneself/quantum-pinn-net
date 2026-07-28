@@ -43,6 +43,58 @@
 
 Baseline 使用固定 loss 权重训练。
 
+### Darcy 偏微分方程约束
+
+在原有场均值经验约束之外，当前实验已经加入稳态、单相、不可压缩 Darcy
+渗流约束。对预测的归一化 log-permeability
+\(\widehat{\ell}(x,y)\)，先构造严格为正的相对渗透率
+
+```text
+k_r(x,y) = exp(clip(l_hat(x,y) - mean(l_hat), -6, 6))
+```
+
+再在单位正方形区域上求解辅助压力场：
+
+```text
+q = -k_r grad(p)
+div(q) = 0
+```
+
+采用的无量纲边界条件为：
+
+```text
+p(0,y) = 1,  p(1,y) = 0
+dp/dn(x,0) = dp/dn(x,1) = 0
+```
+
+离散实现使用网格面渗透率的调和平均计算 transmissibility，并通过可微的
+weighted-Jacobi 迭代得到压力场。物理损失为：
+
+```text
+L_physics =
+    L_mean
+  + lambda_c * mean((div(q) / q_scale)^2)
+  + lambda_f * mean(((Q_in - Q_out) / Q_scale)^2)
+```
+
+其中 `L_mean` 保留已有的 Darcy/geomechanics-inspired 全局工程条件约束，
+后两项分别约束局部质量守恒与进出口通量守恒。训练历史会分别保存
+`physics_mean_loss`、`darcy_continuity_loss` 和 `darcy_flux_loss`；最终指标表
+新增 `Darcy Continuity Residual` 与 `Darcy Flux Imbalance`，两者均为越低
+越好。默认
+`lambda_c=0.02`、`lambda_f=0.01`，辅助压力迭代 16 次。
+
+必须说明：上游模拟数据只包含归一化渗透率场和样本级工程条件，没有真实压力
+场、井源项、区域尺寸、绝对渗透率单位及逐点边界条件。因此这里的 PDE 是
+无量纲结构约束，不能解释为对真实储层压力场的复现。若后续数据能提供压力场
+或井源项，可将控制方程扩展为
+
+```text
+phi * c_t * dp/dt - div(k / mu * grad(p)) = s(x,y,t)
+```
+
+并直接加入压力观测、初始条件和井边界条件损失。
+
 ### RBA-QPINN
 
 RBA-QPINN 在相同 PINN 任务上加入四类量子启发与残差自适应机制：
@@ -59,6 +111,7 @@ RBA-QPINN 在相同 PINN 任务上加入四类量子启发与残差自适应机�
 ```text
 quantum-pinn-net/
   dataset/
+    darcy_physics.py
     physics_constraints.py
     processed/
       fields.npy
@@ -107,16 +160,24 @@ cd /Users/yuanzhi.liu/Desktop/code/experiment/quantum-pinn-net
   --mc-trials 4 \
   --residual-resample-period 5 \
   --residual-replace-ratio 0.20 \
+  --darcy-iterations 16 \
+  --darcy-continuity-weight 0.02 \
+  --darcy-flux-weight 0.01 \
   --run-ablations
 ```
 
 默认会启用 RBA-QPINN 的残差自适应逐点权重，并在 `--run-ablations` 模式下训练以下消融模型：
 
 - Baseline PINN
+- Classical + Loss Balancer
+- Classical + RBA
+- Classical + Loss + RBA
 - Quantum Feature PINN
+- Quantum + MC
+- Quantum + RBA
 - Quantum + Loss Balancer
 - Quantum + Loss + MC
-- RBA-QPINN w/o MC
+- Quantum + Loss + RBA
 - Full RBA-QPINN
 
 若需要只运行 Baseline 与 Full RBA-QPINN 的核心对比，可去掉 `--run-ablations`。若需要复现实验中的旧版 Quantum-PINN，可添加：
@@ -124,6 +185,15 @@ cd /Users/yuanzhi.liu/Desktop/code/experiment/quantum-pinn-net
 ```bash
 --no-adaptive-residual-weights
 ```
+
+若需要进行“不使用 Darcy PDE”的消融实验，可添加：
+
+```bash
+--no-darcy-physics
+```
+
+完整控制方程、离散方式、消融矩阵和论文表述边界见
+[`docs/DARCY_PINN_EXPERIMENT.md`](docs/DARCY_PINN_EXPERIMENT.md)。
 
 若重新配置环境，核心依赖为：
 
@@ -156,18 +226,22 @@ python -m pip install numpy torch matplotlib pandas scipy
 - `figures/loss_curve_same_epoch.png`: 两种方法同 epoch 下的收敛曲线。
 - `figures/quality_physics_metrics_bars.png`: 误差与物理指标柱状图。
 - `figures/ablation_table.png` / `figures/ablation_table.csv`: 消融实验指标表。
+- `figures/ablation_design_matrix.png` / `figures/ablation_design_matrix.csv`: 消融实验模块设计矩阵。
+- `figures/ablation_study_summary.png`: 消融实验总览图。
+- `figures/ablation_module_contribution.png`: 各模块相对 Baseline 的贡献柱状图。
+- `figures/ablation_path_metrics.png`: 不同模块组合下的指标变化路径图。
+- `figures/ablation_metric_heatmap.png`: 消融模型指标热力图。
+- `figures/ablation_sample_rmse_heatmap.png`: 逐样本消融 RMSE 热力图。
 - `figures/error_boxplot.png`: 各消融模型在留出测试点上的绝对误差箱线图。
 - `figures/prediction_field_ablation_comparison.png`: 多个消融模型在同一渗透率场上的预测场对比图。
 - `figures/residual_sampling_heatmap.png`: 残差自适应采样/逐点权重热力图。
 - `figures/loss_weight_dynamics_ablation.png`: 消融模型的动态损失权重曲线。
 - `figures/training_time_table.png` / `figures/training_time_table.csv`: 训练耗时表。
 - `figures/method_flowchart.png`: RBA-QPINN 方法流程图。
-- `figures/baseline_vs_rba_qpinn_comparison.png`: Baseline PINN 与 RBA-QPINN 在留出测试点上的预测场、误差和增益对比图。
-- `figures/baseline_vs_rba_qpinn_comparison_smooth.png`: Baseline PINN 与 RBA-QPINN 的平滑视觉对比图；平滑只用于展示，指标仍按原始留出网格点计算。
-- `figures/prediction_comparison.png`: 目标场、训练观测点、Baseline 预测、RBA-QPINN/Quantum-PINN 预测和留出点预测增益图。显示层面使用 bicubic 插值和观测点叠加，数值指标只在未观测测试点上计算。
-- `figures/quantum_loss_weight_dynamics.png`: Quantum-PINN 动态 loss 权重演化图。
+- `figures/baseline_vs_rba_qpinn_comparison_smooth.png`: Baseline PINN 与当前最佳改良模型的点级视觉对比图。
+- `figures/prediction_comparison.png`: 目标场、训练观测点、Baseline 预测、当前最佳改良模型预测和留出点预测增益图。
+- `figures/heldout_point_prediction_comparison.png`: 无插值的 held-out 点级预测对比图。
 - `figures/residual_point_weight_dynamics.png`: RBA-QPINN 残差逐点权重的均值、95 分位数和最大值演化图。
-- `figures/adaptive_sampling_weight_map.png`: RBA-QPINN 训练观测点和残差自适应权重空间分布图。
 - `figures/rba_qpinn_architecture.png`: RBA-QPINN 网络架构图，可直接用于论文方法章节。
 
 ## 学术表述建议

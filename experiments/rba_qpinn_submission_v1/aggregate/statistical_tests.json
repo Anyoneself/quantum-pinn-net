@@ -1,0 +1,100 @@
+{
+  "raw": {
+    "evaluation": "raw",
+    "primary_inference_unit": "random seed",
+    "baseline": "Baseline PINN",
+    "best_non_baseline_by_mean_rmse": "Quantum Feature PINN",
+    "n_seeds": 5,
+    "baseline_rmse_by_seed": [
+      0.17493962029647137,
+      0.17248903933373896,
+      0.1770873186186589,
+      0.17420395394861182,
+      0.17183474589509395
+    ],
+    "best_rmse_by_seed": [
+      0.08320073260866084,
+      0.08440930686751769,
+      0.08458534893336012,
+      0.08348381219853035,
+      0.08676273319540465
+    ],
+    "paired_rmse_improvement_by_seed": [
+      0.09173888768781052,
+      0.08807973246622128,
+      0.09250196968529878,
+      0.09072014175008147,
+      0.08507201269968931
+    ],
+    "mean_rmse_improvement": 0.08962254885782028,
+    "relative_rmse_improvement_percent": 51.47439391985543,
+    "paired_t_test_greater": {
+      "statistic": 65.83638125455306,
+      "two_sided_pvalue": 3.1887447968177136e-07,
+      "one_sided_pvalue": 1.5943723984088568e-07
+    },
+    "seed_level_wilcoxon_greater": {
+      "statistic": 15.0,
+      "pvalue": 0.03125
+    },
+    "bootstrap_95_ci_mean_rmse_improvement": [
+      0.08700693165061996,
+      0.09184037129926001
+    ],
+    "supporting_per_sample_wilcoxon_greater": {
+      "n_paired_sample_seed_observations": 640,
+      "statistic": 205120.0,
+      "pvalue": 8.8547902459053e-107,
+      "note": "Supporting analysis only; observations within a seed are not treated as independent primary replicates."
+    }
+  },
+  "corrected": {
+    "evaluation": "corrected",
+    "primary_inference_unit": "random seed",
+    "baseline": "Baseline PINN",
+    "best_non_baseline_by_mean_rmse": "Quantum Feature PINN",
+    "n_seeds": 5,
+    "baseline_rmse_by_seed": [
+      0.031484369492116214,
+      0.030939798680616457,
+      0.030842635852453823,
+      0.029060311691706215,
+      0.030526078947557645
+    ],
+    "best_rmse_by_seed": [
+      0.019225759352270416,
+      0.0193545183579724,
+      0.018938842847347922,
+      0.018967392923964935,
+      0.019244714057203002
+    ],
+    "paired_rmse_improvement_by_seed": [
+      0.012258610139845798,
+      0.011585280322644057,
+      0.011903793005105901,
+      0.01009291876774128,
+      0.011281364890354643
+    ],
+    "mean_rmse_improvement": 0.011424393425138336,
+    "relative_rmse_improvement_percent": 37.370476456895894,
+    "paired_t_test_greater": {
+      "statistic": 30.83786136695218,
+      "two_sided_pvalue": 6.588336957416197e-06,
+      "one_sided_pvalue": 3.2941684787080983e-06
+    },
+    "seed_level_wilcoxon_greater": {
+      "statistic": 15.0,
+      "pvalue": 0.03125
+    },
+    "bootstrap_95_ci_mean_rmse_improvement": [
+      0.010692782839736875,
+      0.011989278212965101
+    ],
+    "supporting_per_sample_wilcoxon_greater": {
+      "n_paired_sample_seed_observations": 640,
+      "statistic": 205120.0,
+      "pvalue": 8.8547902459053e-107,
+      "note": "Supporting analysis only; observations within a seed are not treated as independent primary replicates."
+    }
+  }
+}

@@ -28,12 +28,47 @@ from physics_constraints import PhysicalConfig, expected_log_perm_index  # noqa:
 
 METHODS = [
     ("standard-pinn", "Baseline PINN"),
+    ("standard-loss", "Classical + Loss Balancer"),
+    ("standard-rba", "Classical + RBA"),
+    ("standard-loss-rba", "Classical + Loss + RBA"),
     ("quantum-feature", "Quantum Feature PINN"),
+    ("quantum-mc-only", "Quantum + MC"),
+    ("quantum-rba", "Quantum + RBA"),
     ("quantum-loss", "Quantum + Loss Balancer"),
     ("quantum-mc", "Quantum + Loss + MC"),
-    ("rba-no-mc", "RBA-QPINN w/o MC"),
+    ("rba-no-mc", "Quantum + Loss + RBA"),
     ("rba-qpinn", "Full RBA-QPINN"),
 ]
+
+
+METHOD_MODULES = {
+    "standard-pinn": {"Quantum": 0, "Loss": 0, "MC": 0, "RBA": 0},
+    "standard-loss": {"Quantum": 0, "Loss": 1, "MC": 0, "RBA": 0},
+    "standard-rba": {"Quantum": 0, "Loss": 0, "MC": 0, "RBA": 1},
+    "standard-loss-rba": {"Quantum": 0, "Loss": 1, "MC": 0, "RBA": 1},
+    "quantum-feature": {"Quantum": 1, "Loss": 0, "MC": 0, "RBA": 0},
+    "quantum-mc-only": {"Quantum": 1, "Loss": 0, "MC": 1, "RBA": 0},
+    "quantum-rba": {"Quantum": 1, "Loss": 0, "MC": 0, "RBA": 1},
+    "quantum-loss": {"Quantum": 1, "Loss": 1, "MC": 0, "RBA": 0},
+    "quantum-mc": {"Quantum": 1, "Loss": 1, "MC": 1, "RBA": 0},
+    "rba-no-mc": {"Quantum": 1, "Loss": 1, "MC": 0, "RBA": 1},
+    "rba-qpinn": {"Quantum": 1, "Loss": 1, "MC": 1, "RBA": 1},
+}
+
+
+SHORT_LABELS = {
+    "standard-pinn": "Base",
+    "standard-loss": "C+Loss",
+    "standard-rba": "C+RBA",
+    "standard-loss-rba": "C+Loss+RBA",
+    "quantum-feature": "QF",
+    "quantum-mc-only": "QF+MC",
+    "quantum-rba": "QF+RBA",
+    "quantum-loss": "QF+Loss",
+    "quantum-mc": "QF+Loss+MC",
+    "rba-no-mc": "QF+Loss+RBA",
+    "rba-qpinn": "Full",
+}
 
 
 def load_inputs() -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, list[dict[str, str | float]], dict[str, np.ndarray]]:
@@ -57,6 +92,14 @@ def method_label(key: str) -> str:
 def key_from_label(label: str) -> str:
     reverse = {label: key for key, label in METHODS}
     return reverse[label]
+
+
+def short_label_from_row(row: dict[str, str | float]) -> str:
+    label = str(row["Model"])
+    try:
+        return SHORT_LABELS[key_from_label(label)]
+    except KeyError:
+        return label.replace(" ", "\n")
 
 
 def best_method(metrics_rows: list[dict[str, str | float]]) -> str:
@@ -167,9 +210,35 @@ def save_ablation_module_contribution(metrics_rows: list[dict[str, str | float]]
     plt.close(fig)
 
 
+def save_ablation_design_matrix(path_png: Path, path_csv: Path) -> None:
+    rows = []
+    for key, label in METHODS:
+        modules = METHOD_MODULES[key]
+        rows.append({"Method": label, **modules})
+    with path_csv.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=["Method", "Quantum", "Loss", "MC", "RBA"])
+        writer.writeheader()
+        writer.writerows(rows)
+
+    matrix = np.asarray([[row[name] for name in ["Quantum", "Loss", "MC", "RBA"]] for row in rows], dtype=np.float32)
+    fig, ax = plt.subplots(figsize=(7.8, 5.4), dpi=240)
+    im = ax.imshow(matrix, cmap="GnBu", vmin=0.0, vmax=1.0, aspect="auto")
+    ax.set_xticks(np.arange(4))
+    ax.set_xticklabels(["Quantum\nfeatures", "Dynamic\nloss", "MC neuron\nthreshold", "Residual\nadaptive"], fontsize=8)
+    ax.set_yticks(np.arange(len(rows)))
+    ax.set_yticklabels([row["Method"] for row in rows], fontsize=7.5)
+    for row in range(matrix.shape[0]):
+        for col in range(matrix.shape[1]):
+            ax.text(col, row, "on" if matrix[row, col] > 0 else "-", ha="center", va="center", fontsize=8, color="#102033")
+    fig.colorbar(im, ax=ax, shrink=0.78, pad=0.02, ticks=[0, 1], label="Module enabled")
+    ax.set_title("Ablation Design Matrix")
+    plt.tight_layout()
+    fig.savefig(path_png, bbox_inches="tight")
+    plt.close(fig)
+
+
 def save_ablation_path_lines(metrics_rows: list[dict[str, str | float]], path: Path) -> None:
-    labels = [str(row["Model"]) for row in metrics_rows]
-    steps = ["Base", "+QF", "+Loss", "+MC", "+RBA/noMC", "Full"]
+    steps = [short_label_from_row(row) for row in metrics_rows]
     metrics = ["RMSE", "MAE", "Physics Residual", "Composite Score"]
     fig, axes = plt.subplots(2, 2, figsize=(10.2, 6.4), dpi=240)
     for ax, metric in zip(axes.ravel(), metrics):
@@ -178,11 +247,11 @@ def save_ablation_path_lines(metrics_rows: list[dict[str, str | float]], path: P
         best_idx = int(np.argmin(values) if metric != "Composite Score" else np.argmax(values))
         ax.scatter([best_idx], [values[best_idx]], s=58, color="#e76f51", zorder=5)
         ax.set_xticks(np.arange(len(values)))
-        ax.set_xticklabels(steps[: len(values)], rotation=18, ha="right", fontsize=7)
+        ax.set_xticklabels(steps[: len(values)], rotation=20, ha="right", fontsize=7)
         ax.set_title(metric)
         ax.grid(alpha=0.24)
-    fig.suptitle("Ablation Path: Adding Quantum Feature, Loss Balancing, MC, and RBA", fontsize=12)
-    fig.text(0.5, 0.01, "Full method is reported honestly; best predictive RMSE occurs at the quantum-feature ablation in this run.", ha="center", fontsize=8.5, color="#586a7c")
+    fig.suptitle("Ablation Path Across Module Combinations", fontsize=12)
+    fig.text(0.5, 0.01, "Markers highlight the best value for each metric; lower is better for RMSE, MAE, and physics residual.", ha="center", fontsize=8.5, color="#586a7c")
     plt.tight_layout(rect=[0, 0.035, 1, 0.94])
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)
@@ -250,7 +319,7 @@ def save_ablation_study_summary(
 ) -> None:
     ordered = method_order(predictions)
     labels = [label for _, label in ordered]
-    short = ["Base", "+QF", "+Loss", "+MC", "+RBA/noMC", "Full"][: len(labels)]
+    short = [SHORT_LABELS.get(key, label) for key, label in ordered]
     rmse = np.asarray([float(row["RMSE"]) for row in metrics_rows], dtype=np.float32)
     mae = np.asarray([float(row["MAE"]) for row in metrics_rows], dtype=np.float32)
     phys = np.asarray([float(row["Physics Residual"]) for row in metrics_rows], dtype=np.float32)
@@ -554,6 +623,7 @@ def main() -> None:
     best = predictions[best_key]
 
     outputs = {
+        "ablation_design_matrix.png": lambda path: save_ablation_design_matrix(path, FIGURE_DIR / "ablation_design_matrix.csv"),
         "ablation_study_summary.png": lambda path: save_ablation_study_summary(fields, test_mask, metrics_rows, predictions, path),
         "ablation_module_contribution.png": lambda path: save_ablation_module_contribution(metrics_rows, path),
         "ablation_path_metrics.png": lambda path: save_ablation_path_lines(metrics_rows, path),

@@ -1,0 +1,92 @@
+{
+  "config": {
+    "source_root": "/Users/yuanzhi.liu/Desktop/code/experiment/quantum-attention-net",
+    "output_dir": "experiments/rba_qpinn_submission_v1/seed_43",
+    "processed_dir": "experiments/rba_qpinn_submission_v1/seed_43/processed",
+    "seed": 43,
+    "epochs": 40,
+    "batch_size": 8,
+    "hidden_dim": 128,
+    "depth": 4,
+    "latent_dim": 24,
+    "learning_rate": 0.001,
+    "train_ratio": 0.7,
+    "validation_ratio": 0.1,
+    "max_samples": 128,
+    "device": "cpu",
+    "mc_trials": 4,
+    "adaptive_residual_weights": true,
+    "residual_resample_period": 5,
+    "residual_replace_ratio": 0.2,
+    "residual_candidate_min": 32,
+    "residual_dbscan_eps": 2.0,
+    "residual_dbscan_min_samples": 4,
+    "residual_weight_lr": 0.2,
+    "residual_weight_max": 4.0,
+    "residual_correction_k": 8,
+    "residual_correction_power": 2.0,
+    "residual_correction_strength": 0.95,
+    "run_ablations": false,
+    "paper_ablations": true,
+    "fail_if_output_exists": true,
+    "fast": false,
+    "darcy_physics": false,
+    "darcy_iterations": 16,
+    "darcy_continuity_weight": 0.02,
+    "darcy_flux_weight": 0.01
+  },
+  "metric_primary": "raw network output on independent test mask",
+  "metric_secondary": "IDW-corrected output using training-point residuals only",
+  "checkpoint_selection_mask": "validation_mask",
+  "final_evaluation_mask": "test_mask",
+  "methods": [
+    {
+      "key": "standard-pinn",
+      "label": "Baseline PINN",
+      "model_type": "standard",
+      "use_loss_balancer": false,
+      "use_adaptive_residual": false,
+      "use_mc_threshold": false
+    },
+    {
+      "key": "quantum-feature",
+      "label": "Quantum Feature PINN",
+      "model_type": "quantum",
+      "use_loss_balancer": false,
+      "use_adaptive_residual": false,
+      "use_mc_threshold": false
+    },
+    {
+      "key": "quantum-loss",
+      "label": "Quantum + Loss Balancer",
+      "model_type": "quantum",
+      "use_loss_balancer": true,
+      "use_adaptive_residual": false,
+      "use_mc_threshold": false
+    },
+    {
+      "key": "quantum-mc",
+      "label": "Quantum + Loss + MC",
+      "model_type": "quantum",
+      "use_loss_balancer": true,
+      "use_adaptive_residual": false,
+      "use_mc_threshold": true
+    },
+    {
+      "key": "rba-no-mc",
+      "label": "Quantum + Loss + RBA",
+      "model_type": "quantum",
+      "use_loss_balancer": true,
+      "use_adaptive_residual": true,
+      "use_mc_threshold": false
+    },
+    {
+      "key": "rba-qpinn",
+      "label": "Full RBA-QPINN",
+      "model_type": "quantum",
+      "use_loss_balancer": true,
+      "use_adaptive_residual": true,
+      "use_mc_threshold": true
+    }
+  ]
+}
