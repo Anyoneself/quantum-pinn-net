@@ -1,6 +1,6 @@
-# Quantum-PINN Permeability Field Prediction
+# Phase-Periodic Network for Permeability-Field Completion
 
-本项目面向二维渗透率场预测问题，核心任务是在给定工程物理条件和部分空间观测点的情况下，预测未观测位置的归一化 log-permeability。`quantum-attention-net` 项目负责 GSTools 渗透率场数据生成与物理条件调制，本项目不重复解决数据生成问题，而是在该数据基础上构建标准 Physics-Informed Neural Network (PINN) 基线，并提出一种量子启发的 PINN 优化方法。实验目标是比较两类网络在空间留出点预测任务中的误差、准确率、结构一致性和物理一致性。
+本项目面向二维渗透率场内空间补全：在给定工程条件和部分空间观测值的情况下，预测训练阶段已见场中的未观测位置。当前论文比较固定 Fourier 坐标网络与完全由经典张量运算实现的可学习周期相位网络，并考察动态目标权重、训练点残差自适应加权和 Monte Carlo 神经元筛选。归档主实验不含局部 Darcy 方程残差，也不包含量子线路或量子硬件。
 
 ## 数据来源与任务边界
 
@@ -12,7 +12,7 @@
 训练和测试数据来自：
 
 ```text
-/Users/yuanzhi.liu/Desktop/code/experiment/quantum-attention-net/dataset/runs/<model>/
+<upstream-project>/dataset/runs/<model>/
 ```
 
 读取的上游模型数据包括：
@@ -28,25 +28,24 @@
 - `dataset.npy`: 形状为 `(N, 1, 32, 32)` 的归一化二维 log-permeability 场。
 - `physical_conditions.npy`: 每个样本对应的工程条件，列顺序为 `[pressure_mpa, pressure_gradient_mpa_per_m, viscosity_cp, porosity, flow_rate_m3_day]`。
 
-最终实验使用 128 个 GSTools 渗透率场样本。每个样本内部随机保留约 80% 空间点作为训练观测点，剩余约 20% 空间点作为测试点；因此评价协议是同一渗透率场内的空间留出预测。数值指标只在未观测测试点上计算，以衡量模型对未知空间位置的预测能力。
+代码可读取上述多种上游目录；当前正式归档包含 128 个 \(32\times32\) 合成场，其来源类别标识均为 `gan`。同一组场在五次独立随机化运行中共享，观测、验证与空间留出位置两两互斥。由于模型使用可学习场嵌入，评价协议属于训练阶段已见场内的空间补全，而不是未知场泛化。
 
 ## 方法
 
-### Baseline PINN
+### Fourier 对照网络
 
-标准 PINN 以 `(x, y, physical conditions, learnable sample embedding)` 为输入，输出对应坐标处的渗透率值。`sample embedding` 用于标识每个 GSTools 渗透率场，使网络在同一场内根据稀疏观测点预测未观测空间位置，而不是仅预测跨样本均值。为了避免弱 Baseline 造成不公平对比，当前 Baseline 使用固定 Fourier 坐标特征、SiLU 残差 MLP 和 LayerNorm，形成强经典 PINN 基线；但它仍使用固定 loss 权重，不引入量子特征、残差自适应权重或 Monte Carlo 神经元筛选。训练目标由四项组成：
+Fourier 对照网络以 `(x, y, engineering conditions, learnable field embedding)` 为输入，使用固定 Fourier 坐标特征、SiLU 残差主干和 LayerNorm 输出连续场值。场嵌入用于区分训练阶段已见场。训练目标由四项组成：
 
 - 数据项：观测点上的 MSE。
 - 物理项：预测场均值与 Darcy/geomechanics-inspired 期望场均值之间的残差。
 - 平滑项：相邻网格差分约束。
 - 边界项：上下、左右边界均值一致性约束。
 
-Baseline 使用固定 loss 权重训练。
+Fourier 对照网络使用固定目标权重训练。
 
 ### Darcy 偏微分方程约束
 
-在原有场均值经验约束之外，当前实验已经加入稳态、单相、不可压缩 Darcy
-渗流约束。对预测的归一化 log-permeability
+代码提供可选的稳态、单相、不可压缩 Darcy 诊断与训练约束，但当前论文归档通过 `--no-darcy-physics` 将其排除在训练目标之外。对预测的归一化 log-permeability
 \(\widehat{\ell}(x,y)\)，先构造严格为正的相对渗透率
 
 ```text
@@ -95,16 +94,16 @@ phi * c_t * dp/dt - div(k / mu * grad(p)) = s(x,y,t)
 
 并直接加入压力观测、初始条件和井边界条件损失。
 
-### RBA-QPINN
+### 周期相位网络与自适应机制
 
-RBA-QPINN 在相同 PINN 任务上加入四类量子启发与残差自适应机制：
+周期相位网络在相同场内补全任务上使用或考察以下机制：
 
-- 量子角度编码特征：将输入映射为 `sin/cos` 相位特征，并引入可学习的 entanglement mixer 以增强非线性空间表达。
-- 动态 loss 权重：以幅值归一化的 quantum-inspired probability amplitude 更新数据项、物理项、平滑项和边界项权重，使优化过程能根据不同损失项的收敛状态自适应调节。
+- 周期相位特征：将输入映射为 `sin/cos` 相位响应，并通过可学习通道混合形成谐波频率族。
+- 动态目标权重：以归一化概率幅值更新数据、场均值、平滑和边缘统计目标的相对权重。
 - 残差自适应逐点权重：仅基于训练观测点残差更新逐点注意力权重，并在连续高残差区域内增强训练权重，避免使用测试点标签造成数据泄漏。
-- Monte Carlo 神经元筛选：训练前半程对量子特征层神经元进行随机批次效用估计，效用定义为 `mean_abs_activation * sqrt(activation_variance + eps)`，对低效神经元进行轻量重初始化，以提高有效表达单元比例。
+- Monte Carlo 神经元筛选：训练前半程对正弦支路神经元进行随机批次效用估计，效用定义为 `mean_abs_activation * sqrt(activation_variance + eps)`，对低效神经元进行轻量重初始化。
 
-该方法为量子启发算法实现，不依赖真实量子硬件或 PennyLane 量子线路模拟。其优势体现在相同数据、相同评价协议下的误差降低、结构相似性改善和物理残差降低。
+上述模块全部采用经典张量运算。当前证据只支持完整架构方案的探索性比较，不支持量子优势、相位编码的独立因果贡献或局部物理守恒。
 
 ## 项目结构
 
@@ -143,85 +142,73 @@ quantum-pinn-net/
       quantum-pinn/
 ```
 
-## 复现实验
+## 复现当前归档协议
 
-推荐使用已有虚拟环境：
-
-```bash
-cd /Users/yuanzhi.liu/Desktop/code/experiment/quantum-pinn-net
-/Users/yuanzhi.liu/Desktop/code/liuyuanzhi/python_venvs/bench_pa_py312/bin/python \
-  gen-figures/run_pinn_experiment.py \
-  --device cpu \
-  --max-samples 128 \
-  --epochs 40 \
-  --batch-size 8 \
-  --hidden-dim 128 \
-  --latent-dim 24 \
-  --mc-trials 4 \
-  --residual-resample-period 5 \
-  --residual-replace-ratio 0.20 \
-  --darcy-iterations 16 \
-  --darcy-continuity-weight 0.02 \
-  --darcy-flux-weight 0.01 \
-  --run-ablations
-```
-
-默认会启用 RBA-QPINN 的残差自适应逐点权重，并在 `--run-ablations` 模式下训练以下消融模型：
-
-- Baseline PINN
-- Classical + Loss Balancer
-- Classical + RBA
-- Classical + Loss + RBA
-- Quantum Feature PINN
-- Quantum + MC
-- Quantum + RBA
-- Quantum + Loss Balancer
-- Quantum + Loss + MC
-- Quantum + Loss + RBA
-- Full RBA-QPINN
-
-若需要只运行 Baseline 与 Full RBA-QPINN 的核心对比，可去掉 `--run-ablations`。若需要复现实验中的旧版 Quantum-PINN，可添加：
+五个种子须分别输出到新目录，防止覆盖已有归档。以一个种子为例：
 
 ```bash
---no-adaptive-residual-weights
+python3 gen-figures/run_pinn_experiment.py \
+  --output-dir experiments/rba_qpinn_submission_v1/seed_<seed> \
+  --processed-dir experiments/rba_qpinn_submission_v1/seed_<seed>/processed \
+  --fail-if-output-exists \
+  --paper-ablations \
+  --seed <seed> \
+  --epochs 40 --batch-size 8 --hidden-dim 128 --depth 4 --latent-dim 24 \
+  --learning-rate 0.001 --train-ratio 0.70 --validation-ratio 0.10 \
+  --max-samples 128 --device cpu --mc-trials 4 \
+  --residual-resample-period 5 --residual-replace-ratio 0.20 \
+  --no-darcy-physics
 ```
 
-若需要进行“不使用 Darcy PDE”的消融实验，可添加：
+完成 seeds 42–46 后聚合：
 
 ```bash
---no-darcy-physics
+python3 gen-figures/aggregate_multiseed_results.py \
+  --experiment-root experiments/rba_qpinn_submission_v1 \
+  --seeds 42,43,44,45,46
 ```
 
-完整控制方程、离散方式、消融矩阵和论文表述边界见
-[`docs/DARCY_PINN_EXPERIMENT.md`](docs/DARCY_PINN_EXPERIMENT.md)。
+归档内部键对应六组配置：Fourier 对照网络、周期相位网络、周期相位 + 动态权重、周期相位 + 动态权重 + MC、周期相位 + 动态权重 + RBA，以及周期相位 + 动态权重 + RBA + MC。Darcy PDE 实现、离散方式和后续确认性实验设计见 [`docs/DARCY_PINN_EXPERIMENT.md`](docs/DARCY_PINN_EXPERIMENT.md)。
 
 若重新配置环境，核心依赖为：
 
 ```bash
-python -m pip install numpy torch matplotlib pandas scipy
+python -m pip install -r requirements.txt
 ```
 
-## 实验结果
+## 当前权威实验结果
 
-最终指标保存在 `figures/metrics_summary.csv` 与 `figures/metrics_summary.json`。当前复现实验结果如下：
+根目录 `figures/` 保留了早期开发实验，**不应用于当前结论或投稿引用**。当前权威结果来自
+[`experiments/rba_qpinn_submission_v1/`](experiments/rba_qpinn_submission_v1/) 中五次不可覆盖的独立随机化运行；五次运行共享同一组 128 个场，主结果为网络的原始输出，IDW 校正仅作为次分析。
 
-| Model | RMSE | MAE | MAPE | Accuracy | R2 | SSIM | Physics Residual | Physical Score | Composite Score |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Baseline PINN | 0.281121 | 0.220904 | 2.190129 | 0.889548 | 0.280768 | 0.057266 | 0.124136 | 0.578783 | 0.536446 |
-| Quantum-PINN | 0.254444 | 0.200718 | 1.472617 | 0.899641 | 0.410793 | 0.213637 | 0.034889 | 0.546033 | 0.607043 |
+| Model | Raw RMSE（均值±标准差，n=5） | Raw MAE | Raw R² | Raw SSIM | Weak Physics Residual |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Fourier 对照网络 | 0.1741 ± 0.0021 | 0.1317 ± 0.0014 | 0.7237 ± 0.0058 | 0.6866 ± 0.0122 | 0.1228 ± 0.0003 |
+| 周期相位网络 | **0.0845 ± 0.0014** | **0.0591 ± 0.0009** | **0.9349 ± 0.0025** | **0.9384 ± 0.0028** | 0.1209 ± 0.0001 |
+| 周期相位 + 动态权重 + RBA + MC | 0.2477 ± 0.0041 | 0.1966 ± 0.0034 | 0.4406 ± 0.0212 | 0.1852 ± 0.0291 | **0.0395 ± 0.0035** |
 
-相对 Baseline，Quantum-PINN 取得：
+当前证据支持：周期相位网络的原始 RMSE 相对 Fourier 对照低 **51.47%**，平均配对差为 0.0896，运行级 Bootstrap 95% 区间为 `[0.0870, 0.0918]`。该结果来自共享固定数据集的五次运行，并且两种网络同时改变多个架构因素，不能解释为相位编码的独立因果效应。沿累积路径加入动态权重、残差自适应和 MC 筛选后，场均值先验偏差下降，但点值精度未同步改善。
 
-- RMSE 降低 `9.49%`。
-- MAE 降低 `9.14%`。
-- Physics Residual 降低 `71.89%`。
-- 综合评分提升 `13.16%`。
+完整六模型结果、每种子的配置与统计检验见 [`experiments/rba_qpinn_submission_v1/README.md`](experiments/rba_qpinn_submission_v1/README.md) 和 [`aggregate/`](experiments/rba_qpinn_submission_v1/aggregate/)。
 
-需要注意的是，上表为引入 RBA-QPINN 增强前的已保存结果。`Physical Score` 是 Darcy 相关性、压力相关性、孔隙度相关性及范围约束构成的综合指标；`Physics Residual` 是预测场均值相对拟合物理期望均值的单项残差。当前已保存结果中 Quantum-PINN 在误差、结构相似性、场均值物理残差和综合评分上均优于 Baseline。
+## 文档与交付导航
 
-## 论文图像
+| 文档 | 用途 |
+| --- | --- |
+| [`paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md`](paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md) | 当前四章学术主稿 |
+| [`paper/CLAIM_EVIDENCE_LEDGER.md`](paper/CLAIM_EVIDENCE_LEDGER.md) | 主张—证据边界与投稿阻断项 |
+| [`docs/PAPER_SUBMISSION_WORKFLOW.md`](docs/PAPER_SUBMISSION_WORKFLOW.md) | 无 Skill 的复算、检查与投稿流程 |
+| [`docs/PROJECT_DOCUMENTATION_GUIDE.md`](docs/PROJECT_DOCUMENTATION_GUIDE.md) | 文档地图、权威性规则和术语口径 |
+| [`experiments/rba_qpinn_submission_v1/README.md`](experiments/rba_qpinn_submission_v1/README.md) | 可复现实验协议与运行命令 |
+| [`docs/RBA_QPINN_SUBMISSION_MANUSCRIPT.md`](docs/RBA_QPINN_SUBMISSION_MANUSCRIPT.md) | 完整研究报告／投稿预稿 |
+| [`docs/QGE_PINN_GXNU_STYLE_SUBMISSION.md`](docs/QGE_PINN_GXNU_STYLE_SUBMISSION.md) | 广西师大学报风格稿件 |
+| [`docs/RBA_QPINN_DELIVERY_AUDIT.md`](docs/RBA_QPINN_DELIVERY_AUDIT.md) | 证据审计、结论边界与后续整改项 |
+| [`docs/RBA_QPINN_SUBMISSION_READINESS.md`](docs/RBA_QPINN_SUBMISSION_READINESS.md) | 投稿材料完成度与待补充信息 |
+| [`docs/DARCY_PINN_EXPERIMENT.md`](docs/DARCY_PINN_EXPERIMENT.md) | Darcy 约束的实现与后续验证设计 |
 
-可直接用于论文的图像包括：
+## 历史图像
+
+下列根目录图像来自早期开发结果，可用于内部检查或示意，**不应直接作为当前论文证据**。当前论文主图应从 `experiments/rba_qpinn_submission_v1/aggregate/` 或各 seed 目录重新生成并注明协议。
 
 - `figures/loss_curve_same_epoch.png`: 两种方法同 epoch 下的收敛曲线。
 - `figures/quality_physics_metrics_bars.png`: 误差与物理指标柱状图。
@@ -238,14 +225,12 @@ python -m pip install numpy torch matplotlib pandas scipy
 - `figures/loss_weight_dynamics_ablation.png`: 消融模型的动态损失权重曲线。
 - `figures/training_time_table.png` / `figures/training_time_table.csv`: 训练耗时表。
 - `figures/method_flowchart.png`: RBA-QPINN 方法流程图。
-- `figures/baseline_vs_rba_qpinn_comparison_smooth.png`: Baseline PINN 与当前最佳改良模型的点级视觉对比图。
+- `figures/baseline_vs_rba_qpinn_comparison_smooth.png`: 旧版 Fourier 对照与改良模型的点级视觉对比图。
 - `figures/prediction_comparison.png`: 目标场、训练观测点、Baseline 预测、当前最佳改良模型预测和留出点预测增益图。
 - `figures/heldout_point_prediction_comparison.png`: 无插值的 held-out 点级预测对比图。
 - `figures/residual_point_weight_dynamics.png`: RBA-QPINN 残差逐点权重的均值、95 分位数和最大值演化图。
-- `figures/rba_qpinn_architecture.png`: RBA-QPINN 网络架构图，可直接用于论文方法章节。
+- `figures/rba_qpinn_architecture.png`: RBA-QPINN 网络架构图；使用前须核对其与当前正式模型及协议一致。
 
-## 学术表述建议
+## 结论边界
 
-本实验支持如下严谨表述：
-
-> 在相同 GSTools 渗透率场数据、相同稀疏空间观测比例和相同训练轮数下，量子启发 PINN 通过相位特征映射、动态损失权重和 Monte Carlo 神经元筛选机制，在留出空间点预测任务中取得更低的 RMSE/MAE，并改善场均值物理残差和综合评分。该结果表明，量子启发优化可作为 PINN 在非均质渗透率场预测任务中的有效表达增强与训练调度策略。
+本项目的严谨表述是：在当前 128 个训练阶段已见合成场的空间补全协议下，周期相位完整架构取得最低平均原始 RMSE。该结果不等同于量子计算优势或加速，也不证明对未见渗透率场或真实储层的泛化能力；归档训练目标不含 Darcy 方程残差，因此不能声称实现了局部 Darcy 守恒。Fourier 对照与周期相位网络同时改变多项架构设计，不能将全部差异单独归因为相位特征。详见 [`paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md`](paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md) 与 [`paper/CLAIM_EVIDENCE_LEDGER.md`](paper/CLAIM_EVIDENCE_LEDGER.md)。

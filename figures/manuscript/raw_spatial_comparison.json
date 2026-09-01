@@ -1,0 +1,33 @@
+{
+  "selection_rule": "within the first randomized run, select the nearest fields to Q25, Q50, and Q75 of paired per-field RMSE improvement",
+  "error_color_limit": "98th percentile across selected held-out absolute errors",
+  "error_color_max": 0.33222289014607664,
+  "rows": [
+    {
+      "quantile": 0.25,
+      "sample_index_zero_based": 34,
+      "field_number_one_based": 35,
+      "fourier_rmse": 0.12141108560118807,
+      "phase_periodic_rmse": 0.05761192566967529,
+      "rmse_difference": 0.06379915993151278
+    },
+    {
+      "quantile": 0.5,
+      "sample_index_zero_based": 38,
+      "field_number_one_based": 39,
+      "fourier_rmse": 0.13004399518755697,
+      "phase_periodic_rmse": 0.03941016436512174,
+      "rmse_difference": 0.09063383082243523
+    },
+    {
+      "quantile": 0.75,
+      "sample_index_zero_based": 79,
+      "field_number_one_based": 80,
+      "fourier_rmse": 0.21070121024495694,
+      "phase_periodic_rmse": 0.09985208614615604,
+      "rmse_difference": 0.1108491240988009
+    }
+  ],
+  "randomized_run_directory": "experiments/rba_qpinn_submission_v1/seed_42",
+  "figure": "figures/manuscript/raw_spatial_comparison.png"
+}

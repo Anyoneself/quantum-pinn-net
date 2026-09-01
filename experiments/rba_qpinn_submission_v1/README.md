@@ -1,14 +1,17 @@
 # RBA-QPINN submission experiment v1
 
+> 本目录保存共享同一组 128 个场的五次独立随机化运行。它支持完整架构方案在训练阶段已见场内空间补全任务中的描述性比较，不支持未知场泛化、量子加速或局部 Darcy 守恒等主张。目录名与模型键属于历史归档标识，论文中的中性名称见 [`../../paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md`](../../paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md)。
+
 ## Protocol
 
 - Seeds: 42, 43, 44, 45, 46
 - Spatial split: 70% train, 10% validation, 20% independent test
-- Models per seed: 6
+- Configurations per run: 6
 - Epochs: 40
 - Primary result: Raw network output
 - Secondary result: IDW-corrected output using training-point residuals only
 - Output protection: `--fail-if-output-exists`
+- Darcy note: the archived runs use `--no-darcy-physics`; `Physics Residual` is a weak field-mean prior diagnostic, not a local PDE residual.
 
 ## Reproduction
 

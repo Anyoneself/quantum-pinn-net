@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowAccent" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Songti SC','Noto Serif CJK SC',serif; fill:#0f172a; }
+      .subtitle { font: 22px 'Songti SC','Noto Serif CJK SC',serif; fill:#475569; }
+      .head { font: 700 24px 'Songti SC','Noto Serif CJK SC',serif; fill:#0f172a; }
+      .body { font: 20px 'Songti SC','Noto Serif CJK SC',serif; fill:#334155; }
+      .small { font: 17px 'Songti SC','Noto Serif CJK SC',serif; fill:#475569; }
+      .formula { font: italic 19px 'Times New Roman',serif; fill:#0f172a; }
+      .box { stroke-width:2.2; rx:18; ry:18; }
+      .arrow { stroke:#334155; stroke-width:3; fill:none; marker-end:url(#arrow); }
+      .feedback { stroke:#0f766e; stroke-width:2.6; fill:none; stroke-dasharray:9 7; marker-end:url(#arrowAccent); }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="820" fill="#ffffff"/>
+  <text x="800" y="58" text-anchor="middle" class="title">可学习周期相位网络及自适应训练机制</text>
+  <text x="800" y="92" text-anchor="middle" class="subtitle">全部模块均由经典张量运算实现；虚线表示可选训练机制</text>
+
+  <rect x="45" y="155" width="220" height="260" fill="#eff6ff" stroke="#2563eb" class="box"/>
+  <text x="155" y="197" text-anchor="middle" class="head">输入表示</text>
+  <text x="70" y="244" class="body">空间坐标 (x, y)</text>
+  <text x="70" y="281" class="body">工程条件 c_s</text>
+  <text x="70" y="318" class="body">场嵌入 e_s</text>
+  <rect x="67" y="350" width="176" height="42" rx="9" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="155" y="378" text-anchor="middle" class="formula">z = [x, y, c_s, e_s]</text>
+
+  <rect x="325" y="155" width="225" height="260" fill="#ecfeff" stroke="#0891b2" class="box"/>
+  <text x="438" y="197" text-anchor="middle" class="head">相位投影</text>
+  <text x="350" y="248" class="body">可学习角度映射</text>
+  <text x="438" y="283" text-anchor="middle" class="formula">θ = Wz + b</text>
+  <text x="350" y="328" class="body">通道混合</text>
+  <text x="438" y="363" text-anchor="middle" class="formula">η = sin(Mᵀθ)</text>
+
+  <rect x="610" y="135" width="280" height="300" fill="#f0fdfa" stroke="#0f766e" class="box"/>
+  <text x="750" y="177" text-anchor="middle" class="head">周期相位特征</text>
+  <text x="750" y="226" text-anchor="middle" class="formula">sin θ，cos θ</text>
+  <text x="750" y="269" text-anchor="middle" class="formula">sin(θ + η)</text>
+  <text x="750" y="312" text-anchor="middle" class="formula">cos(θ − η)</text>
+  <line x1="643" y1="338" x2="857" y2="338" stroke="#99f6e4" stroke-width="2"/>
+  <text x="750" y="373" text-anchor="middle" class="small">与原始输入拼接形成 ξ</text>
+  <text x="750" y="404" text-anchor="middle" class="small">产生 Bessel 系数控制的谐波族</text>
+
+  <rect x="950" y="155" width="245" height="260" fill="#fff7ed" stroke="#ea580c" class="box"/>
+  <text x="1073" y="197" text-anchor="middle" class="head">门控正弦层</text>
+  <text x="1073" y="250" text-anchor="middle" class="formula">sin[σ(Gξ)]</text>
+  <text x="1073" y="289" text-anchor="middle" class="formula">⊙ sin[ω(Hξ)]</text>
+  <text x="1073" y="338" text-anchor="middle" class="body">ω = 18</text>
+  <text x="1073" y="375" text-anchor="middle" class="small">连续高频响应与门控调制</text>
+
+  <rect x="1255" y="155" width="210" height="260" fill="#f8fafc" stroke="#64748b" class="box"/>
+  <text x="1360" y="197" text-anchor="middle" class="head">残差主干</text>
+  <text x="1360" y="250" text-anchor="middle" class="formula">h_l = h_(l−1)</text>
+  <text x="1360" y="285" text-anchor="middle" class="formula">+ SiLU(A_l h_(l−1)+b_l)</text>
+  <text x="1360" y="335" text-anchor="middle" class="body">线性输出</text>
+  <text x="1360" y="373" text-anchor="middle" class="formula">u_hat_s(x,y)</text>
+
+  <path d="M265 285 L325 285" class="arrow"/>
+  <path d="M550 285 L610 285" class="arrow"/>
+  <path d="M890 285 L950 285" class="arrow"/>
+  <path d="M1195 285 L1255 285" class="arrow"/>
+
+  <rect x="85" y="545" width="390" height="185" fill="#faf5ff" stroke="#7e22ce" class="box"/>
+  <text x="280" y="586" text-anchor="middle" class="head">动态目标权重</text>
+  <text x="280" y="629" text-anchor="middle" class="formula">L = sum_k w_k L_k，sum_k w_k = 4</text>
+  <text x="280" y="668" text-anchor="middle" class="small">数据、均值、平滑与边缘目标</text>
+  <text x="280" y="701" text-anchor="middle" class="small">依据损失值和相对变化更新</text>
+
+  <rect x="605" y="545" width="390" height="185" fill="#f0fdfa" stroke="#0f766e" class="box"/>
+  <text x="800" y="586" text-anchor="middle" class="head">训练点残差自适应加权</text>
+  <text x="800" y="629" text-anchor="middle" class="formula">lambda_(s,i) ← clip_[1,4](残差驱动更新)</text>
+  <text x="800" y="668" text-anchor="middle" class="small">仅改变观测点的数据项贡献</text>
+  <text x="800" y="701" text-anchor="middle" class="small">不新增坐标，不读取空间留出残差</text>
+
+  <rect x="1125" y="545" width="390" height="185" fill="#fffbeb" stroke="#ca8a04" class="box"/>
+  <text x="1320" y="586" text-anchor="middle" class="head">Monte Carlo 神经元筛选</text>
+  <text x="1320" y="629" text-anchor="middle" class="formula">U_j = mean(|a_j|)·sqrt[var(a_j)]</text>
+  <text x="1320" y="668" text-anchor="middle" class="small">估计正弦支路神经元效用</text>
+  <text x="1320" y="701" text-anchor="middle" class="small">轻量重初始化低效用单元</text>
+
+  <path d="M280 545 C280 480, 1030 500, 1070 415" class="feedback"/>
+  <path d="M800 545 C800 490, 1270 505, 1330 415" class="feedback"/>
+  <path d="M1320 545 C1300 485, 1145 475, 1090 415" class="feedback"/>
+
+  <text x="800" y="785" text-anchor="middle" class="small">固定权重周期相位网络为主方法；下方模块用于考察复合训练机制的非加性影响</text>
+</svg>

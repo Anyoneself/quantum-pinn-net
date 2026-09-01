@@ -1,0 +1,476 @@
+{
+  "experiment_root": "experiments/rba_qpinn_submission_v1",
+  "randomized_run_ids": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "array_crosscheck": {
+    "fixed_dataset_shared_across_runs": true,
+    "field_shape": [
+      128,
+      32,
+      32
+    ],
+    "condition_shape": [
+      128,
+      5
+    ],
+    "source_identifiers": [
+      0
+    ],
+    "fixed_array_sha256": {
+      "fields": "348d264aebfb7dfaeefd02e85e54036ec6d367a2b6f9a9feb25b1a5e427570fa",
+      "conditions": "b802a6020481a19d7ab35c8a9228389a09005b28a6d8e653e5d42e90bc1029f8",
+      "source_ids": "a7cd92232d6f3663d48a60bc04ae54ae4fb6841e40d79ee9fd6e78a9c0122cbf"
+    },
+    "mask_check": "binary, pairwise disjoint, and complete in every randomized run",
+    "maximum_absolute_metric_difference": 4.4741962912375755e-08,
+    "maximum_absolute_per_field_rmse_difference": 4.470877196238732e-08,
+    "maximum_absolute_aggregate_difference": {
+      "raw": 3.2705738117755345e-08,
+      "corrected": 8.418647529095935e-09
+    },
+    "note": "Primary metrics and per-field RMSE values were recomputed from fields, predictions, and held-out masks before comparison with derived JSON/CSV files."
+  },
+  "field_run_statistics": {
+    "pair_count": 640,
+    "field_count": 128,
+    "models": {
+      "standard-pinn": {
+        "label": "Fourier 对照网络",
+        "rmse_distribution": {
+          "count": 640,
+          "mean": 0.16477894381279665,
+          "sample_std": 0.05607584645153464,
+          "median": 0.15186349969149748,
+          "q1": 0.1224532280460353,
+          "q3": 0.20014939231135428,
+          "p90": 0.24583072060198877,
+          "minimum": 0.05862882314254618,
+          "maximum": 0.38277259016648313
+        }
+      },
+      "quantum-feature": {
+        "label": "周期相位网络",
+        "rmse_distribution": {
+          "count": 640,
+          "mean": 0.07499005920982614,
+          "sample_std": 0.039165401016988795,
+          "median": 0.06105117869105472,
+          "q1": 0.04678901920909448,
+          "q3": 0.08693798908937997,
+          "p90": 0.14068002844517982,
+          "minimum": 0.024615114535209016,
+          "maximum": 0.20856351626100855
+        },
+        "wins_vs_baseline": 640,
+        "win_rate_vs_baseline": 1.0
+      },
+      "quantum-loss": {
+        "label": "周期相位 + 动态权重",
+        "rmse_distribution": {
+          "count": 640,
+          "mean": 0.22200482227060053,
+          "sample_std": 0.06308695458197534,
+          "median": 0.22289752852932665,
+          "q1": 0.17170229629637135,
+          "q3": 0.2642875664407148,
+          "p90": 0.30485403002091244,
+          "minimum": 0.077835922824295,
+          "maximum": 0.4168386582200926
+        },
+        "wins_vs_baseline": 75,
+        "win_rate_vs_baseline": 0.1171875
+      },
+      "quantum-mc": {
+        "label": "周期相位 + 动态权重 + MC",
+        "rmse_distribution": {
+          "count": 640,
+          "mean": 0.24542015797785738,
+          "sample_std": 0.07093129744637895,
+          "median": 0.24129745708161132,
+          "q1": 0.19059745370063375,
+          "q3": 0.3004101091145851,
+          "p90": 0.33782361390440174,
+          "minimum": 0.08554117791577794,
+          "maximum": 0.4742060978333793
+        },
+        "wins_vs_baseline": 52,
+        "win_rate_vs_baseline": 0.08125
+      },
+      "rba-no-mc": {
+        "label": "周期相位 + 动态权重 + RBA",
+        "rmse_distribution": {
+          "count": 640,
+          "mean": 0.21905119208041537,
+          "sample_std": 0.06428024759203045,
+          "median": 0.2201248002570592,
+          "q1": 0.16688500525981614,
+          "q3": 0.2645003139636773,
+          "p90": 0.3023122830501717,
+          "minimum": 0.07770227626226499,
+          "maximum": 0.40227153526056286
+        },
+        "wins_vs_baseline": 97,
+        "win_rate_vs_baseline": 0.1515625
+      },
+      "rba-qpinn": {
+        "label": "周期相位 + 动态权重 + RBA + MC",
+        "rmse_distribution": {
+          "count": 640,
+          "mean": 0.2378285868025412,
+          "sample_std": 0.06944078835408528,
+          "median": 0.2332092162238508,
+          "q1": 0.18408537280811216,
+          "q3": 0.28842923066700443,
+          "p90": 0.32994694334163427,
+          "minimum": 0.0860149038252916,
+          "maximum": 0.43072830264181405
+        },
+        "wins_vs_baseline": 71,
+        "win_rate_vs_baseline": 0.1109375
+      }
+    },
+    "quantum_feature_field_average_vs_baseline": {
+      "fields_with_lower_rmse": 128,
+      "difference_distribution": {
+        "count": 128,
+        "mean": 0.0897888846029705,
+        "sample_std": 0.0341726069012537,
+        "median": 0.0848699588161839,
+        "q1": 0.06611911476003872,
+        "q3": 0.10754848171417362,
+        "p90": 0.1344353697153339,
+        "minimum": 0.025594323757709987,
+        "maximum": 0.2092045466919707
+      }
+    },
+    "note": "Field-run pairs share fields and fitted model parameters. These statistics are descriptive and are not independent inferential units."
+  },
+  "dynamic_weight_statistics": {
+    "quantum-loss": {
+      "label": "周期相位 + 动态权重",
+      "dominant_objective_counts": {
+        "smoothness": 5
+      },
+      "terminal_weights": {
+        "data": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        },
+        "mean_prior": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        },
+        "smoothness": {
+          "count": 5,
+          "mean": 3.999998092651367,
+          "sample_std": 0.0,
+          "median": 3.999998092651367,
+          "q1": 3.999998092651367,
+          "q3": 3.999998092651367,
+          "p90": 3.999998092651367,
+          "minimum": 3.999998092651367,
+          "maximum": 3.999998092651367
+        },
+        "boundary": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        }
+      },
+      "note": "The archive key 'physics' denotes the field-mean prior because Darcy training is disabled. These weights are updated after training ends, do not enter a subsequent gradient step, and need not match the validation-selected checkpoint."
+    },
+    "quantum-mc": {
+      "label": "周期相位 + 动态权重 + MC",
+      "dominant_objective_counts": {
+        "smoothness": 4,
+        "mean_prior": 1
+      },
+      "terminal_weights": {
+        "data": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        },
+        "mean_prior": {
+          "count": 5,
+          "mean": 0.7999778118959512,
+          "sample_std": 1.7888033442292217,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 2.3999321623261496,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 3.9998865127563477
+        },
+        "smoothness": {
+          "count": 5,
+          "mean": 3.2000208848243346,
+          "sample_std": 1.7888034171517218,
+          "median": 3.999998092651367,
+          "q1": 3.999998092651367,
+          "q3": 3.999998092651367,
+          "p90": 3.999998092651367,
+          "minimum": 0.0001120535162044689,
+          "maximum": 3.999998092651367
+        },
+        "boundary": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        }
+      },
+      "note": "The archive key 'physics' denotes the field-mean prior because Darcy training is disabled. These weights are updated after training ends, do not enter a subsequent gradient step, and need not match the validation-selected checkpoint."
+    },
+    "rba-no-mc": {
+      "label": "周期相位 + 动态权重 + RBA",
+      "dominant_objective_counts": {
+        "smoothness": 5
+      },
+      "terminal_weights": {
+        "data": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        },
+        "mean_prior": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        },
+        "smoothness": {
+          "count": 5,
+          "mean": 3.999998092651367,
+          "sample_std": 0.0,
+          "median": 3.999998092651367,
+          "q1": 3.999998092651367,
+          "q3": 3.999998092651367,
+          "p90": 3.999998092651367,
+          "minimum": 3.999998092651367,
+          "maximum": 3.999998092651367
+        },
+        "boundary": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        }
+      },
+      "note": "The archive key 'physics' denotes the field-mean prior because Darcy training is disabled. These weights are updated after training ends, do not enter a subsequent gradient step, and need not match the validation-selected checkpoint."
+    },
+    "rba-qpinn": {
+      "label": "周期相位 + 动态权重 + RBA + MC",
+      "dominant_objective_counts": {
+        "smoothness": 5
+      },
+      "terminal_weights": {
+        "data": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        },
+        "mean_prior": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        },
+        "smoothness": {
+          "count": 5,
+          "mean": 3.999998092651367,
+          "sample_std": 0.0,
+          "median": 3.999998092651367,
+          "q1": 3.999998092651367,
+          "q3": 3.999998092651367,
+          "p90": 3.999998092651367,
+          "minimum": 3.999998092651367,
+          "maximum": 3.999998092651367
+        },
+        "boundary": {
+          "count": 5,
+          "mean": 6.366808520397171e-07,
+          "sample_std": 0.0,
+          "median": 6.366808520397171e-07,
+          "q1": 6.366808520397171e-07,
+          "q3": 6.366808520397171e-07,
+          "p90": 6.366808520397171e-07,
+          "minimum": 6.366808520397171e-07,
+          "maximum": 6.366808520397171e-07
+        }
+      },
+      "note": "The archive key 'physics' denotes the field-mean prior because Darcy training is disabled. These weights are updated after training ends, do not enter a subsequent gradient step, and need not match the validation-selected checkpoint."
+    }
+  },
+  "rba_weight_statistics": {
+    "rba-no-mc": {
+      "label": "周期相位 + 动态权重 + RBA",
+      "terminal_point_weights": {
+        "mean": {
+          "count": 5,
+          "mean": 1.214252495765686,
+          "sample_std": 9.184707913344847e-05,
+          "median": 1.2142096757888794,
+          "q1": 1.2141826152801514,
+          "q3": 1.2143265008926392,
+          "p90": 1.21435489654541,
+          "minimum": 1.2141698598861694,
+          "maximum": 1.2143738269805908
+        },
+        "p95": {
+          "count": 5,
+          "mean": 1.523191213607788,
+          "sample_std": 0.0007792938248300287,
+          "median": 1.5231220722198486,
+          "q1": 1.522648811340332,
+          "q3": 1.5237665176391602,
+          "p90": 1.5240011930465698,
+          "minimum": 1.5222610235214233,
+          "maximum": 1.5241576433181763
+        },
+        "max": {
+          "count": 5,
+          "mean": 2.134023571014404,
+          "sample_std": 0.04235648654564669,
+          "median": 2.1416842937469482,
+          "q1": 2.1388752460479736,
+          "q3": 2.1500587463378906,
+          "p90": 2.165892505645752,
+          "minimum": 2.063051223754883,
+          "maximum": 2.176448345184326
+        }
+      }
+    },
+    "rba-qpinn": {
+      "label": "周期相位 + 动态权重 + RBA + MC",
+      "terminal_point_weights": {
+        "mean": {
+          "count": 5,
+          "mean": 1.2146396398544312,
+          "sample_std": 0.0004024325914517871,
+          "median": 1.2144715785980225,
+          "q1": 1.2144111394882202,
+          "q3": 1.2148263454437256,
+          "p90": 1.2150804042816161,
+          "minimum": 1.2142393589019775,
+          "maximum": 1.21524977684021
+        },
+        "p95": {
+          "count": 5,
+          "mean": 1.5174429178237916,
+          "sample_std": 0.0014017034724841105,
+          "median": 1.517850399017334,
+          "q1": 1.516377568244934,
+          "q3": 1.518580675125122,
+          "p90": 1.5187167167663573,
+          "minimum": 1.5155985355377197,
+          "maximum": 1.5188074111938477
+        },
+        "max": {
+          "count": 5,
+          "mean": 2.1764028072357178,
+          "sample_std": 0.04506882721291931,
+          "median": 2.1735689640045166,
+          "q1": 2.1722490787506104,
+          "q3": 2.179183006286621,
+          "p90": 2.2169206142425537,
+          "minimum": 2.114933967590332,
+          "maximum": 2.242079019546509
+        }
+      }
+    }
+  },
+  "mc_statistics": {
+    "quantum-mc": {
+      "label": "周期相位 + 动态权重 + MC",
+      "neuron_level_reinitializations_per_run": {
+        "count": 5,
+        "mean": 140.0,
+        "sample_std": 0.0,
+        "median": 140.0,
+        "q1": 140.0,
+        "q3": 140.0,
+        "p90": 140.0,
+        "minimum": 140.0,
+        "maximum": 140.0
+      }
+    },
+    "rba-qpinn": {
+      "label": "周期相位 + 动态权重 + RBA + MC",
+      "neuron_level_reinitializations_per_run": {
+        "count": 5,
+        "mean": 140.0,
+        "sample_std": 0.0,
+        "median": 140.0,
+        "q1": 140.0,
+        "q3": 140.0,
+        "p90": 140.0,
+        "minimum": 140.0,
+        "maximum": 140.0
+      }
+    }
+  }
+}
