@@ -1,0 +1,488 @@
+{
+  "key": "localactivation",
+  "expected_title": "Locally adaptive activation functions with slope recovery for deep and physics-informed neural networks",
+  "doi": "10.1098/rspa.2020.0334",
+  "arxiv": "1909.12228",
+  "accessed": "2026-09-30T15:36:12.689709+00:00",
+  "errors": [],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2026-09-30T11:15:14Z",
+      "timestamp": 1790766914365,
+      "version": "4.1.0"
+    },
+    "reference-count": 27,
+    "publisher": "The Royal Society",
+    "issue": "2239",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2020-07-01T00:00:00Z",
+          "timestamp": 1593561600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://royalsociety.org/-/media/journals/author/Licence-to-Publish-20062019-final.pdf"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2020-07-01T00:00:00Z",
+          "timestamp": 1593561600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://royalsociety.org/journals/ethics-policies/data-sharing-mining/"
+      }
+    ],
+    "funder": [
+      {
+        "name": "DAPRA-AIRA",
+        "award": [
+          "HR00111990025"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "HR00111990025"
+            ]
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "DE-SC0019453"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-SC0019453"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "royalsocietypublishing.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Proc. R. Soc. A."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          7
+        ]
+      ]
+    },
+    "abstract": "<jats:p>\n                    We propose two approaches of locally adaptive activation functions namely, layer-wise and neuron-wise locally adaptive activation functions, which improve the performance of deep and physics-informed neural networks. The local adaptation of activation function is achieved by introducing a scalable parameter in each layer (layer-wise) and for every neuron (neuron-wise) separately, and then optimizing it using a variant of stochastic gradient descent algorithm. In order to further increase the training speed, an activation slope-based\n                    <jats:italic>slope recovery</jats:italic>\n                    term is added in the loss function, which further accelerates convergence, thereby reducing the training cost. On the theoretical side, we prove that in the proposed method, the gradient descent algorithms are not attracted to sub-optimal critical points or local minima under practical conditions on the initialization and learning rate, and that the gradient dynamics of the proposed method is not achievable by base methods with any (adaptive) learning rates. We further show that the adaptive activation methods accelerate the convergence by implicitly multiplying conditioning matrices to the gradient of the base method without any explicit computation of the conditioning matrix and the matrix–vector product. The different adaptive activation functions are shown to induce different implicit conditioning matrices. Furthermore, the proposed methods with the slope recovery are shown to accelerate the training process.\n                  </jats:p>",
+    "DOI": "10.1098/rspa.2020.0334",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2020-07-15T03:05:16Z",
+      "timestamp": 1594782316000
+    },
+    "page": "20200334",
+    "update-policy": "https://doi.org/10.1098/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 261,
+    "title": [
+      "Locally adaptive activation functions with slope recovery for deep and physics-informed neural networks"
+    ],
+    "prefix": "10.1098",
+    "volume": "476",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8831-1000",
+        "authenticated-orcid": true,
+        "given": "Ameya D.",
+        "family": "Jagtap",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Division of Applied Mathematics, Brown University, 182 George Street, Providence, RI 02912, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kenji",
+        "family": "Kawaguchi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology, 77 Massachusetts Avenue, Cambridge, MA 02139, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "George",
+        "family": "Em Karniadakis",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Division of Applied Mathematics, Brown University, 182 George Street, Providence, RI 02912, USA"
+          },
+          {
+            "name": "Pacific Northwest National Laboratory, Richland, WA 99354, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "175",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          15
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_6_2_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSP.2012.2205597"
+      },
+      {
+        "key": "e_1_3_6_3_2",
+        "unstructured": "Krizhevsky A Sutskever I Hinton G. 2012 Imagenet classification with deep convolutional neural networks. In Advances in Neural Information Processing Systems 25 26th Annual Conf. in Neural Information Processing Systems 2012 Lake Tahoe NV 1–6 December vol. 1 pp. 1097–1105. Neural Information Processing Systems Foundation Inc."
+      },
+      {
+        "key": "e_1_3_6_4_2",
+        "unstructured": "Wu Y et al. 2016 Google’s neural machine translation system: bridging the gap between human and machine translation. (http://arxiv.org/abs/1609.08144)."
+      },
+      {
+        "key": "e_1_3_6_5_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2018.10.045"
+      },
+      {
+        "key": "e_1_3_6_6_2",
+        "first-page": "1929",
+        "article-title": "Dropout: a simple way to prevent neural networks from overfitting",
+        "volume": "15",
+        "author": "Srivastava N",
+        "year": "2014",
+        "journal-title": "J. Mach. Learning Res."
+      },
+      {
+        "key": "e_1_3_6_7_2",
+        "unstructured": "Yu CC Tang YC Liu BD. 2002 An adaptive activation function for multilayer feedforward neural networks. In 2002 IEEE Region 10 Conf. on Computers Communications Control and Power Engineering. TENCOM ’02. Proc. Beijing China 28–31 October. Piscataway NJ: IEEE."
+      },
+      {
+        "key": "e_1_3_6_8_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.neucom.2017.06.070"
+      },
+      {
+        "key": "e_1_3_6_9_2",
+        "unstructured": "Dushkoff M Ptucha R. Adaptive activation functions for deep networks. Electronic imaging computational imaging XIV pp. 1–5(5). (doi:10.2352/ISSN.2470-1173.2016.19.COIMG-149)"
+      },
+      {
+        "key": "e_1_3_6_10_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s00521-012-0858-9"
+      },
+      {
+        "key": "e_1_3_6_11_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11063-004-0637-4"
+      },
+      {
+        "key": "e_1_3_6_12_2",
+        "first-page": "587287",
+        "article-title": "On transformative adaptive activation functions in neural networks for gene expression inference",
+        "author": "Kunc V",
+        "year": "2019",
+        "journal-title": "bioRxiv"
+      },
+      {
+        "key": "e_1_3_6_13_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2019.109136"
+      },
+      {
+        "key": "e_1_3_6_14_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cma.2020.113028"
+      },
+      {
+        "key": "e_1_3_6_15_2",
+        "unstructured": "Wang S Teng Y Perdikaris P. 2020 Understanding and mitigating gradient pathologies in physics-informed neural networks. (http://arxiv.org/abs/2001.04536)."
+      },
+      {
+        "key": "e_1_3_6_16_2",
+        "first-page": "1",
+        "article-title": "Automatic differentiation in machine learning: a survey",
+        "volume": "18",
+        "author": "Baydin AG",
+        "year": "2018",
+        "journal-title": "J. Mach. Learning Res."
+      },
+      {
+        "key": "e_1_3_6_17_2",
+        "unstructured": "Ruder S. 2017 An overview of gradient descent optimization algorithms. (http://arxiv.org/abs/1609.04747v2)."
+      },
+      {
+        "key": "e_1_3_6_18_2",
+        "unstructured": "Kingma DP Ba JL. 2017 ADAM: a method for stochastic optimization. (http://arxiv.org/abs/1412.6980v9)."
+      },
+      {
+        "key": "e_1_3_6_19_2",
+        "volume-title": "Nonlinear programming",
+        "author": "Bertsekas DP",
+        "year": "1999"
+      },
+      {
+        "key": "e_1_3_6_20_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pakravan S Mistani PA Aragon-Calvo MA Gibou F. 2020 Solving inverse-PDE problems with physics-aware neural networks. (http://arxiv.org/abs/2001.03608).",
+        "DOI": "10.1016/j.jcp.2021.110414"
+      },
+      {
+        "key": "e_1_3_6_21_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.wavemoti.2018.02.001"
+      },
+      {
+        "key": "e_1_3_6_22_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/5.726791"
+      },
+      {
+        "key": "e_1_3_6_23_2",
+        "unstructured": "Xiao H Rasul K Vollgraf R. 2017 Fashion-MNIST: a novel image dataset for benchmarking machine learning algorithms. (http://arxiv.org/abs/1708.07747)."
+      },
+      {
+        "key": "e_1_3_6_24_2",
+        "unstructured": "Clanuwat T Bober-Irizar M Kitamoto A Lamb A Yamamoto K Ha D. 2018 Deep learning for classical Japanese literature. (http://arxiv.org/abs/1812.01718)."
+      },
+      {
+        "key": "e_1_3_6_25_2",
+        "unstructured": "Tactile Srl Brescia Italy (1994). Semeion Handwritten Digit Data Set. Rome Italy: Semeion Research Center of Sciences of Communication."
+      },
+      {
+        "key": "e_1_3_6_26_2",
+        "unstructured": "Netzer Y Wang T Coates A Bissacco A Wu B Ng AY. 2011 Reading digits in natural images with unsupervised feature learning. NIPS Workshop on Deep Learning and Unsupervised Feature Learning ."
+      },
+      {
+        "key": "e_1_3_6_27_2",
+        "unstructured": "Krizhevsky A Hinton G. 2009 Learning multiple layers of features from tiny images. Technical report Citeseer."
+      },
+      {
+        "key": "e_1_3_6_28_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He K Zhang X Ren S Sun J. 2016 Identity mappings in deep residual networks. Computer Vision - ECCV 2016 14th European Conf. Amsterdam The Netherlands 11–14 October Proc. Part IV pp. 630–645. Springer.",
+        "DOI": "10.1007/978-3-319-46493-0_38"
+      }
+    ],
+    "container-title": [
+      "Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.2020.0334",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://royalsocietypublishing.org/doi/full-xml/10.1098/rspa.2020.0334",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.2020.0334",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          12
+        ]
+      ],
+      "date-time": "2026-05-12T21:24:06Z",
+      "timestamp": 1778621046000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://royalsocietypublishing.org/rspa/article/80756"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          7
+        ]
+      ]
+    },
+    "references-count": 27,
+    "journal-issue": {
+      "issue": "2239",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            7
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1098/rspa.2020.0334"
+    ],
+    "URL": "https://doi.org/10.1098/rspa.2020.0334",
+    "relation": {},
+    "ISSN": [
+      "1364-5021",
+      "1471-2946"
+    ],
+    "issn-type": [
+      {
+        "value": "1364-5021",
+        "type": "print"
+      },
+      {
+        "value": "1471-2946",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          7
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-05-01",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2020-06-12",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2020-07-15",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  },
+  "arxiv_metadata": {
+    "citation_title": [
+      "Locally adaptive activation functions with slope recovery term for deep and physics-informed neural networks"
+    ],
+    "citation_author": [
+      "Jagtap, Ameya D.",
+      "Kawaguchi, Kenji",
+      "Karniadakis, George Em"
+    ],
+    "citation_date": [
+      "2019/09/25"
+    ],
+    "citation_doi": [
+      "10.1098/rspa.2020.0334"
+    ],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/1909.12228"
+    ]
+  },
+  "journal_ref": null,
+  "text_file": "paper/materical/literature_sources/localactivation.txt",
+  "reading_source": "https://arxiv.org/html/1909.12228",
+  "text_chars": 71823,
+  "is_pdf_reading": false
+}

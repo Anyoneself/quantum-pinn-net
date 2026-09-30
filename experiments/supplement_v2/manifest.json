@@ -1,0 +1,41 @@
+{
+  "protocol": "paper/materical/SUPPLEMENT_EXPERIMENT_PROTOCOL_V2.md",
+  "data_sha256": "348d264aebfb7dfaeefd02e85e54036ec6d367a2b6f9a9feb25b1a5e427570fa",
+  "condition_sha256": "b802a6020481a19d7ab35c8a9228389a09005b28a6d8e653e5d42e90bc1029f8",
+  "script_sha256": "e83df7033158bd498d62ef0936c25a1b5fce7a43277eef39fd6a84358f361fb4",
+  "arguments": {
+    "output": "experiments/supplement_v2",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "scenarios": [
+      "random70",
+      "random40",
+      "random20",
+      "noise05",
+      "noise10",
+      "block"
+    ],
+    "methods": null,
+    "epochs": 40,
+    "threads": 4,
+    "max_fields": 0,
+    "extended": true
+  },
+  "versions": {
+    "python": "3.14.0",
+    "torch": "2.11.0",
+    "numpy": "2.4.0",
+    "scipy": "1.16.3",
+    "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O"
+  },
+  "field_count": 128,
+  "device": "cpu",
+  "shape": [
+    128,
+    32,
+    32
+  ]
+}

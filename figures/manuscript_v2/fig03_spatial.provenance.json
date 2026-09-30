@@ -1,0 +1,18 @@
+{
+  "claim": "Matched missing-region sections reveal local shape and signed reconstruction deviations.",
+  "panel_roles": [
+    "Prespecified fields 0, 42, 85, row 16; all 14 displayed locations are test points",
+    "Reference versus four prediction profiles and signed errors; one run, no uncertainty estimate"
+  ],
+  "source": "experiments/supplement_v2",
+  "source_table": "source_metrics.csv",
+  "field_count": 128,
+  "run_ids": [
+    101,
+    202,
+    303
+  ],
+  "exclusions": [],
+  "uncertainty": "Sample SD across three repeated runs unless explicitly labelled otherwise",
+  "curve_policy": "Adjacent recorded epochs, grid locations or empirical ranks are joined by straight segments; no spline smoothing or invented observations."
+}

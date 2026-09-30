@@ -1,0 +1,19 @@
+{
+  "claim": "Pressure and inlet-flow deviations have different spatial distributions.",
+  "panel_roles": [
+    "Pressure RMSE at each x over all fields and y cells, random and block missing",
+    "Mean absolute local inlet-flux-density error at each y over all fields, not total-flux error",
+    "Profiles use all 128 fields and original 32 cell centres; pointwise three-run SD"
+  ],
+  "source": "experiments/supplement_v2",
+  "source_table": "source_metrics.csv",
+  "field_count": 128,
+  "run_ids": [
+    101,
+    202,
+    303
+  ],
+  "exclusions": [],
+  "uncertainty": "Sample SD across three repeated runs unless explicitly labelled otherwise",
+  "curve_policy": "Adjacent recorded epochs, grid locations or empirical ranks are joined by straight segments; no spline smoothing or invented observations."
+}

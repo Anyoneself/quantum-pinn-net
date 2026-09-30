@@ -1,0 +1,71 @@
+{
+  "parameter_search": [
+    {
+      "parameters": {
+        "neighbors": 16,
+        "smoothing": 0
+      },
+      "validation_mse": 3.552156704245135e-05
+    },
+    {
+      "parameters": {
+        "neighbors": 16,
+        "smoothing": 0.01
+      },
+      "validation_mse": 0.0003288660664111376
+    },
+    {
+      "parameters": {
+        "neighbors": 16,
+        "smoothing": 0.1
+      },
+      "validation_mse": 0.0012649407144635916
+    },
+    {
+      "parameters": {
+        "neighbors": 32,
+        "smoothing": 0
+      },
+      "validation_mse": 3.209862916264683e-05
+    },
+    {
+      "parameters": {
+        "neighbors": 32,
+        "smoothing": 0.01
+      },
+      "validation_mse": 0.0002297994215041399
+    },
+    {
+      "parameters": {
+        "neighbors": 32,
+        "smoothing": 0.1
+      },
+      "validation_mse": 0.0018238620832562447
+    },
+    {
+      "parameters": {
+        "neighbors": 64,
+        "smoothing": 0
+      },
+      "validation_mse": 3.303168705315329e-05
+    },
+    {
+      "parameters": {
+        "neighbors": 64,
+        "smoothing": 0.01
+      },
+      "validation_mse": 0.00022349612845573574
+    },
+    {
+      "parameters": {
+        "neighbors": 64,
+        "smoothing": 0.1
+      },
+      "validation_mse": 0.001727961702272296
+    }
+  ],
+  "selected": {
+    "neighbors": 32,
+    "smoothing": 0
+  }
+}

@@ -1,0 +1,570 @@
+{
+  "key": "deepxde",
+  "expected_title": "DeepXDE: A Deep Learning Library for Solving Differential Equations",
+  "doi": "10.1137/19M1274067",
+  "arxiv": "1907.04502",
+  "accessed": "2026-09-30T15:36:03.357629+00:00",
+  "errors": [],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2026-09-30T15:29:13Z",
+      "timestamp": 1790782153135,
+      "version": "4.1.0"
+    },
+    "reference-count": 59,
+    "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+    "issue": "1",
+    "funder": [
+      {
+        "name": "DOE PhILMs",
+        "award": [
+          "de-sc0019453"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "de-sc0019453"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DARPA-AIRA",
+        "award": [
+          "HR00111990025"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "HR00111990025"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "SIAM Rev."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "abstract": "<jats:p>Abstract.</jats:p>\n                  <jats:p>Deep learning has achieved remarkable success in diverse applications; however, its use in solving partial differential equations (PDEs) has emerged only recently. Here, we present an overview of physics-informed neural networks (PINNs), which embed a PDE into the loss of the neural network using automatic differentiation. The PINN algorithm is simple, and it can be applied to different types of PDEs, including integro-differential equations, fractional PDEs, and stochastic PDEs. Moreover, from an implementation point of view, PINNs solve inverse problems as easily as forward problems. We propose a new residual-based adaptive refinement (RAR) method to improve the training efficiency of PINNs. For pedagogical reasons, we compare the PINN algorithm to a standard finite element method. We also present a Python library for PINNs, DeepXDE, which is designed to serve both as an educational tool to be used in the classroom as well as a research tool for solving problems in computational science and engineering. Specifically, DeepXDE can solve forward problems given initial and boundary conditions, as well as inverse problems given some extra measurements. DeepXDE supports complex-geometry domains based on the technique of constructive solid geometry and enables the user code to be compact, resembling closely the mathematical formulation. We introduce the usage of DeepXDE and its customizability, and we also demonstrate the capability of PINNs and the user-friendliness of DeepXDE for five different examples. More broadly, DeepXDE contributes to the more rapid development of the emerging scientific machine learning field.</jats:p>",
+    "DOI": "10.1137/19m1274067",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          2,
+          4
+        ]
+      ],
+      "date-time": "2021-02-04T09:27:06Z",
+      "timestamp": 1612430826000
+    },
+    "page": "208-228",
+    "source": "Crossref",
+    "is-referenced-by-count": 2332,
+    "title": [
+      "DeepXDE: A Deep Learning Library for Solving Differential Equations"
+    ],
+    "prefix": "10.1137",
+    "volume": "63",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-5476-5768",
+        "authenticated-orcid": true,
+        "given": "Lu",
+        "family": "Lu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Mathematics, Massachusetts Institute of Technology, Cambridge, MA 02139 USA."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xuhui",
+        "family": "Meng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Division of Applied Mathematics, Brown University, Providence, RI 02912 USA."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhiping",
+        "family": "Mao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Mathematical Sciences, Xiamen University, Xiamen, Fujian 361005, China."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-9713-7120",
+        "authenticated-orcid": true,
+        "given": "George Em",
+        "family": "Karniadakis",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Division of Applied Mathematics, Brown University, Providence, RI 02912 USA, and Pacific Northwest National Laboratory, Richland, WA 99354 USA."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "351",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          2,
+          4
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref1",
+        "unstructured": "M. Abadi, P. Barham, J. Chen, Z. Chen, A. Davis, J. Dean, M. Devin, S. Ghemawat, G. Irving, M. Isard et al., TensorFlow: A system for large-scale machine learning, in 12th USENIX Symposium on Operating Systems Design and Implementation, 2016, pp. 265–283."
+      },
+      {
+        "key": "ref2",
+        "volume-title": "A Posteriori Error Estimation in Finite Element Analysis",
+        "author": "Ainsworth M.",
+        "year": "2011"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/fld.1191"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2172/1478744"
+      },
+      {
+        "key": "ref5",
+        "first-page": "5595",
+        "volume": "18",
+        "author": "Baydin A. G.",
+        "year": "2017",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s00332-018-9525-3"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.neucom.2018.06.056"
+      },
+      {
+        "key": "ref8",
+        "unstructured": "M. Betancourt, A Geometric Theory of Higher-Order Automatic Differentiation, preprint, https://arxiv.org/abs/1812.11592, 2018."
+      },
+      {
+        "key": "ref9",
+        "volume-title": "NeurIPS 2019 Workshop on Program Transformations",
+        "author": "Bettencourt J.",
+        "year": "2019"
+      },
+      {
+        "key": "ref10",
+        "first-page": "494",
+        "volume-title": "Advances in Neural Information Processing Systems",
+        "author": "Blum A.",
+        "year": "1989"
+      },
+      {
+        "key": "ref11",
+        "first-page": "161",
+        "volume-title": "Advances in Neural Information Processing Systems",
+        "author": "Bottou L.",
+        "year": "2008"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/0916069"
+      },
+      {
+        "key": "ref13",
+        "unstructured": "Y. Chen, L. Lu, G. E. Karniadakis, and L. D. Negro, Physics-Informed Neural Networks for Inverse Problems in Nano-optics and Metamaterials, preprint, https://arxiv.org/abs/1912.01085, 2019."
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9780898719208"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/cnm.1640100303"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s40304-018-0127-z"
+      },
+      {
+        "key": "ref17",
+        "unstructured": "C. Finn, P. Abbeel, and S. Levine, Model-agnostic meta-learning for fast adaptation of deep networks, in Proceedings of the 34th International Conference on Machine Learning, PMLR, 2017, pp. 1126–1135."
+      },
+      {
+        "key": "ref18",
+        "unstructured": "P. Grohs, F. Hornung, A. Jentzen, and P. Von Wurstemberger, A Proof That Artificial Neural Networks Overcome the Curse of Dimensionality in the Numerical Approximation of Black-Scholes Partial Differential Equations, preprint, https://arxiv.org/abs/1809.02362, 2018."
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1718942115"
+      },
+      {
+        "key": "ref20",
+        "unstructured": "J. He, L. Li, J. Xu, and C. Zheng, ReLU Deep Neural Networks and Linear Finite Elements, preprint, https://arxiv.org/abs/1807.03973, 2018."
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Q. He, D. Brajas-Solano, G. Tartakovsky, and A. M. Tartakovsky, Physics-Informed Neural Networks for Multiphysics Data Assimilation with Application to Subsurface Transport, preprint, https://arxiv.org/abs/1912.02968, 2019.",
+        "DOI": "10.1016/j.advwatres.2020.103610"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cma.2004.10.008"
+      },
+      {
+        "key": "ref23",
+        "unstructured": "A. D. Jagtap, K. Kawaguchi, and G. E. Karniadakis, Locally Adaptive Activation Functions with Slope Recovery Term for Deep and Physics-Informed Neural Networks, preprint, https://arxiv.org/abs/1909.12228, 2019."
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2019.109136"
+      },
+      {
+        "key": "ref25",
+        "unstructured": "P. Jin, L. Lu, Y. Tang, and G. E. Karniadakis, Quantifying the Generalization Error in Deep Learning in Terms of Data Distribution and Neural Network Smoothness, preprint, https://arxiv.org/abs/1905.11427, 2019."
+      },
+      {
+        "key": "ref26",
+        "volume-title": "Numerical Solution of Partial Differential Equations by the Finite Element Method",
+        "author": "Johnson C.",
+        "year": "2012"
+      },
+      {
+        "key": "ref27",
+        "volume-title": "Spectral/hp Element Methods for Computational Fluid Dynamics",
+        "author": "Karniadakis G. E.",
+        "year": "2013",
+        "edition": "2"
+      },
+      {
+        "key": "ref28",
+        "unstructured": "Y. Khoo, J. Lu, and L. Ying, Solving parametric PDE problems with artificial neural networks, preprint, https://arxiv.org/abs/1707.03351, 2017."
+      },
+      {
+        "key": "ref29",
+        "unstructured": "D. P. Kingma and J. Ba, Adam: A method for stochastic optimization, in the 3rd International Conference on Learning Representations, 2015; preprint available from https://arxiv.org/abs/1412.6980."
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/72.712178"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/72.870037"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/nature14539"
+      },
+      {
+        "key": "ref33",
+        "unstructured": "Z. Long, Y. Lu, X. Ma, and B. Dong, PDE-net: Learning PDEs from data, in Proceedings of the 35th International Conference on Machine Learning, PMLR, 2018, pp. 3214–3222."
+      },
+      {
+        "key": "ref34",
+        "unstructured": "L. Lu, P. Jin, and G. E. Karniadakis, DeepONet: Learning Nonlinear Operators for Identifying Differential Equations Based on the Universal Approximation Theorem of Operators, preprint, https://arxiv.org/abs/1910.03193, 2019."
+      },
+      {
+        "key": "ref35",
+        "unstructured": "L. Lu, Y. Shin, Y. Su, and G. E. Karniadakis, Dying ReLU and Initialization: Theory and Numerical Examples, preprint, https://arxiv.org/abs/1903.06733, 2019."
+      },
+      {
+        "key": "ref36",
+        "unstructured": "L. Lu, Y. Su, and G. E. Karniadakis, Collapse of Deep and Narrow Neural Nets, preprint, https://arxiv.org/abs/1808.04947, 2018."
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cma.2019.112789"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/widm.1305"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0895-7177(94)90095-7"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "crossref",
+        "unstructured": "X. Meng and G. E. Karniadakis, A Composite Neural Network That Learns from Multi-fidelity Data: Application to Function Approximation and Inverse PDE Problems, preprint, https://arxiv.org/abs/1903.00104, 2019.",
+        "DOI": "10.1016/j.jcp.2019.109020"
+      },
+      {
+        "key": "ref41",
+        "unstructured": "M. A. Nabian and H. Meidani, A Deep Neural Network Surrogate for High-Dimensional Random Partial Differential Equations, preprint, https://arxiv.org/abs/1806.02957, 2018."
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/18M1229845"
+      },
+      {
+        "key": "ref43",
+        "volume-title": "NIPS 2017 Workshop on Autodiff",
+        "author": "Paszke A.",
+        "year": "2017"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/S0962492900002919"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11633-017-1054-2"
+      },
+      {
+        "key": "ref46",
+        "unstructured": "N. Rahaman, A. Baratin, D. Arpit, F. Draxler, M. Lin, F. Hamprecht, Y. Bengio, and A. Courville, On the spectral bias of neural networks, in Proceedings of the 36th International Conference on Machine Learning, PMLR, 2019, pp. 5301–5310."
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2018.10.045"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.aaw4741"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/323533a0"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2018.08.029"
+      },
+      {
+        "key": "ref51",
+        "unstructured": "A. M. Tartakovsky, C. O. Marrero, P. Perdikaris, G. D. Tartakovsky, and D. Barajas-Solano, Learning Parameters and Constitutive Relationships with Physics Informed Deep Neural Networks, preprint, https://arxiv.org/abs/1808.03398, 2018."
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevLett.75.3594"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2019.05.026"
+      },
+      {
+        "key": "ref54",
+        "unstructured": "Z.Q. J. Xu, Y. Zhang, T. Luo, Y. Xiao, and Z. Ma, Frequency Principle: Fourier Analysis Sheds Light on Deep Neural Networks, preprint, https://arxiv.org/abs/1901.06523, 2019."
+      },
+      {
+        "key": "ref55",
+        "unstructured": "L. Yang, D. Zhang, and G. E. Karniadakis, Physics-Informed Generative Adversarial Networks for Stochastic Differential Equations, preprint, https://arxiv.org/abs/1811.02033, 2018."
+      },
+      {
+        "key": "ref56",
+        "unstructured": "D. Zhang, L. Guo, and G. E. Karniadakis, Learning in Modal Space: Solving Time-Dependent Stochastic PDEs Using Physics-Informed Neural Networks, preprint, https://arxiv.org/abs/1905.01205, 2019."
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2019.07.048"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Y. Zhu, N. Zabaras, P.S. Koutsourelakis, and P. Perdikaris, Physics-Constrained Deep Learning for High-Dimensional Surrogate Modeling and Uncertainty Quantification without Labeled Data, preprint, https://arxiv.org/abs/1901.06314, 2019.",
+        "DOI": "10.1016/j.jcp.2019.05.024"
+      },
+      {
+        "key": "ref59",
+        "unstructured": "B. Zoph and Q. V. Le, Neural Architecture Search with Reinforcement Learning, preprint, https://arxiv.org/abs/1611.01578, 2016."
+      }
+    ],
+    "container-title": [
+      "SIAM Review"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://epubs.siam.org/doi/pdf/10.1137/19M1274067",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          20
+        ]
+      ],
+      "date-time": "2026-08-20T12:02:24Z",
+      "timestamp": 1787227344000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://epubs.siam.org/doi/10.1137/19M1274067"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "references-count": 59,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            1
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1137/19M1274067"
+    ],
+    "URL": "https://doi.org/10.1137/19m1274067",
+    "relation": {},
+    "ISSN": [
+      "0036-1445",
+      "1095-7200"
+    ],
+    "issn-type": [
+      {
+        "value": "0036-1445",
+        "type": "print"
+      },
+      {
+        "value": "1095-7200",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "arxiv_metadata": {
+    "citation_title": [
+      "DeepXDE: A deep learning library for solving differential equations"
+    ],
+    "citation_author": [
+      "Lu, Lu",
+      "Meng, Xuhui",
+      "Mao, Zhiping",
+      "Karniadakis, George E."
+    ],
+    "citation_date": [
+      "2019/07/10"
+    ],
+    "citation_doi": [
+      "10.1137/19M1274067"
+    ],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/1907.04502"
+    ]
+  },
+  "journal_ref": null,
+  "text_file": "paper/materical/literature_sources/deepxde.txt",
+  "reading_source": "https://arxiv.org/html/1907.04502",
+  "text_chars": 69701,
+  "is_pdf_reading": false
+}

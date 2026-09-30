@@ -1,0 +1,18 @@
+{
+  "claim": "Short-budget architecture differences must be separated from eventual convergence and cost.",
+  "panel_roles": [
+    "Fourier validation trajectories under two training budgets",
+    "Phase validation trajectories under the same two budgets; one prespecified run, schedule length also changes"
+  ],
+  "source": "experiments/supplement_v2",
+  "source_table": "source_metrics.csv",
+  "field_count": 128,
+  "run_ids": [
+    101,
+    202,
+    303
+  ],
+  "exclusions": [],
+  "uncertainty": "Sample SD across three repeated runs unless explicitly labelled otherwise",
+  "curve_policy": "Adjacent recorded epochs, grid locations or empirical ranks are joined by straight segments; no spline smoothing or invented observations."
+}

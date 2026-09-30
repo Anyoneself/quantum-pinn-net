@@ -1,0 +1,20 @@
+{
+  "experiment_root": "experiments/rba_qpinn_submission_v1",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "models": {
+    "Fourier comparator": "standard-pinn",
+    "Phase-periodic network": "quantum-feature"
+  },
+  "run_count_per_field": 5,
+  "field_count": 128,
+  "selection_rule": "All fields included; sorted by field-averaged Fourier comparator RMSE.",
+  "exclusions": [],
+  "fields_with_lower_phase_periodic_rmse": 128,
+  "source_data": "figures/manuscript/field_average_rmse_distribution.csv"
+}

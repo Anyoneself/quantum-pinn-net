@@ -1,0 +1,591 @@
+{
+  "key": "gradient",
+  "expected_title": "Understanding and Mitigating Gradient Flow Pathologies in Physics-Informed Neural Networks",
+  "doi": "10.1137/20M1318043",
+  "arxiv": "2001.04536",
+  "accessed": "2026-09-30T15:35:55.655958+00:00",
+  "errors": [],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2026-09-30T15:31:02Z",
+      "timestamp": 1790782262768,
+      "version": "4.1.0"
+    },
+    "reference-count": 57,
+    "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+    "issue": "5",
+    "funder": [
+      {
+        "DOI": "10.13039/100000185",
+        "name": "Defense Advanced Research Projects Agency",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "HR00111890034"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "HR00111890034"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000185",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-SC0019116"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-SC0019116"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "SIAM J. Sci. Comput."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "abstract": "<jats:p>The widespread use of neural networks across different scientific domains often involves constraining them to satisfy certain symmetries, conservation laws, or other domain knowledge. Such constraints are often imposed as soft penalties during model training and effectively act as domain-specific regularizers of the empirical risk loss. Physics-informed neural networks is an example of this philosophy in which the outputs of deep neural networks are constrained to approximately satisfy a given set of partial differential equations. In this work we review recent advances in scientific machine learning with a specific focus on the effectiveness of physics-informed neural networks in predicting outcomes of physical systems and discovering hidden physics from noisy data. We also identify and analyze a fundamental mode of failure of such approaches that is related to numerical stiffness leading to unbalanced back-propagated gradients during model training. To address this limitation we present a learning rate annealing algorithm that utilizes gradient statistics during model training to balance the interplay between different terms in composite loss functions. We also propose a novel neural network architecture that is more resilient to such gradient pathologies. Taken together, our developments provide new insights into the training of constrained neural networks and consistently improve the predictive accuracy of physics-informed neural networks by a factor of 50--100$\\times$ across a range of problems in computational physics. All code and data accompanying this manuscript are publicly available at https://github.com/PredictiveIntelligenceLab/GradientPathologiesPINNs.</jats:p>",
+    "DOI": "10.1137/20m1318043",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          9
+        ]
+      ],
+      "date-time": "2021-09-09T14:42:53Z",
+      "timestamp": 1631198573000
+    },
+    "page": "A3055-A3081",
+    "source": "Crossref",
+    "is-referenced-by-count": 2033,
+    "title": [
+      "Understanding and Mitigating Gradient Flow Pathologies in Physics-Informed Neural Networks"
+    ],
+    "prefix": "10.1137",
+    "volume": "43",
+    "author": [
+      {
+        "given": "Sifan",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yujun",
+        "family": "Teng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2816-3229",
+        "authenticated-orcid": true,
+        "given": "Paris",
+        "family": "Perdikaris",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "351",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          9
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "atypb1",
+        "first-page": "265",
+        "volume-title": "12th USENIX Symposium on Operating Systems Design and Implementation (OSDI 16)",
+        "author": "Abadi M.",
+        "year": "2016"
+      },
+      {
+        "key": "atypb2",
+        "volume-title": "Pure Appl. Math. (Amst.) 140",
+        "author": "Adams R. A.",
+        "year": "2003"
+      },
+      {
+        "key": "atypb3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/nbt.3300"
+      },
+      {
+        "key": "atypb4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/ncomms5308"
+      },
+      {
+        "key": "atypb5",
+        "volume-title": "The Mechanics of n-Player Differentiable Games, preprint, https://arxiv.org/abs/1802.05642",
+        "author": "Balduzzi D.",
+        "year": "2018"
+      },
+      {
+        "key": "atypb6",
+        "first-page": "153",
+        "volume": "18",
+        "author": "Baydin A. G.",
+        "year": "2018",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "atypb7",
+        "volume-title": "Constrained Optimization and Lagrange Multiplier Methods",
+        "author": "Bertsekas D. P.",
+        "year": "2014"
+      },
+      {
+        "key": "atypb8",
+        "volume-title": "Relativistic Quantum Mechanics",
+        "author": "Bjorken J. D.",
+        "year": "1965"
+      },
+      {
+        "key": "atypb9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.compfluid.2004.12.004"
+      },
+      {
+        "key": "atypb10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-30726-6"
+      },
+      {
+        "key": "atypb11",
+        "volume-title": "GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks, preprint, https://arxiv.org/abs/1711.02257",
+        "author": "Chen Z.",
+        "year": "2017"
+      },
+      {
+        "key": "atypb12",
+        "volume-title": "Learning Phrase Representations Using RNN Encoder-Decoder for Statistical Machine Translation, preprint, https://arxiv.org/abs/1406.1078",
+        "author": "Cho K.",
+        "year": "2014"
+      },
+      {
+        "key": "atypb13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298878"
+      },
+      {
+        "key": "atypb14",
+        "volume-title": "AMS",
+        "author": "Evans L. C.",
+        "year": "1998"
+      },
+      {
+        "key": "atypb15",
+        "volume-title": "PhyGeoNet: Physics-Informed Geometry-Adaptive Convolutional Neural Networks for Solving Parametric PDEs on Irregular Domain, preprint, https://arxiv.org/abs/2004.13145",
+        "author": "Gao H.",
+        "year": "2020"
+      },
+      {
+        "key": "atypb16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01934907"
+      },
+      {
+        "key": "atypb17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2019.109056"
+      },
+      {
+        "key": "atypb18",
+        "first-page": "249",
+        "volume-title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics",
+        "author": "Glorot X.",
+        "year": "2010"
+      },
+      {
+        "key": "atypb19",
+        "volume-title": "Deep Learning",
+        "author": "Goodfellow I.",
+        "year": "2016"
+      },
+      {
+        "key": "atypb20",
+        "volume-title": "A First Course in the Numerical Analysis of Differential Equations",
+        "author": "Iserles A.",
+        "year": "2009"
+      },
+      {
+        "key": "atypb21",
+        "volume-title": "Variational Physics-Informed Neural Networks for Solving Partial Differential Equations, preprint, https://arxiv.org/abs/1912.00873",
+        "author": "Kharazmi E.",
+        "year": "2019"
+      },
+      {
+        "key": "atypb22",
+        "volume-title": "Adam: A Method for Stochastic Optimization, preprint, https://arxiv.org/abs/1412.6980",
+        "author": "Kingma D. P.",
+        "year": "2014"
+      },
+      {
+        "key": "atypb23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cma.2019.112623"
+      },
+      {
+        "key": "atypb24",
+        "volume-title": "Covariant Compositional Networks for Learning Graphs, preprint, https://arxiv.org/abs/1801.02144",
+        "author": "Kondor R.",
+        "year": "2018"
+      },
+      {
+        "key": "atypb25",
+        "first-page": "1097",
+        "author": "Krizhevsky A.",
+        "year": "2012",
+        "journal-title": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "key": "atypb26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/72.712178"
+      },
+      {
+        "key": "atypb27",
+        "first-page": "255",
+        "volume-title": "The Handbook of Brain Theory and Neural Networks",
+        "author": "LeCun Y.",
+        "year": "1995"
+      },
+      {
+        "key": "atypb28",
+        "volume-title": "A Critical Review of Recurrent Neural Networks for Sequence Learning, preprint, https://arxiv.org/abs/1506.00019",
+        "author": "Lipton Z. C.",
+        "year": "2015"
+      },
+      {
+        "key": "atypb29",
+        "volume-title": "Two-Layer Neural Networks for Partial Differential Equations: Optimization and Generalization Theory, preprint, https://arxiv.org/abs/2006.15733",
+        "author": "Luo T.",
+        "year": "2020"
+      },
+      {
+        "key": "atypb30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1098/rsta.2015.0203"
+      },
+      {
+        "key": "atypb31",
+        "first-page": "9573",
+        "author": "Mardani M.",
+        "year": "2018",
+        "journal-title": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "key": "atypb32",
+        "first-page": "2703",
+        "volume-title": "Proceedings of the 2018 Annual ACM-SIAM Symposium on Discrete Algorithms, SIAM, 2018",
+        "author": "Mertikopoulos P.",
+        "year": "1975"
+      },
+      {
+        "key": "atypb33",
+        "volume-title": "Estimates on the Generalization Error of Physics Informed Neural Networks (PINNs) for Approximating PDEs II: A Class of Inverse Problems, preprint, https://arxiv.org/abs/2007.01138",
+        "author": "Mishra S.",
+        "year": "2020"
+      },
+      {
+        "key": "atypb34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4757-4393-7"
+      },
+      {
+        "key": "atypb35",
+        "volume-title": "Efficient Computation of Hessian Matrices in TensorFlow, preprint, https://arxiv.org/abs/1905.05559",
+        "author": "Nilsen G. K.",
+        "year": "2019"
+      },
+      {
+        "key": "atypb36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1561/2400000003"
+      },
+      {
+        "key": "atypb37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/aic.690381003"
+      },
+      {
+        "key": "atypb38",
+        "volume-title": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks, preprint, https://arxiv.org/abs/1511.06434",
+        "author": "Radford A.",
+        "year": "2015"
+      },
+      {
+        "key": "atypb39",
+        "first-page": "932",
+        "volume": "19",
+        "author": "Raissi M.",
+        "year": "2018",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "atypb40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2018.10.045"
+      },
+      {
+        "key": "atypb41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.aaw4741"
+      },
+      {
+        "key": "atypb42",
+        "volume-title": "Eigenvalues of the Hessian in Deep Learning: Singularity and Beyond, preprint, https://arxiv.org/abs/1611.07476",
+        "author": "Sagun L.",
+        "year": "2016"
+      },
+      {
+        "key": "atypb43",
+        "volume-title": "Competitive Gradient Descent, preprint, https://arxiv.org/abs/1905.12103",
+        "author": "Schäfer F.",
+        "year": "2019"
+      },
+      {
+        "key": "atypb44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4208/cicp.OA-2020-0193"
+      },
+      {
+        "key": "atypb45",
+        "volume-title": "Error Estimates of Residual Minimization Using Neural Networks for Linear PDEs, preprint, https://arxiv.org/abs/2010.08019",
+        "author": "Shin Y.",
+        "year": "2020"
+      },
+      {
+        "key": "atypb46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/nature24270"
+      },
+      {
+        "key": "atypb47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2018.08.029"
+      },
+      {
+        "key": "atypb48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/0705041"
+      },
+      {
+        "key": "atypb49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cma.2019.112732"
+      },
+      {
+        "key": "atypb50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/090771648"
+      },
+      {
+        "key": "atypb51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1029/2019WR026731"
+      },
+      {
+        "key": "atypb52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2018.08.036"
+      },
+      {
+        "key": "atypb53",
+        "first-page": "5998",
+        "author": "Vaswani A.",
+        "year": "2017",
+        "journal-title": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "key": "atypb54",
+        "volume-title": "When and Why PINNs Fail to Train: A Neural Tangent Kernel Perspective, preprint, https://arxiv.org/abs/2007.14527",
+        "author": "Wang S.",
+        "year": "2020"
+      },
+      {
+        "key": "atypb55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2019.05.027"
+      },
+      {
+        "key": "atypb56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jcp.2019.05.024"
+      },
+      {
+        "key": "atypb57",
+        "volume-title": "The Finite Element Method",
+        "volume": "3",
+        "author": "Zienkiewicz O. C.",
+        "year": "1977"
+      }
+    ],
+    "container-title": [
+      "SIAM Journal on Scientific Computing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://epubs.siam.org/doi/pdf/10.1137/20M1318043",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          21
+        ]
+      ],
+      "date-time": "2026-08-21T16:31:32Z",
+      "timestamp": 1787329892000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://epubs.siam.org/doi/10.1137/20M1318043"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "references-count": 57,
+    "journal-issue": {
+      "issue": "5",
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            1
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1137/20M1318043"
+    ],
+    "URL": "https://doi.org/10.1137/20m1318043",
+    "relation": {},
+    "ISSN": [
+      "1064-8275",
+      "1095-7197"
+    ],
+    "issn-type": [
+      {
+        "value": "1064-8275",
+        "type": "print"
+      },
+      {
+        "value": "1095-7197",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    }
+  },
+  "arxiv_metadata": {
+    "citation_title": [
+      "Understanding and mitigating gradient pathologies in physics-informed neural networks"
+    ],
+    "citation_author": [
+      "Wang, Sifan",
+      "Teng, Yujun",
+      "Perdikaris, Paris"
+    ],
+    "citation_date": [
+      "2020/01/13"
+    ],
+    "citation_doi": [],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/2001.04536"
+    ]
+  },
+  "journal_ref": null,
+  "text_file": "paper/materical/literature_sources/gradient.txt",
+  "reading_source": "https://arxiv.org/html/2001.04536",
+  "text_chars": 112917,
+  "is_pdf_reading": false
+}

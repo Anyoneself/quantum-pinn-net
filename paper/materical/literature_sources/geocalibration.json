@@ -1,0 +1,940 @@
+{
+  "key": "geocalibration",
+  "expected_title": "Impact of geostatistical reconstruction approaches on model calibration for flow in highly heterogeneous aquifers",
+  "doi": "10.1007/s00477-020-01865-2",
+  "arxiv": null,
+  "accessed": "2026-09-30T15:40:36.644656+00:00",
+  "errors": [],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          29
+        ]
+      ],
+      "date-time": "2026-09-29T10:11:21Z",
+      "timestamp": 1790676681014,
+      "version": "4.1.0"
+    },
+    "reference-count": 61,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "10",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              9,
+              2
+            ]
+          ],
+          "date-time": "2020-09-02T00:00:00Z",
+          "timestamp": 1599004800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              9,
+              2
+            ]
+          ],
+          "date-time": "2020-09-02T00:00:00Z",
+          "timestamp": 1599004800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100006690",
+        "name": "Politecnico di Milano",
+        "doi-asserted-by": "crossref",
+        "id": [
+          {
+            "id": "10.13039/501100006690",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Stoch Environ Res Risk Assess"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          10
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title><jats:p>Our study is aimed at assessing the extent at which relying on differing geostatistical approaches may affect characterization of the connectivity of geomaterials (or<jats:italic>facies</jats:italic>) and, in turn, model calibration outputs in highly heterogeneous aquifers. We set our study within a probabilistic framework, by relying on a numerical Monte Carlo (MC) approach. The reconstruction of the spatial distribution of geomaterials and flow simulations are patterned after a field scenario corresponding to the aquifer system serving the city of Bologna (Northern Italy). Two collections of MC realizations of facies distributions, conditional on available lithological data, are generated through two alternative geostatistically-based techniques, i.e., Sequential Indicator and Transition-Probability simulation. Hydraulic conductivity values of the least- and most-conductive facies are estimated within each MC simulation in the context of a Maximum Likelihood (ML) approach by considering available piezometric data. We provide evidence that the choice of the facies reconstruction technique (1) impacts the degree of connectivity of facies whose proportions are close to the percolation threshold while (2) is not sensibly affecting the connectivity associated with facies whose proportions are much larger than the percolation threshold. By relying on the unique (lithological and hydrological) data-set at our disposal, we also explore the performance of ML-based model identification criteria to (1) discriminate amongst competitive facies reconstruction geostatistical models and (2) quantify the (posterior probabilistic) weight associated with each model. We then show that ML-based model averaging provides estimates of hydraulic heads which are slightly more in agreement with available data when compared to the best-performing realization in the T-PROGS set than considering its counterpart associated with the SISIM-based collection.</jats:p>",
+    "DOI": "10.1007/s00477-020-01865-2",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          2
+        ]
+      ],
+      "date-time": "2020-09-02T20:02:32Z",
+      "timestamp": 1599076952000
+    },
+    "page": "1591-1606",
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 19,
+    "title": [
+      "Impact of geostatistical reconstruction approaches on model calibration for flow in highly heterogeneous aquifers"
+    ],
+    "prefix": "10.1007",
+    "volume": "34",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-9094-4731",
+        "authenticated-orcid": false,
+        "given": "Martina",
+        "family": "Siena",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7304-4114",
+        "authenticated-orcid": false,
+        "given": "Monica",
+        "family": "Riva",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          2
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "issue": "1",
+        "key": "1865_CR1",
+        "doi-asserted-by": "publisher",
+        "first-page": "45",
+        "DOI": "10.1007/s11004-015-9590-1",
+        "volume": "48",
+        "author": "VA Bakshevskaia",
+        "year": "2016",
+        "unstructured": "Bakshevskaia VA, Pozdniakov SP (2016) Simulation of hydraulic heterogeneity and upscaling permeability and dispersivity in sandy-clay formations. Math Geosci 48(1):45–64. https://doi.org/10.1007/s11004-015-9590-1",
+        "journal-title": "Math Geosci"
+      },
+      {
+        "key": "1865_CR2",
+        "doi-asserted-by": "publisher",
+        "first-page": "557",
+        "DOI": "10.1016/j.jhydrol.2015.10.072",
+        "volume": "531",
+        "author": "M Bianchi",
+        "year": "2015",
+        "unstructured": "Bianchi M, Kearsey T, Kingdon A (2015) Integrating deterministic lithostratigraphic models in stochastic realizations of subsurface heterogeneity. Impact on predictions of lithology, hydraulic heads and groundwater fluxes. J Hydrol 531:557–573. https://doi.org/10.1016/j.jhydrol.2015.10.072",
+        "journal-title": "J Hydrol"
+      },
+      {
+        "issue": "2",
+        "key": "1865_CR3",
+        "doi-asserted-by": "publisher",
+        "first-page": "231",
+        "DOI": "10.1007/BF02769630",
+        "volume": "29",
+        "author": "SF Carle",
+        "year": "1997",
+        "unstructured": "Carle SF (1997) Implementation schemes for avoiding artifact discontinuities in simulated annealing. Math Geol 29(2):231–244. https://doi.org/10.1007/BF02769630",
+        "journal-title": "Math Geol"
+      },
+      {
+        "issue": "4",
+        "key": "1865_CR4",
+        "doi-asserted-by": "publisher",
+        "first-page": "453",
+        "DOI": "10.1007/BF02083656",
+        "volume": "28",
+        "author": "SF Carle",
+        "year": "1996",
+        "unstructured": "Carle SF, Fogg GE (1996) Transition probability-based indicator geostatistics. Math Geol 28(4):453–477. https://doi.org/10.1007/BF02083656",
+        "journal-title": "Transition probability-based indicator geostatistics. Math Geol"
+      },
+      {
+        "issue": "7",
+        "key": "1865_CR5",
+        "doi-asserted-by": "publisher",
+        "first-page": "891",
+        "DOI": "10.1023/A:1022303706942",
+        "volume": "29",
+        "author": "SF Carle",
+        "year": "1997",
+        "unstructured": "Carle SF, Fogg GE (1997) Modelling spatial variability with one and multidimensional continuous-lag Markov chains. Math Geol 29(7):891–918. https://doi.org/10.1023/A:1022303706942",
+        "journal-title": "Math Geol"
+      },
+      {
+        "issue": "2",
+        "key": "1865_CR6",
+        "doi-asserted-by": "publisher",
+        "first-page": "199",
+        "DOI": "10.1029/WR022i002p00199",
+        "volume": "22",
+        "author": "J Carrera",
+        "year": "1986",
+        "unstructured": "Carrera J, Neuman SP (1986) Estimation of aquifer parameters under transient and steady state conditions: maximum likelihood method incorporating prior information. Water Resour Res 22(2):199–210. https://doi.org/10.1029/WR022i002p00199",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "issue": "7",
+        "key": "1865_CR7",
+        "doi-asserted-by": "publisher",
+        "first-page": "5759",
+        "DOI": "10.1002/2014WR015449",
+        "volume": "50",
+        "author": "V Cvetkovic",
+        "year": "2014",
+        "unstructured": "Cvetkovic V, Fiori A, Dagan G (2014) Solute transport in aquifers of arbitrary variability: a time-domain random walk formulation. Water Resour Res 50(7):5759–5773. https://doi.org/10.1002/2014WR015449",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "key": "1865_CR8",
+        "doi-asserted-by": "publisher",
+        "first-page": "299",
+        "DOI": "10.1007/s10040-011-0808-0",
+        "volume": "20",
+        "author": "D Dell’arciprete",
+        "year": "2012",
+        "unstructured": "Dell’arciprete D, Bersezio R, Felletti F, Giudici M, Comunian A, Renard P (2012) Comparison of three geostatistical methods for hydrofacies simulation: a test on alluvial sediments. Hydrogeol J 20:299–311. https://doi.org/10.1007/s10040-011-0808-0",
+        "journal-title": "Hydrogeol J"
+      },
+      {
+        "issue": "4",
+        "key": "1865_CR9",
+        "doi-asserted-by": "publisher",
+        "first-page": "761",
+        "DOI": "10.1007/s10040-014-1105-5",
+        "volume": "22",
+        "author": "D Della’rciprete",
+        "year": "2014",
+        "unstructured": "Della’rciprete D, Vassena C, Baratelli F, Giudici M, Bersezio R, Felletti F (2014) Connectivity and single/dual domain transport models: tests on a point-bar/channel aquifer analogue. Hydrogeol J 22(4):761–778. https://doi.org/10.1007/s10040-014-1105-5",
+        "journal-title": "Hydrogeol J"
+      },
+      {
+        "issue": "10",
+        "key": "1865_CR10",
+        "doi-asserted-by": "publisher",
+        "first-page": "1669",
+        "DOI": "10.1016/j.cageo.2006.03.005",
+        "volume": "32",
+        "author": "CV Deutsch",
+        "year": "2006",
+        "unstructured": "Deutsch CV (2006) A sequential indicator simulation program for categorical variables with point and block data: BlockSIS. Comput Geosci 32(10):1669–1681. https://doi.org/10.1016/j.cageo.2006.03.005",
+        "journal-title": "Comput Geosci"
+      },
+      {
+        "key": "1865_CR11",
+        "volume-title": "GSLIB, Geostatistical software library and user’s guide",
+        "author": "CV Deutsch",
+        "year": "1998",
+        "unstructured": "Deutsch CV, Journel AG (1998) GSLIB, Geostatistical software library and user’s guide. Oxford University Press, New York"
+      },
+      {
+        "key": "1865_CR12",
+        "volume-title": "PEST: model independent parameter estimation, user manual",
+        "author": "J Doherty",
+        "year": "2002",
+        "unstructured": "Doherty J (2002) PEST: model independent parameter estimation, user manual, 4th edn. Watermark Numer. Computing, Corinda",
+        "edition": "4"
+      },
+      {
+        "issue": "5",
+        "key": "1865_CR13",
+        "doi-asserted-by": "publisher",
+        "first-page": "569",
+        "DOI": "10.1023/A:1011044812133",
+        "volume": "33",
+        "author": "A Elfeki",
+        "year": "2001",
+        "unstructured": "Elfeki A, Dekking M (2001) A Markov chain model for subsurface characterization: theory and applications. Math Geol 33(5):569–589. https://doi.org/10.1023/A:1011044812133",
+        "journal-title": "Math Geol"
+      },
+      {
+        "key": "1865_CR14",
+        "doi-asserted-by": "publisher",
+        "first-page": "414",
+        "DOI": "10.1007/s00477-004-0213-5",
+        "volume": "18",
+        "author": "X Emery",
+        "year": "2004",
+        "unstructured": "Emery X (2004) Properties and limitations of sequential indicator simulation. Stoch Envir Res and Risk Ass 18:414–424. https://doi.org/10.1007/s00477-004-0213-5",
+        "journal-title": "Stoch Envir Res and Risk Ass"
+      },
+      {
+        "key": "1865_CR15",
+        "doi-asserted-by": "publisher",
+        "first-page": "1215",
+        "DOI": "10.2110/jsr.2006.091",
+        "volume": "76",
+        "author": "F Felletti",
+        "year": "2006",
+        "unstructured": "Felletti F, Bersezio R, Giudici M (2006) Geostatistical simulation and numerical upscaling, to model ground-water flow in a sandy-gravel, braided river, aquifer analogue. J Sedim Res 76:1215–1229. https://doi.org/10.2110/jsr.2006.091",
+        "journal-title": "J Sedim Res"
+      },
+      {
+        "issue": "1",
+        "key": "1865_CR16",
+        "doi-asserted-by": "publisher",
+        "first-page": "47",
+        "DOI": "10.1016/S0309-1708(96)00031-0",
+        "volume": "21",
+        "author": "JJ Gomez-Hernandez",
+        "year": "1998",
+        "unstructured": "Gomez-Hernandez JJ, Wen XH (1998) To be or not to be multi-Gaussian? A reflection on stochastic hydrogeology. Adv Water Res 21(1):47–61. https://doi.org/10.1016/S0309-1708(96)00031-0",
+        "journal-title": "Adv Water Res"
+      },
+      {
+        "key": "1865_CR17",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1093/oso/9780195115383.001.0001",
+        "volume-title": "Geostatistics for natural resources evaluation",
+        "author": "P Goovaerts",
+        "year": "1997",
+        "unstructured": "Goovaerts P (1997) Geostatistics for natural resources evaluation. Oxford University Press, New York"
+      },
+      {
+        "key": "1865_CR18",
+        "doi-asserted-by": "publisher",
+        "first-page": "394",
+        "DOI": "10.1007/s00477-003-0157-1",
+        "volume": "17",
+        "author": "A Guadagnini",
+        "year": "2003",
+        "unstructured": "Guadagnini A, Guadagnini L, Tartakovsky DM, Winter CL (2003) Random domain decomposition for flow in heterogeneous stratified aquifers. Stoch Environ Res Risk Assess 17:394–407. https://doi.org/10.1007/s00477-003-0157-1",
+        "journal-title": "Stoch Environ Res Risk Assess"
+      },
+      {
+        "issue": "1–3",
+        "key": "1865_CR19",
+        "doi-asserted-by": "publisher",
+        "first-page": "57",
+        "DOI": "10.1016/j.jhydrol.2004.02.007",
+        "volume": "294",
+        "author": "L Guadagnini",
+        "year": "2004",
+        "unstructured": "Guadagnini L, Guadagnini A, Tartakovsky DM (2004) Probabilistic reconstruction of geologic facies. J Hydrol 294(1–3):57–67. https://doi.org/10.1016/j.jhydrol.2004.02.007",
+        "journal-title": "J Hydrol"
+      },
+      {
+        "key": "1865_CR20",
+        "first-page": "A6",
+        "volume-title": "MODFLOW-2005, the US Geological Survey modular ground-water model: the ground-water flow process",
+        "author": "AW Harbaugh",
+        "year": "2005",
+        "unstructured": "Harbaugh AW (2005) MODFLOW-2005, the US Geological Survey modular ground-water model: the ground-water flow process. US Department of the Interior, US Geological Survey, Reston, pp A6–A16"
+      },
+      {
+        "issue": "1",
+        "key": "1865_CR21",
+        "doi-asserted-by": "publisher",
+        "first-page": "53",
+        "DOI": "10.1061/(ASCE)0733-9437(2003)129:1(53)",
+        "volume": "129",
+        "author": "GH Hargreaves",
+        "year": "2003",
+        "unstructured": "Hargreaves GH, Allen RG (2003) History and evaluation of Hargreaves evapotranspiration equation. J Irrig Drain Eng 129(1):53–63. https://doi.org/10.1061/(ASCE)0733-9437(2003)129:1(53)",
+        "journal-title": "J Irrig Drain Eng"
+      },
+      {
+        "key": "1865_CR22",
+        "doi-asserted-by": "publisher",
+        "first-page": "026120",
+        "DOI": "10.1103/PhysRevE.72.026120",
+        "volume": "72",
+        "author": "T Harter",
+        "year": "2005",
+        "unstructured": "Harter T (2005) Finite-size scaling analysis of percolation in three-dimensional correlated binary Markov chain random fields. Phys Rev E 72:026120. https://doi.org/10.1103/PhysRevE.72.026120",
+        "journal-title": "Phys Rev E"
+      },
+      {
+        "issue": "7",
+        "key": "1865_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "395",
+        "DOI": "10.1097/SS.0b013e3181aea77c",
+        "volume": "174",
+        "author": "Y He",
+        "year": "2009",
+        "unstructured": "He Y, Hu K, Li B, Chen D, Suter HC, Huang Y (2009) Comparison of sequential indicator simulation and transition probability indicator simulation used to model clay content in microscale surface soil. Soil Sci 174(7):395–402. https://doi.org/10.1097/SS.0b013e3181aea77c",
+        "journal-title": "Soil Sci"
+      },
+      {
+        "issue": "4",
+        "key": "1865_CR24",
+        "doi-asserted-by": "publisher",
+        "first-page": "3147",
+        "DOI": "10.1002/2013WR014593",
+        "volume": "50",
+        "author": "X He",
+        "year": "2014",
+        "unstructured": "He X, Koch J, Sonnenborg TO, Jørgensen F, Schamper C, Refsgaard JC (2014) Transition probability-based stochastic geological modeling using airborne geophysical data and borehole data. Water Resour Res 50(4):3147–3169. https://doi.org/10.1002/2013WR014593",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "issue": "19",
+        "key": "1865_CR25",
+        "doi-asserted-by": "publisher",
+        "first-page": "4293",
+        "DOI": "10.1002/hyp.10488",
+        "volume": "29",
+        "author": "X He",
+        "year": "2015",
+        "unstructured": "He X, Højberg AL, Jørgensen F, Refsgaard JC (2015) Assessing hydrological model predictive uncertainty using stochastically generated geological models. Hydrol Process 29(19):4293–4311. https://doi.org/10.1002/hyp.10488",
+        "journal-title": "Hydrol Process"
+      },
+      {
+        "issue": "6",
+        "key": "1865_CR26",
+        "doi-asserted-by": "publisher",
+        "first-page": "4086",
+        "DOI": "10.1002/2014WR016717",
+        "volume": "51",
+        "author": "CV Henri",
+        "year": "2015",
+        "unstructured": "Henri CV, Fernandez-Garcia D, de Barros FPJ (2015) Probabilistic human health risk assessment of degradation-related chemical mixtures in heterogeneous aquifers: risk statistics, hot spots, and preferential channels. Water Resour Res 51(6):4086–4108. https://doi.org/10.1002/2014WR016717",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "issue": "3",
+        "key": "1865_CR27",
+        "doi-asserted-by": "publisher",
+        "first-page": "195",
+        "DOI": "10.1144/1354-079305-697",
+        "volume": "13",
+        "author": "JM Hovadik",
+        "year": "2007",
+        "unstructured": "Hovadik JM, Larue DK (2007) Static characterizations of reservoirs: refining the concepts of connectivity and continuity. Petrol Geosci 13(3):195–211. https://doi.org/10.1144/1354-079305-697",
+        "journal-title": "Petrol Geosci"
+      },
+      {
+        "issue": "2",
+        "key": "1865_CR28",
+        "doi-asserted-by": "publisher",
+        "first-page": "99",
+        "DOI": "10.1109/tpami.1982.4767213",
+        "volume": "4",
+        "author": "RL Kashyap",
+        "year": "1982",
+        "unstructured": "Kashyap RL (1982) Optimal choice of AR and MA parts in autoregressive moving average models. IEEE Trans Pattern Anal 4(2):99–104. https://doi.org/10.1109/tpami.1982.4767213",
+        "journal-title": "IEEE Trans Pattern Anal"
+      },
+      {
+        "issue": "1",
+        "key": "1865_CR29",
+        "doi-asserted-by": "publisher",
+        "first-page": "147",
+        "DOI": "10.1016/j.advwatres.2007.07.002",
+        "volume": "31",
+        "author": "J Kerrou",
+        "year": "2008",
+        "unstructured": "Kerrou J, Renard P, Franssen HJH, Lunati I (2008) Issues in characterizing heterogeneity and connectivity in non-multiGaussian media. Adv Water Resour 31(1):147–159. https://doi.org/10.1016/j.advwatres.2007.07.002",
+        "journal-title": "Adv Water Resour"
+      },
+      {
+        "issue": "5",
+        "key": "1865_CR30",
+        "doi-asserted-by": "publisher",
+        "first-page": "692",
+        "DOI": "10.1111/j.1745-6584.2012.01015.x",
+        "volume": "51",
+        "author": "TC Kessler",
+        "year": "2013",
+        "unstructured": "Kessler TC, Comunian A, Oriani F, Renard P, Nilsson B, Klint KE, Bjerg PL (2013) Modeling fine-scale geological heterogeneity—examples of sand lenses in tills. Groundwater 51(5):692–705. https://doi.org/10.1111/j.1745-6584.2012.01015.x",
+        "journal-title": "Groundwater"
+      },
+      {
+        "issue": "8",
+        "key": "1865_CR31",
+        "doi-asserted-by": "publisher",
+        "first-page": "2907",
+        "DOI": "10.5194/hess-18-2907-2014",
+        "volume": "18",
+        "author": "J Koch",
+        "year": "2014",
+        "unstructured": "Koch J, He X, Jensen KH, Refsgaard JC (2014) Challenges in conditioning a stochastic geological model of a heterogeneous glacial aquifer to a comprehensive soft data set. Hydrol Earth Syst Sci 18(8):2907–2923. https://doi.org/10.5194/hess-18-2907-2014",
+        "journal-title": "Hydrol Earth Syst Sci"
+      },
+      {
+        "key": "1865_CR32",
+        "doi-asserted-by": "publisher",
+        "first-page": "2129",
+        "DOI": "10.1007/s00477-017-1504-y",
+        "volume": "32",
+        "author": "A Langousis",
+        "year": "2018",
+        "unstructured": "Langousis A, Kaleris V, Kokosi A, Mamounakis G (2018) Markov based transition probability geostatistics in groundwater applications: assumptions and limitations. Stoch Environ Res Risk Assess 32:2129–2146. https://doi.org/10.1007/s00477-017-1504-y",
+        "journal-title": "Stoch Environ Res Risk Assess"
+      },
+      {
+        "issue": "9",
+        "key": "1865_CR33",
+        "doi-asserted-by": "publisher",
+        "first-page": "1914",
+        "DOI": "10.1016/j.advwatres.2007.03.005",
+        "volume": "30",
+        "author": "SY Lee",
+        "year": "2007",
+        "unstructured": "Lee SY, Carle SF, Fogg GE (2007) Geological heterogeneity and comparison of two geostatistical models: sequential Gaussian and transition probability-based geostatistical simulation. Adv Water Resour 30(9):1914–1932. https://doi.org/10.1016/j.advwatres.2007.03.005",
+        "journal-title": "Adv Water Resour"
+      },
+      {
+        "issue": "2",
+        "key": "1865_CR34",
+        "doi-asserted-by": "publisher",
+        "first-page": "159",
+        "DOI": "10.1007/s11004-006-9071-7",
+        "volume": "39",
+        "author": "W Li",
+        "year": "2007",
+        "unstructured": "Li W (2007) A fixed-path Markov chain algorithm for 1 conditional simulation of discrete spatial variables. Math Geol 39(2):159–176. https://doi.org/10.1007/s11004-006-9071-7",
+        "journal-title": "Math Geol"
+      },
+      {
+        "issue": "8",
+        "key": "1865_CR35",
+        "doi-asserted-by": "publisher",
+        "first-page": "971",
+        "DOI": "10.1007/s11004-011-9359-0",
+        "volume": "43",
+        "author": "D Lu",
+        "year": "2011",
+        "unstructured": "Lu D, Ye M, Neuman SP (2011) Dependence of Bayesian model selection criteria and Fisher information matrix on sample size. Math Geol 43(8):971–993. https://doi.org/10.1007/s11004-011-9359-0",
+        "journal-title": "Math Geol"
+      },
+      {
+        "key": "1865_CR36",
+        "doi-asserted-by": "publisher",
+        "first-page": "1859",
+        "DOI": "10.1016/j.jhydrol.2015.07.029",
+        "volume": "529",
+        "author": "D Lu",
+        "year": "2015",
+        "unstructured": "Lu D, Ye M, Curtis GP (2015) Maximum likelihood Bayesian model averaging and its predictive analysis for groundwater reactive transport models. J Hydrol 529:1859–1873. https://doi.org/10.1016/j.jhydrol.2015.07.029",
+        "journal-title": "J Hydrol"
+      },
+      {
+        "key": "1865_CR37",
+        "doi-asserted-by": "publisher",
+        "first-page": "149",
+        "DOI": "10.1016/j.jhydrol.2015.07.015",
+        "volume": "531",
+        "author": "M Maghrebi",
+        "year": "2015",
+        "unstructured": "Maghrebi M, Jankoyic I, Weissmann GS, Matott LS, Allen-King RM, Rabideau AJ (2015) Contaminant tailing in highly heterogeneous porous formations: sensitivity on model selection and material properties. J Hydrol 531:149–160. https://doi.org/10.1016/j.jhydrol.2015.07.015",
+        "journal-title": "J Hydrol"
+      },
+      {
+        "issue": "7",
+        "key": "1865_CR38",
+        "doi-asserted-by": "publisher",
+        "first-page": "844",
+        "DOI": "10.3390/w10070844",
+        "volume": "10",
+        "author": "M Marini",
+        "year": "2019",
+        "unstructured": "Marini M, Felletti F, Beretta GP, Terrenghi J (2019) Three Geostatistical methods for hydrofacies simulation ranked using a large borehole lithology dataset from the Venice Hinterland (NE Italy). Water 10(7):844. https://doi.org/10.3390/w10070844",
+        "journal-title": "Water"
+      },
+      {
+        "issue": "6",
+        "key": "1865_CR39",
+        "doi-asserted-by": "publisher",
+        "first-page": "825",
+        "DOI": "10.1007/s00477-020-01801-4",
+        "volume": "34",
+        "author": "HS Mohammadi",
+        "year": "2020",
+        "unstructured": "Mohammadi HS, Mohammad JA, Faramarz DA (2020) CHDS: conflict handling in direct sampling for stochastic simulation of spatial variables. Stoch Environ Res Risk Assess 34(6):825–847. https://doi.org/10.1007/s00477-020-01801-4",
+        "journal-title": "Stoch Environ Res Risk Assess"
+      },
+      {
+        "key": "1865_CR40",
+        "doi-asserted-by": "publisher",
+        "first-page": "9",
+        "DOI": "10.1016/j.scitotenv.2012.03.015",
+        "volume": "425",
+        "author": "A Molinari",
+        "year": "2012",
+        "unstructured": "Molinari A, Guadagnini L, Marcaccio M, Guadagnini A (2012) Natural back-ground levels and threshold values of chemical species in three large-scale groundwater bodies in Northern Italy. Sci Total Environ 425:9–19. https://doi.org/10.1016/j.scitotenv.2012.03.015",
+        "journal-title": "Sci Total Environ"
+      },
+      {
+        "issue": "5",
+        "key": "1865_CR41",
+        "doi-asserted-by": "publisher",
+        "first-page": "291",
+        "DOI": "10.1007/s00477-003-0151-7",
+        "volume": "17",
+        "author": "SP Neuman",
+        "year": "2003",
+        "unstructured": "Neuman SP (2003) Maximum likelihood Bayesian averaging of alternative conceptual-mathematical models. Stoch Environ Res Risk Assess 17(5):291–305. https://doi.org/10.1007/s00477-003-0151-7",
+        "journal-title": "Stoch Environ Res Risk Assess"
+      },
+      {
+        "key": "1865_CR42",
+        "doi-asserted-by": "publisher",
+        "first-page": "909",
+        "DOI": "10.2136/sssaj2005.0386",
+        "volume": "71",
+        "author": "E Park",
+        "year": "2007",
+        "unstructured": "Park E, Elfeki AMM, Song Y, Kim K (2007) Generalized coupled Markov chain model for characterizing categorical variables in soil mapping. Soil Sci Soc Am J 71:909–917. https://doi.org/10.2136/sssaj2005.0386",
+        "journal-title": "Soil Sci Soc Am J"
+      },
+      {
+        "key": "1865_CR43",
+        "unstructured": "Regione Emilia-Romagna (2010). Council Decree (Delibera di Giunta) n. 350 of 8/02/2010, Approval of the activities of the Emilia Romagna Region related to the implementation of Directive 2000/60/EC aiming at the design and adoption of the Management Plans of the hydrographic districs Padano, Appennino settentrionale and Appennino centrale http://ambiente.regione.emilia-romagna.it/acque/temi/piani%20di%20gestione Accessed 20 Mar 2019"
+      },
+      {
+        "key": "1865_CR44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9781139150019",
+        "volume-title": "Applied geostatistics with SGeMS: a user’s guide",
+        "author": "N Remy",
+        "year": "2009",
+        "unstructured": "Remy N, Boucher A, Wu J (2009) Applied geostatistics with SGeMS: a user’s guide. Cambridge University Press, New York"
+      },
+      {
+        "key": "1865_CR45",
+        "doi-asserted-by": "publisher",
+        "first-page": "168",
+        "DOI": "10.1016/j.advwatres.2011.12.001",
+        "volume": "51",
+        "author": "P Renard",
+        "year": "2013",
+        "unstructured": "Renard P, Allard D (2013) Connectivity metrics for subsurface flow and transport. Adv Water Resour 51:168–196. https://doi.org/10.1016/j.advwatres.2011.12.001",
+        "journal-title": "Adv Water Resour"
+      },
+      {
+        "key": "1865_CR46",
+        "unstructured": "Ricci Lucchi F (1984) Flysh, molassa, clastic deposits: traditional and innovative approaches to the analysis of north Apennine basins (Flysch, molassa, cunei clastici: tradizione e nuovi approcci nell’analisi dei bacini orogenici dell’Appennino settentrionale). Cento Anni di Geologia Italiana, Volume Giubilare 1 centenario Soc. Geol. Ital 279–295"
+      },
+      {
+        "key": "1865_CR47",
+        "doi-asserted-by": "publisher",
+        "first-page": "W07502",
+        "DOI": "10.1029/2011WR010480",
+        "volume": "47",
+        "author": "M Riva",
+        "year": "2011",
+        "unstructured": "Riva M, Panzeri M, Guadagnini A, Neuman SP (2011) Role of model selection criteria in geostatistical inverse estimation of statistical data- and model-parameters. Water Resour Res 47:W07502. https://doi.org/10.1029/2011WR010480",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "issue": "3",
+        "key": "1865_CR48",
+        "doi-asserted-by": "publisher",
+        "first-page": "643",
+        "DOI": "10.1007/s00477-017-1436-6",
+        "volume": "32",
+        "author": "S Samani",
+        "year": "2018",
+        "unstructured": "Samani S, Moghaddam AA, Ye M (2018) Investigating the effect of complexity on groundwater flow modeling uncertainty. Stoch Environ Res Risk Assess 32(3):643–659. https://doi.org/10.1007/s00477-017-1436-6",
+        "journal-title": "Stoch Environ Res Risk Assess"
+      },
+      {
+        "issue": "5",
+        "key": "1865_CR49",
+        "doi-asserted-by": "publisher",
+        "first-page": "1375",
+        "DOI": "10.1007/s00477-017-1453-5",
+        "volume": "32",
+        "author": "M Sharifzadehlari",
+        "year": "2018",
+        "unstructured": "Sharifzadehlari M, Fathianpour N, Renard P, Amirfattahi R (2018) Random partitioning and adaptive filters for multiple-point stochastic simulation. Stoch Environ Res Risk Assess 32(5):1375–1396. https://doi.org/10.1007/s00477-017-1453-5",
+        "journal-title": "Stoch Environ Res Risk Assess"
+      },
+      {
+        "issue": "3",
+        "key": "1865_CR50",
+        "doi-asserted-by": "publisher",
+        "first-page": "557",
+        "DOI": "10.1214/10-BA522",
+        "volume": "5",
+        "author": "M Short",
+        "year": "2010",
+        "unstructured": "Short M, Highdon D, Guadagnini L, Guadagnini A, Tartakovsky DM (2010) Predicting vertical connectivity within an aquifer system. Bayesian Anal 5(3):557–582. https://doi.org/10.1214/10-BA522",
+        "journal-title": "Bayesian Anal"
+      },
+      {
+        "key": "1865_CR51",
+        "doi-asserted-by": "publisher",
+        "first-page": "53",
+        "DOI": "10.1016/j.advwatres.2014.10.011",
+        "volume": "75",
+        "author": "ER Siirila-Woodburn",
+        "year": "2015",
+        "unstructured": "Siirila-Woodburn ER, Maxwell RM (2015) A heterogeneity model comparison of highly resolved statistically anisotropic aquifers. Adv Water Resour 75:53–66. https://doi.org/10.1016/j.advwatres.2014.10.011",
+        "journal-title": "Adv Water Resour"
+      },
+      {
+        "key": "1865_CR52",
+        "volume-title": "Introduction to percolation theory",
+        "author": "D Stauffer",
+        "year": "1992",
+        "unstructured": "Stauffer D, Aharony A (1992) Introduction to percolation theory, 2nd edn. Taylor & Francis, London",
+        "edition": "2"
+      },
+      {
+        "issue": "3",
+        "key": "1865_CR53",
+        "doi-asserted-by": "publisher",
+        "first-page": "651",
+        "DOI": "10.1007/s10040-009-0523-2",
+        "volume": "18",
+        "author": "C Vassena",
+        "year": "2010",
+        "unstructured": "Vassena C, Cattaneo L, Giudici M (2010) Assessment of the role of facies heterogeneity at the fine scale by numerical transport experiments and connectivity indicators. Hydrogeol J 18(3):651–668. https://doi.org/10.1007/s10040-009-0523-2",
+        "journal-title": "Hydrogeol J"
+      },
+      {
+        "issue": "6",
+        "key": "1865_CR54",
+        "doi-asserted-by": "publisher",
+        "first-page": "1761",
+        "DOI": "10.1029/1999WR900048",
+        "volume": "35",
+        "author": "GS Weissmann",
+        "year": "1999",
+        "unstructured": "Weissmann GS, Carle SF, Fogg GE (1999) Three-dimensional hydrofacies modeling based on soil surveys and transition probability geostatistics. Water Resour Res 35(6):1761–1770. https://doi.org/10.1029/1999WR900048",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "issue": "1–2",
+        "key": "1865_CR55",
+        "doi-asserted-by": "publisher",
+        "first-page": "129",
+        "DOI": "10.1016/S0169-7722(97)00035-1",
+        "volume": "30",
+        "author": "XH Wen",
+        "year": "1998",
+        "unstructured": "Wen XH, Gomez-Hernandez JJ (1998) Numerical modeling of macrodispersion in heterogeneous media: a comparison of multi-Gaussian and non-multi-Gaussian models. J Contam Hydrol 30(1–2):129–156. https://doi.org/10.1016/S0169-7722(97)00035-1",
+        "journal-title": "J Contam Hydrol"
+      },
+      {
+        "key": "1865_CR56",
+        "doi-asserted-by": "publisher",
+        "first-page": "83",
+        "DOI": "10.1029/2000WR900241",
+        "volume": "37",
+        "author": "A Western",
+        "year": "2001",
+        "unstructured": "Western A, Bloschl G, Grayson RB (2001) Toward capturing hydrologically significant connectivity in spatial patterns. Water Resour Res 37:83–97. https://doi.org/10.1029/2000WR900241",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "key": "1865_CR57",
+        "doi-asserted-by": "publisher",
+        "first-page": "633",
+        "DOI": "10.1007/s00477-009-0350-y",
+        "volume": "24",
+        "author": "CL Winter",
+        "year": "2010",
+        "unstructured": "Winter CL, Nychka D (2010) Forecasting skill of model averages. Stoch Environ Res Risk Assess 24:633–638. https://doi.org/10.1007/s00477-009-0350-y",
+        "journal-title": "Stoch Environ Res Risk Assess"
+      },
+      {
+        "key": "1865_CR58",
+        "doi-asserted-by": "publisher",
+        "first-page": "166",
+        "DOI": "10.1016/j.jcp.2006.01.047",
+        "volume": "217",
+        "author": "CL Winter",
+        "year": "2006",
+        "unstructured": "Winter CL, Guadagnini A, Nychka D, Tartakovsky DM (2006) Multivariate sensitivity analysis of saturated flow through simulated highly heterogeneous groundwater aquifers. J Comput Phys 217:166–175. https://doi.org/10.1016/j.jcp.2006.01.047",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "issue": "5",
+        "key": "1865_CR59",
+        "doi-asserted-by": "publisher",
+        "first-page": "W05113",
+        "DOI": "10.1029/2003WR002557",
+        "volume": "40",
+        "author": "M Ye",
+        "year": "2004",
+        "unstructured": "Ye M, Neuman SP, Meyer PD (2004) Maximum likelihood Bayesian averaging of spatial variability models in unsaturated fractured tuff. Water Resour Res 40(5):W05113. https://doi.org/10.1029/2003WR002557",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "key": "1865_CR60",
+        "doi-asserted-by": "publisher",
+        "first-page": "W03428",
+        "DOI": "10.1029/2008WR006803",
+        "volume": "44",
+        "author": "M Ye",
+        "year": "2008",
+        "unstructured": "Ye M, Meyer PD, Neuman SP (2008) On model selection criteria in multimodel analysis. Water Resour Res 44:W03428. https://doi.org/10.1029/2008WR006803",
+        "journal-title": "Water Resour Res"
+      },
+      {
+        "issue": "3",
+        "key": "1865_CR61",
+        "doi-asserted-by": "publisher",
+        "first-page": "1051",
+        "DOI": "10.1029/2001WR001146",
+        "volume": "39",
+        "author": "B Zinn",
+        "year": "2003",
+        "unstructured": "Zinn B, Harvey CF (2003) When good statistical models of aquifer heterogeneity go bad: a comparison of flow, dispersion, and mass transfer in connected and multivariate Gaussian hydraulic conductivity fields. Water Resour Res 39(3):1051. https://doi.org/10.1029/2001WR001146",
+        "journal-title": "Water Resour Res"
+      }
+    ],
+    "container-title": [
+      "Stochastic Environmental Research and Risk Assessment"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s00477-020-01865-2.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s00477-020-01865-2/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s00477-020-01865-2.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          13
+        ]
+      ],
+      "date-time": "2024-08-13T02:55:55Z",
+      "timestamp": 1723517755000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s00477-020-01865-2"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          2
+        ]
+      ]
+    },
+    "references-count": 61,
+    "journal-issue": {
+      "issue": "10",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            10
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "1865"
+    ],
+    "URL": "https://doi.org/10.1007/s00477-020-01865-2",
+    "relation": {},
+    "ISSN": [
+      "1436-3240",
+      "1436-3259"
+    ],
+    "issn-type": [
+      {
+        "value": "1436-3240",
+        "type": "print"
+      },
+      {
+        "value": "1436-3259",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          2
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2 September 2020",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      }
+    ]
+  },
+  "text_file": "paper/materical/literature_sources/geocalibration.txt",
+  "reading_source": "https://link.springer.com/content/pdf/10.1007/s00477-020-01865-2.pdf",
+  "text_chars": 61043,
+  "is_pdf_reading": true
+}

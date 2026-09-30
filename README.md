@@ -2,6 +2,16 @@
 
 本项目面向二维渗透率场内空间补全：在给定工程条件和部分空间观测值的情况下，预测训练阶段已见场中的未观测位置。当前论文比较固定 Fourier 坐标网络与完全由经典张量运算实现的可学习周期相位网络，并考察动态目标权重、训练点残差自适应加权和 Monte Carlo 神经元筛选。归档主实验不含局部 Darcy 方程残差，也不包含量子线路或量子硬件。
 
+## 当前论文与补充实验
+
+- [Markdown主稿](paper/PHASE_PERIODIC_ENGINEERING_MANUSCRIPT_V2.md)：10幅图、32篇参考文献；[验收记录](paper/materical/MANUSCRIPT_V2_QA.md)说明检查范围和剩余研究边界。
+- [补充实验归档](experiments/supplement_v2/README.md)：101组运行，包含预测数组、模型、逐轮记录及选型结果；本次保存没有重新训练。
+- [图表与源数据](figures/manuscript_v2/)及[架构与训练流程图](figures/architecture/)：对应当前主稿。
+- [文献阅读记录](paper/materical/literature-notes.md)与[写作规范](paper/materical/reference.md)：第三方论文全文及阅读用提取文本仅保留在本地，远端保存题录、来源链接与原创阅读概括。
+- [通用论文写作 skill](skills/chinese-core-paper/SKILL.md)：全局 `chinese-core-paper` 的项目内副本，不含本项目专属规范；修改后不会自动与全局副本同步。
+
+当前实验中，周期网络原始输出相对Fourier对照的RMSE降低48.15%，校正后RMSE为0.01912，仍高于RBF的0.00247。结论限于固定数值场的场内补全，上游生成与归一化记录尚不完整。下文的早期实现、V1命令和五次运行结果保留作历史记录，不与当前三次重复的补充实验混用。已有Word/PDF为历史导出件，未同步当前Markdown修订。
+
 ## 数据来源与任务边界
 
 `quantum-attention-net` 是上游数据生成项目；`quantum-pinn-net` 是下游渗透率场预测项目。二者分工如下：
@@ -28,7 +38,7 @@
 - `dataset.npy`: 形状为 `(N, 1, 32, 32)` 的归一化二维 log-permeability 场。
 - `physical_conditions.npy`: 每个样本对应的工程条件，列顺序为 `[pressure_mpa, pressure_gradient_mpa_per_m, viscosity_cp, porosity, flow_rate_m3_day]`。
 
-代码可读取上述多种上游目录；当前正式归档包含 128 个 \(32\times32\) 合成场，其来源类别标识均为 `gan`。同一组场在五次独立随机化运行中共享，观测、验证与空间留出位置两两互斥。由于模型使用可学习场嵌入，评价协议属于训练阶段已见场内的空间补全，而不是未知场泛化。
+代码可读取上述多种上游目录；V1归档包含 128 个 \(32\times32\) 数值场，其来源类别标识均为 `gan`，但完整上游生成链尚未追溯。V1在五次随机化运行中共享同一组场；补充实验复用固定数组，主比较采用三次重复。观测、验证与空间留出位置两两互斥。由于模型使用可学习场嵌入，评价协议属于训练阶段已见场内的空间补全，而不是未知场泛化。
 
 ## 方法
 
@@ -45,7 +55,7 @@ Fourier 对照网络使用固定目标权重训练。
 
 ### Darcy 偏微分方程约束
 
-代码提供可选的稳态、单相、不可压缩 Darcy 诊断与训练约束，但当前论文归档通过 `--no-darcy-physics` 将其排除在训练目标之外。对预测的归一化 log-permeability
+早期代码提供可选的稳态、单相、不可压缩 Darcy 诊断与训练约束，V1归档通过 `--no-darcy-physics` 将其排除在训练目标之外。以下说明这一早期实现；当前补充实验另以有限体积稀疏直接求解评价流动响应，不将其用于训练。对预测的归一化 log-permeability
 \(\widehat{\ell}(x,y)\)，先构造严格为正的相对渗透率
 
 ```text
@@ -142,7 +152,7 @@ quantum-pinn-net/
       quantum-pinn/
 ```
 
-## 复现当前归档协议
+## 复现历史V1协议
 
 五个种子须分别输出到新目录，防止覆盖已有归档。以一个种子为例：
 
@@ -176,10 +186,10 @@ python3 gen-figures/aggregate_multiseed_results.py \
 python -m pip install -r requirements.txt
 ```
 
-## 当前权威实验结果
+## 历史V1实验结果
 
-根目录 `figures/` 保留了早期开发实验，**不应用于当前结论或投稿引用**。当前权威结果来自
-[`experiments/rba_qpinn_submission_v1/`](experiments/rba_qpinn_submission_v1/) 中五次不可覆盖的独立随机化运行；五次运行共享同一组 128 个场，主结果为网络的原始输出，IDW 校正仅作为次分析。
+根目录 `figures/` 保留了早期开发实验，**不应用于当前结论或投稿引用**。下表来自
+[`experiments/rba_qpinn_submission_v1/`](experiments/rba_qpinn_submission_v1/) 中五次独立随机化运行；五次运行共享同一组 128 个场。这一旧协议存在完整场统计量参与先验和裁剪的问题，仅保留作历史探索性结果，不作为当前稿的独立测试证据。
 
 | Model | Raw RMSE（均值±标准差，n=5） | Raw MAE | Raw R² | Raw SSIM | Weak Physics Residual |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -187,7 +197,7 @@ python -m pip install -r requirements.txt
 | 周期相位网络 | **0.0845 ± 0.0014** | **0.0591 ± 0.0009** | **0.9349 ± 0.0025** | **0.9384 ± 0.0028** | 0.1209 ± 0.0001 |
 | 周期相位 + 动态权重 + RBA + MC | 0.2477 ± 0.0041 | 0.1966 ± 0.0034 | 0.4406 ± 0.0212 | 0.1852 ± 0.0291 | **0.0395 ± 0.0035** |
 
-当前证据支持：周期相位网络的原始 RMSE 相对 Fourier 对照低 **51.47%**，平均配对差为 0.0896，运行级 Bootstrap 95% 区间为 `[0.0870, 0.0918]`。该结果来自共享固定数据集的五次运行，并且两种网络同时改变多个架构因素，不能解释为相位编码的独立因果效应。沿累积路径加入动态权重、残差自适应和 MC 筛选后，场均值先验偏差下降，但点值精度未同步改善。
+旧协议下，周期相位网络的原始 RMSE 相对 Fourier 对照低 **51.47%**，平均配对差为 0.0896，运行级 Bootstrap 95% 区间为 `[0.0870, 0.0918]`。该结果来自共享固定数据集的五次运行，并且两种网络同时改变多个架构因素，不能解释为相位编码的独立因果效应。沿累积路径加入动态权重、残差自适应和 MC 筛选后，场均值先验偏差下降，但点值精度未同步改善。
 
 完整六模型结果、每种子的配置与统计检验见 [`experiments/rba_qpinn_submission_v1/README.md`](experiments/rba_qpinn_submission_v1/README.md) 和 [`aggregate/`](experiments/rba_qpinn_submission_v1/aggregate/)。
 
@@ -195,8 +205,10 @@ python -m pip install -r requirements.txt
 
 | 文档 | 用途 |
 | --- | --- |
-| [`paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md`](paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md) | 当前四章学术主稿 |
-| [`paper/CLAIM_EVIDENCE_LEDGER.md`](paper/CLAIM_EVIDENCE_LEDGER.md) | 主张—证据边界与投稿阻断项 |
+| [`paper/PHASE_PERIODIC_ENGINEERING_MANUSCRIPT_V2.md`](paper/PHASE_PERIODIC_ENGINEERING_MANUSCRIPT_V2.md) | 当前Markdown学术主稿 |
+| [`paper/materical/MANUSCRIPT_V2_QA.md`](paper/materical/MANUSCRIPT_V2_QA.md) | 当前验收结果与研究证据边界 |
+| [`paper/materical/SUPPLEMENTARY_MATERIAL_V2.md`](paper/materical/SUPPLEMENTARY_MATERIAL_V2.md) | 当前实验协议、复现细节与补充分析 |
+| [`skills/chinese-core-paper/SKILL.md`](skills/chinese-core-paper/SKILL.md) | 通用论文写作skill副本 |
 | [`docs/PAPER_SUBMISSION_WORKFLOW.md`](docs/PAPER_SUBMISSION_WORKFLOW.md) | 无 Skill 的复算、检查与投稿流程 |
 | [`docs/PROJECT_DOCUMENTATION_GUIDE.md`](docs/PROJECT_DOCUMENTATION_GUIDE.md) | 文档地图、权威性规则和术语口径 |
 | [`experiments/rba_qpinn_submission_v1/README.md`](experiments/rba_qpinn_submission_v1/README.md) | 可复现实验协议与运行命令 |
@@ -208,7 +220,7 @@ python -m pip install -r requirements.txt
 
 ## 历史图像
 
-下列根目录图像来自早期开发结果，可用于内部检查或示意，**不应直接作为当前论文证据**。当前论文主图应从 `experiments/rba_qpinn_submission_v1/aggregate/` 或各 seed 目录重新生成并注明协议。
+下列根目录图像来自早期开发结果，可用于内部检查或示意，**不应直接作为当前论文证据**。当前论文的数据图见 `figures/manuscript_v2/`，由 `experiments/supplement_v2/` 的真实记录生成。
 
 - `figures/loss_curve_same_epoch.png`: 两种方法同 epoch 下的收敛曲线。
 - `figures/quality_physics_metrics_bars.png`: 误差与物理指标柱状图。
@@ -233,4 +245,4 @@ python -m pip install -r requirements.txt
 
 ## 结论边界
 
-本项目的严谨表述是：在当前 128 个训练阶段已见合成场的空间补全协议下，周期相位完整架构取得最低平均原始 RMSE。该结果不等同于量子计算优势或加速，也不证明对未见渗透率场或真实储层的泛化能力；归档训练目标不含 Darcy 方程残差，因此不能声称实现了局部 Darcy 守恒。Fourier 对照与周期相位网络同时改变多项架构设计，不能将全部差异单独归因为相位特征。详见 [`paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md`](paper/PHASE_PERIODIC_PINN_MANUSCRIPT_V2.md) 与 [`paper/CLAIM_EVIDENCE_LEDGER.md`](paper/CLAIM_EVIDENCE_LEDGER.md)。
+当前补充实验支持周期网络在有限预算下相对Fourier对照的拟合收益，但RBF插值精度仍优于网络方案。该结果不等同于量子计算优势或加速，也不证明对未见渗透率场或真实储层的泛化能力；训练目标不含Darcy方程残差，下游流动评价不等于网络实现了局部物理约束。组件贡献以受控消融为依据，不能将整体架构差异全部归因为相位特征。详见[当前主稿](paper/PHASE_PERIODIC_ENGINEERING_MANUSCRIPT_V2.md)与[验收记录](paper/materical/MANUSCRIPT_V2_QA.md)。

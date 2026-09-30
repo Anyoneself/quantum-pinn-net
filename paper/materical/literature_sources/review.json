@@ -1,0 +1,1748 @@
+{
+  "key": "review",
+  "expected_title": "Scientific Machine Learning Through Physics-Informed Neural Networks: Where we are and What's Next",
+  "doi": "10.1007/s10915-022-01939-z",
+  "arxiv": "2201.05624",
+  "accessed": "2026-09-30T15:36:02.505269+00:00",
+  "errors": [],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2026-09-30T14:05:10Z",
+      "timestamp": 1790777110396,
+      "version": "4.1.0"
+    },
+    "reference-count": 202,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              26
+            ]
+          ],
+          "date-time": "2022-07-26T00:00:00Z",
+          "timestamp": 1658793600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              26
+            ]
+          ],
+          "date-time": "2022-07-26T00:00:00Z",
+          "timestamp": 1658793600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100007195",
+        "name": "Università degli Studi di Napoli Federico II",
+        "doi-asserted-by": "crossref",
+        "id": [
+          {
+            "id": "10.13039/100007195",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "J Sci Comput"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          9
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Physics-Informed Neural Networks (PINN) are neural networks (NNs) that encode model equations, like Partial Differential Equations (PDE), as a component of the neural network itself. PINNs are nowadays used to solve PDEs, fractional equations, integral-differential equations, and stochastic PDEs. This novel methodology has arisen as a multi-task learning framework in which a NN must fit observed data while reducing a PDE residual. This article provides a comprehensive review of the literature on PINNs: while the primary goal of the study was to characterize these networks and their related advantages and disadvantages. The review also attempts to incorporate publications on a broader range of collocation-based physics informed neural networks, which stars form the vanilla PINN, as well as many other variants, such as physics-constrained neural networks (PCNN), variational hp-VPINN, and conservative PINN (CPINN). The study indicates that most research has focused on customizing the PINN through different activation functions, gradient optimization techniques, neural network structures, and loss function structures. Despite the wide range of applications for which PINNs have been used, by demonstrating their ability to be more feasible in some contexts than classical numerical techniques like Finite Element Method (FEM), advancements are still possible, most notably theoretical issues that remain unresolved.</jats:p>",
+    "DOI": "10.1007/s10915-022-01939-z",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          26
+        ]
+      ],
+      "date-time": "2022-07-26T09:05:42Z",
+      "timestamp": 1658826342000
+    },
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 2711,
+    "title": [
+      "Scientific Machine Learning Through Physics–Informed Neural Networks: Where we are and What’s Next"
+    ],
+    "prefix": "10.1007",
+    "volume": "92",
+    "author": [
+      {
+        "given": "Salvatore",
+        "family": "Cuomo",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Vincenzo Schiano",
+        "family": "Di Cola",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fabio",
+        "family": "Giampaolo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Gianluigi",
+        "family": "Rozza",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Maziar",
+        "family": "Raissi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5179-2496",
+        "authenticated-orcid": false,
+        "given": "Francesco",
+        "family": "Piccialli",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          26
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "1939_CR1",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Abreu, E., Florindo, J.B.: A Study on a Feedforward Neural Network to Solve Partial Differential Equations in Hyperbolic-Transport Problems. In: Paszynski M, Kranzlmüller D, Krzhizhanovskaya VV, et al (eds) Computational Science – ICCS 2021. Springer International Publishing, Cham, Lecture Notes in Comput. Sci. pp. 398–411, (2021) https://doi.org/10.1007/978-3-030-77964-1_31",
+        "DOI": "10.1007/978-3-030-77964-1_31"
+      },
+      {
+        "key": "1939_CR2",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Aldweesh, A., Derhab, A., Emam, A.Z.: Deep learning approaches for anomaly-based intrusion detection systems: A survey, taxonomy, and open issues. Knowledge-Based Systems 189, 105,124 (2020). https://doi.org/10.1016/j.knosys.2019.105124, https://www.sciencedirect.com/science/article/pii/S0950705119304897",
+        "DOI": "10.1016/j.knosys.2019.105124"
+      },
+      {
+        "key": "1939_CR3",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Alkhadhr, S., Liu, X., Almekkawy, M: Modeling of the Forward Wave Propagation Using Physics-Informed Neural Networks. In: 2021 IEEE International Ultrasonics Symposium (IUS), pp. 1–4, (2021) https://doi.org/10.1109/IUS52206.2021.9593574, iSSN: 1948-5727",
+        "DOI": "10.1109/IUS52206.2021.9593574"
+      },
+      {
+        "key": "1939_CR4",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Almajid, M.M., Abu-Al-Saud, M.O.: Prediction of porous media fluid flow using physics informed neural networks. J. Pet. Sci, Eng. 208, 109,205 (2022). https://doi.org/10.1016/j.petrol.2021.109205, https://www.sciencedirect.com/science/article/pii/S0920410521008597",
+        "DOI": "10.1016/j.petrol.2021.109205"
+      },
+      {
+        "key": "1939_CR5",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Alom, M.Z., Taha, T.M., Yakopcic, C., et al: A state-of-the-art survey on deep learning theory and architectures. Electron. 8(3) (2019). https://doi.org/10.3390/electronics8030292, https://www.mdpi.com/2079-9292/8/3/292",
+        "DOI": "10.3390/electronics8030292"
+      },
+      {
+        "key": "1939_CR6",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Amini Niaki, S., Haghighat, E., Campbell, T., et al.: Physics-informed neural network for modelling the thermochemical curing process of composite-tool systems during manufacture. Computer Methods in Applied Mechanics and Engineering 384, 113,959 (2021). https://doi.org/10.1016/j.cma.2021.113959, https://www.sciencedirect.com/science/article/pii/S0045782521002966",
+        "DOI": "10.1016/j.cma.2021.113959"
+      },
+      {
+        "key": "1939_CR7",
+        "unstructured": "Araz, J.Y., Criado, J.C., Spannowsky, M: Elvet – a neural network-based differential equation and variational problem solver (2021). arXiv:2103.14575 [hep-lat, physics:hep-ph, physics:hep-th, stat] , arXiv: 2103.14575"
+      },
+      {
+        "key": "1939_CR8",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Arnold, D.N.: Stability, Consistency, and Convergence of Numerical Discretizations, pp. 1358–1364. Springer, Berlin, Heidelberg (2015). https://doi.org/10.1007/978-3-540-70529-1_407",
+        "DOI": "10.1007/978-3-540-70529-1_407"
+      },
+      {
+        "key": "1939_CR9",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Arnold, F., King, R: State–space modeling for control based on physics-informed neural networks. Eng. Appl. Artif. Intell. 101, 104,195 . https://doi.org/10.1016/j.engappai.2021.104195, https://www.sciencedirect.com/science/article/pii/S0952197621000427",
+        "DOI": "10.1016/j.engappai.2021.104195"
+      },
+      {
+        "key": "1939_CR10",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Arthurs, C.J., King, A.P.: Active training of physics-informed neural networks to aggregate and interpolate parametric solutions to the Navier-Stokes equations. J. Comput. Phys. 438:110,364 (2021). https://doi.org/10.1016/j.jcp.2021.110364, https://www.sciencedirect.com/science/article/pii/S002199912100259X",
+        "DOI": "10.1016/j.jcp.2021.110364"
+      },
+      {
+        "issue": "6",
+        "key": "1939_CR11",
+        "doi-asserted-by": "publisher",
+        "first-page": "26",
+        "DOI": "10.1109/MSP.2017.2743240",
+        "volume": "34",
+        "author": "K Arulkumaran",
+        "year": "2017",
+        "unstructured": "Arulkumaran, K., Deisenroth, M.P., Brundage, M., et al.: Deep Reinforcement Learning: A Brief Survey. IEEE Signal Process. Mag. 34(6), 26–38 (2017). https://doi.org/10.1109/MSP.2017.2743240",
+        "journal-title": "IEEE Signal Process. Mag."
+      },
+      {
+        "key": "1939_CR12",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Balu, A., Botelho, S., Khara, B., et al.: Distributed multigrid neural solvers on megavoxel domains. In: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis. Association for Computing Machinery, New York, NY, USA, SC ’21, (2021) https://doi.org/10.1145/3458817.3476218",
+        "DOI": "10.1145/3458817.3476218"
+      },
+      {
+        "key": "1939_CR13",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Bauer, B.: Kohler, M: On deep learning as a remedy for the curse of dimensionality in nonparametric regression. Ann. Statist. 47(4), 2261–2285 (2019). https://doi.org/10.1214/18-AOS1747, http://projecteuclid.org/journals/annals-of-statistics/volume-47/issue-4/On-deep-learning-as-a-remedy-for-the-curse-of/10.1214/18-AOS1747.full",
+        "DOI": "10.1214/18-AOS1747"
+      },
+      {
+        "key": "1939_CR14",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Belkin, M., Hsu, D., Ma, S., et al.: Reconciling modern machine-learning practice and the classical bias-variance trade-off. Proc. Nat. Acad. Sci. India Sect. 116(32), 15849–15854 (2019). https://doi.org/10.1073/pnas.1903070116, www.pnas.org/doi/10.1073/pnas.1903070116",
+        "DOI": "10.1073/pnas.1903070116"
+      },
+      {
+        "issue": "3731",
+        "key": "1939_CR15",
+        "doi-asserted-by": "publisher",
+        "first-page": "34",
+        "DOI": "10.1126/science.153.3731.34",
+        "volume": "153",
+        "author": "R Bellman",
+        "year": "1966",
+        "unstructured": "Bellman, R.: Dynamic programming. Sci. 153(3731), 34–37 (1966)",
+        "journal-title": "Sci."
+      },
+      {
+        "key": "1939_CR16",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Berg, J., Nyström, K.: A unified deep artificial neural network approach to partial differential equations in complex geometries. Neurocomputing 317, 28–41 (2018). https://doi.org/10.1016/j.neucom.2018.06.056, www.sciencedirect.com/science/article/pii/S092523121830794X",
+        "DOI": "10.1016/j.neucom.2018.06.056"
+      },
+      {
+        "key": "1939_CR17",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Berman, D.S., Buczak, A.L., Chavis, J.S., et al.: A survey of deep learning methods for cyber security. Inform. 10(4) (2019). https://doi.org/10.3390/info10040122, https://www.mdpi.com/2078-2489/10/4/122",
+        "DOI": "10.3390/info10040122"
+      },
+      {
+        "issue": "3",
+        "key": "1939_CR18",
+        "doi-asserted-by": "publisher",
+        "first-page": "753",
+        "DOI": "10.1007/s00211-022-01294-z",
+        "volume": "151",
+        "author": "A Biswas",
+        "year": "2022",
+        "unstructured": "Biswas, A., Tian, J., Ulusoy, S.: Error estimates for deep learning methods in fluid dynamics. Numer. Math. 151(3), 753–777 (2022). https://doi.org/10.1007/s00211-022-01294-z",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "1939_CR19",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Blechschmidt, J., Ernst, O.G.: Three ways to solve partial differential equations with neural networks – A review. GAMM-Mitteilungen 44(2), e202100,006 (2021). https://doi.org/10.1002/gamm.202100006, https://onlinelibrary.wiley.com/doi/abs/10.1002/gamm.202100006",
+        "DOI": "10.1002/gamm.202100006"
+      },
+      {
+        "issue": "12",
+        "key": "1939_CR20",
+        "doi-asserted-by": "publisher",
+        "first-page": "1727",
+        "DOI": "10.1007/s10409-021-01148-1",
+        "volume": "37",
+        "author": "S Cai",
+        "year": "2021",
+        "unstructured": "Cai, S., Mao, Z., Wang, Z., et al.: Physics-informed neural networks (PINNs) for fluid mechanics: a review. Acta. Mech. Sin. 37(12), 1727–1738 (2021). https://doi.org/10.1007/s10409-021-01148-1",
+        "journal-title": "Acta. Mech. Sin."
+      },
+      {
+        "key": "1939_CR21",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Cai, S., Wang, Z., Lu, L., et al.: DeepM &Mnet: Inferring the electroconvection multiphysics fields based on operator approximation by neural networks. J. Comput. Phys. 436, 110,296 (2021b). https://doi.org/10.1016/j.jcp.2021.110296, https://www.sciencedirect.com/science/article/pii/S0021999121001911",
+        "DOI": "10.1016/j.jcp.2021.110296"
+      },
+      {
+        "key": "1939_CR22",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Cai, S., Wang, Z., Wang, S., et al.: Physics-Informed Neural Networks for Heat Transfer Problems. J. Heat Transf. 143(6) (2021c). https://doi.org/10.1115/1.4050542",
+        "DOI": "10.1115/1.4050542"
+      },
+      {
+        "key": "1939_CR23",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Calin, O.: Convolutional Networks, pp. 517–542. Springer International Publishing, Cham (2020). https://doi.org/10.1007/978-3-030-36721-3_16",
+        "DOI": "10.1007/978-3-030-36721-3_16"
+      },
+      {
+        "key": "1939_CR24",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Calin, O.: Universal Approximators, pp. 251–284. Springer Series in the Data Sciences, Springer International Publishing, Cham (2020b). https://doi.org/10.1007/978-3-030-36721-3_9",
+        "DOI": "10.1007/978-3-030-36721-3_9"
+      },
+      {
+        "key": "1939_CR25",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Caterini, A.L., Chang, D.E.: In: Caterini, A.L., Chang, D.E. (eds.) Deep Neural Networks in a Mathematical Framework. Generic Representation of Neural Networks, pp. 23–34. SpringerBriefs in Computer Science, Springer International Publishing, Cham (2018). https://doi.org/10.1007/978-3-319-75304-1_3",
+        "DOI": "10.1007/978-3-319-75304-1_3"
+      },
+      {
+        "key": "1939_CR26",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Caterini, A.L., Chang, D.E.: Specific Network Descriptions. In: Caterini, A.L., Chang, D.E. (eds.) Deep Neural Networks in a Mathematical Framework, pp. 35–58. Springer International Publishing, Cham, SpringerBriefs in Computer Science (2018). https://doi.org/10.1007/978-3-319-75304-1_4",
+        "DOI": "10.1007/978-3-319-75304-1_4"
+      },
+      {
+        "issue": "1",
+        "key": "1939_CR27",
+        "doi-asserted-by": "publisher",
+        "first-page": "6424",
+        "DOI": "10.1038/s41467-021-26577-1",
+        "volume": "12",
+        "author": "H Cavanagh",
+        "year": "2021",
+        "unstructured": "Cavanagh, H., Mosbach, A., Scalliet, G., et al.: Physics-informed deep learning characterizes morphodynamics of asian soybean rust disease. Nat. Commun. 12(1), 6424 (2021). https://doi.org/10.1038/s41467-021-26577-1",
+        "journal-title": "Nat. Commun."
+      },
+      {
+        "issue": "46",
+        "key": "1939_CR28",
+        "doi-asserted-by": "publisher",
+        "first-page": "1931",
+        "DOI": "10.21105/joss.01931",
+        "volume": "5",
+        "author": "F Chen",
+        "year": "2020",
+        "unstructured": "Chen, F., Sondak, D., Protopapas, P., et al.: Neurodiffeq: A python package for solving differential equations with neural networks. J. Open Source Softw. 5(46), 1931 (2020)",
+        "journal-title": "J. Open Source Softw."
+      },
+      {
+        "key": "1939_CR29",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Chen, H., Engkvist, O., Wang, Y., et al.: The rise of deep learning in drug discovery. Drug Discov. Today 23(6), 1241–1250 (2018). https://doi.org/10.1016/j.drudis.2018.01.039, www.sciencedirect.com/science/article/pii/S1359644617303598",
+        "DOI": "10.1016/j.drudis.2018.01.039"
+      },
+      {
+        "key": "1939_CR30",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Chen, Y., Lu, L., Karniadakis, G.E., et al.: Physics-informed neural networks for inverse problems in nano-optics and metamaterials. Opt. Express 28(8), 11618–11633 (2020). https://doi.org/10.1364/OE.384875, www.osapublishing.org/oe/abstract.cfm?uri=oe-28-8-11618",
+        "DOI": "10.1364/OE.384875"
+      },
+      {
+        "key": "1939_CR31",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Cheng, C., Zhang, G.T.: Deep Learning Method Based on Physics Informed Neural Network with Resnet Block for Solving Fluid Flow Problems. Water 13(4), 423 (2021). https://doi.org/10.3390/w13040423, www.mdpi.com/2073-4441/13/4/423",
+        "DOI": "10.3390/w13040423"
+      },
+      {
+        "issue": "3",
+        "key": "1939_CR32",
+        "doi-asserted-by": "publisher",
+        "first-page": "298",
+        "DOI": "10.1007/s42514-021-00076-7",
+        "volume": "3",
+        "author": "KC Cheung",
+        "year": "2021",
+        "unstructured": "Cheung, K.C., See, S.: Recent advance in machine learning for partial differential equation. CCF Trans. High Performance Comput. 3(3), 298–310 (2021). https://doi.org/10.1007/s42514-021-00076-7",
+        "journal-title": "CCF Trans. High Performance Comput."
+      },
+      {
+        "key": "1939_CR33",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Chiu, P.H., Wong, J.C., Ooi, C., et al.: CAN-PINN: A fast physics-informed neural network based on coupled-automatic–numerical differentiation method. Comput. Methods Appl. Mech. Engrg. 395, 114,909 (2022). https://doi.org/10.1016/j.cma.2022.114909, https://www.sciencedirect.com/science/article/pii/S0045782522001906",
+        "DOI": "10.1016/j.cma.2022.114909"
+      },
+      {
+        "issue": "4",
+        "key": "1939_CR34",
+        "doi-asserted-by": "publisher",
+        "first-page": "303",
+        "DOI": "10.1007/BF02551274",
+        "volume": "2",
+        "author": "G Cybenko",
+        "year": "1989",
+        "unstructured": "Cybenko, G.: Approximation by superpositions of a sigmoidal function. Math. Control Signals Systems 2(4), 303–314 (1989). https://doi.org/10.1007/BF02551274",
+        "journal-title": "Math. Control Signals Systems"
+      },
+      {
+        "issue": "4",
+        "key": "1939_CR35",
+        "doi-asserted-by": "publisher",
+        "first-page": "1071",
+        "DOI": "10.1007/s11831-019-09344-w",
+        "volume": "27",
+        "author": "S Dargan",
+        "year": "2020",
+        "unstructured": "Dargan, S., Kumar, M., Ayyagari, M.R., et al.: A Survey of Deep Learning and Its Applications: A New Paradigm to Machine Learning. Arch. Comput. Methods Engrg. 27(4), 1071–1092 (2020). https://doi.org/10.1007/s11831-019-09344-w",
+        "journal-title": "Arch. Comput. Methods Engrg."
+      },
+      {
+        "key": "1939_CR36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "De Ryck, T., Mishra, S.: Error analysis for physics informed neural networks (PINNs) approximating Kolmogorov PDEs. (2021) arXiv:2106.14473 [cs, math]",
+        "DOI": "10.1007/s10444-022-09985-9"
+      },
+      {
+        "key": "1939_CR37",
+        "doi-asserted-by": "publisher",
+        "unstructured": "De Ryck, T., Lanthaler, S., Mishra, S.: On the approximation of functions by tanh neural networks. Neural Netw. 143, 732–750 (2021). https://doi.org/10.1016/j.neunet.2021.08.015, www.sciencedirect.com/science/article/pii/S0893608021003208",
+        "DOI": "10.1016/j.neunet.2021.08.015"
+      },
+      {
+        "key": "1939_CR38",
+        "doi-asserted-by": "crossref",
+        "unstructured": "De Ryck, T., Jagtap, A.D., Mishra, S.: Error estimates for physics informed neural networks approximating the Navier-Stokes equations. (2022) arXiv:2203.09346 [cs, math]",
+        "DOI": "10.1093/imanum/drac085"
+      },
+      {
+        "key": "1939_CR39",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Dissanayake, M.W.M.G., Phan-Thien, N.: Neural-network-based approximations for solving partial differential equations. Commun. Numer. Methods Eng. 10(3), 195–201 (1994). https://doi.org/10.1002/cnm.1640100303, https://onlinelibrary.wiley.com/doi/abs/10.1002/cnm.1640100303",
+        "DOI": "10.1002/cnm.1640100303"
+      },
+      {
+        "key": "1939_CR40",
+        "unstructured": "Driscoll, T.A., Hale, N., Trefethen, L.N.: Chebfun Guide. Pafnuty Publications, http://www.chebfun.org/docs/guide/ (2014)"
+      },
+      {
+        "key": "1939_CR41",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Dwivedi, V., Srinivasan, B.: Physics Informed Extreme Learning Machine (PIELM)-A rapid method for the numerical solution of partial differential equations. Neurocomputing 391, 96–118 (2020). https://doi.org/10.1016/j.neucom.2019.12.099, www.sciencedirect.com/science/article/pii/S0925231219318144",
+        "DOI": "10.1016/j.neucom.2019.12.099"
+      },
+      {
+        "key": "1939_CR42",
+        "doi-asserted-by": "publisher",
+        "unstructured": "EW, Yu. B.: The Deep Ritz Method: A Deep Learning-Based Numerical Algorithm for Solving Variational Problems. Commun. Math. Stat. 6(1), 1–12 (2018). https://doi.org/10.1007/s40304-018-0127-z",
+        "DOI": "10.1007/s40304-018-0127-z"
+      },
+      {
+        "issue": "5",
+        "key": "1939_CR43",
+        "doi-asserted-by": "publisher",
+        "first-page": "2581",
+        "DOI": "10.1109/TIT.2021.3062161",
+        "volume": "67",
+        "author": "D Elbrächter",
+        "year": "2021",
+        "unstructured": "Elbrächter, D., Perekrestenko, D., Grohs, P., et al.: Deep Neural Network Approximation Theory. IEEE Trans. Inf. Theory 67(5), 2581–2623 (2021). https://doi.org/10.1109/TIT.2021.3062161",
+        "journal-title": "IEEE Trans. Inf. Theory"
+      },
+      {
+        "key": "1939_CR44",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Fang, Z.: A High-Efficient Hybrid Physics-Informed Neural Networks Based on Convolutional Neural Network. IEEE Transactions on Neural Networks and Learning Systems pp. 1–13. (2021) https://doi.org/10.1109/TNNLS.2021.3070878",
+        "DOI": "10.1109/TNNLS.2021.3070878"
+      },
+      {
+        "key": "1939_CR45",
+        "doi-asserted-by": "publisher",
+        "first-page": "24506",
+        "DOI": "10.1109/ACCESS.2019.2963375",
+        "volume": "8",
+        "author": "Z Fang",
+        "year": "2020",
+        "unstructured": "Fang, Z., Zhan, J.: Deep Physical Informed Neural Networks for Metamaterial Design. IEEE Access 8, 24506–24513 (2020). https://doi.org/10.1109/ACCESS.2019.2963375",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "1939_CR46",
+        "doi-asserted-by": "publisher",
+        "first-page": "26328",
+        "DOI": "10.1109/ACCESS.2019.2963390",
+        "volume": "8",
+        "author": "Z Fang",
+        "year": "2020",
+        "unstructured": "Fang, Z., Zhan, J.: A Physics-Informed Neural Network Framework for PDEs on 3D Surfaces: Time Independent Problems. IEEE Access 8, 26328–26335 (2020). https://doi.org/10.1109/ACCESS.2019.2963390",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "1939_CR47",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Fuks, O., Tchelepi, H.A.: LIMITATIONS OF PHYSICS INFORMED MACHINE LEARNING FOR NONLINEAR TWO-PHASE TRANSPORT IN POROUS MEDIA. Journal of Machine Learning for Modeling and Computing 1(1) (2020). https://doi.org/10.1615/.2020033905, https://www.dl.begellhouse.com/journals/558048804a15188a,583c4e56625ba94e,415f83b5707fde65.html",
+        "DOI": "10.1615/.2020033905"
+      },
+      {
+        "key": "1939_CR48",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Gao, H., Sun, L., Wang, J.X.: PhyGeoNet: Physics-informed geometry-adaptive convolutional neural networks for solving parameterized steady-state PDEs on irregular domain. J. Comput. Phys. 428, 110,079 (2021). https://doi.org/10.1016/j.jcp.2020.110079, https://www.sciencedirect.com/science/article/pii/S0021999120308536",
+        "DOI": "10.1016/j.jcp.2020.110079"
+      },
+      {
+        "key": "1939_CR49",
+        "unstructured": "Gardner, J.R., Pleiss, G., Bindel, D., et al.: Gpytorch: Blackbox matrix-matrix gaussian process inference with gpu acceleration. In: Advances in Neural Information Processing Systems (2018)"
+      },
+      {
+        "key": "1939_CR50",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Garnelo, M., Shanahan, M.: Reconciling deep learning with symbolic artificial intelligence: representing objects and relations. Curr. Opinion in Behav. Sci. 29, 17–23 (2019). https://doi.org/10.1016/j.cobeha.2018.12.010, www.sciencedirect.com/science/article/pii/S2352154618301943",
+        "DOI": "10.1016/j.cobeha.2018.12.010"
+      },
+      {
+        "key": "1939_CR51",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Geneva, N., Zabaras, N.: Modeling the dynamics of pde systems with physics-constrained deep auto-regressive networks. J. Comput. Phys. 403, 109,056 (2020). https://doi.org/10.1016/j.jcp.2019.109056, https://www.sciencedirect.com/science/article/pii/S0021999119307612",
+        "DOI": "10.1016/j.jcp.2019.109056"
+      },
+      {
+        "key": "1939_CR52",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Goswami, S., Anitescu, C., Chakraborty, S., et al.: Transfer learning enhanced physics informed neural network for phase-field modeling of fracture. Theoret. Appl. Fracture Mech. 106, 102,447 (2020). https://doi.org/10.1016/j.tafmec.2019.102447, https://www.sciencedirect.com/science/article/pii/S016784421930357X",
+        "DOI": "10.1016/j.tafmec.2019.102447"
+      },
+      {
+        "key": "1939_CR53",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Grandits, T., Pezzuto, S., Costabal, F.S., et al.: Learning Atrial Fiber Orientations and Conductivity Tensors from Intracardiac Maps Using Physics-Informed Neural Networks. In: Ennis, D.B., Perotti, L.E., Wang, V.Y. (eds) Functional Imaging and Modeling of the Heart. Springer International Publishing, Cham, Lecture Notes in Comput. Sci., pp. 650–658 (2021), https://doi.org/10.1007/978-3-030-78710-3_62",
+        "DOI": "10.1007/978-3-030-78710-3_62"
+      },
+      {
+        "key": "1939_CR54",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Grubišić, L., Hajba, M., Lacmanović, D.: Deep Neural Network Model for Approximating Eigenmodes Localized by a Confining Potential. Entropy 23(1), 95 (2021). https://doi.org/10.3390/e23010095, www.mdpi.com/1099-4300/23/1/95",
+        "DOI": "10.3390/e23010095"
+      },
+      {
+        "key": "1939_CR55",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Haghighat, E., Juanes, R.: SciANN: A Keras/Tensorflow wrapper for scientific computations and physics-informed deep learning using artificial neural networks. Comput. Methods Appl. Mech. Engrg. 373, 113,552 (2021). https://doi.org/10.1016/j.cma.2020.113552, arXiv: 2005.08803",
+        "DOI": "10.1016/j.cma.2020.113552"
+      },
+      {
+        "key": "1939_CR56",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Haghighat, E., Bekar, A.C., Madenci, E., et al.: A nonlocal physics-informed deep learning framework using the peridynamic differential operator. Comput. Methods Appl. Mech. Engrg. 385, 114,012 (2021a). https://doi.org/10.1016/j.cma.2021.114012, https://www.sciencedirect.com/science/article/pii/S0045782521003431",
+        "DOI": "10.1016/j.cma.2021.114012"
+      },
+      {
+        "key": "1939_CR57",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Haghighat, E., Raissi, M., Moure, A., et al.: A physics-informed deep learning framework for inversion and surrogate modeling in solid mechanics. Comput. Methods Appl. Mech. Engrg. 379, 113,741 (2021b). https://doi.org/10.1016/j.cma.2021.113741, https://www.sciencedirect.com/science/article/pii/S0045782521000773",
+        "DOI": "10.1016/j.cma.2021.113741"
+      },
+      {
+        "key": "1939_CR58",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Haitsiukevich, K., Ilin, A.: Improved Training of Physics-Informed Neural Networks with Model Ensembles. (2022) arXiv:2204.05108 [cs, stat]",
+        "DOI": "10.1109/IJCNN54540.2023.10191822"
+      },
+      {
+        "key": "1939_CR59",
+        "doi-asserted-by": "publisher",
+        "unstructured": "He, Q., Tartakovsky, A.M.: Physics-informed neural network method for forward and backward advection-dispersion equations. Water Resources Research 57(7), e2020WR029,479 (2021). https://doi.org/10.1029/2020WR029479, https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020WR029479, e2020WR029479 2020WR029479",
+        "DOI": "10.1029/2020WR029479"
+      },
+      {
+        "key": "1939_CR60",
+        "doi-asserted-by": "publisher",
+        "unstructured": "He, Q., Barajas-Solano, D., Tartakovsky, G., et al.: Physics-informed neural networks for multiphysics data assimilation with application to subsurface transport. Adv. Water Resources 141, 103,610 (2020). https://doi.org/10.1016/j.advwatres.2020.103610, https://www.sciencedirect.com/science/article/pii/S0309170819311649",
+        "DOI": "10.1016/j.advwatres.2020.103610"
+      },
+      {
+        "key": "1939_CR61",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Hennigh, O., Narasimhan, S., Nabian, M.A., et al.: NVIDIA SimNet: An AI-Accelerated Multi-Physics Simulation Framework. In: Paszynski M, Kranzlmüller D, Krzhizhanovskaya VV, et al (eds) Computational Science – ICCS 2021. Springer International Publishing, Cham, Lecture Notes in Comput. Sci., pp. 447–461 (2021), https://doi.org/10.1007/978-3-030-77977-1_36",
+        "DOI": "10.1007/978-3-030-77977-1_36"
+      },
+      {
+        "key": "1939_CR62",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Hillebrecht, B., Unger, B.: Certified machine learning: A posteriori error estimation for physics-informed neural networks. Tech. rep., (2022) https://doi.org/10.48550/arXiv.2203.17055, arXiv:2203.17055 [cs, math] type: article",
+        "DOI": "10.48550/arXiv.2203.17055"
+      },
+      {
+        "key": "1939_CR63",
+        "volume-title": "Optimization with PDE constraints",
+        "author": "M Hinze",
+        "year": "2008",
+        "unstructured": "Hinze, M., Pinnau, R., Ulbrich, M., et al.: Optimization with PDE constraints, vol. 23. Springer Science & Business Media, Berlin (2008)"
+      },
+      {
+        "key": "1939_CR64",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Hoffer, J.G., Geiger, B.C., Ofner, P., et al.: Mesh-Free Surrogate Models for Structural Mechanic FEM Simulation: A Comparative Study of Approaches. Appl. Sci. 11(20), 9411 (2021). https://doi.org/10.3390/app11209411, www.mdpi.com/2076-3417/11/20/9411",
+        "DOI": "10.3390/app11209411"
+      },
+      {
+        "key": "1939_CR65",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Hornik, K., Stinchcombe, M., White, H.: Multilayer feedforward networks are universal approximators. Neural Networks 2(5), 359–366 (1989). https://doi.org/10.1016/0893-6080(89)90020-8, www.sciencedirect.com/science/article/pii/0893608089900208",
+        "DOI": "10.1016/0893-6080(89)90020-8"
+      },
+      {
+        "issue": "2",
+        "key": "1939_CR66",
+        "doi-asserted-by": "publisher",
+        "first-page": "107",
+        "DOI": "10.1007/s13042-011-0019-y",
+        "volume": "2",
+        "author": "GB Huang",
+        "year": "2011",
+        "unstructured": "Huang, G.B., Wang, D.H., Lan, Y.: Extreme learning machines: a survey. Int. J. Mach. Learn. Cybern. 2(2), 107–122 (2011). https://doi.org/10.1007/s13042-011-0019-y",
+        "journal-title": "Int. J. Mach. Learn. Cybern."
+      },
+      {
+        "key": "1939_CR67",
+        "unstructured": "Huang, X., Liu, H., Shi, B., et al.: Solving Partial Differential Equations with Point Source Based on Physics-Informed Neural Networks. (2021) arXiv:2111.01394 [physics]"
+      },
+      {
+        "key": "1939_CR68",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Irrgang, C., Boers, N., Sonnewald, M., et al.: Towards neural Earth system modelling by integrating artificial intelligence in Earth system science. Nat. Mach. Intelligence 3(8), 667–674 (2021). https://doi.org/10.1038/s42256-021-00374-3, www.nature.com/articles/s42256-021-00374-3",
+        "DOI": "10.1038/s42256-021-00374-3"
+      },
+      {
+        "key": "1939_CR69",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Islam, M., Thakur, M.S.H., Mojumder, S., et al.: Extraction of material properties through multi-fidelity deep learning from molecular dynamics simulation. Comput. Mater. Sci. 188, 110,187 (2021). https://doi.org/10.1016/j.commatsci.2020.110187, https://www.sciencedirect.com/science/article/pii/S0927025620306789",
+        "DOI": "10.1016/j.commatsci.2020.110187"
+      },
+      {
+        "key": "1939_CR70",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Jagtap, A.D., Kawaguchi, K., Karniadakis, G.E.: Adaptive activation functions accelerate convergence in deep and physics-informed neural networks. J. Comput. Phys. 404, 109,136 (2020a). https://doi.org/10.1016/j.jcp.2019.109136, https://www.sciencedirect.com/science/article/pii/S0021999119308411",
+        "DOI": "10.1016/j.jcp.2019.109136"
+      },
+      {
+        "key": "1939_CR71",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Jagtap, A.D., Kharazmi, E., Karniadakis, G.E.: Conservative physics-informed neural networks on discrete domains for conservation laws: Applications to forward and inverse problems. Comput. Methods Appl. Mech. Engrg. 365, 113,028 (2020b). https://doi.org/10.1016/j.cma.2020.113028, https://www.sciencedirect.com/science/article/pii/S0045782520302127",
+        "DOI": "10.1016/j.cma.2020.113028"
+      },
+      {
+        "key": "1939_CR72",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Jamali, B., Haghighat, E., Ignjatovic, A., et al.: Machine learning for accelerating 2D flood models: Potential and challenges. Hydrological Processes 35(4), e14,064 (2021). https://doi.org/10.1002/hyp.14064, https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.14064",
+        "DOI": "10.1002/hyp.14064"
+      },
+      {
+        "key": "1939_CR73",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Jin, X., Cai, S., Li, H., et al.: NSFnets (Navier-Stokes flow nets): Physics-informed neural networks for the incompressible Navier-Stokes equations. J. Comput. Phys. 426, 109,951 (2021). https://doi.org/10.1016/j.jcp.2020.109951, https://www.sciencedirect.com/science/article/pii/S0021999120307257",
+        "DOI": "10.1016/j.jcp.2020.109951"
+      },
+      {
+        "key": "1939_CR74",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Karniadakis, G.E., Kevrekidis, I.G., Lu, L., et al.: Physics-informed machine learning. Nature Reviews Phys. 3(6), 422–440 (2021). https://doi.org/10.1038/s42254-021-00314-5, www.nature.com/articles/s42254-021-00314-5",
+        "DOI": "10.1038/s42254-021-00314-5"
+      },
+      {
+        "key": "1939_CR75",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kashinath, K., Mustafa, M., Albert, A., et al.: Physics-informed machine learning: case studies for weather and climate modelling. Philosophical Transactions of the Royal Society A: Mathematical, Phys. Eng. Sci. 379(2194), 20200,093 (2021). https://doi.org/10.1098/rsta.2020.0093, https://royalsocietypublishing.org/doi/full/10.1098/rsta.2020.0093",
+        "DOI": "10.1098/rsta.2020.0093"
+      },
+      {
+        "key": "1939_CR76",
+        "unstructured": "Kharazmi, E., Zhang, Z., Karniadakis, G.E.: Variational Physics-Informed Neural Networks For Solving Partial Differential Equations. (2019) arXiv:1912.00873 [physics, stat]"
+      },
+      {
+        "issue": "11",
+        "key": "1939_CR77",
+        "doi-asserted-by": "publisher",
+        "first-page": "744",
+        "DOI": "10.1038/s43588-021-00158-0",
+        "volume": "1",
+        "author": "E Kharazmi",
+        "year": "2021",
+        "unstructured": "Kharazmi, E., Cai, M., Zheng, X., et al.: Identifiability and predictability of integer- and fractional-order epidemiological models using physics-informed neural networks. Nature Comput. Sci. 1(11), 744–753 (2021). https://doi.org/10.1038/s43588-021-00158-0",
+        "journal-title": "Nature Comput. Sci."
+      },
+      {
+        "key": "1939_CR78",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kharazmi, E., Zhang, Z., Karniadakis, G.E.M.: hp-VPINNs: Variational physics-informed neural networks with domain decomposition. Comput. Methods Appl. Mech. Engrg. 374, 113,547 (2021b). https://doi.org/10.1016/j.cma.2020.113547, https://www.sciencedirect.com/science/article/pii/S0045782520307325",
+        "DOI": "10.1016/j.cma.2020.113547"
+      },
+      {
+        "key": "1939_CR79",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kim, J., Lee, K., Lee, D., et al.: DPM: A Novel Training Method for Physics-Informed Neural Networks in Extrapolation. Proc. AAAI Conf. Artif. Intell. 35(9), 8146–8154 (2021a). https://ojs.aaai.org/index.php/AAAI/article/view/16992",
+        "DOI": "10.1609/aaai.v35i9.16992"
+      },
+      {
+        "issue": "4",
+        "key": "1939_CR80",
+        "doi-asserted-by": "publisher",
+        "first-page": "1331",
+        "DOI": "10.1007/s12206-021-0342-5",
+        "volume": "35",
+        "author": "SW Kim",
+        "year": "2021",
+        "unstructured": "Kim, S.W., Kim, I., Lee, J., et al.: Knowledge Integration into deep learning in dynamical systems: an overview and taxonomy. J. Mech. Sci. Technol. 35(4), 1331–1342 (2021). https://doi.org/10.1007/s12206-021-0342-5",
+        "journal-title": "J. Mech. Sci. Technol."
+      },
+      {
+        "key": "1939_CR81",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kissas, G., Yang, Y., Hwuang, E., et al.: Machine learning in cardiovascular flows modeling: Predicting arterial blood pressure from non-invasive 4D flow MRI data using physics-informed neural networks. Comput. Methods Appl. Mech. Engrg. 358, 112,623 (2020). https://doi.org/10.1016/j.cma.2019.112623, https://www.sciencedirect.com/science/article/pii/S0045782519305055",
+        "DOI": "10.1016/j.cma.2019.112623"
+      },
+      {
+        "key": "1939_CR82",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kollmannsberger, S., D’Angella, D., Jokeit, M., et al.: Physics-Informed Neural Networks. In: Kollmannsberger, S., D’Angella, D., Jokeit, M., et al. (eds.) Deep Learning in Computational Mechanics, pp. 55–84. Studies in Computational Intelligence, Springer International Publishing, Cham (2021). https://doi.org/10.1007/978-3-030-76587-3_5",
+        "DOI": "10.1007/978-3-030-76587-3_5"
+      },
+      {
+        "key": "1939_CR83",
+        "unstructured": "Kondor, R., Trivedi, S.: On the Generalization of Equivariance and Convolution in Neural Networks to the Action of Compact Groups. In: Dy J, Krause A (eds) Proceedings of the 35th International Conference on Machine Learning, Proc. Mach. Learn. Res., vol 80. PMLR, pp. 2747–2755 (2018), https://proceedings.mlr.press/v80/kondor18a.html"
+      },
+      {
+        "key": "1939_CR84",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Koryagin, A., Khudorozkov, R., Tsimfer, S.: PyDEns: a Python Framework for Solving Differential Equations with Neural Networks. (2019) arXiv:1909.11544 [cs, stat]",
+        "DOI": "10.3997/2214-4609.202012125"
+      },
+      {
+        "key": "1939_CR85",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kovacs, A., Exl, L., Kornell, A., et al.: Conditional physics informed neural networks. Commun. Nonlinear Sci. Numer. Simulation 104, 106,041 (2022). https://doi.org/10.1016/j.cnsns.2021.106041, https://www.sciencedirect.com/science/article/pii/S1007570421003531",
+        "DOI": "10.1016/j.cnsns.2021.106041"
+      },
+      {
+        "key": "1939_CR86",
+        "unstructured": "Krishnapriyan, A., Gholami, A., Zhe, S., et al.: Characterizing possible failure modes in physics-informed neural networks. In: Ranzato, M., Beygelzimer, A., Dauphin, Y., et al (eds) Advances in Neural Information Processing Systems, vol 34. Curran Associates, Inc., pp. 26,548–26,560 (2021), https://proceedings.neurips.cc/paper/2021/file/df438e5206f31600e6ae4af72f2725f1-Paper.pdf"
+      },
+      {
+        "key": "1939_CR87",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kumar, M., Yadav, N.: Multilayer perceptrons and radial basis function neural network methods for the solution of differential equations: A survey. Computers & Mathematics with Applications 62(10), 3796–3811 (2011). https://doi.org/10.1016/j.camwa.2011.09.028, www.sciencedirect.com/science/article/pii/S0898122111007966",
+        "DOI": "10.1016/j.camwa.2011.09.028"
+      },
+      {
+        "key": "1939_CR88",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kutyniok, G.: The Mathematics of Artificial Intelligence (2022). arXiv:2203.08890 [cs, math, stat]",
+        "DOI": "10.4171/icm2022/141"
+      },
+      {
+        "issue": "5",
+        "key": "1939_CR89",
+        "doi-asserted-by": "publisher",
+        "first-page": "987",
+        "DOI": "10.1109/72.712178",
+        "volume": "9",
+        "author": "I Lagaris",
+        "year": "1998",
+        "unstructured": "Lagaris, I., Likas, A., Fotiadis, D.: Artificial neural networks for solving ordinary and partial differential equations. IEEE Trans. Neural Networks 9(5), 987–1000 (1998). https://doi.org/10.1109/72.712178",
+        "journal-title": "IEEE Trans. Neural Networks"
+      },
+      {
+        "issue": "5",
+        "key": "1939_CR90",
+        "doi-asserted-by": "publisher",
+        "first-page": "1041",
+        "DOI": "10.1109/72.870037",
+        "volume": "11",
+        "author": "I Lagaris",
+        "year": "2000",
+        "unstructured": "Lagaris, I., Likas, A., Papageorgiou, D.: Neural-network methods for boundary value problems with irregular boundaries. IEEE Trans. Neural Networks 11(5), 1041–1049 (2000). https://doi.org/10.1109/72.870037",
+        "journal-title": "IEEE Trans. Neural Networks"
+      },
+      {
+        "key": "1939_CR91",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Lai, Z., Mylonas, C., Nagarajaiah, S., et al.: Structural identification with physics-informed neural ordinary differential equations. J. Sound and Vibration 508, 116,196 (2021). https://doi.org/10.1016/j.jsv.2021.116196, https://www.sciencedirect.com/science/article/pii/S0022460X21002686",
+        "DOI": "10.1016/j.jsv.2021.116196"
+      },
+      {
+        "issue": "7553",
+        "key": "1939_CR92",
+        "doi-asserted-by": "publisher",
+        "first-page": "436",
+        "DOI": "10.1038/nature14539",
+        "volume": "521",
+        "author": "Y LeCun",
+        "year": "2015",
+        "unstructured": "LeCun, Y., Bengio, Y., Hinton, G.: Deep learning. Nature 521(7553), 436–444 (2015). https://doi.org/10.1038/nature14539",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "1939_CR93",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Lee, H., Kang, I.S.: Neural algorithm for solving differential equations. J. Comput. Phys. 91(1), 110–131 (1990). https://doi.org/10.1016/0021-9991(90)90007-N, www.sciencedirect.com/science/article/pii/002199919090007N",
+        "DOI": "10.1016/0021-9991(90)90007-N"
+      },
+      {
+        "key": "1939_CR94",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Li, W., Bazant, M.Z., Zhu, J.: A physics-guided neural network framework for elastic plates: Comparison of governing equations-based and energy-based approaches. Comput. Methods Appl. Mech. Engrg. 383, 113,933 (2021). https://doi.org/10.1016/j.cma.2021.113933, https://www.sciencedirect.com/science/article/pii/S004578252100270X",
+        "DOI": "10.1016/j.cma.2021.113933"
+      },
+      {
+        "key": "1939_CR95",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Lin, C., Li, Z., Lu, L., et al.: Operator learning for predicting multiscale bubble growth dynamics. J. Chem. Phys. 154(10), 104,118 (2021a). https://doi.org/10.1063/5.0041203, https://aip.scitation.org/doi/10.1063/5.0041203",
+        "DOI": "10.1063/5.0041203"
+      },
+      {
+        "key": "1939_CR96",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Lin, C., Maxey, M., Li, Z., et al.: A seamless multiscale operator neural network for inferring bubble dynamics. J. Fluid Mech. 929 (2021b). https://doi.org/10.1017/jfm.2021.866, https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/seamless-multiscale-operator-neural-network-for-inferring-bubble-dynamics/D516AB0EF954D0FF56AD864DB2618E94",
+        "DOI": "10.1017/jfm.2021.866"
+      },
+      {
+        "key": "1939_CR97",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Liu, D., Wang, Y.: A Dual-Dimer method for training physics-constrained neural networks with minimax architecture. Neural Netw. 136, 112–125 (2021). https://doi.org/10.1016/j.neunet.2020.12.028, www.sciencedirect.com/science/article/pii/S0893608020304536",
+        "DOI": "10.1016/j.neunet.2020.12.028"
+      },
+      {
+        "key": "1939_CR98",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Lu, L., Dao, M., Kumar, P., et al.: Extraction of mechanical properties of materials through deep learning from instrumented indentation. Proc. Nat. Acad. Sci. India Sect. 117(13), 7052–7062 (2020). https://doi.org/10.1073/pnas.1922210117, www.pnas.org/content/117/13/7052",
+        "DOI": "10.1073/pnas.1922210117"
+      },
+      {
+        "key": "1939_CR99",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Lu, L., Jin, P., Pang, G., et al.: Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators. Nat. Mac. Intell. 3(3), 218–229 (2021). https://doi.org/10.1038/s42256-021-00302-5, www.nature.com/articles/s42256-021-00302-5",
+        "DOI": "10.1038/s42256-021-00302-5"
+      },
+      {
+        "issue": "1",
+        "key": "1939_CR100",
+        "doi-asserted-by": "publisher",
+        "first-page": "208",
+        "DOI": "10.1137/19M1274067",
+        "volume": "63",
+        "author": "L Lu",
+        "year": "2021",
+        "unstructured": "Lu, L., Meng, X., Mao, Z., et al.: DeepXDE: A deep learning library for solving differential equations. SIAM Rev. 63(1), 208–228 (2021). https://doi.org/10.1137/19M1274067",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "issue": "6",
+        "key": "1939_CR101",
+        "doi-asserted-by": "publisher",
+        "first-page": "B1105",
+        "DOI": "10.1137/21M1397908",
+        "volume": "43",
+        "author": "L Lu",
+        "year": "2021",
+        "unstructured": "Lu, L., Pestourie, R., Yao, W., et al.: Physics-informed neural networks with hard constraints for inverse design. SIAM J. Sci. Comput. 43(6), B1105–B1132 (2021). https://doi.org/10.1137/21M1397908",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "1939_CR102",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mallat, S.: Understanding deep convolutional networks. Philosophical Transactions of the Royal Society A: Mathematical, Phys. Eng. Sci. 374(2065), 20150,203 (2016). https://doi.org/10.1098/rsta.2015.0203, https://royalsocietypublishing.org/doi/10.1098/rsta.2015.0203",
+        "DOI": "10.1098/rsta.2015.0203"
+      },
+      {
+        "key": "1939_CR103",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mao, Z., Jagtap, A.D., Karniadakis, G.E.: Physics-informed neural networks for high-speed flows. Comput. Methods Appl. Mech. Engrg. 360, 112,789 (2020). https://doi.org/10.1016/j.cma.2019.112789, https://www.sciencedirect.com/science/article/pii/S0045782519306814",
+        "DOI": "10.1016/j.cma.2019.112789"
+      },
+      {
+        "key": "1939_CR104",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mao, Z., Lu, L., Marxen, O., et al.: DeepM &Mnet for hypersonics: Predicting the coupled flow and finite-rate chemistry behind a normal shock using neural-network approximation of operators. J. Comput. Phys. 447, 110,698 (2021). https://doi.org/10.1016/j.jcp.2021.110698, https://www.sciencedirect.com/science/article/pii/S0021999121005933",
+        "DOI": "10.1016/j.jcp.2021.110698"
+      },
+      {
+        "key": "1939_CR105",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Markidis, S.: The Old and the New: Can Physics-Informed Deep-Learning Replace Traditional Linear Solvers? Frontiers in Big Data 4 (2021). https://www.frontiersin.org/article/10.3389/fdata.2021.669097",
+        "DOI": "10.3389/fdata.2021.669097"
+      },
+      {
+        "key": "1939_CR106",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mathews, A., Francisquez, M., Hughes, J.W., et al.: Uncovering turbulent plasma dynamics via deep learning from partial observations. Phys. Review E 104(2) (2021). https://doi.org/10.1103/physreve.104.025205, https://www.osti.gov/pages/biblio/1813020",
+        "DOI": "10.1103/physreve.104.025205"
+      },
+      {
+        "key": "1939_CR107",
+        "doi-asserted-by": "crossref",
+        "unstructured": "McClenny, L.D., Haile, M.A., Braga-Neto, U.M.: Tensordiffeq: Scalable multi-gpu forward and inverse solvers for physics informed neural networks. (2021) arXiv preprint arXiv:2103.16034",
+        "DOI": "10.2139/ssrn.4086448"
+      },
+      {
+        "issue": "6",
+        "key": "1939_CR108",
+        "doi-asserted-by": "publisher",
+        "first-page": "1675",
+        "DOI": "10.1515/fca-2019-0086",
+        "volume": "22",
+        "author": "PP Mehta",
+        "year": "2019",
+        "unstructured": "Mehta, P.P., Pang, G., Song, F., et al.: Discovering a universal variable-order fractional model for turbulent couette flow using a physics-informed neural network. Fract. Calc. Appl. Anal. 22(6), 1675–1688 (2019). https://doi.org/10.1515/fca-2019-0086",
+        "journal-title": "Fract. Calc. Appl. Anal."
+      },
+      {
+        "key": "1939_CR109",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Meng, X., Li, Z., Zhang, D., et al.: Ppinn: Parareal physics-informed neural network for time-dependent pdes. Comput. Methods Appl. Mech. Engrg. 370, 113,250 (2020). https://doi.org/10.1016/j.cma.2020.113250, https://www.sciencedirect.com/science/article/pii/S0045782520304357",
+        "DOI": "10.1016/j.cma.2020.113250"
+      },
+      {
+        "key": "1939_CR110",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Minh Nguyen-Thanh, V., Trong Khiem Nguyen, L., Rabczuk, T., et al.: A surrogate model for computational homogenization of elastostatics at finite strain using high-dimensional model representation-based neural network. Int. J. Numer. Methods Eng. 121(21), 4811–4842 (2020). https://doi.org/10.1002/nme.6493, https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.6493",
+        "DOI": "10.1002/nme.6493"
+      },
+      {
+        "key": "1939_CR111",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/imanum/drab032",
+        "author": "S Mishra",
+        "year": "2021",
+        "unstructured": "Mishra, S., Molinaro, R.: Estimates on the generalization error of physics-informed neural networks for approximating a class of inverse problems for PDEs. IMA J. Numer. Anal. (2021). https://doi.org/10.1093/imanum/drab032",
+        "journal-title": "IMA J. Numer. Anal."
+      },
+      {
+        "key": "1939_CR112",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mishra, S., Molinaro, R.: Physics informed neural networks for simulating radiative transfer. J. Quant. Spectroscopy and Radiative Transf. 270, 107,705 (2021b). https://doi.org/10.1016/j.jqsrt.2021.107705, https://www.sciencedirect.com/science/article/pii/S0022407321001989",
+        "DOI": "10.1016/j.jqsrt.2021.107705"
+      },
+      {
+        "key": "1939_CR113",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mishra, S., Molinaro, R.: Estimates on the generalization error of physics-informed neural networks for approximating PDEs. IMA J. Numer. Anal. p drab093 (2022). https://doi.org/10.1093/imanum/drab093",
+        "DOI": "10.1093/imanum/drab093"
+      },
+      {
+        "key": "1939_CR114",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Misyris, G.S., Venzke, A., Chatzivasileiadis, S.: Physics-informed neural networks for power systems. 2020 IEEE Power & Energy Society General Meeting (PESGM) pp. 1–5 (2020)",
+        "DOI": "10.1109/PESGM41954.2020.9282004"
+      },
+      {
+        "key": "1939_CR115",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mo, Y., Ling, L., Zeng, D.: Data-driven vector soliton solutions of coupled nonlinear Schrödinger equation using a deep learning algorithm. Phys. Lett. A 421, 127,739 (2022). https://doi.org/10.1016/j.physleta.2021.127739, https://www.sciencedirect.com/science/article/pii/S0375960121006034",
+        "DOI": "10.1016/j.physleta.2021.127739"
+      },
+      {
+        "key": "1939_CR116",
+        "unstructured": "Moseley, B., Markham, A., Nissen-Meyer, T.: Finite Basis Physics-Informed Neural Networks (FBPINNs): a scalable domain decomposition approach for solving differential equations. (2021) arXiv:2107.07871 [physics]"
+      },
+      {
+        "issue": "7",
+        "key": "1939_CR117",
+        "doi-asserted-by": "publisher",
+        "first-page": "2973",
+        "DOI": "10.1007/s00521-020-05151-8",
+        "volume": "33",
+        "author": "AN Muhammad",
+        "year": "2021",
+        "unstructured": "Muhammad, A.N., Aseere, A.M., Chiroma, H., et al.: Deep learning application in smart cities: recent development, taxonomy, challenges and research prospects. Neural Comput. Appl. 33(7), 2973–3009 (2021). https://doi.org/10.1007/s00521-020-05151-8",
+        "journal-title": "Neural Comput. Appl."
+      },
+      {
+        "key": "1939_CR118",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Nabian, M.A., Gladstone, R.J., Meidani, H.: Efficient training of physics-informed neural networks via importance sampling. Comput. Aided Civil Infrastruct. Eng. 36(8), 962–977 (2021). https://doi.org/10.1111/mice.12685, https://onlinelibrary.wiley.com/doi/abs/10.1111/mice.12685",
+        "DOI": "10.1111/mice.12685"
+      },
+      {
+        "key": "1939_CR119",
+        "unstructured": "Nandi, T., Hennigh, O., Nabian, M., et al.: Progress Towards Solving High Reynolds Number Reacting Flows in SimNet. Tech. rep., (2021) https://www.osti.gov/biblio/1846970-progress-towards-solving-high-reynolds-number-reacting-flows-simnet"
+      },
+      {
+        "key": "1939_CR120",
+        "unstructured": "Nandi, T., Hennigh, O., Nabian, M., et al.: Developing Digital Twins for Energy Applications Using Modulus. Tech. rep., (2022) https://www.osti.gov/biblio/1866819"
+      },
+      {
+        "key": "1939_CR121",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Nascimento, R.G., Fricke, K., Viana, F.A.: A tutorial on solving ordinary differential equations using python and hybrid physics-informed neural network. Eng. Appl. Artif. Intell. 96, 103,996. (2020) https://doi.org/10.1016/j.engappai.2020.103996, https://www.sciencedirect.com/science/article/pii/S095219762030292X",
+        "DOI": "10.1016/j.engappai.2020.103996"
+      },
+      {
+        "key": "1939_CR122",
+        "unstructured": "Novak, R., Xiao, L., Hron, J., et al.: Neural tangents: Fast and easy infinite neural networks in python. In: International Conference on Learning Representations, (2020) https://github.com/google/neural-tangents"
+      },
+      {
+        "key": "1939_CR123",
+        "unstructured": "NVIDIA Corporation (2021) Modulus User Guide. https://developer.nvidia.com/modulus-user-guide-v2106, release v21.06 – November 9, (2021)"
+      },
+      {
+        "key": "1939_CR124",
+        "unstructured": "Oreshkin, B.N., Carpov, D., Chapados, N., et al.: N-BEATS: Neural basis expansion analysis for interpretable time series forecasting. (2020) arXiv:1905.10437 [cs, stat]"
+      },
+      {
+        "issue": "3",
+        "key": "1939_CR125",
+        "doi-asserted-by": "publisher",
+        "first-page": "812",
+        "DOI": "10.1137/140974596",
+        "volume": "13",
+        "author": "H Owhadi",
+        "year": "2015",
+        "unstructured": "Owhadi, H.: Bayesian numerical homogenization. Multiscale Model. Simul 13(3), 812–828 (2015). https://doi.org/10.1137/140974596",
+        "journal-title": "Multiscale Model. Simul"
+      },
+      {
+        "key": "1939_CR126",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Owhadi, H., Yoo, G.R.: Kernel Flows: From learning kernels from data into the abyss. J. Comput. Phys. 389, 22–47 (2019). https://doi.org/10.1016/j.jcp.2019.03.040, www.sciencedirect.com/science/article/pii/S0021999119302232",
+        "DOI": "10.1016/j.jcp.2019.03.040"
+      },
+      {
+        "key": "1939_CR127",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Özbay, A.G., Hamzehloo, A., Laizet, S., et al.: Poisson CNN: Convolutional neural networks for the solution of the Poisson equation on a Cartesian mesh. Data-Centric Engineering 2. (2021) https://doi.org/10.1017/dce.2021.7, https://www.cambridge.org/core/journals/data-centric-engineering/article/poisson-cnn-convolutional-neural-networks-for-the-solution-of-the-poisson-equation-on-a-cartesian-mesh/8CDFD5C9D5172E51B924E9AA1BA253A1",
+        "DOI": "10.1017/dce.2021.7"
+      },
+      {
+        "key": "1939_CR128",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Pang, G., Lu, L., Karniadakis, G.E.: fPINNs: Fractional Physics-Informed Neural Networks. SIAM J. Sci. Comput. 41(4), A2603–A2626 (2019). https://doi.org/10.1137/18M1229845, https://epubs.siam.org/doi/abs/10.1137/18M1229845",
+        "DOI": "10.1137/18M1229845"
+      },
+      {
+        "key": "1939_CR129",
+        "unstructured": "Paszke, A., Gross, S., Chintala, S., et al.: Automatic differentiation in PyTorch. Tech. rep., (2017) https://openreview.net/forum?id=BJJsrmfCZ"
+      },
+      {
+        "key": "1939_CR130",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Patel, R.G., Manickam, I., Trask, N.A., et al.: Thermodynamically consistent physics-informed neural networks for hyperbolic systems. J. Comput. Phys. 449, 110,754 (2022). https://doi.org/10.1016/j.jcp.2021.110754, https://www.sciencedirect.com/science/article/pii/S0021999121006495",
+        "DOI": "10.1016/j.jcp.2021.110754"
+      },
+      {
+        "key": "1939_CR131",
+        "unstructured": "Pedro, J.B., Maroñas, J., Paredes, R.: Solving Partial Differential Equations with Neural Networks. (2019) arXiv:1912.04737 [physics]"
+      },
+      {
+        "key": "1939_CR132",
+        "unstructured": "Peng, W., Zhang, J., Zhou, W., et al.: IDRLnet: A Physics-Informed Neural Network Library. (2021) arXiv:2107.04320 [cs, math]"
+      },
+      {
+        "key": "1939_CR133",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Pinkus, A.: Approximation theory of the MLP model in neural networks. Acta Numer. 8, 143–195 (1999). https://doi.org/10.1017/S0962492900002919, www.cambridge.org/core/journals/acta-numerica/article/abs/approximation-theory-of-the-mlp-model-in-neural-networks/18072C558C8410C4F92A82BCC8FC8CF9",
+        "DOI": "10.1017/S0962492900002919"
+      },
+      {
+        "key": "1939_CR134",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Pratama, D.A., Bakar, M.A., Man, M., et al.: ANNs-Based Method for Solving Partial Differential Equations : A Survey. (2021) Preprint https://doi.org/10.20944/preprints202102.0160.v1, https://www.preprints.org/manuscript/202102.0160/v1",
+        "DOI": "10.20944/preprints202102.0160.v1"
+      },
+      {
+        "key": "1939_CR135",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Psichogios, D.C., Ungar, L.H.: A hybrid neural network-first principles approach to process modeling. AIChE J. 38(10), 1499–1511 (1992). https://doi.org/10.1002/aic.690381003, https://onlinelibrary.wiley.com/doi/abs/10.1002/aic.690381003",
+        "DOI": "10.1002/aic.690381003"
+      },
+      {
+        "key": "1939_CR136",
+        "volume-title": "Numerical Models for Differential Problems",
+        "author": "A Quarteroni",
+        "year": "2013",
+        "unstructured": "Quarteroni, A.: Numerical Models for Differential Problems, 2nd edn. Springer Publishing Company, Incorporated (2013)",
+        "edition": "2"
+      },
+      {
+        "key": "1939_CR137",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rackauckas, C., Ma, Y., Martensen, J., et al.: Universal Differential Equations for Scientific Machine Learning. (2021) arXiv:2001.04385 [cs, math, q-bio, stat]",
+        "DOI": "10.21203/rs.3.rs-55125/v1"
+      },
+      {
+        "key": "1939_CR138",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1109/ACCESS.2022.3153056",
+        "volume": "10",
+        "author": "M Rafiq",
+        "year": "2022",
+        "unstructured": "Rafiq, M., Rafiq, G., Choi, G.S.: DSFA-PINN: Deep Spectral Feature Aggregation Physics Informed Neural Network. IEEE Access 10, 1 (2022). https://doi.org/10.1109/ACCESS.2022.3153056",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "1939_CR139",
+        "unstructured": "Raissi, M.: Deep hidden physics models: Deep learning of nonlinear partial differential equations. J. Mach. Learn. Res. 19(25), 1–24 (2018). http://jmlr.org/papers/v19/18-046.html"
+      },
+      {
+        "key": "1939_CR140",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Raissi, M., Karniadakis, G.E.: Hidden physics models: Machine learning of nonlinear partial differential equations. J. Comput. Phys. 357, 125–141 (2018). https://doi.org/10.1016/j.jcp.2017.11.039, www.sciencedirect.com/science/article/pii/S0021999117309014",
+        "DOI": "10.1016/j.jcp.2017.11.039"
+      },
+      {
+        "key": "1939_CR141",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Raissi, M., Perdikaris, P., Karniadakis, G.E.: Inferring solutions of differential equations using noisy multi-fidelity data. J. Comput. Phys. 335, 736–746 (2017). https://doi.org/10.1016/j.jcp.2017.01.060, www.sciencedirect.com/science/article/pii/S0021999117300761",
+        "DOI": "10.1016/j.jcp.2017.01.060"
+      },
+      {
+        "key": "1939_CR142",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Raissi, M., Perdikaris, P., Karniadakis, G.E.: Machine learning of linear differential equations using Gaussian processes. J. Comput. Phys. 348, 683–693 (2017). https://doi.org/10.1016/j.jcp.2017.07.050, www.sciencedirect.com/science/article/pii/S0021999117305582",
+        "DOI": "10.1016/j.jcp.2017.07.050"
+      },
+      {
+        "key": "1939_CR143",
+        "unstructured": "Raissi, M., Perdikaris, P., Karniadakis, G.E.: Physics Informed Deep Learning (Part I): Data-driven Solutions of Nonlinear Partial Differential Equations. (2017c) arXiv:1711.10561 [cs, math, stat]"
+      },
+      {
+        "key": "1939_CR144",
+        "unstructured": "Raissi, M., Perdikaris, P., Karniadakis, G.E.: Physics Informed Deep Learning (Part II): Data-driven Discovery of Nonlinear Partial Differential Equations. (2017d) arXiv:1711.10566 [cs, math, stat]"
+      },
+      {
+        "issue": "1",
+        "key": "1939_CR145",
+        "doi-asserted-by": "publisher",
+        "first-page": "A172",
+        "DOI": "10.1137/17M1120762",
+        "volume": "40",
+        "author": "M Raissi",
+        "year": "2018",
+        "unstructured": "Raissi, M., Perdikaris, P., Karniadakis, G.E.: Numerical gaussian processes for time-dependent and nonlinear partial differential equations. SIAM J. Sci. Comput. 40(1), A172–A198 (2018). https://doi.org/10.1137/17M1120762",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "1939_CR146",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Raissi, M., Perdikaris, P., Karniadakis, G.E.: Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. J. Comput. Phys. 378, 686–707 (2019). https://doi.org/10.1016/j.jcp.2018.10.045, www.sciencedirect.com/science/article/pii/S0021999118307125",
+        "DOI": "10.1016/j.jcp.2018.10.045"
+      },
+      {
+        "key": "1939_CR147",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Raissi, M., Yazdani, A., Karniadakis, G.E.: Hidden fluid mechanics: Learning velocity and pressure fields from flow visualizations. Sci. 367(6481), 1026–1030 (2020). https://doi.org/10.1126/science.aaw4741, www.science.org/doi/10.1126/science.aaw4741",
+        "DOI": "10.1126/science.aaw4741"
+      },
+      {
+        "key": "1939_CR148",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Ramabathiran, A.A., Ramachandran, P.: SPINN: Sparse, Physics-based, and partially Interpretable Neural Networks for PDEs. J. Comput. Phys. 445, 110,600 (2021). https://doi.org/10.1016/j.jcp.2021.110600, https://www.sciencedirect.com/science/article/pii/S0021999121004952",
+        "DOI": "10.1016/j.jcp.2021.110600"
+      },
+      {
+        "key": "1939_CR149",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rudin, C., Chen, C., Chen, Z., et al.: Interpretable machine learning: Fundamental principles and 10 grand challenges. Stat. Surveys 16(none), 1–85 (2022). https://doi.org/10.1214/21-SS133, https://projecteuclid.org/journals/statistics-surveys/volume-16/issue-none/Interpretable-machine-learning-Fundamental-principles-and-10-grand-challenges/10.1214/21-SS133.full",
+        "DOI": "10.1214/21-SS133"
+      },
+      {
+        "key": "1939_CR150",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ryaben’kii, V.S., Tsynkov, S.V.: A Theoretical Introduction to Numerical Analysis. CRC Press, Boca Raton, FL (2006)",
+        "DOI": "10.1201/9781420011166"
+      },
+      {
+        "key": "1939_CR151",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sahli Costabal, F., Yang, Y., Perdikaris, P., et al.: Physics-Informed Neural Networks for Cardiac Activation Mapping. Front. Phys. 8, 42 (2020). https://doi.org/10.3389/fphy.2020.00042, www.frontiersin.org/article/10.3389/fphy.2020.00042",
+        "DOI": "10.3389/fphy.2020.00042"
+      },
+      {
+        "key": "1939_CR152",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Scharzenberger, C., Hays, J.: Learning To Estimate Regions Of Attraction Of Autonomous Dynamical Systems Using Physics-Informed Neural Networks. Tech. rep., (2021) https://doi.org/10.48550/arXiv.2111.09930, arXiv:2111.09930 [cs] type: article",
+        "DOI": "10.48550/arXiv.2111.09930"
+      },
+      {
+        "key": "1939_CR153",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Schiassi, E., Furfaro, R., Leake, C., et al.: Extreme theory of functional connections: A fast physics-informed neural network method for solving ordinary and partial differential equations. Neurocomputing 457, 334–356 (2021). https://doi.org/10.1016/j.neucom.2021.06.015, www.sciencedirect.com/science/article/pii/S0925231221009140",
+        "DOI": "10.1016/j.neucom.2021.06.015"
+      },
+      {
+        "issue": "5",
+        "key": "1939_CR154",
+        "doi-asserted-by": "publisher",
+        "first-page": "612",
+        "DOI": "10.1109/JPROC.2021.3058954",
+        "volume": "109",
+        "author": "B Schölkopf",
+        "year": "2021",
+        "unstructured": "Schölkopf, B., Locatello, F., Bauer, S., et al.: Toward Causal Representation Learning. Proc. IEEE 109(5), 612–634 (2021). https://doi.org/10.1109/JPROC.2021.3058954",
+        "journal-title": "Proc. IEEE"
+      },
+      {
+        "key": "1939_CR155",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sengupta, S., Basak, S., Saikia, P., et al.: A review of deep learning with special emphasis on architectures, applications and recent trends. Knowledge-Based Systems 194, 105,596 (2020). https://doi.org/10.1016/j.knosys.2020.105596, https://www.sciencedirect.com/science/article/pii/S095070512030071X",
+        "DOI": "10.1016/j.knosys.2020.105596"
+      },
+      {
+        "key": "1939_CR156",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sergeev, A., Del Balso, M.: Horovod: fast and easy distributed deep learning in TensorFlow. Tech. rep., (2018) https://doi.org/10.48550/arXiv.1802.05799, arXiv:1802.05799 [cs, stat] type: article",
+        "DOI": "10.48550/arXiv.1802.05799"
+      },
+      {
+        "key": "1939_CR157",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Shin, Y., Darbon, J., Karniadakis, G.E.: On the convergence of physics informed neural networks for linear second-order elliptic and parabolic type PDEs. Commun. Comput. Phys. 28(5), 2042–2074 (2020a). https://doi.org/10.4208/cicp.OA-2020-0193, arXiv: 2004.01806",
+        "DOI": "10.4208/cicp.OA-2020-0193"
+      },
+      {
+        "key": "1939_CR158",
+        "unstructured": "Shin, Y., Zhang, Z., Karniadakis, G.E.: Error estimates of residual minimization using neural networks for linear PDEs. (2020b) arXiv:2010.08019 [cs, math]"
+      },
+      {
+        "key": "1939_CR159",
+        "doi-asserted-by": "publisher",
+        "first-page": "53040",
+        "DOI": "10.1109/ACCESS.2019.2912200",
+        "volume": "7",
+        "author": "A Shrestha",
+        "year": "2019",
+        "unstructured": "Shrestha, A., Mahmood, A.: Review of Deep Learning Algorithms and Architectures. IEEE Access 7, 53040–53065 (2019). https://doi.org/10.1109/ACCESS.2019.2912200",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "1939_CR160",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sirignano, J., Spiliopoulos, K.: DGM: A deep learning algorithm for solving partial differential equations. J. Comput. Phys. 375, 1339–1364 (2018). https://doi.org/10.1016/j.jcp.2018.08.029, www.sciencedirect.com/science/article/pii/S0021999118305527",
+        "DOI": "10.1016/j.jcp.2018.08.029"
+      },
+      {
+        "key": "1939_CR161",
+        "unstructured": "Sitzmann, V., Martel, J.N.P., Bergman, A.W., et al.: Implicit Neural Representations with Periodic Activation Functions (2020). arXiv:2006.09661 [cs, eess]"
+      },
+      {
+        "issue": "12",
+        "key": "1939_CR162",
+        "doi-asserted-by": "publisher",
+        "first-page": "10685",
+        "DOI": "10.1109/TGRS.2020.3039165",
+        "volume": "59",
+        "author": "JD Smith",
+        "year": "2021",
+        "unstructured": "Smith, J.D., Azizzadenesheli, K., Ross, Z.E.: EikoNet: Solving the Eikonal Equation With Deep Neural Networks. IEEE Trans. Geosci. Remote Sens. 59(12), 10685–10696 (2021). https://doi.org/10.1109/TGRS.2020.3039165",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "issue": "1",
+        "key": "1939_CR163",
+        "doi-asserted-by": "publisher",
+        "first-page": "698",
+        "DOI": "10.1093/gji/ggab309",
+        "volume": "228",
+        "author": "JD Smith",
+        "year": "2021",
+        "unstructured": "Smith, J.D., Ross, Z.E., Azizzadenesheli, K., et al.: HypoSVI: Hypocentre inversion with Stein variational inference and physics informed neural networks. Geophys. J. Int. 228(1), 698–710 (2021). https://doi.org/10.1093/gji/ggab309",
+        "journal-title": "Geophys. J. Int."
+      },
+      {
+        "key": "1939_CR164",
+        "doi-asserted-by": "publisher",
+        "first-page": "143",
+        "DOI": "10.1080/00401706.1987.10488205",
+        "volume": "29",
+        "author": "ML Stein",
+        "year": "1987",
+        "unstructured": "Stein, M.L.: Large sample properties of simulations using latin hypercube sampling. Technometrics 29, 143–151 (1987)",
+        "journal-title": "Technometrics"
+      },
+      {
+        "key": "1939_CR165",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Stiasny J, Misyris GS, Chatzivasileiadis S (2021) Physics-Informed Neural Networks for Non-linear System Identification for Power System Dynamics. In: 2021 IEEE Madrid PowerTech, pp 1–6, https://doi.org/10.1109/PowerTech46648.2021.9495063",
+        "DOI": "10.1109/PowerTech46648.2021.9495063"
+      },
+      {
+        "key": "1939_CR166",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Stielow, T., Scheel, S.: Reconstruction of nanoscale particles from single-shot wide-angle free-electron-laser diffraction patterns with physics-informed neural networks. Phys. Review E 103(5), 053,312 (2021). https://doi.org/10.1103/PhysRevE.103.053312, https://link.aps.org/doi/10.1103/PhysRevE.103.053312",
+        "DOI": "10.1103/PhysRevE.103.053312"
+      },
+      {
+        "key": "1939_CR167",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Stiller, P., Bethke, F., Böhme, M., et al.: Large-Scale Neural Solvers for Partial Differential Equations. In: Nichols J, Verastegui B, Maccabe AB, et al (eds) Driving Scientific and Engineering Discoveries Through the Convergence of HPC, Big Data and AI. Springer International Publishing, Cham, Communications in Computer and Information Science, pp. 20–34, (2020) https://doi.org/10.1007/978-3-030-63393-6_2",
+        "DOI": "10.1007/978-3-030-63393-6_2"
+      },
+      {
+        "key": "1939_CR168",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sun, L., Gao, H., Pan, S., et al.: Surrogate modeling for fluid flows based on physics-constrained deep learning without simulation data. Comput. Methods Appl. Mech. Engrg. 361, 112,732 (2020a). https://doi.org/10.1016/j.cma.2019.112732, https://www.sciencedirect.com/science/article/pii/S004578251930622X",
+        "DOI": "10.1016/j.cma.2019.112732"
+      },
+      {
+        "issue": "8",
+        "key": "1939_CR169",
+        "doi-asserted-by": "publisher",
+        "first-page": "3668",
+        "DOI": "10.1109/TCYB.2019.2950779",
+        "volume": "50",
+        "author": "S Sun",
+        "year": "2020",
+        "unstructured": "Sun, S., Cao, Z., Zhu, H., et al.: A Survey of Optimization Methods From a Machine Learning Perspective. IEEE Trans. Cybernet. 50(8), 3668–3681 (2020). https://doi.org/10.1109/TCYB.2019.2950779",
+        "journal-title": "IEEE Trans. Cybernet."
+      },
+      {
+        "key": "1939_CR170",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Tartakovsky, A.M., Marrero, C.O., Perdikaris, P., et al.: Physics-Informed Deep Neural Networks for Learning Parameters and Constitutive Relationships in Subsurface Flow Problems. Water Resources Research 56(5), e2019WR026,731 (2020). https://doi.org/10.1029/2019WR026731, https://onlinelibrary.wiley.com/doi/abs/10.1029/2019WR026731",
+        "DOI": "10.1029/2019WR026731"
+      },
+      {
+        "key": "1939_CR171",
+        "unstructured": "Thompson, D.B.: Numerical Methods 101 – Convergence of Numerical Models. ASCE, pp. 398–403 (1992), https://cedb.asce.org/CEDBsearch/record.jsp?dockey=0078142"
+      },
+      {
+        "key": "1939_CR172",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Tong, Y., Xiong, S., He, X., et al.: Symplectic neural networks in taylor series form for hamiltonian systems. J. Comput. Phys. 437, 110,325 (2021). https://doi.org/10.1016/j.jcp.2021.110325, https://www.sciencedirect.com/science/article/pii/S0021999121002205",
+        "DOI": "10.1016/j.jcp.2021.110325"
+      },
+      {
+        "key": "1939_CR173",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Torabi Rad, M., Viardin, A., Schmitz, G.J., et al.: Theory-training deep neural networks for an alloy solidification benchmark problem. Comput. Mater. Sci. 180, 109,687 (2020). https://doi.org/10.1016/j.commatsci.2020.109687, https://www.sciencedirect.com/science/article/pii/S0927025620301786",
+        "DOI": "10.1016/j.commatsci.2020.109687"
+      },
+      {
+        "key": "1939_CR174",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Viana, F.A.C., Nascimento, R.G., Dourado, A., et al.: Estimating model inadequacy in ordinary differential equations with physics-informed neural networks. Comput. Structures 245, 106,458 (2021). https://doi.org/10.1016/j.compstruc.2020.106458, https://www.sciencedirect.com/science/article/pii/S0045794920302613",
+        "DOI": "10.1016/j.compstruc.2020.106458"
+      },
+      {
+        "key": "1939_CR175",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Waheed, U.b., Haghighat, E., Alkhalifah, T., et al.: PINNeik: Eikonal solution using physics-informed neural networks. Comput. Geosci. 155, 104,833 (2021). https://doi.org/10.1016/j.cageo.2021.104833, https://www.sciencedirect.com/science/article/pii/S009830042100131X",
+        "DOI": "10.1016/j.cageo.2021.104833"
+      },
+      {
+        "key": "1939_CR176",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wang, L., Yan, Z.: Data-driven rogue waves and parameter discovery in the defocusing nonlinear Schrödinger equation with a potential using the PINN deep learning. Phys. Lett. A 404, 127,408 (2021). https://doi.org/10.1016/j.physleta.2021.127408, https://www.sciencedirect.com/science/article/pii/S0375960121002723",
+        "DOI": "10.1016/j.physleta.2021.127408"
+      },
+      {
+        "key": "1939_CR177",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wang, N., Chang, H., Zhang, D.: Theory-guided auto-encoder for surrogate construction and inverse modeling. Comput. Methods Appl. Mech. Engrg. 385, 114,037 (2021a). https://doi.org/10.1016/j.cma.2021.114037, https://www.sciencedirect.com/science/article/pii/S0045782521003686",
+        "DOI": "10.1016/j.cma.2021.114037"
+      },
+      {
+        "key": "1939_CR178",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wang, S., Perdikaris, P.: Deep learning of free boundary and Stefan problems. J. Comput. Phys. 428, 109,914 (2021). https://doi.org/10.1016/j.jcp.2020.109914, https://www.sciencedirect.com/science/article/pii/S0021999120306884",
+        "DOI": "10.1016/j.jcp.2020.109914"
+      },
+      {
+        "key": "1939_CR179",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wang, S., Teng, Y., Perdikaris, P.: Understanding and Mitigating Gradient Flow Pathologies in Physics-Informed Neural Networks. SIAM J. Sci. Comput. 43(5), A3055–A3081 (2021). https://doi.org/10.1137/20M1318043, https://epubs.siam.org/doi/abs/10.1137/20M1318043",
+        "DOI": "10.1137/20M1318043"
+      },
+      {
+        "key": "1939_CR180",
+        "unstructured": "Wang, S., Sankaran, S., Perdikaris, P.: Respecting causality is all you need for training physics-informed neural networks. (2022a) arXiv:2203.07404 [nlin, physics:physics, stat]"
+      },
+      {
+        "key": "1939_CR181",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wang, S., Yu, X., Perdikaris, P.: When and why PINNs fail to train: A neural tangent kernel perspective. J. Comput. Phys. 449, 110,768 (2022b). https://doi.org/10.1016/j.jcp.2021.110768, https://www.sciencedirect.com/science/article/pii/S002199912100663X",
+        "DOI": "10.1016/j.jcp.2021.110768"
+      },
+      {
+        "key": "1939_CR182",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wen, G., Li, Z., Azizzadenesheli, K., et al.: U-FNO–An enhanced Fourier neural operator-based deep-learning model for multiphase flow. Adv. Water Resources 163, 104,180 (2022). https://doi.org/10.1016/j.advwatres.2022.104180, https://www.sciencedirect.com/science/article/pii/S0309170822000562",
+        "DOI": "10.1016/j.advwatres.2022.104180"
+      },
+      {
+        "key": "1939_CR183",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wiecha, P.R., Arbouet, A., Arbouet, A., et al.: Deep learning in nano-photonics: inverse design and beyond. Photonics Research 9(5), B182–B200 (2021). https://doi.org/10.1364/PRJ.415960, www.osapublishing.org/prj/abstract.cfm?uri=prj-9-5-B182",
+        "DOI": "10.1364/PRJ.415960"
+      },
+      {
+        "issue": "2",
+        "key": "1939_CR184",
+        "doi-asserted-by": "publisher",
+        "first-page": "14",
+        "DOI": "10.1109/MCI.2021.3061854",
+        "volume": "16",
+        "author": "JC Wong",
+        "year": "2021",
+        "unstructured": "Wong, J.C., Gupta, A., Ong, Y.S.: Can Transfer Neuroevolution Tractably Solve Your Differential Equations? IEEE Comput. Intell. Mag. 16(2), 14–30 (2021). https://doi.org/10.1109/MCI.2021.3061854",
+        "journal-title": "IEEE Comput. Intell. Mag."
+      },
+      {
+        "key": "1939_CR185",
+        "unstructured": "Wong, J.C., Ooi, C., Gupta, A., et al.: Learning in Sinusoidal Spaces with Physics-Informed Neural Networks. (2022) arXiv:2109.09338 [physics]"
+      },
+      {
+        "key": "1939_CR186",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Xiao, H., Wu, J.L., Laizet, S., et al.: Flows over periodic hills of parameterized geometries: A dataset for data-driven turbulence modeling from direct simulations. Comput. Fluids 200, 104,431 (2020). https://doi.org/10.1016/j.compfluid.2020.104431, https://www.sciencedirect.com/science/article/pii/S0045793020300074",
+        "DOI": "10.1016/j.compfluid.2020.104431"
+      },
+      {
+        "key": "1939_CR187",
+        "unstructured": "Xu, K., Darve, E.: ADCME: Learning Spatially-varying Physical Fields using Deep Neural Networks. (2020) arXiv:2011.11955 [cs, math]"
+      },
+      {
+        "key": "1939_CR188",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Xu, K., Darve, E.: Solving inverse problems in stochastic models using deep neural networks and adversarial training. Comput. Methods Appl. Mech. Engrg. 384, 113,976 (2021). https://doi.org/10.1016/j.cma.2021.113976, https://www.sciencedirect.com/science/article/pii/S0045782521003078",
+        "DOI": "10.1016/j.cma.2021.113976"
+      },
+      {
+        "issue": "1",
+        "key": "1939_CR189",
+        "doi-asserted-by": "publisher",
+        "first-page": "A292",
+        "DOI": "10.1137/18M1225409",
+        "volume": "42",
+        "author": "L Yang",
+        "year": "2020",
+        "unstructured": "Yang, L., Zhang, D., Karniadakis, G.E.: Physics-informed generative adversarial networks for stochastic differential equations. SIAM J. Sci. Comput. 42(1), A292–A317 (2020). https://doi.org/10.1137/18M1225409",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "1939_CR190",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Yang, L., Meng, X., Karniadakis, G.E.: B-PINNs: Bayesian physics-informed neural networks for forward and inverse PDE problems with noisy data. J. Comput. Phys. 425, 109,913 (2021). https://doi.org/10.1016/j.jcp.2020.109913, https://www.sciencedirect.com/science/article/pii/S0021999120306872",
+        "DOI": "10.1016/j.jcp.2020.109913"
+      },
+      {
+        "key": "1939_CR191",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Yang, Y., Perdikaris, P.: Adversarial uncertainty quantification in physics-informed neural networks. J. Comput. Phys. 394, 136–152 (2019). https://doi.org/10.1016/j.jcp.2019.05.027, www.sciencedirect.com/science/article/pii/S0021999119303584",
+        "DOI": "10.1016/j.jcp.2019.05.027"
+      },
+      {
+        "key": "1939_CR192",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Yarotsky, D.: Error bounds for approximations with deep relu networks. Neural Netw. 94, 103–114 (2017). https://doi.org/10.1016/j.neunet.2017.07.002, www.sciencedirect.com/science/article/pii/S0893608017301545",
+        "DOI": "10.1016/j.neunet.2017.07.002"
+      },
+      {
+        "key": "1939_CR193",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Yuan, L., Ni, Y.Q., Deng, X.Y., et al.: A-PINN: Auxiliary physics informed neural networks for forward and inverse problems of nonlinear integro-differential equations. J. Comput. Phys. 462, 111,260 (2022). https://doi.org/10.1016/j.jcp.2022.111260,https://www.sciencedirect.com/science/article/pii/S0021999122003229",
+        "DOI": "10.1016/j.jcp.2022.111260"
+      },
+      {
+        "key": "1939_CR194",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Yucesan, Y.A., Viana, F.A.C.: Hybrid physics-informed neural networks for main bearing fatigue prognosis with visual grease inspection. Comput. Ind. 125:103,386 (2021). https://doi.org/10.1016/j.compind.2020.103386, https://www.sciencedirect.com/science/article/pii/S0166361520306205",
+        "DOI": "10.1016/j.compind.2020.103386"
+      },
+      {
+        "key": "1939_CR195",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zhang, D., Lu, L., Guo, L., et al.: Quantifying total uncertainty in physics-informed neural networks for solving forward and inverse stochastic problems. J. Comput. Phys. 397, 108,850 (2019). https://doi.org/10.1016/j.jcp.2019.07.048, https://www.sciencedirect.com/science/article/pii/S0021999119305340",
+        "DOI": "10.1016/j.jcp.2019.07.048"
+      },
+      {
+        "issue": "2",
+        "key": "1939_CR196",
+        "doi-asserted-by": "publisher",
+        "first-page": "A639",
+        "DOI": "10.1137/19M1260141",
+        "volume": "42",
+        "author": "D Zhang",
+        "year": "2020",
+        "unstructured": "Zhang, D., Guo, L., Karniadakis, G.E.: Learning in modal space: Solving time-dependent stochastic pdes using physics-informed neural networks. SIAM J. Sci. Comput. 42(2), A639–A665 (2020). https://doi.org/10.1137/19M1260141",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "1939_CR197",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zhang, R., Liu, Y., Sun, H.: Physics-informed multi-LSTM networks for metamodeling of nonlinear structures. Comput. Methods Appl. Mech. Engrg. 369, 113,226 (2020b). https://doi.org/10.1016/j.cma.2020.113226, https://www.sciencedirect.com/science/article/pii/S0045782520304114",
+        "DOI": "10.1016/j.cma.2020.113226"
+      },
+      {
+        "key": "1939_CR198",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zhi-Qin, Xu, J., et al.: Frequency principle: Fourier analysis sheds light on deep neural networks. Commun. Comput. Phys. 28(5), 1746–1767 (2020). https://doi.org/10.4208/cicp.OA-2020-0085, http://global-sci.org/intro/article_detail/cicp/18395.html",
+        "DOI": "10.4208/cicp.OA-2020-0085"
+      },
+      {
+        "issue": "2",
+        "key": "1939_CR199",
+        "doi-asserted-by": "publisher",
+        "first-page": "619",
+        "DOI": "10.1007/s00466-020-01952-9",
+        "volume": "67",
+        "author": "Q Zhu",
+        "year": "2021",
+        "unstructured": "Zhu, Q., Liu, Z., Yan, J.: Machine learning for metal additive manufacturing: predicting temperature and melt pool fluid dynamics using physics-informed neural networks. Comput. Mech. 67(2), 619–635 (2021). https://doi.org/10.1007/s00466-020-01952-9",
+        "journal-title": "Comput. Mech."
+      },
+      {
+        "key": "1939_CR200",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zhu, Y., Zabaras, N., Koutsourelakis, P.S., et al.: Physics-constrained deep learning for high-dimensional surrogate modeling and uncertainty quantification without labeled data. J. Comput. Phys. 394, 56–81 (2019). https://doi.org/10.1016/j.jcp.2019.05.024, www.sciencedirect.com/science/article/pii/S0021999119303559",
+        "DOI": "10.1016/j.jcp.2019.05.024"
+      },
+      {
+        "key": "1939_CR201",
+        "unstructured": "Zubov, K., McCarthy, Z., Ma, Y., et al.: NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations. (2021a) arXiv:2107.09443 [cs]"
+      },
+      {
+        "key": "1939_CR202",
+        "unstructured": "Zubov, K., McCarthy, Z., Ma, Y., et al.: NeuralPDE: Automating Physics-Informed Neural Networks (PINNs) with Error Approximations. (2021b) arXiv:2107.09443 [cs]"
+      }
+    ],
+    "container-title": [
+      "Journal of Scientific Computing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s10915-022-01939-z.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s10915-022-01939-z/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s10915-022-01939-z.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          9,
+          29
+        ]
+      ],
+      "date-time": "2024-09-29T18:28:05Z",
+      "timestamp": 1727634485000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s10915-022-01939-z"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          26
+        ]
+      ]
+    },
+    "references-count": 202,
+    "journal-issue": {
+      "issue": "3",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            9
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "1939"
+    ],
+    "URL": "https://doi.org/10.1007/s10915-022-01939-z",
+    "relation": {},
+    "ISSN": [
+      "0885-7474",
+      "1573-7691"
+    ],
+    "issn-type": [
+      {
+        "value": "0885-7474",
+        "type": "print"
+      },
+      {
+        "value": "1573-7691",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          26
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "14 January 2022",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "6 July 2022",
+        "order": 2,
+        "name": "revised",
+        "label": "Revised",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "6 July 2022",
+        "order": 3,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "26 July 2022",
+        "order": 4,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "order": 1,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Declarations"
+        }
+      },
+      {
+        "value": "The authors have not disclosed any competing interests.",
+        "order": 2,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Competing interests"
+        }
+      }
+    ],
+    "article-number": "88"
+  },
+  "arxiv_metadata": {
+    "citation_title": [
+      "Scientific Machine Learning through Physics-Informed Neural Networks: Where we are and What's next"
+    ],
+    "citation_author": [
+      "Cuomo, Salvatore",
+      "di Cola, Vincenzo Schiano",
+      "Giampaolo, Fabio",
+      "Rozza, Gianluigi",
+      "Raissi, Maziar",
+      "Piccialli, Francesco"
+    ],
+    "citation_date": [
+      "2022/01/14"
+    ],
+    "citation_doi": [],
+    "citation_pdf_url": [
+      "https://arxiv.org/pdf/2201.05624"
+    ]
+  },
+  "journal_ref": null,
+  "text_file": "paper/materical/literature_sources/review.txt",
+  "reading_source": "https://arxiv.org/html/2201.05624",
+  "text_chars": 230367,
+  "is_pdf_reading": false
+}

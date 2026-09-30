@@ -1,0 +1,1417 @@
+[
+  {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          23
+        ]
+      ],
+      "date-time": "2026-09-23T02:16:45Z",
+      "timestamp": 1790129805716,
+      "version": "4.0.1"
+    },
+    "reference-count": 33,
+    "publisher": "Global Science Press",
+    "issue": "3",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "abstract": "<jats:p>Phase field models, in particular, the Allen-Cahn type and Cahn-Hilliard\ntype equations, have been widely used to investigate interfacial dynamic problems.\nDesigning accurate, efficient, and stable numerical algorithms for solving the phase\nfield models has been an active field for decades. In this paper, we focus on using\nthe deep neural network to design an automatic numerical solver for the Allen-Cahn\nand Cahn-Hilliard equations by proposing an improved physics informed neural network (PINN). Though the PINN has been embraced to investigate many differential\nequation problems, we find a direct application of the PINN in solving phase-field\nequations won&amp;#39;t provide accurate solutions in many cases. Thus, we propose various\ntechniques that add to the approximation power of the PINN. As a major contribution of this paper, we propose to embrace the adaptive idea in both space and time\nand introduce various sampling strategies, such that we are able to improve the efficiency and accuracy of the PINN on solving phase field equations. In addition, the\nimproved PINN has no restriction on the explicit form of the PDEs, making it applicable to a wider class of PDE problems, and shedding light on numerical approximations\nof other PDEs in general.</jats:p>",
+    "DOI": "10.4208/cicp.oa-2020-0086",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2021-01-12T20:28:37Z",
+      "timestamp": 1610483317000
+    },
+    "page": "930-954",
+    "source": "Crossref",
+    "is-referenced-by-count": 209,
+    "title": [
+      "Solving Allen-Cahn and Cahn-Hilliard Equations Using the Adaptive Physics Informed Neural Networks"
+    ],
+    "prefix": "10.4208",
+    "volume": "29",
+    "author": [
+      {
+        "given": "Colby",
+        "family": "L. Wight",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/00h6set76",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Department of Mathematics & Statistics, Utah State University, Logan, United States"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6021-0841",
+        "authenticated-orcid": false,
+        "given": "Jia",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "id": [
+              {
+                "id": "https://ror.org/00h6set76",
+                "id-type": "ROR",
+                "asserted-by": "publisher"
+              }
+            ],
+            "name": "Department of Mathematics & Statistics, Utah State University, Logan, United States"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "2725",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          13
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[1] C. Anitescu, E. Atroshchenko, N. Alajlan, and T. Rabczuk. Artificial neural network methods for the solution of second order boundary value problems. Computers, Materials and Continua, 59(1):345–359, 2019.",
+        "DOI": "10.32604/cmc.2019.06641"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[2] J. Berg and K. Nystrom. A unified deep artificial neural network approach to partial differential equations in complex geometries. Neurocomputing, 317:28–41, 2018.",
+        "DOI": "10.1016/j.neucom.2018.06.056"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[3] J. Berg and K. Nystrom. Data-driven discovery of pdes in complex datasets. Journal of Computational Physics, 284:239–252, 2019.",
+        "DOI": "10.1016/j.jcp.2019.01.036"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[4] L. Bottou. Large-scale machine learning with stochastic gradient descent. In Proceedings of COMPSTAT’2010, pages 177–186. Springer, 2010.",
+        "DOI": "10.1007/978-3-7908-2604-3_16"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[5] S. L. Brunton, J. L. Proctor, and J. N. Kutz. Discovering governing equations from data by sparse identification of nonlinear dynamical systems. Proceedings of the National Academy of Sciences, 113(15):3932–3937, 2016.",
+        "DOI": "10.1073/pnas.1517384113"
+      },
+      {
+        "key": "ref6",
+        "unstructured": "[6] V. Buhrmester, D. Münch, and M. Arens. Analysis of explainers of black box deep neural networks for computer vision: A survey. arXiv, page 1911.12116, 2019."
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[7] K. Cheng, C. Wang, and S. M. Wise. An energy stable BDF2 Fourier pseudo-spectral numerical scheme for the square phase field crystal equation. Communications in Computational Physics, 26:1335–1364, 2019.",
+        "DOI": "10.4208/cicp.2019.js60.10"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[8] J. M. Church, Z. Guo, P. K. Jimack, A. Madzvamuse, K. Promislow, B. Wetton, S. M. Wise, and F. Yang. High accuracy benchmark problems for Allen-Cahn and Cahn-Hilliard dynamics. Communications in Computational Physics, 26:947–972, 2019.",
+        "DOI": "10.4208/cicp.OA-2019-0006"
+      },
+      {
+        "key": "ref9",
+        "unstructured": "[9] T. Dockhorn. A discussion on solving partial differential equations using neural networks. arXiv, page 1904.07200, 2019."
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[10] W. E and B. Yu. The deep Ritz method: A deep learning-based numerical algorithm for solving variational problems. Communications in Mathematics and Statistics, 6:1–12, 2018.",
+        "DOI": "10.1007/s40304-018-0127-z"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[11] F. Guillen-Gonzailez and G. Tierra. Splitting schemes for a Navier-Stokes-Cahn-Hilliard model for two fluids with different densities. Journal of Computational Mathematics, 32(6):643– 664, 2014.",
+        "DOI": "10.4208/jcm.1405-m4410"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[12] D. Han and X. Wang. A second order in time uniquely solvable unconditionally stable numerical schemes for Cahn-Hilliard-Navier-Stokes equation. Journal of Computational Physics, 290(1):139–156, 2015.",
+        "DOI": "10.1016/j.jcp.2015.02.046"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[13] J. Han, A. Jentzen, and W. E. Solving high-dimensional partial differential equations using deep learning. Proceedings of the National Academy of Sciences, 115(34):8505–8510, 2018.",
+        "DOI": "10.1073/pnas.1718942115"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[14] R. Hecht-Nielsen. Theory of the backpropagation neural network. In Neural networks for perception, pages 65–93. Elsevier, 1992.",
+        "DOI": "10.1016/B978-0-12-741252-8.50010-8"
+      },
+      {
+        "key": "ref15",
+        "unstructured": "[15] C. Higham and D. Higham. Deep learning: An introduction for applied mathematicians. arXiv, page 1801.05894, 2018."
+      },
+      {
+        "key": "ref16",
+        "unstructured": "[16] R. Kleinberg, Y. Li, and Y. Yuan. An alternative view: When does SGD escape local minima? Proceedings of the 35th International Conference on Machine Learning, 80:2698–2707, 2018."
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[17] B. Li, S. Tang, and H. Yu. Better approximations of high dimensional smooth functions by deep neural networks with rectified power units. Communications in Computational Physics, 27:379–411, 2020.",
+        "DOI": "10.4208/cicp.OA-2019-0168"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[18] Y. Li, J. Kim, and N. Wang. An unconditionally energy-stable second-order time-accurate scheme for the Cahn-Hilliard equation on surfaces. Commun Nonlinear Sci Numer Simulat, 53:213–227, 2017.",
+        "DOI": "10.1016/j.cnsns.2017.05.006"
+      },
+      {
+        "key": "ref19",
+        "unstructured": "[19] L. Lu, X. Meng, Z. Mao, and G. E. Karniadakis. DeepXDE: A deep learning library for solving differential equations. arXiv, page 1907.04502, 2019."
+      },
+      {
+        "key": "ref20",
+        "unstructured": "[20] B. Mehlig. Artificial neural networks, 2019."
+      },
+      {
+        "key": "ref21",
+        "unstructured": "[21] C. Nwankpa, W. Ijomah, A. Gachagan, and S. Marshall. Activation functions: Comparison of trends in practice and research for deep learning. arXiv, page 1811.03378, 2018."
+      },
+      {
+        "key": "ref22",
+        "unstructured": "[22] M. Raissi. Deep hidden physics models: Deep learning of nonlinear partial differential equations. The Journal of Machine Learning Research, 19:1–24, 2018."
+      },
+      {
+        "key": "ref23",
+        "unstructured": "[23] M. Raissi, P. Perdikaris, and G. E. Karniadakis. Multistep neural networks for data-driven discovery of nonlinear dynamical systems. arXiv, page 1801.01236, 2018."
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[24] M. Raissi, P. Perdikaris, and G. E. Karniadakis. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational Physics, 378:686–707, 2019.",
+        "DOI": "10.1016/j.jcp.2018.10.045"
+      },
+      {
+        "key": "ref25",
+        "unstructured": "[25] P. Ramachandran, B. Zoph, and Q. V.Le. Searching for activation functions. arXiv, page 1710.05941, 2017."
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[26] S. Rudy, A. Alla, S. L. Brunton, and J. N. Kutz. Data-driven identification of parametric partial differential equations. SIAM Journal on Applied Dynamical Systems, 18(2):643–660, 2019.",
+        "DOI": "10.1137/18M1191944"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[27] S. Rudy, S. Brunton, J. Proctor, and J. Kutz. Data-driven discovery of partial differential equations. Science Advances, 3, 09 2016.",
+        "DOI": "10.1126/sciadv.1602614"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[28] J. Shen, C. Wang, X. Wang, and S. Wise. Second-order convex splitting schemes for gradient flows with Ehrlich-Schwoebel type energy: application to thin film epitaxy. SIAM Journal of Numerical Analysis, 50(1):105–125, 2012.",
+        "DOI": "10.1137/110822839"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[29] J. Shen and X. Yang. Numerical approximation of Allen-Cahn and Cahn-Hilliard equations. Discrete and Continuous Dynamical Systems Series B, 28(4):1669–1691, 2010.",
+        "DOI": "10.3934/dcds.2010.28.1669"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[30] J. Sirignano and K. Spiliopoulos. DGM: A deep learning algorithm for solving partial differential equations. Journal of Computational Physics, 375:1339–1364, 2018.",
+        "DOI": "10.1016/j.jcp.2018.08.029"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[31] G. Wang, G. B. Giannakis, and J. Chen. Learning ReLU networks on linearly separable data: Algorithm, optimality, and generalization. IEEE Transactions on Signal Processing, 67(9):2357– 2370, 2019.",
+        "DOI": "10.1109/TSP.2019.2904921"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[32] X. Yang and J. Zhao. On linear and unconditionally energy stable algorithms for variable mobility Cahn-Hilliard type equation with logarithmic flory-huggins potential. Communications in Computational Physics, 25:703–728, 2019.",
+        "DOI": "10.4208/cicp.OA-2017-0259"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "[33] J. Zhao, Q. Wang, and X. Yang. Numerical approximations for a phase field dendritic crystal growth model based on the invariant energy quadratization approach. Inter. J. Num. Meth. Engr., 110:279–300, 2017.",
+        "DOI": "10.1002/nme.5372"
+      }
+    ],
+    "container-title": [
+      "Communications in Computational Physics"
+    ],
+    "link": [
+      {
+        "URL": "https://global-sci.com/article/79656/download",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          17
+        ]
+      ],
+      "date-time": "2026-09-17T19:56:21Z",
+      "timestamp": 1789674981000
+    },
+    "score": 88.83686,
+    "resource": {
+      "primary": {
+        "URL": "https://www.global-sci.com/cicp/article/view/6944"
+      }
+    },
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          13
+        ]
+      ]
+    },
+    "references-count": 33,
+    "journal-issue": {
+      "issue": "3",
+      "published-online": {
+        "date-parts": [
+          [
+            2021
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.4208/cicp.oa-2020-0086",
+    "ISSN": [
+      "1815-2406",
+      "1991-7120"
+    ],
+    "issn-type": [
+      {
+        "value": "1815-2406",
+        "type": "print"
+      },
+      {
+        "value": "1991-7120",
+        "type": "electronic"
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          13
+        ]
+      ]
+    }
+  },
+  {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2026-07-04T13:22:17Z",
+      "timestamp": 1783171337872,
+      "version": "3.54.6"
+    },
+    "reference-count": 53,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2026-11-01T00:00:00Z",
+          "timestamp": 1793491200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2026-11-01T00:00:00Z",
+          "timestamp": 1793491200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2026-11-01T00:00:00Z",
+          "timestamp": 1793491200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2026-11-01T00:00:00Z",
+          "timestamp": 1793491200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2026-11-01T00:00:00Z",
+          "timestamp": 1793491200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2026-11-01T00:00:00Z",
+          "timestamp": 1793491200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2026-11-01T00:00:00Z",
+          "timestamp": 1793491200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100006469",
+        "name": "Fundo para o Desenvolvimento das Ciências e da Tecnologia",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "0132/2020/A3"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "0132/2020/A3"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100006469",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Communications in Nonlinear Science and Numerical Simulation"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.cnsns.2026.110077",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          29
+        ]
+      ],
+      "date-time": "2026-05-29T15:58:10Z",
+      "timestamp": 1780070290000
+    },
+    "page": "110077",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 1,
+    "special_numbering": "P1",
+    "title": [
+      "A priori error estimation for physics-informed neural networks solving Allen–Cahn and Cahn–Hilliard equations"
+    ],
+    "prefix": "10.1016",
+    "volume": "162",
+    "author": [
+      {
+        "given": "Guangtao",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiani",
+        "family": "Lin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qijia",
+        "family": "Zhai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Huiyu",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xujun",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4242-5205",
+        "authenticated-orcid": false,
+        "given": "Ieng Tak",
+        "family": "Leong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fang",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0001",
+        "series-title": "2017 IEEE Winter conference on applications of computer vision (WACV)",
+        "first-page": "953",
+        "article-title": "Fused DNN: a deep neural network fusion approach to fast and robust pedestrian detection",
+        "author": "Du",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0002",
+        "first-page": "2018",
+        "article-title": "Deep learning for computer vision: a brief review",
+        "author": "Voulodimos",
+        "year": "2018",
+        "journal-title": "Comput Intell Neurosci"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.cnsns.2026.110077_bib0003",
+        "doi-asserted-by": "crossref",
+        "first-page": "3041",
+        "DOI": "10.1007/s00521-022-08100-9",
+        "article-title": "Black-box error diagnosis in deep neural networks for computer vision: a survey of tools",
+        "volume": "35",
+        "author": "Fraternali",
+        "year": "2023",
+        "journal-title": "Neural Comput Appl"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0004",
+        "doi-asserted-by": "crossref",
+        "first-page": "59",
+        "DOI": "10.1038/s41524-022-00734-6",
+        "article-title": "Recent advances and applications of deep learning methods in materials science",
+        "volume": "8",
+        "author": "Choudhary",
+        "year": "2022",
+        "journal-title": "Npj Comput Mater"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0005",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.eswa.2022.119055",
+        "article-title": "DNN-PP: a novel deep neural network approach and its applicability in drug-related property prediction",
+        "volume": "213",
+        "author": "Wiercioch",
+        "year": "2023",
+        "journal-title": "Expert Syst Appl"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0006",
+        "article-title": "High-temperature constitutive relationship involving phase transformation for non-oriented electrical steel based on PSO-DNN approach",
+        "volume": "34",
+        "author": "Song",
+        "year": "2023",
+        "journal-title": "Mater Today Commun"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0007",
+        "doi-asserted-by": "crossref",
+        "first-page": "3",
+        "DOI": "10.1002/asmb.2209",
+        "article-title": "Deep learning for finance: deep portfolios",
+        "volume": "33",
+        "author": "Heaton",
+        "year": "2017",
+        "journal-title": "Appl Stoch Models Bus Ind"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0008",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.techfore.2023.122470",
+        "article-title": "Artificial neural network (ANN)-based estimation of the influence of COVID-19 pandemic on dynamic and emerging financial markets",
+        "volume": "190",
+        "author": "Naveed",
+        "year": "2023",
+        "journal-title": "Technol Forecast Soc Change"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.cnsns.2026.110077_bib0009",
+        "doi-asserted-by": "crossref",
+        "first-page": "1956",
+        "DOI": "10.3390/app13031956",
+        "article-title": "An overview of machine learning, deep learning, and reinforcement learning-based techniques in quantitative finance: recent progress and challenges",
+        "volume": "13",
+        "author": "Sahu",
+        "year": "2023",
+        "journal-title": "Appl Sci"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.cnsns.2026.110077_bib0010",
+        "doi-asserted-by": "crossref",
+        "first-page": "349",
+        "DOI": "10.1007/s40304-017-0117-6",
+        "article-title": "Deep learning-based numerical methods for high-dimensional parabolic partial differential equations and backward stochastic differential equations",
+        "volume": "5",
+        "author": "Han",
+        "year": "2017",
+        "journal-title": "Commun Math Stat"
+      },
+      {
+        "issue": "01",
+        "key": "10.1016/j.cnsns.2026.110077_bib0011",
+        "doi-asserted-by": "crossref",
+        "first-page": "19",
+        "DOI": "10.1142/S0219530518500203",
+        "article-title": "Deep learning in high dimension: neural network expression rates for generalized polynomial chaos expansions in UQ",
+        "volume": "17",
+        "author": "Schwab",
+        "year": "2019",
+        "journal-title": "Anal Appl"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0012",
+        "doi-asserted-by": "crossref",
+        "first-page": "73",
+        "DOI": "10.1007/s00365-021-09551-4",
+        "article-title": "A theoretical analysis of deep neural networks and parametric PDEs",
+        "volume": "55",
+        "author": "Kutyniok",
+        "year": "2022",
+        "journal-title": "Constructive Approximation"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0013",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2020.109339",
+        "article-title": "Deep learning observables in computational fluid dynamics",
+        "volume": "410",
+        "author": "Lye",
+        "year": "2020",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0014",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2020.113575",
+        "article-title": "Iterative surrogate model optimization (ISMO): an active learning algorithm for PDE constrained optimization with deep neural networks",
+        "volume": "374",
+        "author": "Lye",
+        "year": "2021",
+        "journal-title": "Comput Methods Appl Mech Eng"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0015",
+        "doi-asserted-by": "crossref",
+        "first-page": "686",
+        "DOI": "10.1016/j.jcp.2018.10.045",
+        "article-title": "Physics-informed neural networks: a deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+        "volume": "378",
+        "author": "Raissi",
+        "year": "2019",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "issue": "12",
+        "key": "10.1016/j.cnsns.2026.110077_bib0016",
+        "doi-asserted-by": "crossref",
+        "first-page": "1727",
+        "DOI": "10.1007/s10409-021-01148-1",
+        "article-title": "Physics-informed neural networks (PINNs) for fluid mechanics: a review",
+        "volume": "37",
+        "author": "Cai",
+        "year": "2021",
+        "journal-title": "Acta Mech Sin"
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.cnsns.2026.110077_bib0017",
+        "doi-asserted-by": "crossref",
+        "first-page": "11618",
+        "DOI": "10.1364/OE.384875",
+        "article-title": "Physics-informed neural networks for inverse problems in nano-optics and metamaterials",
+        "volume": "28",
+        "author": "Chen",
+        "year": "2020",
+        "journal-title": "Opt Express"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0018",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2020.113028",
+        "article-title": "Conservative physics-informed neural networks on discrete domains for conservation laws: applications to forward and inverse problems",
+        "volume": "365",
+        "author": "Jagtap",
+        "year": "2020",
+        "journal-title": "Comput Methods Appl Mech Eng"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.cnsns.2026.110077_bib0019",
+        "doi-asserted-by": "crossref",
+        "first-page": "2002",
+        "DOI": "10.4208/cicp.OA-2020-0164",
+        "article-title": "Extended physics-informed neural networks (XPINNs): a generalized space-time domain decomposition based deep learning framework for nonlinear partial differential equations",
+        "volume": "28",
+        "author": "Jagtap",
+        "year": "2020",
+        "journal-title": "Commun Comput Phys"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0020",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2020.109913",
+        "article-title": "B-PINNs: Bayesian physics-informed neural networks for forward and inverse PDE problems with noisy data",
+        "volume": "425",
+        "author": "Yang",
+        "year": "2021",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0021",
+        "doi-asserted-by": "crossref",
+        "first-page": "143",
+        "DOI": "10.1017/S0962492900002919",
+        "article-title": "Approximation theory of the MLP model in neural networks",
+        "volume": "8",
+        "author": "Pinkus",
+        "year": "1999",
+        "journal-title": "Acta Numer"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0022",
+        "unstructured": "Kutyniok G.. The mathematics of artificial intelligence. 2022.arxiv preprint arXiv: 2203.08890 [cs,math,stat]."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.cnsns.2026.110077_bib0023",
+        "doi-asserted-by": "crossref",
+        "first-page": "981",
+        "DOI": "10.1093/imanum/drab032",
+        "article-title": "Estimates on the generalization error of physics-informed neural networks for approximating a class of inverse problems for PDEs",
+        "volume": "42",
+        "author": "Mishra",
+        "year": "2022",
+        "journal-title": "IMA J Numer Anal"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0024",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1093/imanum/drab093",
+        "article-title": "Estimates on the generalization error of physics-informed neural networks for approximating PDEs",
+        "volume": "43",
+        "author": "Mishra",
+        "year": "2023",
+        "journal-title": "IMA J Numer Anal"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.cnsns.2026.110077_bib0025",
+        "doi-asserted-by": "crossref",
+        "first-page": "79",
+        "DOI": "10.1007/s10444-022-09985-9",
+        "article-title": "Error analysis for physics-informed neural networks (PINNs) approximating Kolmogorov PDEs",
+        "volume": "48",
+        "author": "De Ryck",
+        "year": "2022",
+        "journal-title": "Adv Comput Math"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0026",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2023.112527",
+        "article-title": "Physics-informed neural networks for approximating dynamic (Hyperbolic) PDEs of second order in time: error analysis and algorithms",
+        "volume": "495",
+        "author": "Qian",
+        "year": "2023",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.cnsns.2026.110077_bib0027",
+        "doi-asserted-by": "crossref",
+        "first-page": "2042",
+        "DOI": "10.4208/cicp.OA-2020-0193",
+        "article-title": "On the convergence of physics informed neural networks for linear second-order elliptic and parabolic type PDEs",
+        "volume": "28",
+        "author": "Shin",
+        "year": "2020",
+        "journal-title": "Commun Comput Phys"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0028",
+        "unstructured": "Shin Y., Zhang Z., Karniadakis G.E.. Error estimates of residual minimization using neural networks for linear equations. 2020b. arxiv preprint arXiv: 2010.08019."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0029",
+        "doi-asserted-by": "crossref",
+        "first-page": "83",
+        "DOI": "10.1093/imanum/drac085",
+        "article-title": "Error estimates for physics-informed neural networks approximating the Navier–Stokes equations",
+        "volume": "44",
+        "author": "De Ryck",
+        "year": "2024",
+        "journal-title": "IMA J Numer Anal"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0030",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jqsrt.2021.107705",
+        "article-title": "Physics informed neural networks for simulating radiative transfer",
+        "volume": "270",
+        "author": "Mishra",
+        "year": "2021",
+        "journal-title": "J Quant Spectrosc Radiat Transf"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0031",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2022.111260",
+        "article-title": "A-PINN: auxiliary physics informed neural networks for forward and inverse problems of nonlinear integro-differential equations",
+        "volume": "462",
+        "author": "Yuan",
+        "year": "2022",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0032",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2023.116160",
+        "article-title": "Error convergence and engineering-guided hyperparameter search of PINNs: towards optimized i-FENN performance",
+        "volume": "414",
+        "author": "Pantidis",
+        "year": "2023",
+        "journal-title": "Comput Methods Appl Mech Eng"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0033",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2023.112603",
+        "article-title": "NAS-PINN: neural architecture search-guided physics-informed neural network for solving PDEs",
+        "volume": "496",
+        "author": "Wang",
+        "year": "2024",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.cnsns.2026.110077_bib0034",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1063/5.0266746",
+        "article-title": "A data-driven approach to solving the Allen–Cahn equation in varying dimensions using physics-informed neural networks (PINNs)",
+        "volume": "37",
+        "author": "Katbar",
+        "year": "2025",
+        "journal-title": "Phys Fluids"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.cnsns.2026.110077_bib0035",
+        "doi-asserted-by": "crossref",
+        "first-page": "332",
+        "DOI": "10.1140/epjp/s13360-025-06267-3",
+        "article-title": "Data-driven discovery of phase field dynamics: a physics-informed neural network-based approach to the Allen–Cahn equation",
+        "volume": "140",
+        "author": "Katbar",
+        "year": "2025",
+        "journal-title": "Eur Phys J plus"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0036",
+        "unstructured": "Kingma D.P., Ba J.. Adam: a method for stochastic optimization. 2014. arxiv preprint arXiv: 1412.6980."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.cnsns.2026.110077_bib0037",
+        "doi-asserted-by": "crossref",
+        "first-page": "550",
+        "DOI": "10.1145/279232.279236",
+        "article-title": "Algorithm 778: L-BFGS-b: Fortran subroutines for large-scale bound-constrained optimization",
+        "volume": "23",
+        "author": "Zhu",
+        "year": "1997",
+        "journal-title": "ACM Trans Math Softw"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0038",
+        "article-title": "A multi-batch l-BFGS method for machine learning",
+        "volume": "29",
+        "author": "Berahas",
+        "year": "2016",
+        "journal-title": "Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0039",
+        "series-title": "2021 International joint conference on neural networks (IJCNN)",
+        "first-page": "1",
+        "article-title": "Adversarial multi-task learning enhanced physics-informed neural networks for solving partial differential equations",
+        "author": "Thanasutives",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0040",
+        "unstructured": "Bischof R., Kraus M.. Multi-objective loss balancing for physics-informed deep learning. 2021. arxiv preprint arXiv: 2110.09813."
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0041",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang G., Yang H., Xu S., Zhu F., Pan G., et al. Residuals-RAE PINN: residuals-weighted region activation evaluation pointwise loss weighting scheme for physics-informed neural networks via k-nearest neighbor information. 2024. SSRN:10.2139/ssrn.4882304.",
+        "DOI": "10.2139/ssrn.4882304"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0042",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2022.111722",
+        "article-title": "Self-adaptive physics-informed neural networks",
+        "volume": "474",
+        "author": "McClenny",
+        "year": "2023",
+        "journal-title": "J Comput Phys"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0043",
+        "unstructured": "Driscoll T.A., Hale N., Trefethen L.N.. Chebfun guide. 2026."
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0044",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2021.114474",
+        "article-title": "A novel sequential method to train physics informed neural networks for Allen Cahn and Cahn Hilliard equations",
+        "volume": "390",
+        "author": "Mattey",
+        "year": "2022",
+        "journal-title": "Comput Methods Appl Mech Eng"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0045",
+        "series-title": "Lectures on convex optimization",
+        "volume": "vol. 137",
+        "author": "Nesterov",
+        "year": "2018"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.cnsns.2026.110077_bib0046",
+        "doi-asserted-by": "crossref",
+        "first-page": "223",
+        "DOI": "10.1137/16M1080173",
+        "article-title": "Optimization methods for large-scale machine learning",
+        "volume": "60",
+        "author": "Bottou",
+        "year": "2018",
+        "journal-title": "SIAM Rev"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0047",
+        "series-title": "International conference on learning representations",
+        "article-title": "On the convergence of Adam and beyond",
+        "author": "Reddi",
+        "year": "2019"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0048",
+        "doi-asserted-by": "crossref",
+        "first-page": "503",
+        "DOI": "10.1007/BF01589116",
+        "article-title": "On the limited memory BFGS method for large scale optimization",
+        "volume": "45",
+        "author": "Liu",
+        "year": "1989",
+        "journal-title": "Math Program"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0049",
+        "first-page": "15",
+        "article-title": "Some entire solutions of the Allen–Cahn equation",
+        "volume": "8",
+        "author": "Fukao",
+        "year": "2004",
+        "journal-title": "Taiwan J Math"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0050",
+        "series-title": "Numerical methods for nonlinear partial differential equations",
+        "volume": "vol. 47",
+        "author": "Bartels",
+        "year": "2015"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cnsns.2026.110077_bib0051",
+        "doi-asserted-by": "crossref",
+        "first-page": "22",
+        "DOI": "10.1007/s10915-023-02412-1",
+        "article-title": "Discontinuity computing using physics-informed neural networks",
+        "volume": "98",
+        "author": "Liu",
+        "year": "2024",
+        "journal-title": "J Sci Comput"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0052",
+        "doi-asserted-by": "crossref",
+        "first-page": "777",
+        "DOI": "10.2307/3318542",
+        "article-title": "Cahn-Hilliard stochastic equation: existence of the solution and of its density",
+        "volume": "7",
+        "author": "Cardon-Weber",
+        "year": "2001",
+        "journal-title": "Bernoulli"
+      },
+      {
+        "key": "10.1016/j.cnsns.2026.110077_bib0053",
+        "first-page": "26548",
+        "article-title": "Characterizing possible failure modes in physics-informed neural networks",
+        "volume": "34",
+        "author": "Krishnapriyan",
+        "year": "2021",
+        "journal-title": "Adv Neural Inf Process Syst"
+      }
+    ],
+    "container-title": [
+      "Communications in Nonlinear Science and Numerical Simulation"
+    ],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S1007570426004363?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S1007570426004363?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2026-07-04T13:04:45Z",
+      "timestamp": 1783170285000
+    },
+    "score": 76.31972,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1007570426004363"
+      }
+    },
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11
+        ]
+      ]
+    },
+    "references-count": 53,
+    "alternative-id": [
+      "S1007570426004363"
+    ],
+    "URL": "https://doi.org/10.1016/j.cnsns.2026.110077",
+    "ISSN": [
+      "1007-5704"
+    ],
+    "issn-type": [
+      {
+        "value": "1007-5704",
+        "type": "print"
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          11
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "A priori error estimation for physics-informed neural networks solving Allen–Cahn and Cahn–Hilliard equations",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Communications in Nonlinear Science and Numerical Simulation",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.cnsns.2026.110077",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2026 Published by Elsevier B.V.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "110077"
+  },
+  {
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          7,
+          3
+        ]
+      ],
+      "date-time": "2025-07-03T15:27:00Z",
+      "timestamp": 1751556420509,
+      "version": "3.40.3"
+    },
+    "posted": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "group-title": "SSRN",
+    "reference-count": 0,
+    "publisher": "Elsevier BV",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "DOI": "10.2139/ssrn.5206451",
+    "type": "posted-content",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          5
+        ]
+      ],
+      "date-time": "2025-04-05T12:37:45Z",
+      "timestamp": 1743856665000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 1,
+    "title": [
+      "A Priori Error Estimation for Physics-Informed Neural Networks Solving Allen--Cahn and Cahn--Hilliard Equations"
+    ],
+    "prefix": "10.2139",
+    "author": [
+      {
+        "given": "Guangtao",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jiani",
+        "family": "Lin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Qijia",
+        "family": "Zhai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Huiyu",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xujun",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Ieng Tak",
+        "family": "Leong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          5
+        ]
+      ],
+      "date-time": "2025-04-05T12:37:45Z",
+      "timestamp": 1743856665000
+    },
+    "score": 76.17088,
+    "resource": {
+      "primary": {
+        "URL": "https://www.ssrn.com/abstract=5206451"
+      }
+    },
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "references-count": 0,
+    "URL": "https://doi.org/10.2139/ssrn.5206451",
+    "published": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "subtype": "preprint"
+  }
+]

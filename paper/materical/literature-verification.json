@@ -1,0 +1,564 @@
+{
+  "listed": 32,
+  "unique_works": 32,
+  "relevant_full_text_read": 32,
+  "actually_cited": 32,
+  "reading_scope": "Relevant original methods/results/discussion, including disclosed author-manuscript versions",
+  "items": [
+    {
+      "key": "geocalibration",
+      "match": "10.1007/s00477-020-01865-2",
+      "sections": "第2节研究区与地质统计重建、第3节连通性和标定结果、第4节结论；表1及图3—4的说明。",
+      "finding": "对Bologna含水层分别用SISIM和T-PROGS生成岩相实现，再标定水力参数。两类重建的砾石连通性不同，对应的标定导水率和水头预测也不同。",
+      "use": "引言中说明仅比较场值或均值不足以判断流动响应。",
+      "boundary": "研究对象是有地质和水头资料的含水层；不能将其现场证据移作本文固定数值场的验证。",
+      "number": 1,
+      "bibliography": "SIENA M, RIVA M. Impact of geostatistical reconstruction approaches on model calibration for flow in highly heterogeneous aquifers[J]. Stochastic Environmental Research and Risk Assessment, 2020, 34(10): 1591-1606. DOI: 10.1007/s00477-020-01865-2.",
+      "reading_source": "https://link.springer.com/content/pdf/10.1007/s00477-020-01865-2.pdf",
+      "local_text": "literature_sources/geocalibration.txt",
+      "accessed": "2026-09-30T15:40:36.644656+00:00",
+      "metadata_sources": [
+        "literature_sources/geocalibration.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "gstools",
+      "match": "10.5194/gmd-15-3161-2022",
+      "sections": "随机场生成和条件模拟说明、第4节示例、第5节结论；图15、图30说明。",
+      "finding": "GSTools整合协方差建模、克里金、随机场生成和条件模拟。条件场示例中，观测附近的实现偏离参考场更小，显示空间相关建模与观测条件的联系。",
+      "use": "引言中交代地质统计空间恢复的技术路线。",
+      "boundary": "本文没有运行克里金或GSTools，不将工具库论文误写为已实现的比较方法。",
+      "number": 2,
+      "bibliography": "MÜLLER S, SCHÜLER L, ZECH A, et al. GSTools v1.3: A toolbox for geostatistical modelling in Python[J]. Geoscientific Model Development, 2022, 15(7): 3161-3182. DOI: 10.5194/gmd-15-3161-2022.",
+      "reading_source": "https://gmd.copernicus.org/articles/15/3161/2022/",
+      "local_text": "literature_sources/gstools.txt",
+      "accessed": "2026-09-30T15:35:47.906492+00:00",
+      "metadata_sources": [
+        "literature_sources/gstools.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "deepsdf",
+      "match": "DeepSDF:",
+      "sections": "第6节形状表示、补全和潜在空间插值结果，第7节结论；表4和补全过程说明。",
+      "finding": "共享解码器以位置和形状编码表示连续有符号距离；部分形状的补全需要依据观测优化潜在编码。作者同时报告了编码优化带来的推理成本。",
+      "use": "引言中解释对象嵌入与连续查询，并区分场内拟合和新对象直接预测。",
+      "boundary": "原文处理三维形状，本文处理渗透率；引用的是表示与适配方式，不转用原文的精度优势。",
+      "number": 3,
+      "bibliography": "PARK J J, FLORENCE P, STRAUB J, et al. DeepSDF: Learning continuous signed distance functions for shape representation[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019: 165-174. DOI: 10.1109/CVPR.2019.00025.",
+      "reading_source": "https://arxiv.org/html/1901.05103",
+      "local_text": "literature_sources/deepsdf.txt",
+      "accessed": "2026-09-30T15:36:05.741124+00:00",
+      "metadata_sources": [
+        "literature_sources/deepsdf.json",
+        "literature_sources/deepsdf_candidates.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "spectral",
+      "match": "On the spectral bias",
+      "sections": "第1节问题定义、合成实验1和对应讨论、第6节结论。",
+      "finding": "对深层ReLU网络进行Fourier分析及合成拟合实验，观察到低频优先的学习行为；流形几何还影响高频函数的表达难度。",
+      "use": "引言中限定频谱偏置的适用条件，说明有限预算细节拟合的动机。",
+      "boundary": "不能将ReLU网络的分析无条件推广为本文门控残差网络的理论证明。",
+      "number": 4,
+      "bibliography": "RAHAMAN N, BARATIN A, ARPIT D, et al. On the spectral bias of neural networks[C]//Proceedings of the 36th International Conference on Machine Learning. PMLR, 2019, 97: 5301-5310.",
+      "reading_source": "https://arxiv.org/html/1806.08734",
+      "local_text": "literature_sources/spectral.txt",
+      "accessed": "2026-09-30T15:35:52.508829+00:00",
+      "metadata_sources": [
+        "literature_sources/spectral.json",
+        "literature_sources/spectral_proceedings.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "fourier",
+      "match": "Fourier features let networks",
+      "sections": "第6.1节编码对照、第6.2节直接/间接回归及留出评价、第7节结论。",
+      "finding": "比较基本周期映射、位置编码和Gaussian随机Fourier特征；在图像、形状和成像任务中，调整频率尺度能改善坐标MLP拟合。频率尺度由留出信号调节。",
+      "use": "引言说明输入编码路线，讨论频率尺度和比较前提。",
+      "boundary": "本文固定Fourier对照不等于复现原文最优超参数搜索，不能声称超过原始Fourier特征方法的全部配置。",
+      "number": 5,
+      "bibliography": "TANCIK M, SRINIVASAN P P, MILDENHALL B, et al. Fourier features let networks learn high frequency functions in low dimensional domains[C]//Advances in Neural Information Processing Systems. 2020, 33: 7537-7547.",
+      "reading_source": "https://arxiv.org/html/2006.10739",
+      "local_text": "literature_sources/fourier.txt",
+      "accessed": "2026-09-30T15:35:52.866163+00:00",
+      "metadata_sources": [
+        "literature_sources/fourier.json",
+        "literature_sources/fourier_proceedings.json",
+        "literature_sources/fourier_bibtex.txt"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "siren",
+      "match": "Implicit neural representations with periodic",
+      "sections": "第4节Poisson、Eikonal等导数监督任务，第5节讨论与结论。",
+      "finding": "周期激活配合专门初始化可表达信号及其导数，并用于边值问题和隐式几何表示。原文对整个周期网络的激活统计作了分析。",
+      "use": "引言和方法中说明正弦激活来源，并声明当前网络不是完整SIREN配置。",
+      "boundary": "只在首层使用正弦且初始化不同，不能继承原文全部性质或把本文对照称为SIREN。",
+      "number": 6,
+      "bibliography": "SITZMANN V, MARTEL J N P, BERGMAN A W, et al. Implicit neural representations with periodic activation functions[C]//Advances in Neural Information Processing Systems. 2020, 33: 7462-7473.",
+      "reading_source": "https://arxiv.org/html/2006.09661",
+      "local_text": "literature_sources/siren.txt",
+      "accessed": "2026-09-30T15:35:53.952876+00:00",
+      "metadata_sources": [
+        "literature_sources/siren.json",
+        "literature_sources/siren_proceedings.json",
+        "literature_sources/siren_bibtex.txt"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "nerf",
+      "match": "10.1007/978-3-030-58452-8_24",
+      "sections": "第6节合成/真实场景结果、第6.4节消融设置和讨论、第7节结论。",
+      "finding": "逐场景优化位置与方向查询的连续辐射场，通过体渲染拟合图像，并分析质量、训练时间与存储之间的取舍。",
+      "use": "引言中说明位置编码及逐对象连续表示的已有应用。",
+      "boundary": "视图合成并非渗透率重建，只借鉴表示概念，不引入渲染模块或迁移精度结论。",
+      "number": 7,
+      "bibliography": "MILDENHALL B, SRINIVASAN P P, TANCIK M, et al. NeRF: Representing scenes as neural radiance fields for view synthesis[C]//Computer Vision – ECCV 2020. 2020: 405-421. DOI: 10.1007/978-3-030-58452-8_24.",
+      "reading_source": "https://arxiv.org/html/2003.08934",
+      "local_text": "literature_sources/nerf.txt",
+      "accessed": "2026-09-30T15:36:07.015124+00:00",
+      "metadata_sources": [
+        "literature_sources/nerf.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "bacon",
+      "match": "BACON:",
+      "sections": "第3节频带结构、第4.1节图像拟合与编码对照、第5节结论和局限。",
+      "finding": "基于乘法滤波结构控制中间输出的频带，支持多尺度信号表示；图像拟合、神经渲染和形状拟合检验了其尺度行为。",
+      "use": "引言中区分频带控制与一般周期特征。",
+      "boundary": "本文没有BACON式频谱界限，不能声称对未观测位置已有带限保证。",
+      "number": 8,
+      "bibliography": "LINDELL D B, VAN VEEN D, PARK J J, et al. BACON: Band-limited coordinate networks for multiscale scene representation[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2022: 16252-16262.",
+      "reading_source": "https://arxiv.org/html/2112.04645",
+      "local_text": "literature_sources/bacon.txt",
+      "accessed": "2026-09-30T15:36:07.016414+00:00",
+      "metadata_sources": [
+        "literature_sources/bacon.json",
+        "literature_sources/bacon_proceedings.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "eigenvector",
+      "match": "10.1016/j.cma.2021.113938",
+      "sections": "第3节NTK分析、第4节多尺度Poisson等实验、第5节讨论。",
+      "finding": "Fourier特征映射影响NTK特征向量频率；多尺度编码改善相应PDE算例，但频率数目和尺度需要与目标变化匹配。",
+      "use": "引言中说明频率设置是比较前提，不能仅凭编码名称判断表达效果。",
+      "boundary": "固定频率对照不代表所有Fourier网络最优配置，本文未作NTK谱验证。",
+      "number": 9,
+      "bibliography": "WANG S, WANG H, PERDIKARIS P. On the eigenvector bias of Fourier feature networks: From regression to solving multi-scale PDEs with physics-informed neural networks[J]. Computer Methods in Applied Mechanics and Engineering, 2021, 384: 113938. DOI: 10.1016/j.cma.2021.113938.",
+      "reading_source": "https://arxiv.org/html/2012.10047",
+      "local_text": "literature_sources/eigenvector.txt",
+      "accessed": "2026-09-30T15:36:10.246297+00:00",
+      "metadata_sources": [
+        "literature_sources/eigenvector.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "pinn",
+      "match": "10.1016/j.jcp.2018.10.045",
+      "sections": "对应早期作者稿Part I的第1节信息条件、连续时间PINN定义、Allen–Cahn算例及第4节总结；正式题录由Crossref核对。",
+      "finding": "以神经网络近似解函数，将观测和微分方程残差共同纳入优化；Allen–Cahn算例展示了数据和时间离散结构的结合。作者指出它不应被简单视为成熟数值方法的全面替代。",
+      "use": "引言中给出PINN的方程约束含义。",
+      "boundary": "阅读源是2017年Part I作者稿，题录引用2019年合并发表论文；此处仅引用二者共同的正问题框架，不声称逐页核对了正式合并版本或阅读了Part II的全部反演结果。",
+      "number": 10,
+      "bibliography": "RAISSI M, PERDIKARIS P, KARNIADAKIS G E. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations[J]. Journal of Computational Physics, 2019, 378: 686-707. DOI: 10.1016/j.jcp.2018.10.045.",
+      "reading_source": "https://arxiv.org/html/1711.10561",
+      "local_text": "literature_sources/pinn.txt",
+      "accessed": "2026-09-30T15:35:53.953959+00:00",
+      "metadata_sources": [
+        "literature_sources/pinn.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "dgm",
+      "match": "10.1016/j.jcp.2018.08.029",
+      "sections": "随机采样求导估计的成本讨论、第4节高维自由边界实验、第8节结论。",
+      "finding": "用随机时空样本训练神经网络以满足微分算子和初边值条件，在高维自由边界和HJB问题上验证；同时指出高振荡解可能更困难。",
+      "use": "引言中介绍基于微分算子残差的神经求解路线。",
+      "boundary": "文中收敛论证与数值案例有明确方程范围，不构成本研究统计先验的理论依据。",
+      "number": 11,
+      "bibliography": "SIRIGNANO J, SPILIOPOULOS K. DGM: A deep learning algorithm for solving partial differential equations[J]. Journal of Computational Physics, 2018, 375: 1339-1364. DOI: 10.1016/j.jcp.2018.08.029.",
+      "reading_source": "https://arxiv.org/html/1708.07469",
+      "local_text": "literature_sources/dgm.txt",
+      "accessed": "2026-09-30T15:36:08.983183+00:00",
+      "metadata_sources": [
+        "literature_sources/dgm.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "ritz",
+      "match": "10.1007/s40304-018-0127-z",
+      "sections": "第3节Poisson及特征值数值结果、第4节讨论。",
+      "finding": "以深度网络表示试探函数并最小化变分能量；数值示例展示可行性，也报告非凸优化、边界条件处理和高维特征值误差方面的限制。",
+      "use": "引言区分强形式残差与变分能量约束。",
+      "boundary": "本文没有构造Darcy能量训练项，不能将经验平滑损失称为Deep Ritz。",
+      "number": 12,
+      "bibliography": "E W, YU B. The Deep Ritz method: A deep learning-based numerical algorithm for solving variational problems[J]. Communications in Mathematics and Statistics, 2018, 6(1): 1-12. DOI: 10.1007/s40304-018-0127-z.",
+      "reading_source": "https://arxiv.org/html/1710.00211",
+      "local_text": "literature_sources/ritz.txt",
+      "accessed": "2026-09-30T15:36:08.984192+00:00",
+      "metadata_sources": [
+        "literature_sources/ritz.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "review",
+      "match": "10.1007/s10915-022-01939-z",
+      "sections": "第5节挑战及第6节综述结论，关于网络、损失构建、软/硬约束和方程配置点的归纳。",
+      "finding": "系统整理PINN的结构、训练和约束变体，区分方程约束、变分形式、软边界与硬边界处理，并总结多尺度和优化问题。",
+      "use": "引言为不同物理信息注入形式提供综述背景。",
+      "boundary": "综述用于分类，具体方法效果优先引用相应原始研究。",
+      "number": 13,
+      "bibliography": "CUOMO S, DI COLA V S, GIAMPAOLO F, et al. Scientific machine learning through physics-informed neural networks: Where we are and what's next[J]. Journal of Scientific Computing, 2022, 92(3): 88. DOI: 10.1007/s10915-022-01939-z.",
+      "reading_source": "https://arxiv.org/html/2201.05624",
+      "local_text": "literature_sources/review.txt",
+      "accessed": "2026-09-30T15:36:02.505269+00:00",
+      "metadata_sources": [
+        "literature_sources/review.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "fdpinn",
+      "match": "10.6052/0459-1879-23-169",
+      "sections": "本地正式PDF第1195页题录；方法及第2.1节热传导对比、表1、图4—5说明，第3节结论。",
+      "finding": "对周期方向作离散Fourier变换，将PDE转为低维频域方程组。热传导等算例中减少输入样本和训练成本，并比较求解误差与频率截断影响。",
+      "use": "引言区分对控制方程作频域变换与本文的输入相位特征。",
+      "boundary": "不把FD-PINN的降维、效率和精度数字当作本文的结果。中文核心期刊范文的组织特征仅用于写作规范。",
+      "number": 14,
+      "bibliography": "宋家豪, 曹文博, 张伟伟. FD-PINN: 频域物理信息神经网络[J]. 力学学报, 2023, 55(5): 1195-1205. DOI: 10.6052/0459-1879-23-169.",
+      "reading_source": "tmp/pdfs/chinese_core_references/fd_pinn_extracted.txt",
+      "local_text": "../../tmp/pdfs/chinese_core_references/fd_pinn_extracted.txt",
+      "accessed": "2026-09-30T15:35:54.800534+00:00",
+      "metadata_sources": [
+        "literature_sources/fdpinn.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "gradient",
+      "match": "10.1137/20M1318043",
+      "sections": "第2节框架、第3节四种配置的比较设计、腔流图18说明、第4节总结。",
+      "finding": "分析PINN的刚性梯度流及复合损失梯度失衡，以梯度统计调节训练权重，并比较专用网络结构。",
+      "use": "引言和讨论中解释损失数值大小不等于梯度贡献。",
+      "boundary": "本文倒数损失规则不读取梯度统计，不能把它当作该文梯度平衡算法。",
+      "number": 15,
+      "bibliography": "WANG S, TENG Y, PERDIKARIS P. Understanding and mitigating gradient flow pathologies in physics-informed neural networks[J]. SIAM Journal on Scientific Computing, 2021, 43(5): A3055-A3081. DOI: 10.1137/20M1318043.",
+      "reading_source": "https://arxiv.org/html/2001.04536",
+      "local_text": "literature_sources/gradient.txt",
+      "accessed": "2026-09-30T15:35:55.655958+00:00",
+      "metadata_sources": [
+        "literature_sources/gradient.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "ntk",
+      "match": "10.1016/j.jcp.2021.110768",
+      "sections": "第7节数值实验的设置与Poisson检验，第8节Discussion。",
+      "finding": "在相应宽网络假设下研究PINN的NTK，指出复合损失分量收敛速率不同；动态缩放可调整平均速率，但不能消除所有频谱偏置。",
+      "use": "引言区分损失尺度、收敛速度和表示能力。",
+      "boundary": "理论假设不等同于本文有限宽残差网络的实际条件。",
+      "number": 16,
+      "bibliography": "WANG S, YU X, PERDIKARIS P. When and why PINNs fail to train: A neural tangent kernel perspective[J]. Journal of Computational Physics, 2022, 449: 110768. DOI: 10.1016/j.jcp.2021.110768.",
+      "reading_source": "https://arxiv.org/html/2007.14527",
+      "local_text": "literature_sources/ntk.txt",
+      "accessed": "2026-09-30T15:36:00.471404+00:00",
+      "metadata_sources": [
+        "literature_sources/ntk.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "failure",
+      "match": "Characterizing possible failure modes",
+      "sections": "实验设置、反应扩散seq2seq结果图6说明、第6节结论。",
+      "finding": "在对流、反应和扩散问题中，标准软约束PINN随问题难度增加可失效；损失地形与优化困难是原因之一，课程或分步训练能改善部分算例。",
+      "use": "引言说明增加约束并不保证解的准确性。",
+      "boundary": "不能由这些特定PDE失败推广为所有PINN无效，也不把其失败机制等同于本文倒数权重问题。",
+      "number": 17,
+      "bibliography": "KRISHNAPRIYAN A S, GHOLAMI A, ZHE S, et al. Characterizing possible failure modes in physics-informed neural networks[C]//Advances in Neural Information Processing Systems. 2021, 34: 26548-26560.",
+      "reading_source": "https://arxiv.org/html/2109.01050",
+      "local_text": "literature_sources/failure.txt",
+      "accessed": "2026-09-30T15:36:01.318024+00:00",
+      "metadata_sources": [
+        "literature_sources/failure.json",
+        "literature_sources/failure_bibtex.txt"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "sapinn",
+      "match": "10.1016/j.jcp.2022.111722",
+      "sections": "Numerical Examples部分的比较指标、NTK结果图17说明、第7节结论。",
+      "finding": "给训练位置配置可训练权重，以软注意力和惩罚优化解释其作用；多个PDE算例及NTK分析显示这种逐点机制与整项缩放不同。",
+      "use": "引言中说明逐点可训练权重的已有研究。",
+      "boundary": "原文权重通过优化更新；本文残差递推权重和全局倒数评分均不是原算法。阅读为作者公开稿，与2023正式题录合并计一篇。",
+      "number": 18,
+      "bibliography": "MCCLENNY L D, BRAGA-NETO U M. Self-adaptive physics-informed neural networks[J]. Journal of Computational Physics, 2023, 474: 111722. DOI: 10.1016/j.jcp.2022.111722.",
+      "reading_source": "https://arxiv.org/html/2009.04544",
+      "local_text": "literature_sources/sapinn.txt",
+      "accessed": "2026-09-30T15:35:56.346130+00:00",
+      "metadata_sources": [
+        "literature_sources/sapinn.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "rba",
+      "match": "10.1016/j.cma.2024.116805",
+      "sections": "第2节PINN及残差权重方法、第3.1节Allen–Cahn结果和表1说明；公开PDF。",
+      "finding": "根据局部残差递推调整训练点贡献；Allen–Cahn基准将RBA施加于方程残差项，并与其他PINN训练配置比较。",
+      "use": "引言中说明残差驱动注意力，限定本文适配后的逐点加权含义。",
+      "boundary": "原文方程残差权重与本文数据残差权重的对象不同，不能直接移用性能结论。",
+      "number": 19,
+      "bibliography": "ANAGNOSTOPOULOS S J, TOSCANO J D, STERGIOPULOS N, et al. Residual-based attention in physics-informed neural networks[J]. Computer Methods in Applied Mechanics and Engineering, 2024, 421: 116805. DOI: 10.1016/j.cma.2024.116805.",
+      "reading_source": "https://arxiv.org/pdf/2307.00379",
+      "local_text": "literature_sources/rba.txt",
+      "accessed": "2026-09-30T15:35:56.670204+00:00",
+      "metadata_sources": [
+        "literature_sources/rba.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "annulus",
+      "match": "10.7623/syxb202303012",
+      "sections": "正式PDF第545页题录，第2.3—2.4节、第3节压力预测、表3及图7—10说明，第4节结论。",
+      "finding": "将两相流方程、初边值条件及数据拟合结合，用可训练权重关注困难位置。原文为避免噪声重复拟合而不对样本损失加权，并在不同气侵阶段评价压力预测。",
+      "use": "引言中支撑自适应权重需与观测质量相匹配的判断。",
+      "boundary": "有限差分生成数据与实际井筒验证不能混同；不把该文压力预测结果当成本研究的应用收益。",
+      "number": 20,
+      "bibliography": "徐宝昌, 张学智, 王雅欣, 等. 用于两相流环空压力预测的自适应物理信息神经网络模型[J]. 石油学报, 2023, 44(3): 545-555. DOI: 10.7623/syxb202303012.",
+      "reading_source": "tmp/pdfs/chinese_core_references/syxb_extracted.txt",
+      "local_text": "../../tmp/pdfs/chinese_core_references/syxb_extracted.txt",
+      "accessed": "2026-09-30T15:35:58.871284+00:00",
+      "metadata_sources": [
+        "literature_sources/annulus.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "sampling",
+      "match": "10.1016/j.cma.2022.115671",
+      "sections": "第2节方法、第3节六个正反问题比较设置、第4节结论及建议。",
+      "finding": "比较多种非自适应和残差自适应采样，并提出RAD和RAR-D；高残差区域点分布的调整在其算例中改善精度与采样效率。",
+      "use": "引言中区分改变配置点分布与固定观测点加权。",
+      "boundary": "本文没有通过这些方法新增方程配置点，不把已有标签的加权称为主动采样。",
+      "number": 21,
+      "bibliography": "WU C, ZHU M, TAN Q, et al. A comprehensive study of non-adaptive and residual-based adaptive sampling for physics-informed neural networks[J]. Computer Methods in Applied Mechanics and Engineering, 2023, 403: 115671. DOI: 10.1016/j.cma.2022.115671.",
+      "reading_source": "https://arxiv.org/html/2207.10289",
+      "local_text": "literature_sources/sampling.txt",
+      "accessed": "2026-09-30T15:36:02.922494+00:00",
+      "metadata_sources": [
+        "literature_sources/sampling.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "deepxde",
+      "match": "10.1137/19M1274067",
+      "sections": "第1节方法背景、Volterra积分微分方程算例及图10说明、第5节总结。",
+      "finding": "DeepXDE将自动微分、几何与约束接口组织为PINN求解工具，并提出残差自适应细化；原文也指出其正问题求解速度与传统有限元之间的差距。",
+      "use": "引言中作为残差采样/细化路线的原始来源。",
+      "boundary": "本文并未使用DeepXDE执行实验；此引用不能代替本地实现记录。",
+      "number": 22,
+      "bibliography": "LU L, MENG X, MAO Z, et al. DeepXDE: A deep learning library for solving differential equations[J]. SIAM Review, 2021, 63(1): 208-228. DOI: 10.1137/19M1274067.",
+      "reading_source": "https://arxiv.org/html/1907.04502",
+      "local_text": "literature_sources/deepxde.txt",
+      "accessed": "2026-09-30T15:36:03.357629+00:00",
+      "metadata_sources": [
+        "literature_sources/deepxde.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "guide",
+      "match": "An expert's guide",
+      "sections": "第7节Results中的消融与最优配置区分、圆柱绕流评价说明，第8节结论。",
+      "finding": "整合无量纲化、Fourier特征、权重平衡和因果训练，并区分共同超参数消融与经搜索得到的最优配置。",
+      "use": "引言中支持强基线、明确比较条件和组件消融的设计原则。",
+      "boundary": "引用arXiv公开稿并标明电子文献；不把综合训练指南作为本文尚未采用机制的效果证据。",
+      "number": 23,
+      "bibliography": "WANG S, SANKARAN S, WANG H, et al. An expert's guide to training physics-informed neural networks[EB/OL]. arXiv:2308.08468, 2023[2026-09-30]. https://arxiv.org/abs/2308.08468.",
+      "reading_source": "https://arxiv.org/html/2308.08468",
+      "local_text": "literature_sources/guide.txt",
+      "accessed": "2026-09-30T15:36:01.591643+00:00",
+      "metadata_sources": [
+        "literature_sources/guide.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "scipy",
+      "match": "10.1038/s41592-019-0686-2",
+      "sections": "插值、稀疏线性代数和spatial模块介绍，Sparse matrices、cKDTree及Polynomial interpolators部分。",
+      "finding": "介绍SciPy的插值和稀疏矩阵计算体系，并报告稀疏格式处理、近邻结构及多项式插值接口方面的改进。",
+      "use": "方法中注明数值计算所用的SciPy软件论文。",
+      "boundary": "SciPy 1.0论文不是当前RBFInterpolator接口的逐项说明；具体版本与核参数另在补充材料记录，不据软件论文证明基线最优。",
+      "number": 24,
+      "bibliography": "VIRTANEN P, GOMMERS R, OLIPHANT T E, et al. SciPy 1.0: Fundamental algorithms for scientific computing in Python[J]. Nature Methods, 2020, 17(3): 261-272. DOI: 10.1038/s41592-019-0686-2.",
+      "reading_source": "https://arxiv.org/html/1907.10121",
+      "local_text": "literature_sources/scipy.txt",
+      "accessed": "2026-09-30T15:35:59.550445+00:00",
+      "metadata_sources": [
+        "literature_sources/scipy.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "activation",
+      "match": "10.1016/j.jcp.2019.109136",
+      "sections": "第2节可训练激活尺度定义、第3节函数和PDE正反问题设置、第4节结论。",
+      "finding": "在激活中引入可训练尺度，比较平滑/不连续函数以及Burgers、Klein–Gordon和Helmholtz算例，观察到收敛与误差改善。",
+      "use": "方法中说明激活尺度会影响优化，并限定本文固定频率首层的比较。",
+      "boundary": "未在本项目运行自适应激活，不将该文收益写为本地实验结果。",
+      "number": 25,
+      "bibliography": "JAGTAP A D, KAWAGUCHI K, KARNIADAKIS G E. Adaptive activation functions accelerate convergence in deep and physics-informed neural networks[J]. Journal of Computational Physics, 2020, 404: 109136. DOI: 10.1016/j.jcp.2019.109136.",
+      "reading_source": "https://arxiv.org/html/1906.01170",
+      "local_text": "literature_sources/activation.txt",
+      "accessed": "2026-09-30T15:36:07.763358+00:00",
+      "metadata_sources": [
+        "literature_sources/activation.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "localactivation",
+      "match": "10.1098/rspa.2020.0334",
+      "sections": "条件数与收敛图2说明、第4节结论及理论适用条件。",
+      "finding": "提出逐层和逐神经元的局部激活尺度，并以斜率恢复项促进训练；函数逼近、反问题和标准学习任务检验了其作用。",
+      "use": "方法中补充激活参数化的已有进展，说明当前首层比较的范围。",
+      "boundary": "未复现该算法，不把其条件数或收敛保证赋予本文网络。",
+      "number": 26,
+      "bibliography": "JAGTAP A D, KAWAGUCHI K, KARNIADAKIS G E. Locally adaptive activation functions with slope recovery for deep and physics-informed neural networks[J]. Proceedings of the Royal Society A, 2020, 476(2239): 20200334. DOI: 10.1098/rspa.2020.0334.",
+      "reading_source": "https://arxiv.org/html/1909.12228",
+      "local_text": "literature_sources/localactivation.txt",
+      "accessed": "2026-09-30T15:36:12.689709+00:00",
+      "metadata_sources": [
+        "literature_sources/localactivation.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "deeponet",
+      "match": "10.1038/s42256-021-00302-5",
+      "sections": "第2.1节输入函数与位置的分支编码、数据规模收敛图10说明、第5节结论。",
+      "finding": "DeepONet分别编码输入函数观测与查询位置，再合并输出；研究输入函数复杂性、传感器和训练样本数对算子泛化的影响。",
+      "use": "讨论中区分已登记场补全与跨输入函数的算子学习。",
+      "boundary": "本文场标识嵌入没有实现DeepONet式输入函数编码，不能将场内留点解释为算子泛化。",
+      "number": 27,
+      "bibliography": "LU L, JIN P, PANG G, et al. Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators[J]. Nature Machine Intelligence, 2021, 3(3): 218-229. DOI: 10.1038/s42256-021-00302-5.",
+      "reading_source": "https://arxiv.org/html/1910.03193",
+      "local_text": "literature_sources/deeponet.txt",
+      "accessed": "2026-09-30T15:36:04.976897+00:00",
+      "metadata_sources": [
+        "literature_sources/deeponet.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "fno",
+      "match": "Fourier neural operator for parametric",
+      "sections": "第5节Burgers、Darcy和Navier–Stokes实验设置、频谱与非周期边界说明，第6节讨论。",
+      "finding": "以Fourier空间积分算子学习参数函数到解函数的映射，分别保留训练和测试实例；非线性层参与恢复高频，数据生成与训练有独立成本。",
+      "use": "讨论中说明与算子学习的任务和信息条件差别。",
+      "boundary": "FNO不是本文固定Fourier输入编码MLP；本文也未训练FNO，不能直接比较两个任务的误差。",
+      "number": 28,
+      "bibliography": "LI Z, KOVACHKI N, AZIZZADENESHELI K, et al. Fourier neural operator for parametric partial differential equations[C]//International Conference on Learning Representations. 2021. https://arxiv.org/abs/2010.08895.",
+      "reading_source": "https://arxiv.org/html/2010.08895",
+      "local_text": "literature_sources/fno.txt",
+      "accessed": "2026-09-30T15:36:05.131463+00:00",
+      "metadata_sources": [
+        "literature_sources/fno.json",
+        "literature_sources/fno_first_page.txt"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "gpinn",
+      "match": "10.1016/j.cma.2022.114823",
+      "sections": "第2节残差梯度增强方法、第3节正反问题设置、第4节结论及成本讨论。",
+      "finding": "在损失中加入方程残差导数，改善解、导数及反演参数精度；结合RAR处理陡梯度，但高阶自动微分增加计算成本。",
+      "use": "讨论中说明更强约束需要正确的局部方程与成本比较。",
+      "boundary": "本文不使用残差导数损失，也不把统计平滑项等同于gPINN。",
+      "number": 29,
+      "bibliography": "YU J, LU L, MENG X, et al. Gradient-enhanced physics-informed neural networks for forward and inverse PDE problems[J]. Computer Methods in Applied Mechanics and Engineering, 2022, 393: 114823. DOI: 10.1016/j.cma.2022.114823.",
+      "reading_source": "https://arxiv.org/html/2111.02801",
+      "local_text": "literature_sources/gpinn.txt",
+      "accessed": "2026-09-30T15:36:10.972857+00:00",
+      "metadata_sources": [
+        "literature_sources/gpinn.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "hard",
+      "match": "10.1016/j.cma.2021.114333",
+      "sections": "第1节构造思路、第9节边值问题比较设计、第12节结论；正式题录与公开PDF首页核对。",
+      "finding": "用距离函数和跨有限插值构造满足边界条件的试探解，减少边界损失竞争；强调总损失大小并不能替代解误差评价。",
+      "use": "讨论中区分已知边界的硬约束和本文边缘均值正则项。",
+      "boundary": "已修正候选阶段误配的另一篇hPINN题录。本文没有使用距离函数边界构造。",
+      "number": 30,
+      "bibliography": "SUKUMAR N, SRIVASTAVA A. Exact imposition of boundary conditions with distance functions in physics-informed deep neural networks[J]. Computer Methods in Applied Mechanics and Engineering, 2022, 389: 114333. DOI: 10.1016/j.cma.2021.114333.",
+      "reading_source": "https://arxiv.org/pdf/2104.08426",
+      "local_text": "literature_sources/hard.txt",
+      "accessed": "2026-09-30T15:40:36.645072+00:00",
+      "metadata_sources": [
+        "literature_sources/hard.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "wight",
+      "match": "10.4208/cicp.oa-2020-0086",
+      "sections": "第3节Allen–Cahn、Cahn–Hilliard数值设置，第4节时间/空间自适应总结。",
+      "finding": "将空间残差采样与时间域分段策略用于相场方程；时间分段可降低单次学习难度，但前段误差可能向后段传播。",
+      "use": "讨论中说明自适应策略的作用依赖于问题结构。",
+      "boundary": "静态渗透率补全没有时间推进；不能把时间域效果移作本研究自适应模块的正面证据。",
+      "number": 31,
+      "bibliography": "WIGHT C L, ZHAO J. Solving Allen-Cahn and Cahn-Hilliard equations using the adaptive physics informed neural networks[J]. Communications in Computational Physics, 2021, 29(3): 930-954. DOI: 10.4208/cicp.oa-2020-0086.",
+      "reading_source": "https://arxiv.org/html/2007.04542",
+      "local_text": "literature_sources/wight.txt",
+      "accessed": "2026-09-30T15:36:13.304205+00:00",
+      "metadata_sources": [
+        "literature_sources/wight.json",
+        "literature_sources/wight_candidates.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    },
+    {
+      "key": "causal",
+      "match": "10.1016/j.cma.2024.116813",
+      "sections": "第5节混沌动力系统和流动实验设置、第6节Discussion；公开稿题名含is all you need，正式发表题名已核对。",
+      "finding": "针对时间依赖PINN在初值尚未拟合时优先减小后期残差的问题，按早期状态拟合程度调整时间残差权重，改善所研究动力系统的训练。",
+      "use": "讨论中强调训练权重需遵循任务的信息依赖。",
+      "boundary": "本文为静态补全，不存在相同时间因果顺序；只讨论适用条件，不声称采用了因果训练。",
+      "number": 32,
+      "bibliography": "WANG S, SANKARAN S, PERDIKARIS P. Respecting causality for training physics-informed neural networks[J]. Computer Methods in Applied Mechanics and Engineering, 2024, 421: 116813. DOI: 10.1016/j.cma.2024.116813.",
+      "reading_source": "https://arxiv.org/html/2203.07404",
+      "local_text": "literature_sources/causal.txt",
+      "accessed": "2026-09-30T15:36:11.313428+00:00",
+      "metadata_sources": [
+        "literature_sources/causal.json",
+        "literature_sources/causal_candidates.json"
+      ],
+      "status": "verified_and_relevant_sections_read"
+    }
+  ]
+}

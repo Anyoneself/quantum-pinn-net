@@ -42,3 +42,12 @@ defense_ppt_rba_qpinn/.slide_run_state.json.lock
 experiments/*/seed_*/processed/*.npy
 experiments/*/seed_*/runs/**/model.pt
 experiments/*/seed_*/runs/**/*.npy
+
+# Fixed inputs required to verify the supplementary experiment archive.
+!experiments/rba_qpinn_submission_v1/seed_42/processed/fields.npy
+!experiments/rba_qpinn_submission_v1/seed_42/processed/conditions.npy
+
+# Third-party reading copies stay local; publish notes and source metadata.
+output/pdf/chinese_core_references/
+paper/materical/literature_sources/*.txt
+!paper/materical/literature_sources/*_bibtex.txt

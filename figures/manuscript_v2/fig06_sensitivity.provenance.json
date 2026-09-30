@@ -1,0 +1,18 @@
+{
+  "claim": "Noisy fitting and contiguous missing regions have distinct reconstruction effects.",
+  "panel_roles": [
+    "Phase validation trajectories evaluated against the corresponding noisy validation targets",
+    "RMSE by gap column over all 128 fields and 14 missing rows; pointwise three-run SD"
+  ],
+  "source": "experiments/supplement_v2",
+  "source_table": "source_metrics.csv",
+  "field_count": 128,
+  "run_ids": [
+    101,
+    202,
+    303
+  ],
+  "exclusions": [],
+  "uncertainty": "Sample SD across three repeated runs unless explicitly labelled otherwise",
+  "curve_policy": "Adjacent recorded epochs, grid locations or empirical ranks are joined by straight segments; no spline smoothing or invented observations."
+}

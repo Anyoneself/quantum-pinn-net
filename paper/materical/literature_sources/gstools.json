@@ -1,0 +1,888 @@
+{
+  "key": "gstools",
+  "expected_title": "GSTools v1.3: a toolbox for geostatistical modelling in Python",
+  "doi": "10.5194/gmd-15-3161-2022",
+  "arxiv": null,
+  "accessed": "2026-09-30T15:35:47.906492+00:00",
+  "errors": [],
+  "crossref": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2026-09-30T09:29:01Z",
+      "timestamp": 1790760541463,
+      "version": "4.1.0"
+    },
+    "reference-count": 85,
+    "publisher": "Copernicus GmbH",
+    "issue": "7",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              12
+            ]
+          ],
+          "date-time": "2022-04-12T00:00:00Z",
+          "timestamp": 1649721600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100007636",
+        "name": "Deutsche Bundesstiftung Umwelt",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "20016/432"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "20016/432"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100007636",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001659",
+        "name": "Deutsche Forschungsgemeinschaft",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "HE-7028-1/2"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "HE-7028-1/2"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001659",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100002347",
+        "name": "Bundesministerium für Forschung, Technologie und Raumfahrt",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "n/a"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "n/a"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100002347",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100006114",
+        "name": "Sächsisches Staatsministerium für Wissenschaft und Kunst",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "n/a"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "n/a"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100006114",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Geosci. Model Dev."
+    ],
+    "abstract": "<jats:p>Geostatistics as a subfield of statistics accounts for the spatial correlations encountered in many applications of, for example, earth sciences. Valuable information can be extracted from these correlations, also helping to address the often encountered burden of data scarcity.\nDespite the value of additional data, the use of geostatistics still falls short of its potential. This problem is often connected to the lack of user-friendly software hampering the use and application of geostatistics.\nWe therefore present GSTools, a Python-based software suite for solving a wide range of geostatistical problems. We chose Python due to its unique balance between usability, flexibility, and efficiency and due to its adoption in the scientific community. GSTools provides methods for generating random fields; it can perform kriging, variogram estimation and much more. We demonstrate its abilities by virtue of a series of example applications detailing their use.</jats:p>",
+    "DOI": "10.5194/gmd-15-3161-2022",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          12
+        ]
+      ],
+      "date-time": "2022-04-12T08:23:05Z",
+      "timestamp": 1649751785000
+    },
+    "page": "3161-3182",
+    "source": "Crossref",
+    "is-referenced-by-count": 215,
+    "title": [
+      "GSTools v1.3: a toolbox for geostatistical modelling in Python"
+    ],
+    "prefix": "10.5194",
+    "volume": "15",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-9060-4008",
+        "authenticated-orcid": false,
+        "given": "Sebastian",
+        "family": "Müller",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          },
+          {
+            "role": "corresponding-author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9362-1372",
+        "authenticated-orcid": false,
+        "given": "Lennart",
+        "family": "Schüler",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8783-6198",
+        "authenticated-orcid": false,
+        "given": "Alraune",
+        "family": "Zech",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Falk",
+        "family": "Heße",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "3145",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          12
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref1",
+        "unstructured": "Abramowitz, M., and Stegun, I. A.​​​​​​​: Handbook of mathematical functions, 10th edn., Dover Publications, New York, ISBN 978-0-486-61272-0, 1972."
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Attinger, S.: Generalized coarse graining procedures for flow in porous media, Computat. Geosci., 7, 253–273, 10.1023/B:COMG.0000005243.73381.e3, 2003.",
+        "DOI": "10.1023/B:COMG.0000005243.73381.e3"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Banerjee, S., Carlin, B. P., and Gelfand, A. E.: Hierarchical Modeling and Analysis for Spatial Data, 2 edn., Chapman and Hall/CRC, Boca Raton, 10.1201/b17115, 2014.",
+        "DOI": "10.1201/b17115"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Bayer, P., Huggenberger, P., Renard, P., and Comunian, A.: Three-dimensional high resolution fluvio-glacial aquifer analog: Part 1: Field study, J. Hydrol., 405, 1–9​​​​​​​, 10.1016/j.jhydrol.2011.03.038, 2011.",
+        "DOI": "10.1016/j.jhydrol.2011.03.038"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Beg, M., Taka, J., Kluyver, T., Konovalov, A., Ragan-Kelley, M., Thiéry, N. M., and Fangohr, H.: Using Jupyter for Reproducible Scientific Workflows, in: Computing in Science Engineering, Computing in Science Engineering, 23, 36–46, 10.1109/MCSE.2021.3052101, 2021.",
+        "DOI": "10.1109/MCSE.2021.3052101"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Behnel, S., Bradshaw, R., Citro, C., Dalcin, L., Seljebotn, D. S., and Smith, K.: Cython: The Best of Both Worlds, in: Computing in Science Engineering, Computing in Science Engineering, 13, 31–39, 10.1109/MCSE.2010.118, 2011.",
+        "DOI": "10.1109/MCSE.2010.118"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Bellin, A. and Rubin, Y.: HYDRO_GEN: A spatially distributed random field generator for correlated properties, Stoch. Hydrol. Hydraul., 10, 253–278, 10.1007/BF01581869, 1996.",
+        "DOI": "10.1007/BF01581869"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Box, G. E. P. and Cox, D. R.: An Analysis of Transformations, J. Roy. Stat. Soc. B, 26, 211–243, 10.1111/j.2517-6161.1964.tb00553.x, 1964.",
+        "DOI": "10.1111/j.2517-6161.1964.tb00553.x"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Brouste, A., Istas, J., and Lambert-Lacroix, S.: On Fractional Gaussian Random Fields Simulations, J. Stat. Softw., 23, 1–23​​​​​​​, 10.18637/jss.v023.i01, 2008.",
+        "DOI": "10.18637/jss.v023.i01"
+      },
+      {
+        "key": "ref10",
+        "unstructured": "Carle, S. F.: T-PROGS: Transition probability geostatistical software, version 2.1, Tech. Rep., University of California, Davis, http://gmsdocs.aquaveo.com/t-progs.pdf (last access: 31 March 2022​​​​​​​), 1999.",
+        "type": "web-resource"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Cecinati, F., Wani, O., and Rico-Ramirez, M. A.: Comparing Approaches to Deal With Non-Gaussianity of Rainfall Data in Kriging-Based Radar-Gauge Rainfall Merging, Water Resour. Res., 53, 8999–9018, 10.1002/2016WR020330, 2017.",
+        "DOI": "10.1002/2016WR020330"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Chilès, J.-P. and Delfiner, P.: Geostatistics: Modeling Spatial Uncertainty, second edn., Wiley Series in Probability and Statistics, edited by: Balding, D. J., Cressie, N. A. C., Fitzmaurice, G. M., Goldstein, H., Johnstone, I. M., Molenberghs, G., Scott, D. W., Smith, A. F. M., Tsay, R. S., and Weisberg, S.,​​​​​​​ John Wiley & Sons, 10.1002/9781118136188, 2012.",
+        "DOI": "10.1002/9781118136188"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Cirpka, O. A. and Valocchi, A. J.: Debates – Stochastic subsurface hydrology from theory to practice: Does stochastic subsurface hydrology help solving practical problems of contaminant hydrogeology?, Water Resour. Res., 52, 9218–9227, 10.1002/2016WR019087, 2016.",
+        "DOI": "10.1002/2016WR019087"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "unstructured": "conda-forge community​​​​​​​: The conda-forge Project: Community-based Software Distribution Built on the conda Package Format and Ecosystem, Zenodo [software], 10.5281/zenodo.4774217, 2015.",
+        "DOI": "10.5281/zenodo.4774217",
+        "type": "software"
+      },
+      {
+        "key": "ref15",
+        "unstructured": "Cressie, N. and Wikle, C. K.: Statistics for spatio-temporal data, Wiley Series in Probability and Statistics, 1st edn., John Wiley & Sons, Hoboken, New Jersey, ISBN 978-0-471-69274-4, 2011."
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Dagan, G.: Flow and Transport in Porous Formations, 1st edn., Springer, Berlin, Heidelberg, 10.1007/978-3-642-75015-1, 1989.",
+        "DOI": "10.1007/978-3-642-75015-1"
+      },
+      {
+        "key": "ref17",
+        "unstructured": "Deutsch, C. V. and Journel, A. G.: GSLIB: Geostatistical software library and user's guide, Applied geostatistics series, 2. edn., Oxford University Press, ISBN 9780195100150, 1997."
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Di Federico, V. and Neuman, S. P.: Scaling of random fields by means of truncated power variograms and associated spectra, Water Resour. Res., 33, 1075–1085, 10.1029/97WR00299, 1997.",
+        "DOI": "10.1029/97WR00299"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Diggle, P. and Ribeiro, P. J.: Model-based Geostatistics, Springer Series in Statistics, 1st edn., Springer-Verlag, New York, 10.1007/978-0-387-48536-2, 2007.",
+        "DOI": "10.1007/978-0-387-48536-2"
+      },
+      {
+        "key": "ref20",
+        "unstructured": "Eliason, S. R.: Maximum likelihood estimation: Logic and practice, Sage Publications, 1st edn., Thousand Oaks, CA, US, ISBN 9781506315904, 1993."
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Emery, X.: Testing the correctness of the sequential algorithm for simulating Gaussian random fields, Stoch. Env. Res. Risk A., 18, 401–413, 10.1007/s00477-004-0211-7, 2004.",
+        "DOI": "10.1007/s00477-004-0211-7"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Fiori, A., Cvetkovic, V., Dagan, G., Attinger, S., Bellin, A., Dietrich, P., Zech, A., and Teutsch, G.: Debates – Stochastic subsurface hydrology from theory to practice: The relevance of stochastic subsurface hydrology to practical problems of contaminant transport and remediation. What is characterization and stochastic theory good for?, Water Resour. Res., 52, 9228–9234, 10.1002/2015WR017525, 2016.",
+        "DOI": "10.1002/2015WR017525"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Foreman-Mackey, D., Hogg, D. W., Lang, D., and Goodman, J.: emcee: The MCMC Hammer, Publ. Astron. Soc. Pac., 125, 306–312, 10.1086/670067, 2013.",
+        "DOI": "10.1086/670067"
+      },
+      {
+        "key": "ref24",
+        "unstructured": "Goldstein, H.: Classical mechanics, 2nd edn., Addison-Wesley, ISBN 9780201029185, 1980."
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Gong, R., Haslauer, C. P., Chen, Y., and Luo, J.: Analytical relationship between Gaussian and transformed-Gaussian spatially distributed fields, Water Resour. Res., 49, 1735–1740, 10.1002/wrcr.20143, 2013.",
+        "DOI": "10.1002/wrcr.20143"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Goovaerts, P.: Geostatistics in soil science: state-of-the-art and perspectives, Geoderma, 89, 1–45​​​​​​​, 10.1016/S0016-7061(98)00078-0, 1999.",
+        "DOI": "10.1016/S0016-7061(98)00078-0"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Gutzmann, B., Motl, A., Lassahn, D., Kamenshchikov, I., Bachmann, M., and Schrammel, M.: earthobservations/wetterdienst: v0.18.0, Zenodo [software]​​​​​​​, 10.5281/zenodo.4737739, 2021.",
+        "DOI": "10.5281/zenodo.4737739",
+        "type": "software"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Harris, C. R., Millman, K. J., van der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N. J., Kern, R., Picus, M., Hoyer, S., van Kerkwijk, M. H., Brett, M., Haldane, A., Fernández del Río, J., Wiebe, M., Peterson, P., Gérard-Marchant, P., Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C., and Oliphant, T. E.: Array programming with NumPy, Nature, 585, 357–362, 10.1038/s41586-020-2649-2, 2020.",
+        "DOI": "10.1038/s41586-020-2649-2"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Heße, F., Prykhodko, V., Schlüter, S., and Attinger, S.: Generating random fields with a truncated power-law variogram: A comparison of several numerical methods, Environ. Modell. Softw., 55, 32–48, 10.1016/j.envsoft.2014.01.013, 2014.",
+        "DOI": "10.1016/j.envsoft.2014.01.013"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Hohn, M.: Geostatistics and Petroleum Geology, Computer Methods in the Geosciences, 2 edn., Springer Netherlands, 10.1007/978-94-011-4425-4, 1999.",
+        "DOI": "10.1007/978-94-011-4425-4"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "unstructured": "John, J. A. and Draper, N. R.: An Alternative Family of Transformations, J. Roy. Stat. Soc. C-App., 29, 190–197, 10.2307/2986305, 1980.",
+        "DOI": "10.2307/2986305"
+      },
+      {
+        "key": "ref32",
+        "unstructured": "Kitanidis, P.: Introduction to Geostatistics: Applications in Hydrogeology, 1st edn., Cambridge University Press, Cambridge, New York, ISBN 9780521587471, 2008."
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kolditz, O., Bauer, S., Bilke, L., Böttcher, N., Delfs, J.-O., Fischer, T., Görke, U. J., Kalbacher, T., Kosakowski, G., McDermott, C. I., Park, C. H., Radu, F., Rink, K., Shao, H., Shao, H. B., Sun, F., Sun, Y. Y., Singh, A. K., Taron, J., Walther, M., Wang, W., Watanabe, N., Wu, Y., Xie, M., Xu, W., and Zehner, B.: OpenGeoSys: An open-source initiative for numerical simulation of thermo-hydro-mechanical/chemical (THM/C) processes in porous media, Environ. Earth Sci., 67, 589–599, 10.1007/s12665-012-1546-x, 2012.",
+        "DOI": "10.1007/s12665-012-1546-x"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Kraichnan, R.: Diffusion by a Random Velocity Field, Phys. Fluids, 13, 22–31, 10.1063/1.1692799, 1970.",
+        "DOI": "10.1063/1.1692799"
+      },
+      {
+        "key": "ref35",
+        "unstructured": "Krige, D. G.: A statistical approach to some basic mine valuation problems on the Witwatersrand, J. S. Afr. I. Min. Metall., 52, 119–139, 1951."
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Lantuéjoul, C., Freulon, X., and Renard, D.: Spectral Simulation of Isotropic Gaussian Random Fields on a Sphere, Math. Geosci., 51, 999–1020, 10.1007/s11004-019-09799-4, 2019.",
+        "DOI": "10.1007/s11004-019-09799-4"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Mälicke, M.: SciKit-GStat 1.0: a SciPy-flavored geostatistical variogram estimation toolbox written in Python, Geosci. Model Dev., 15, 2505–2532, 10.5194/gmd-15-2505-2022, 2022.",
+        "DOI": "10.5194/gmd-15-2505-2022"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Manly, B. F. J.: Exponential Data Transformations, J. Roy. Stat. Soc. D-Sta., 25, 37–42, 10.2307/2988129, 1976.",
+        "DOI": "10.2307/2988129"
+      },
+      {
+        "key": "ref39",
+        "unstructured": "Matheron, G.: Traité de géostatistique appliquée, no. 14 in Mémoires du BRGM, Editions Technip, Tome II: le krigeage, no 24, Editions BRGM, Paris, 1962."
+      },
+      {
+        "key": "ref40",
+        "unstructured": "Matern, B.: Spatial variation – stochastic models and their applications to some problems in forest survey sampling investigations, Report of the Forest Research Institute of Sweden 49, 1–144, 1960 (in English, Swedish summary)."
+      },
+      {
+        "key": "ref41",
+        "unstructured": "Mohammadi, H., Riche, R. L., Durrande, N., Touboul, E., and Bay, X.: An analytic comparison of regularization methods for Gaussian Processes, arXiv [preprint], arXiv:1602.00853, 5 May 2017.",
+        "type": "preprint"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Monestiez, P., Petrenko, A., Leredde, Y., and Ongari, B.: Geostatistical analysis of three dimensional current patterns in coastal oceanography: Application to the gulf of lions (NW mediterranean sea), in: geoENV IV – Geostatistics for environmental applications, edited by: Sanchez-Vila, X., Carrera, J., and Gómez-Hernández, J. J., pp. 367–378, Springer Netherlands, Dordrecht, 10.1007/1-4020-2115-1_31, 2004.",
+        "DOI": "10.1007/1-4020-2115-1_31"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Müller, S.: GeoStat – Examples/gstools-temperature-trend: v1.0, Zenodo [data set], 10.5281/zenodo.5159728, 2021.",
+        "DOI": "10.5281/zenodo.5159728",
+        "type": "dataset"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Müller, S. and Schüler, L.: GeoStat – Framework/GSTools: v1.3.5 “Pure Pink”, Zenodo [code], 10.5281/zenodo.5883346​​​​​​​, 2021.",
+        "DOI": "10.5281/zenodo.5883346",
+        "type": "software"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Müller, S. and Zech, A.: GeoStat – Examples/gstools-connectivity-and-transport: v1.0, Zenodo [data set], 10.5281/zenodo.5159578, 2021a.",
+        "DOI": "10.5281/zenodo.5159578",
+        "type": "dataset"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Müller, S. and Zech, A.: GeoStat – Examples/gstools-pumping-test-ensemble: v1.0, Zenodo [data set], 10.5281/zenodo.4891875, 2021b.",
+        "DOI": "10.5281/zenodo.4891875",
+        "type": "dataset"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Müller, S., Zech, A., and Heße, F.: ogs5py: A Python – API for the OpenGeoSys 5 Scientific Modeling Package, Groundwater, 59, 117–122, 10.1111/gwat.13017, 2020.",
+        "DOI": "10.1111/gwat.13017"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Müller, S., Heße, F., Attinger, S., and Zech, A.: The extended generalized radial flow model and effective conductivity for truncated power law variograms, Adv. Water Resour., 156, 104027, 10.1016/j.advwatres.2021.104027, 2021a.",
+        "DOI": "10.1016/j.advwatres.2021.104027"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Müller, S., Leven, C., Dietrich, P., Attinger, S., and Zech, A.: How to Find Aquifer Statistics Utilizing Pumping Tests? Two Field Studies Using welltestpy, Groundwater, 60, 137–144, 10.1111/gwat.13121, 2021b.",
+        "DOI": "10.1111/gwat.13121"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Murphy, B., Müller, S., and Yurchak, R.: GeoStat-Framework/PyKrige: v1.6.0, Zenodo [code]​​​​​​​, 10.5281/zenodo.4661732, 2021.",
+        "DOI": "10.5281/zenodo.4661732",
+        "type": "software"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Murray, S. G. and Poulin, F. J.: hankel: A Python library for performing simple and accurate Hankel transformations, The Journal of Open Source Software, 4, 1397, 10.21105/joss.01397, 2019.",
+        "DOI": "10.21105/joss.01397"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Neuman, S. P.: Stochastic groundwater models in practice, Stoch. Env. Res. Risk A., 18, 268–270, 10.1007/s00477-004-0192-6, 2004.",
+        "DOI": "10.1007/s00477-004-0192-6"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Ogata, H.: A Numerical Integration Formula Based on the Bessel Functions, Publ. Res. I. Math. Sci., 41, 949–970, 10.2977/prims/1145474602, 2005.",
+        "DOI": "10.2977/prims/1145474602"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Pebesma, E. J.: Multivariable geostatistics in S: the gstat package, Comput. Geosci., 30, 683–691, 10.1016/j.cageo.2004.03.012, 2004.",
+        "DOI": "10.1016/j.cageo.2004.03.012"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Perkel, J. M.: Why Jupyter is data scientists’ computational notebook of choice, Nature, 563, 145–146, 10.1038/d41586-018-07196-1, 2018.",
+        "DOI": "10.1038/d41586-018-07196-1"
+      },
+      {
+        "key": "ref56",
+        "unstructured": "Pyrcz, M. J. and Deutsch, C. V.: Geostatistical Reservoir Modeling, 2 edn., Oxford University Press, Oxford, ISBN 978-0199731442, 2014."
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Queiroz, F., Silva, R., Miller, J., Brockhauser, S., and Fangohr, H.: Track 1 Paper: Good Usability Practices in Scientific Software Development, Figshare, 10.6084/m9.figshare.5331814.v3, 2017.",
+        "DOI": "10.6084/m9.figshare.5331814.v3"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rajaram, H.: Debates – Stochastic subsurface hydrology from theory to practice: Introduction, Water Resour. Res., 52, 9215–9217, 10.1002/2016WR020066, 2016.",
+        "DOI": "10.1002/2016WR020066"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rasmussen, C. E. and Williams, C. K. I.: Gaussian Processes for Machine Learning, 1st edn., The MIT Press, ISBN 9780262256834, 10.7551/mitpress/3206.001.0001, 2005.",
+        "DOI": "10.7551/mitpress/3206.001.0001"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Remy, N.: S-GeMS: The Stanford Geostatistical Modeling Software: A Tool for New Algorithms Development, in: Quantitative Geology and Geostatistics, Geostatistics Banff 2004, 14, 865–871, 10.1007/978-1-4020-3610-1_89, 2005.",
+        "DOI": "10.1007/978-1-4020-3610-1_89"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rossi, R. E., Mulla, D. J., Journel, A. G., and Franz, E. H.: Geostatistical tools for modeling and interpreting ecological spatial dependence, Ecol. Monogr., 62, 277–314, 10.2307/2937096, 1992.",
+        "DOI": "10.2307/2937096"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rubin, Y.: Applied Stochastic Hydrogeology, 1st edn., Oxford University Press, New York, ISBN 9780195138047, 10.1093/oso/9780195138047.001.0001, 2003.​​​​​​​",
+        "DOI": "10.1093/oso/9780195138047.001.0001"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rubin, Y., Chen, X., Murakami, H., and Hahn, M.: A Bayesian approach for inverse modeling, data assimilation, and conditional simulation of spatial random fields, Water Resour. Res., 46, W10523, 10.1029/2009WR008799, 2010.",
+        "DOI": "10.1029/2009WR008799"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rubin, Y., Chang, C.-F., Chen, J., Cucchi, K., Harken, B., Heße, F., and Savoy, H.: Stochastic hydrogeology's biggest hurdles analyzed and its big blind spot, Hydrol. Earth Syst. Sci., 22, 5675–5695, 10.5194/hess-22-5675-2018, 2018.",
+        "DOI": "10.5194/hess-22-5675-2018"
+      },
+      {
+        "key": "ref65",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Rudin, W.: Fourier Analysis on Groups, 1st edn., Wiley‐Interscience, John Wiley & Sons, ISBN 9780470744819, 10.1002/9781118165621, 1990.",
+        "DOI": "10.1002/9781118165621"
+      },
+      {
+        "key": "ref66",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sales, M. H., Souza, C. M., Kyriakidis, P. C., Roberts, D. A., and Vidal, E.: Improving spatial distribution estimation of forest biomass with geostatistics: A case study for Rondônia, Brazil, Ecol. Model., 205, 221–230, 10.1016/j.ecolmodel.2007.02.033, 2007.",
+        "DOI": "10.1016/j.ecolmodel.2007.02.033"
+      },
+      {
+        "key": "ref67",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Savoy, H., Heße, F., and Rubin, Y.: anchoredDistr: a Package for the Bayesian Inversion of Geostatistical Parameters with Multi-type and Multi-scale Data, R Journal, 9, 6–17, 10.32614/RJ-2017-034, 2017.",
+        "DOI": "10.32614/RJ-2017-034"
+      },
+      {
+        "key": "ref68",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Schlömer, N., McBain, G. D., Luu, K., christos, Li, T., Hochsteger, M., Keilegavlen, E., Ferrándiz, V. M., Barnes, C., Lukeš, V., Dalcin, L., Jansen, M., Wagner, N., Gupta, A., Müller, S., Woodsend, B., Andersen, K., Schwarz, L., Blechta, J., Christovasilis, I. P., Coutinho, C., Beurle, D., ffilotto, Dokken, J. S., blacheref, so1291, Cervone, A., Shrimali, B., Bill, and Jones, D.​​​​​​​: nschloe/meshio: None, Zenodo [code], 10.5281/zenodo.4900671, 2021.",
+        "DOI": "10.5281/zenodo.4900671",
+        "type": "software"
+      },
+      {
+        "key": "ref69",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Schüler, L. and Müller, S.: GeoStat – Examples/gstools-herten-example: v1.0, Zenodo [data set], 10.5281/zenodo.5159658, 2021.",
+        "DOI": "10.5281/zenodo.5159658",
+        "type": "dataset"
+      },
+      {
+        "key": "ref70",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Schüler, L., Suciu, N., Knabner, P., and Attinger, S.: A time dependent mixing model to close PDF equations for transport in heterogeneous aquifers, Adv. Water Resour., 96, 55–67, 10.1016/j.advwatres.2016.06.012, 2016.",
+        "DOI": "10.1016/j.advwatres.2016.06.012"
+      },
+      {
+        "key": "ref71",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Schüler, L., Calabrese, J. M., and Attinger, S.: Data driven high resolution modeling and spatial analyses of the COVID-19 pandemic in Germany, PLOS ONE, 16, 1–14​​​​​​​, 10.1371/journal.pone.0254660, 2021.",
+        "DOI": "10.1371/journal.pone.0254660"
+      },
+      {
+        "key": "ref72",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sturges, H. A.: The Choice of a Class Interval, J. Am. Stat. Assoc., 21, 65–66, 10.1080/01621459.1926.10502161, 1926.",
+        "DOI": "10.1080/01621459.1926.10502161"
+      },
+      {
+        "key": "ref73",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Sullivan, C. B. and Kaszynski, A. A.: PyVista: 3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK), Journal of Open Source Software, 4, 1450​​​​​​​, 10.21105/joss.01450, 2019.",
+        "DOI": "10.21105/joss.01450"
+      },
+      {
+        "key": "ref74",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Uieda, L.: Verde: Processing and gridding spatial data using Green’s functions, Journal of Open Source Software, 3, 957, 10.21105/joss.00957, 2018.",
+        "DOI": "10.21105/joss.00957"
+      },
+      {
+        "key": "ref75",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Virtanen, P., Gommers, R., Oliphant, T. E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson, P., Weckesser, W., Bright, J., van der Walt, S. J., Brett, M., Wilson, J., Millman, K. J., Mayorov, N., Nelson, A. R. J., Jones, E., Kern, R., Larson, E., Carey, C. J., Polat, i., Feng, Y., Moore, E. W., VanderPlas, J., Laxalde, D., Perktold, J., Cimrman, R., Henriksen, I., Quintero, E. A., Harris, C. R., Archibald, A. M., Ribeiro, A. H., Pedregosa, F., van Mulbregt, P., and SciPy 1.0 Contributors: SciPy 1.0: Fundamental algorithms for scientific computing in python, Nat. Methods, 17, 261–272, 10.1038/s41592-019-0686-2, 2020.",
+        "DOI": "10.1038/s41592-019-0686-2"
+      },
+      {
+        "key": "ref76",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Vrugt, J. A.: Markov chain Monte Carlo simulation using the DREAM software package: Theory, concepts, and MATLAB implementation, Environ. Modell. Softw., 75, 273–316, 10.1016/j.envsoft.2015.08.013, 2016.",
+        "DOI": "10.1016/j.envsoft.2015.08.013"
+      },
+      {
+        "key": "ref77",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wackernagel, H.: Multivariate Geostatistics: An Introduction with Applications, 3 edn., Springer-Verlag, Berlin Heidelberg, ISBN 978-3-540-44142-7, 10.1007/978-3-662-05294-5, 2003.",
+        "DOI": "10.1007/978-3-662-05294-5"
+      },
+      {
+        "key": "ref78",
+        "unstructured": "Webster, R. and Oliver, M. A.: Geostatistics for Environmental Scientists, 2 edn., John Wiley & Sons, ISBN 978-0-470-02858-2, 2007.​​​​​​​"
+      },
+      {
+        "key": "ref79",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Wendland, H.: Piecewise polynomial, positive definite and compactly supported radial functions of minimal degree, Adv. Comput. Math., 4, 389–396, 10.1007/BF02123482, 1995.",
+        "DOI": "10.1007/BF02123482"
+      },
+      {
+        "key": "ref80",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Winter, C. L.: Stochastic hydrology: practical alternatives exist, Stoch. Env. Res. Risk A., 18, 271–273, 10.1007/s00477-004-0198-0, 2004.",
+        "DOI": "10.1007/s00477-004-0198-0"
+      },
+      {
+        "key": "ref81",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Yeo, I. and Johnson, R. A.: A new family of power transformations to improve normality or symmetry, Biometrika, 87, 954–959, 10.1093/biomet/87.4.954, 2000.",
+        "DOI": "10.1093/biomet/87.4.954"
+      },
+      {
+        "key": "ref82",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zech, A., Schneider, C. L., and Attinger, S.: The extended Thiem's solution – Including the impact of heterogeneity, Water Resour. Res., 48, W10535, 10.1029/2012WR011852, 2012.",
+        "DOI": "10.1029/2012WR011852"
+      },
+      {
+        "key": "ref83",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zech, A., Müller, S., Mai, J., Heße, F., and Attinger, S.: Extending Theis' solution: Using transient pumping tests to estimate parameters of aquifer heterogeneity, Water Resour. Res., 52, 6156–6170, 10.1002/2015WR018509, 2016.",
+        "DOI": "10.1002/2015WR018509"
+      },
+      {
+        "key": "ref84",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zhang, Y.-K. and Zhang, D.: Forum: The state of stochastic hydrology, Stoch. Env. Res. Risk A., 18, 265​​​​​​​, 10.1007/s00477-004-0190-8, 2004.",
+        "DOI": "10.1007/s00477-004-0190-8"
+      },
+      {
+        "key": "ref85",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Zinn, B. and Harvey, C. F.: When good statistical models of aquifer heterogeneity go bad: A comparison of flow, dispersion, and mass transfer in connected and multivariate Gaussian hydraulic conductivity fields, Water Resour. Res., 39, 1051, 10.1029/2001WR001146, 2003.",
+        "DOI": "10.1029/2001WR001146"
+      }
+    ],
+    "container-title": [
+      "Geoscientific Model Development"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://gmd.copernicus.org/articles/15/3161/2022/gmd-15-3161-2022.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ],
+      "date-time": "2026-09-15T05:29:07Z",
+      "timestamp": 1789450147000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://gmd.copernicus.org/articles/15/3161/2022/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          12
+        ]
+      ]
+    },
+    "references-count": 85,
+    "journal-issue": {
+      "issue": "7",
+      "published-online": {
+        "date-parts": [
+          [
+            2022
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.5194/gmd-15-3161-2022",
+    "relation": {
+      "has-preprint": [
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301",
+          "asserted-by": "object"
+        }
+      ],
+      "has-review": [
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-RC1",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-AC1",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-RC2",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-AC2",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-AC1",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-AC2",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-RC2",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5194/gmd-2021-301-RC1",
+          "asserted-by": "object"
+        }
+      ],
+      "is-part-of": [
+        {
+          "id-type": "doi",
+          "id": "10.5281/zenodo.5159728",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5281/zenodo.5159578",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5281/zenodo.4891875",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5281/zenodo.5159658",
+          "asserted-by": "subject"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.5281/zenodo.5883346",
+          "asserted-by": "subject"
+        }
+      ]
+    },
+    "ISSN": [
+      "1991-9603"
+    ],
+    "issn-type": [
+      {
+        "value": "1991-9603",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          12
+        ]
+      ]
+    }
+  },
+  "text_file": "paper/materical/literature_sources/gstools.txt",
+  "reading_source": "https://gmd.copernicus.org/articles/15/3161/2022/",
+  "text_chars": 76132,
+  "is_pdf_reading": false
+}
