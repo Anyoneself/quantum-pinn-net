@@ -1,0 +1,72 @@
+{
+  "field_seed": 33,
+  "method": "classical_plain",
+  "seed": 303,
+  "epochs": 300,
+  "best_epoch": 300,
+  "initial_validation": 4.898286988922026,
+  "best_validation": 2.12057397491728,
+  "training_seconds": 0.8133982090075733,
+  "screening_seconds": 0.0,
+  "parameter_counts": {
+    "total": 1054,
+    "feature_block": 40,
+    "pressure": 697
+  },
+  "active_features_at_best": 4,
+  "quantum_forward_calls_training": 0,
+  "quantum_sample_evaluations_training": 0,
+  "model_config": {
+    "features": 4,
+    "feature_layers": 2,
+    "hidden": 24,
+    "pressure_depth": 2
+  },
+  "train_config": {
+    "epochs": 300,
+    "learning_rate": 0.001,
+    "gradient_clip": 5.0,
+    "threads": 1
+  },
+  "strategy_config": {
+    "warmup": 20,
+    "rba_decay": 0.9,
+    "rba_gain": 4.0,
+    "mc_every": 20,
+    "mc_trials": 4,
+    "mc_batch": 32,
+    "mc_fraction": 0.25,
+    "mc_threshold": 0.01,
+    "min_features": 2
+  },
+  "loss_weights": {
+    "permeability": 10.0,
+    "pressure": 0.0,
+    "physics": 1.0,
+    "boundary": 1.0
+  },
+  "selection_rule": "minimum noisy validation observation loss, including epoch 0",
+  "observed_variables": [
+    "log_k"
+  ],
+  "pressure_supervision": false,
+  "quantum_backend": null,
+  "training_view_has_test_labels": false,
+  "log_k_rmse": 0.3261646936349957,
+  "k_rmse": 0.3480508061561569,
+  "k_relative_l2": 0.30726811989494535,
+  "pressure_rmse": 0.02495570528620702,
+  "downstream_pressure_rmse": 0.02751124651474701,
+  "downstream_flux_relative_error": 0.011179764990996821,
+  "downstream_solver_residual": 3.2568997372422166e-15,
+  "downstream_flux_imbalance": 4.301409831021681e-15,
+  "test_k_points": 504,
+  "test_p_points": 576,
+  "pde_residual_rmse": 0.32961039355403,
+  "neumann_flux_rmse": 0.04291285244996871,
+  "network_inlet_flux": 0.9227807894708002,
+  "network_outlet_flux": 0.9555097222754003,
+  "network_flux_imbalance": 0.03546772232153815,
+  "network_flux_relative_error": 0.04514608918370032,
+  "prediction_seconds": 0.0005954579974059016
+}

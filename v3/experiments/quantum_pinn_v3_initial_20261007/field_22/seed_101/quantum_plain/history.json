@@ -1,0 +1,4807 @@
+[
+  {
+    "epoch": 0,
+    "validation": 0.12419575143810833,
+    "active_features": 4
+  },
+  {
+    "epoch": 1,
+    "validation": 0.11990248936137099,
+    "training_total_pre_step": 0.37339959258867533,
+    "losses_pre_step": {
+      "permeability": 0.016686566662241237,
+      "pressure": 0.0016719805049343784,
+      "physics": 0.18706271892809503,
+      "boundary": 0.002751401988824098
+    },
+    "physics_unweighted_mse_pre_step": 0.18706271892809503,
+    "gradient_norm_pre_clip": 2.8526057358791013,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 2,
+    "validation": 0.1172654357991602,
+    "training_total_pre_step": 0.3269236057888989,
+    "losses_pre_step": {
+      "permeability": 0.016526656743937305,
+      "pressure": 0.0014075424619824064,
+      "physics": 0.14513286892996174,
+      "boundary": 0.0024487447997400776
+    },
+    "physics_unweighted_mse_pre_step": 0.14513286892996174,
+    "gradient_norm_pre_clip": 2.2553106419681503,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 3,
+    "validation": 0.11599291144547803,
+    "training_total_pre_step": 0.2913363414889607,
+    "losses_pre_step": {
+      "permeability": 0.01651399426706769,
+      "pressure": 0.0011781791836676886,
+      "physics": 0.11224819184658621,
+      "boundary": 0.0021664151350207113
+    },
+    "physics_unweighted_mse_pre_step": 0.11224819184658621,
+    "gradient_norm_pre_clip": 1.7600560486452617,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 4,
+    "validation": 0.11539205851661213,
+    "training_total_pre_step": 0.26525354243225274,
+    "losses_pre_step": {
+      "permeability": 0.016616629119530577,
+      "pressure": 0.000980648062814757,
+      "physics": 0.08739094808746424,
+      "boundary": 0.0018898225213351627
+    },
+    "physics_unweighted_mse_pre_step": 0.08739094808746424,
+    "gradient_norm_pre_clip": 1.3983478966091063,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 5,
+    "validation": 0.11471540386304889,
+    "training_total_pre_step": 0.2464508936839788,
+    "losses_pre_step": {
+      "permeability": 0.016755109252533137,
+      "pressure": 0.000811909136793057,
+      "physics": 0.06916665210331457,
+      "boundary": 0.0016140576874022745
+    },
+    "physics_unweighted_mse_pre_step": 0.06916665210331457,
+    "gradient_norm_pre_clip": 1.1712118388740707,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 6,
+    "validation": 0.11359346861465355,
+    "training_total_pre_step": 0.2326217895947699,
+    "losses_pre_step": {
+      "permeability": 0.016848012310885663,
+      "pressure": 0.0006702100794154613,
+      "physics": 0.05609539792136228,
+      "boundary": 0.001344167770396356
+    },
+    "physics_unweighted_mse_pre_step": 0.05609539792136228,
+    "gradient_norm_pre_clip": 1.0364455359267601,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 7,
+    "validation": 0.11204347185073832,
+    "training_total_pre_step": 0.2220244623914253,
+    "losses_pre_step": {
+      "permeability": 0.01686166101240957,
+      "pressure": 0.0005531416904403051,
+      "physics": 0.04678923494641915,
+      "boundary": 0.0010872004165073694
+    },
+    "physics_unweighted_mse_pre_step": 0.04678923494641915,
+    "gradient_norm_pre_clip": 0.9452855907648506,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 8,
+    "validation": 0.1102524964946233,
+    "training_total_pre_step": 0.21354441727772733,
+    "losses_pre_step": {
+      "permeability": 0.016806287071091396,
+      "pressure": 0.0004571308059973672,
+      "physics": 0.04005918155272872,
+      "boundary": 0.0008510569541109642
+    },
+    "physics_unweighted_mse_pre_step": 0.04005918155272872,
+    "gradient_norm_pre_clip": 0.8707341000293921,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 9,
+    "validation": 0.10841258842593424,
+    "training_total_pre_step": 0.20648769147572638,
+    "losses_pre_step": {
+      "permeability": 0.016709446683785035,
+      "pressure": 0.0003785884188913234,
+      "physics": 0.03496479694566155,
+      "boundary": 0.0006425435033012453
+    },
+    "physics_unweighted_mse_pre_step": 0.03496479694566155,
+    "gradient_norm_pre_clip": 0.8043355654480325,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 10,
+    "validation": 0.1066468469790273,
+    "training_total_pre_step": 0.20041961512080603,
+    "losses_pre_step": {
+      "permeability": 0.01659794828969494,
+      "pressure": 0.0003142722734975324,
+      "physics": 0.030830642538322434,
+      "boundary": 0.00046676695055888103
+    },
+    "physics_unweighted_mse_pre_step": 0.030830642538322434,
+    "gradient_norm_pre_clip": 0.7450836266845244,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 11,
+    "validation": 0.10499795341303182,
+    "training_total_pre_step": 0.1950793805743577,
+    "losses_pre_step": {
+      "permeability": 0.016490079709902714,
+      "pressure": 0.000261381020057164,
+      "physics": 0.027237664511742515,
+      "boundary": 0.0003271087630164212
+    },
+    "physics_unweighted_mse_pre_step": 0.027237664511742515,
+    "gradient_norm_pre_clip": 0.6925367402961851,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 12,
+    "validation": 0.10345141736020758,
+    "training_total_pre_step": 0.1903293811244215,
+    "losses_pre_step": {
+      "permeability": 0.01639416554535096,
+      "pressure": 0.0002175994312916846,
+      "physics": 0.023986549738685345,
+      "boundary": 0.0002251816193096669
+    },
+    "physics_unweighted_mse_pre_step": 0.023986549738685345,
+    "gradient_norm_pre_clip": 0.6444906052277963,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 13,
+    "validation": 0.10196687985160992,
+    "training_total_pre_step": 0.18612046026534157,
+    "losses_pre_step": {
+      "permeability": 0.016310831578790316,
+      "pressure": 0.00018109486911915482,
+      "physics": 0.021040343387454287,
+      "boundary": 0.00016085239879257425
+    },
+    "physics_unweighted_mse_pre_step": 0.021040343387454287,
+    "gradient_norm_pre_clip": 0.5978442647526091,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 14,
+    "validation": 0.10050009082150586,
+    "training_total_pre_step": 0.1824600094667248,
+    "losses_pre_step": {
+      "permeability": 0.016236539299429864,
+      "pressure": 0.0001504858700029252,
+      "physics": 0.018457416981435326,
+      "boundary": 0.00013234079096157705
+    },
+    "physics_unweighted_mse_pre_step": 0.018457416981435326,
+    "gradient_norm_pre_clip": 0.5505664618747168,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 15,
+    "validation": 0.09901375397319073,
+    "training_total_pre_step": 0.1793757956311066,
+    "losses_pre_step": {
+      "permeability": 0.01616638663228957,
+      "pressure": 0.0001247966839533515,
+      "physics": 0.016327598233581545,
+      "boundary": 0.00013636423509582493
+    },
+    "physics_unweighted_mse_pre_step": 0.016327598233581545,
+    "gradient_norm_pre_clip": 0.502809192346842,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 16,
+    "validation": 0.0974816119050297,
+    "training_total_pre_step": 0.17688062982269906,
+    "losses_pre_step": {
+      "permeability": 0.016095671797796127,
+      "pressure": 0.00010339898634069047,
+      "physics": 0.014721605151781916,
+      "boundary": 0.00016831682954895024
+    },
+    "physics_unweighted_mse_pre_step": 0.014721605151781916,
+    "gradient_norm_pre_clip": 0.4567332653969625,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 17,
+    "validation": 0.09588859245965145,
+    "training_total_pre_step": 0.1749479155108529,
+    "losses_pre_step": {
+      "permeability": 0.016020634991371855,
+      "pressure": 8.59374069676149e-05,
+      "physics": 0.013659688017685447,
+      "boundary": 0.0002225035097727638
+    },
+    "physics_unweighted_mse_pre_step": 0.013659688017685447,
+    "gradient_norm_pre_clip": 0.4155518591305362,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 18,
+    "validation": 0.09422862300229565,
+    "training_total_pre_step": 0.17350410673179514,
+    "losses_pre_step": {
+      "permeability": 0.015938730475723514,
+      "pressure": 7.223663309974188e-05,
+      "physics": 0.013101969242820212,
+      "boundary": 0.0002924664007423867
+    },
+    "physics_unweighted_mse_pre_step": 0.013101969242820212,
+    "gradient_norm_pre_clip": 0.38240814903312165,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 19,
+    "validation": 0.0925019973494339,
+    "training_total_pre_step": 0.17243730989231235,
+    "losses_pre_step": {
+      "permeability": 0.015848599172998915,
+      "pressure": 6.219027960748095e-05,
+      "physics": 0.012958009234309016,
+      "boundary": 0.00037140613193938267
+    },
+    "physics_unweighted_mse_pre_step": 0.012958009234309016,
+    "gradient_norm_pre_clip": 0.35947748659076084,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 20,
+    "validation": 0.09071337267832998,
+    "training_total_pre_step": 0.1716152459018843,
+    "losses_pre_step": {
+      "permeability": 0.01574990174178284,
+      "pressure": 5.5638497934409035e-05,
+      "physics": 0.01310720538291436,
+      "boundary": 0.0004526381217974438
+    },
+    "physics_unweighted_mse_pre_step": 0.01310720538291436,
+    "gradient_norm_pre_clip": 0.34745057807032215,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 21,
+    "validation": 0.08887058288311526,
+    "training_total_pre_step": 0.17090301201581015,
+    "losses_pre_step": {
+      "permeability": 0.015643077804566533,
+      "pressure": 5.225623893931303e-05,
+      "physics": 0.013419662352602453,
+      "boundary": 0.0005300092281492518
+    },
+    "physics_unweighted_mse_pre_step": 0.013419662352602453,
+    "gradient_norm_pre_clip": 0.3453964480882702,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 22,
+    "validation": 0.08698437738964761,
+    "training_total_pre_step": 0.17017552104446632,
+    "losses_pre_step": {
+      "permeability": 0.015529041846859581,
+      "pressure": 5.148807743909464e-05,
+      "physics": 0.013771970990960038,
+      "boundary": 0.0005982508105195426
+    },
+    "physics_unweighted_mse_pre_step": 0.013771970990960038,
+    "gradient_norm_pre_clip": 0.35095426680362196,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 23,
+    "validation": 0.08506920136664518,
+    "training_total_pre_step": 0.16932590795217115,
+    "losses_pre_step": {
+      "permeability": 0.015408849635129658,
+      "pressure": 5.2562711816205706e-05,
+      "physics": 0.014058500159559308,
+      "boundary": 0.0006532843231532077
+    },
+    "physics_unweighted_mse_pre_step": 0.014058500159559308,
+    "gradient_norm_pre_clip": 0.360844899549834,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 24,
+    "validation": 0.08314465714179578,
+    "training_total_pre_step": 0.1682729636469018,
+    "losses_pre_step": {
+      "permeability": 0.015283386451212447,
+      "pressure": 5.459466236369687e-05,
+      "physics": 0.01420068411551772,
+      "boundary": 0.0006924683956226421
+    },
+    "physics_unweighted_mse_pre_step": 0.01420068411551772,
+    "gradient_norm_pre_clip": 0.3716031447648562,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 25,
+    "validation": 0.08123673340342245,
+    "training_total_pre_step": 0.16696767792659845,
+    "losses_pre_step": {
+      "permeability": 0.015153109532850375,
+      "pressure": 5.674168792563735e-05,
+      "physics": 0.014154448542999371,
+      "boundary": 0.0007147171758389399
+    },
+    "physics_unweighted_mse_pre_step": 0.014154448542999371,
+    "gradient_norm_pre_clip": 0.3802846106559381,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 26,
+    "validation": 0.0793776403963223,
+    "training_total_pre_step": 0.16539571857328056,
+    "losses_pre_step": {
+      "permeability": 0.015017865992065805,
+      "pressure": 5.8358295589078475e-05,
+      "physics": 0.013913060252681405,
+      "boundary": 0.0007204154440503211
+    },
+    "physics_unweighted_mse_pre_step": 0.013913060252681405,
+    "gradient_norm_pre_clip": 0.3848992512002379,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 27,
+    "validation": 0.07760417258688362,
+    "training_total_pre_step": 0.16357327134511448,
+    "losses_pre_step": {
+      "permeability": 0.014876848784174702,
+      "pressure": 5.9091168459143384e-05,
+      "physics": 0.013502736755476297,
+      "boundary": 0.0007111350632997414
+    },
+    "physics_unweighted_mse_pre_step": 0.013502736755476297,
+    "gradient_norm_pre_clip": 0.3844733394958074,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 28,
+    "validation": 0.07595579686746175,
+    "training_total_pre_step": 0.16153746777129652,
+    "losses_pre_step": {
+      "permeability": 0.014728762403873075,
+      "pressure": 5.889548427450792e-05,
+      "physics": 0.012971645304200394,
+      "boundary": 0.0006892435856203037
+    },
+    "physics_unweighted_mse_pre_step": 0.012971645304200394,
+    "gradient_norm_pre_clip": 0.37883711837762585,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 29,
+    "validation": 0.07447152048936022,
+    "training_total_pre_step": 0.15933509701334606,
+    "losses_pre_step": {
+      "permeability": 0.014572139670038531,
+      "pressure": 5.7984183201127655e-05,
+      "physics": 0.012376344835032981,
+      "boundary": 0.0006575136459165028
+    },
+    "physics_unweighted_mse_pre_step": 0.012376344835032981,
+    "gradient_norm_pre_clip": 0.3683544611707986,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 30,
+    "validation": 0.07318478626301421,
+    "training_total_pre_step": 0.15701356140254522,
+    "losses_pre_step": {
+      "permeability": 0.014405766378281254,
+      "pressure": 5.673775722078489e-05,
+      "physics": 0.01176971904872042,
+      "boundary": 0.0006188009988044015
+    },
+    "physics_unweighted_mse_pre_step": 0.01176971904872042,
+    "gradient_norm_pre_clip": 0.3537752471735854,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 31,
+    "validation": 0.07211820650849586,
+    "training_total_pre_step": 0.15461653826111074,
+    "losses_pre_step": {
+      "permeability": 0.014229155608092672,
+      "pressure": 5.560208584405529e-05,
+      "physics": 0.011193151407430428,
+      "boundary": 0.000575809914313014
+    },
+    "physics_unweighted_mse_pre_step": 0.011193151407430428,
+    "gradient_norm_pre_clip": 0.33629535715275,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 32,
+    "validation": 0.07127979289512969,
+    "training_total_pre_step": 0.1521828500489617,
+    "losses_pre_step": {
+      "permeability": 0.01404280157183333,
+      "pressure": 5.499498201615825e-05,
+      "physics": 0.010673947411488034,
+      "boundary": 0.0005309370989788132
+    },
+    "physics_unweighted_mse_pre_step": 0.010673947411488034,
+    "gradient_norm_pre_clip": 0.3177526505298083,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 33,
+    "validation": 0.07066106238110459,
+    "training_total_pre_step": 0.1497445885078246,
+    "losses_pre_step": {
+      "permeability": 0.013847965755566264,
+      "pressure": 5.5234426383256915e-05,
+      "physics": 0.010226407254058344,
+      "boundary": 0.0004861794342710525
+    },
+    "physics_unweighted_mse_pre_step": 0.010226407254058344,
+    "gradient_norm_pre_clip": 0.3006886745743987,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 34,
+    "validation": 0.0702374648308933,
+    "training_total_pre_step": 0.14732271403754277,
+    "losses_pre_step": {
+      "permeability": 0.01364605218215553,
+      "pressure": 5.649519061881291e-05,
+      "physics": 0.009854146528594688,
+      "boundary": 0.00044309378120467347
+    },
+    "physics_unweighted_mse_pre_step": 0.009854146528594688,
+    "gradient_norm_pre_clip": 0.287944245649514,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 35,
+    "validation": 0.06997181698531929,
+    "training_total_pre_step": 0.14492229304908752,
+    "losses_pre_step": {
+      "permeability": 0.013437869203299884,
+      "pressure": 5.879576136402409e-05,
+      "physics": 0.009552844192809724,
+      "boundary": 0.00040279920963871764
+    },
+    "physics_unweighted_mse_pre_step": 0.009552844192809724,
+    "gradient_norm_pre_clip": 0.2816888220097251,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 36,
+    "validation": 0.06982058533515138,
+    "training_total_pre_step": 0.1425313184750547,
+    "losses_pre_step": {
+      "permeability": 0.013223127243801517,
+      "pressure": 6.2013450093729e-05,
+      "physics": 0.009313899478072525,
+      "boundary": 0.0003660120580297461
+    },
+    "physics_unweighted_mse_pre_step": 0.009313899478072525,
+    "gradient_norm_pre_clip": 0.28233752969736053,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 37,
+    "validation": 0.06974118050856457,
+    "training_total_pre_step": 0.1401252742995453,
+    "losses_pre_step": {
+      "permeability": 0.013000407691691146,
+      "pressure": 6.59217389591124e-05,
+      "physics": 0.009128875555373126,
+      "boundary": 0.0003331044376696043
+    },
+    "physics_unweighted_mse_pre_step": 0.009128875555373126,
+    "gradient_norm_pre_clip": 0.2882144241026485,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 38,
+    "validation": 0.06969785397995773,
+    "training_total_pre_step": 0.13767615978173758,
+    "losses_pre_step": {
+      "permeability": 0.01276759531945718,
+      "pressure": 7.024046546873401e-05,
+      "physics": 0.008993625059573442,
+      "boundary": 0.0003041768729049951
+    },
+    "physics_unweighted_mse_pre_step": 0.008993625059573442,
+    "gradient_norm_pre_clip": 0.2962867695508427,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 39,
+    "validation": 0.06966496543018269,
+    "training_total_pre_step": 0.1351629128770402,
+    "losses_pre_step": {
+      "permeability": 0.012522554039598876,
+      "pressure": 7.468743156266833e-05,
+      "physics": 0.00891136257766095,
+      "boundary": 0.00027913558776380927
+    },
+    "physics_unweighted_mse_pre_step": 0.00891136257766095,
+    "gradient_norm_pre_clip": 0.3033303282758323,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 40,
+    "validation": 0.06962768549030816,
+    "training_total_pre_step": 0.13258036444451182,
+    "losses_pre_step": {
+      "permeability": 0.01226378758929588,
+      "pressure": 7.902063787548237e-05,
+      "physics": 0.008894516167461943,
+      "boundary": 0.0002577660053362546
+    },
+    "physics_unweighted_mse_pre_step": 0.008894516167461943,
+    "gradient_norm_pre_clip": 0.3067796718264086,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 41,
+    "validation": 0.06958075890025156,
+    "training_total_pre_step": 0.12994458787041474,
+    "losses_pre_step": {
+      "permeability": 0.011990917532703172,
+      "pressure": 8.30639294884345e-05,
+      "physics": 0.008964977273997934,
+      "boundary": 0.00023979597450073174
+    },
+    "physics_unweighted_mse_pre_step": 0.008964977273997934,
+    "gradient_norm_pre_clip": 0.3050744885748478,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 42,
+    "validation": 0.06952605603487429,
+    "training_total_pre_step": 0.12729351918474865,
+    "losses_pre_step": {
+      "permeability": 0.011704922041061855,
+      "pressure": 8.671431092134613e-05,
+      "physics": 0.009152211242211241,
+      "boundary": 0.0002249444227054133
+    },
+    "physics_unweighted_mse_pre_step": 0.009152211242211241,
+    "gradient_norm_pre_clip": 0.2976664682139195,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 43,
+    "validation": 0.06946954289441491,
+    "training_total_pre_step": 0.12468299402750659,
+    "losses_pre_step": {
+      "permeability": 0.01140815785886956,
+      "pressure": 8.993447371218888e-05,
+      "physics": 0.009489116992588677,
+      "boundary": 0.00021295370910042475
+    },
+    "physics_unweighted_mse_pre_step": 0.009489116992588677,
+    "gradient_norm_pre_clip": 0.284875672553844,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 44,
+    "validation": 0.06941810872025436,
+    "training_total_pre_step": 0.12217943776699612,
+    "losses_pre_step": {
+      "permeability": 0.011104225612914876,
+      "pressure": 9.273726399090104e-05,
+      "physics": 0.010006202450527081,
+      "boundary": 0.000203606547411281
+    },
+    "physics_unweighted_mse_pre_step": 0.010006202450527081,
+    "gradient_norm_pre_clip": 0.26771221230684383,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 45,
+    "validation": 0.06937651978535865,
+    "training_total_pre_step": 0.11985095933531262,
+    "losses_pre_step": {
+      "permeability": 0.010797740944989457,
+      "pressure": 9.516905898303155e-05,
+      "physics": 0.010725129041940881,
+      "boundary": 0.00019673025364686235
+    },
+    "physics_unweighted_mse_pre_step": 0.010725129041940881,
+    "gradient_norm_pre_clip": 0.24772406174576833,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 46,
+    "validation": 0.06934470199491388,
+    "training_total_pre_step": 0.11775848100479012,
+    "losses_pre_step": {
+      "permeability": 0.010494054226451896,
+      "pressure": 9.72966976589093e-05,
+      "physics": 0.011652779847999895,
+      "boundary": 0.000192191915682171
+    },
+    "physics_unweighted_mse_pre_step": 0.011652779847999895,
+    "gradient_norm_pre_clip": 0.22689785419952613,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 47,
+    "validation": 0.0693156038182698,
+    "training_total_pre_step": 0.11594799310958472,
+    "losses_pre_step": {
+      "permeability": 0.01019893328875331,
+      "pressure": 9.919893193073707e-05,
+      "physics": 0.012776782841029535,
+      "boundary": 0.0001898880617147204
+    },
+    "physics_unweighted_mse_pre_step": 0.012776782841029535,
+    "gradient_norm_pre_clip": 0.20759116753588922,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 48,
+    "validation": 0.06927400724089898,
+    "training_total_pre_step": 0.11444439830397157,
+    "losses_pre_step": {
+      "permeability": 0.00991819607609776,
+      "pressure": 0.00010095989877042058,
+      "physics": 0.014063106656548502,
+      "boundary": 0.00018973189874126604
+    },
+    "physics_unweighted_mse_pre_step": 0.014063106656548502,
+    "gradient_norm_pre_clip": 0.19236974267761278,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 49,
+    "validation": 0.06919677577364335,
+    "training_total_pre_step": 0.11324711901845716,
+    "losses_pre_step": {
+      "permeability": 0.009657266150559042,
+      "pressure": 0.00010266033429202231,
+      "physics": 0.015456213704642712,
+      "boundary": 0.00019164046530379989
+    },
+    "physics_unweighted_mse_pre_step": 0.015456213704642712,
+    "gradient_norm_pre_clip": 0.18349899872860329,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 50,
+    "validation": 0.06905507947627003,
+    "training_total_pre_step": 0.11232803410998797,
+    "losses_pre_step": {
+      "permeability": 0.009420646761919659,
+      "pressure": 0.00010436303808149316,
+      "physics": 0.016882412912962518,
+      "boundary": 0.00019552319701394302
+    },
+    "physics_unweighted_mse_pre_step": 0.016882412912962518,
+    "gradient_norm_pre_clip": 0.1820016456875575,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 51,
+    "validation": 0.0688189045423793,
+    "training_total_pre_step": 0.1116332655035586,
+    "losses_pre_step": {
+      "permeability": 0.009211387487499853,
+      "pressure": 0.0001060923087258111,
+      "physics": 0.018257194988070394,
+      "boundary": 0.00020127255323157845
+    },
+    "physics_unweighted_mse_pre_step": 0.018257194988070394,
+    "gradient_norm_pre_clip": 0.18689943341982246,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 52,
+    "validation": 0.0684632292914752,
+    "training_total_pre_step": 0.11109067552491003,
+    "losses_pre_step": {
+      "permeability": 0.009030718015315402,
+      "pressure": 0.00010781150097065415,
+      "physics": 0.019496623549059403,
+      "boundary": 0.00020875681299007144
+    },
+    "physics_unweighted_mse_pre_step": 0.019496623549059403,
+    "gradient_norm_pre_clip": 0.1955418466999834,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 53,
+    "validation": 0.06797383252507055,
+    "training_total_pre_step": 0.11062289024655678,
+    "losses_pre_step": {
+      "permeability": 0.008878033441385984,
+      "pressure": 0.00010940663929739535,
+      "physics": 0.020530674143327956,
+      "boundary": 0.00021781529639502886
+    },
+    "physics_unweighted_mse_pre_step": 0.020530674143327956,
+    "gradient_norm_pre_clip": 0.2048274981235801,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 54,
+    "validation": 0.06735029056574475,
+    "training_total_pre_step": 0.11016180388651946,
+    "losses_pre_step": {
+      "permeability": 0.008751259725296057,
+      "pressure": 0.00011068524463377659,
+      "physics": 0.0213140973037953,
+      "boundary": 0.000228256883425832
+    },
+    "physics_unweighted_mse_pre_step": 0.0213140973037953,
+    "gradient_norm_pre_clip": 0.21228534187222645,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 55,
+    "validation": 0.06660518272643122,
+    "training_total_pre_step": 0.10965889722154848,
+    "losses_pre_step": {
+      "permeability": 0.008647419920121567,
+      "pressure": 0.00011139688565453658,
+      "physics": 0.02183086630260614,
+      "boundary": 0.00023986286118130297
+    },
+    "physics_unweighted_mse_pre_step": 0.02183086630260614,
+    "gradient_norm_pre_clip": 0.21649348138332533,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 56,
+    "validation": 0.06576046689525573,
+    "training_total_pre_step": 0.10908842392929036,
+    "losses_pre_step": {
+      "permeability": 0.008563142864342461,
+      "pressure": 0.00011127557622563697,
+      "physics": 0.022091845104295668,
+      "boundary": 0.0002523944193137022
+    },
+    "physics_unweighted_mse_pre_step": 0.022091845104295668,
+    "gradient_norm_pre_clip": 0.21697239377722832,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 57,
+    "validation": 0.06484268972771313,
+    "training_total_pre_step": 0.1084446346215956,
+    "losses_pre_step": {
+      "permeability": 0.008494948178443899,
+      "pressure": 0.00011009603972445129,
+      "physics": 0.022128588426555813,
+      "boundary": 0.00026560401335629433
+    },
+    "physics_unweighted_mse_pre_step": 0.022128588426555813,
+    "gradient_norm_pre_clip": 0.21385950744313295,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 58,
+    "validation": 0.06387829914696327,
+    "training_total_pre_step": 0.10773618139297302,
+    "losses_pre_step": {
+      "permeability": 0.008439294330398776,
+      "pressure": 0.00010772945383146756,
+      "physics": 0.02198669468284741,
+      "boundary": 0.00027924886782317715
+    },
+    "physics_unweighted_mse_pre_step": 0.02198669468284741,
+    "gradient_norm_pre_clip": 0.20759643183166135,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 59,
+    "validation": 0.0628898979486554,
+    "training_total_pre_step": 0.1069802719464104,
+    "losses_pre_step": {
+      "permeability": 0.008392486772834419,
+      "pressure": 0.00010418270826707938,
+      "physics": 0.02172047284852746,
+      "boundary": 0.00029310428686795244
+    },
+    "physics_unweighted_mse_pre_step": 0.02172047284852746,
+    "gradient_norm_pre_clip": 0.19874100992383034,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 60,
+    "validation": 0.061894089648712236,
+    "training_total_pre_step": 0.10619773183144615,
+    "losses_pre_step": {
+      "permeability": 0.008350592517422284,
+      "pressure": 9.960945997698947e-05,
+      "physics": 0.02138873778994606,
+      "boundary": 0.00030697426750736544
+    },
+    "physics_unweighted_mse_pre_step": 0.02138873778994606,
+    "gradient_norm_pre_clip": 0.18791745516909858,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 61,
+    "validation": 0.06090123713438816,
+    "training_total_pre_step": 0.10540921653486637,
+    "losses_pre_step": {
+      "permeability": 0.008309494266887056,
+      "pressure": 9.428959427659376e-05,
+      "physics": 0.02105068050622342,
+      "boundary": 0.0003206974170064711
+    },
+    "physics_unweighted_mse_pre_step": 0.02105068050622342,
+    "gradient_norm_pre_clip": 0.17585599491110876,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 62,
+    "validation": 0.05991689777173464,
+    "training_total_pre_step": 0.10463251821164102,
+    "losses_pre_step": {
+      "permeability": 0.008265140512776206,
+      "pressure": 8.858270991748958e-05,
+      "physics": 0.020761138486080154,
+      "boundary": 0.00033414749862390407
+    },
+    "physics_unweighted_mse_pre_step": 0.020761138486080154,
+    "gradient_norm_pre_clip": 0.1634413370176947,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 63,
+    "validation": 0.05894423314867635,
+    "training_total_pre_step": 0.10388087725659456,
+    "losses_pre_step": {
+      "permeability": 0.00821394816300911,
+      "pressure": 8.286785063389795e-05,
+      "physics": 0.020565487448225034,
+      "boundary": 0.00034722967193943503
+    },
+    "physics_unweighted_mse_pre_step": 0.020565487448225034,
+    "gradient_norm_pre_clip": 0.1516782733088493,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 64,
+    "validation": 0.057986549577503405,
+    "training_total_pre_step": 0.10316224213591658,
+    "losses_pre_step": {
+      "permeability": 0.008153247093770232,
+      "pressure": 7.748430374456886e-05,
+      "physics": 0.020495053282054244,
+      "boundary": 0.0003598748787143513
+    },
+    "physics_unweighted_mse_pre_step": 0.020495053282054244,
+    "gradient_norm_pre_clip": 0.14150592825737243,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 65,
+    "validation": 0.057049279628926836,
+    "training_total_pre_step": 0.1024794655970063,
+    "losses_pre_step": {
+      "permeability": 0.00808164336021157,
+      "pressure": 7.268677100967092e-05,
+      "physics": 0.020564129086435082,
+      "boundary": 0.00037203519835881364
+    },
+    "physics_unweighted_mse_pre_step": 0.020564129086435082,
+    "gradient_norm_pre_clip": 0.13348270923086386,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 66,
+    "validation": 0.0561410167563008,
+    "training_total_pre_step": 0.10183140476839174,
+    "losses_pre_step": {
+      "permeability": 0.0079992099035572,
+      "pressure": 6.862342883558711e-05,
+      "physics": 0.02076938930280145,
+      "boundary": 0.0003836821416624141
+    },
+    "physics_unweighted_mse_pre_step": 0.02076938930280145,
+    "gradient_norm_pre_clip": 0.12751664138245314,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 67,
+    "validation": 0.05527351986327674,
+    "training_total_pre_step": 0.10121473037802595,
+    "losses_pre_step": {
+      "permeability": 0.00790746749096372,
+      "pressure": 6.533872073959698e-05,
+      "physics": 0.021091860164678247,
+      "boundary": 0.00039480809631452083
+    },
+    "physics_unweighted_mse_pre_step": 0.021091860164678247,
+    "gradient_norm_pre_clip": 0.12288362393435191,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 68,
+    "validation": 0.05446082922126751,
+    "training_total_pre_step": 0.10062597478775022,
+    "losses_pre_step": {
+      "permeability": 0.007809169710984543,
+      "pressure": 6.279596996686689e-05,
+      "physics": 0.021500888707443436,
+      "boundary": 0.00040542927079269275
+    },
+    "physics_unweighted_mse_pre_step": 0.021500888707443436,
+    "gradient_norm_pre_clip": 0.1185899210638748,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 69,
+    "validation": 0.053717765619276124,
+    "training_total_pre_step": 0.10006314046892094,
+    "losses_pre_step": {
+      "permeability": 0.007707939448507698,
+      "pressure": 6.091006876866392e-05,
+      "physics": 0.021959057877633838,
+      "boundary": 0.0004155874185234813
+    },
+    "physics_unweighted_mse_pre_step": 0.021959057877633838,
+    "gradient_norm_pre_clip": 0.11385583658644402,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 70,
+    "validation": 0.05305814398168749,
+    "training_total_pre_step": 0.09952627194237558,
+    "losses_pre_step": {
+      "permeability": 0.00760781931798998,
+      "pressure": 5.9579163131915704e-05,
+      "physics": 0.022426939213204284,
+      "boundary": 0.000425347917952335
+    },
+    "physics_unweighted_mse_pre_step": 0.022426939213204284,
+    "gradient_norm_pre_clip": 0.10844753716823954,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 71,
+    "validation": 0.052493041446479365,
+    "training_total_pre_step": 0.09901682406657879,
+    "losses_pre_step": {
+      "permeability": 0.007512801285380531,
+      "pressure": 5.870672681295032e-05,
+      "physics": 0.02286695067202573,
+      "boundary": 0.0004347932726182369
+    },
+    "physics_unweighted_mse_pre_step": 0.02286695067202573,
+    "gradient_norm_pre_clip": 0.10273529268675348,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 72,
+    "validation": 0.05202942149371311,
+    "training_total_pre_step": 0.09853623610900684,
+    "losses_pre_step": {
+      "permeability": 0.007426396608804758,
+      "pressure": 5.821046054176925e-05,
+      "physics": 0.023246152435965305,
+      "boundary": 0.00044401297957626746
+    },
+    "physics_unweighted_mse_pre_step": 0.023246152435965305,
+    "gradient_norm_pre_clip": 0.09748486160963142,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 73,
+    "validation": 0.05166932797172352,
+    "training_total_pre_step": 0.09808450300324037,
+    "losses_pre_step": {
+      "permeability": 0.007351297465268851,
+      "pressure": 5.8019844674780344e-05,
+      "physics": 0.02353823781971215,
+      "boundary": 0.000453092084091906
+    },
+    "physics_unweighted_mse_pre_step": 0.02353823781971215,
+    "gradient_norm_pre_clip": 0.09345530533736565,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 74,
+    "validation": 0.05140973646438811,
+    "training_total_pre_step": 0.0976594874701062,
+    "losses_pre_step": {
+      "permeability": 0.007289165073945882,
+      "pressure": 5.806784820777038e-05,
+      "physics": 0.02372505714655229,
+      "boundary": 0.00046210110201738496
+    },
+    "physics_unweighted_mse_pre_step": 0.02372505714655229,
+    "gradient_norm_pre_clip": 0.09097247552561938,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 75,
+    "validation": 0.05124301555656212,
+    "training_total_pre_step": 0.09725727901180213,
+    "losses_pre_step": {
+      "permeability": 0.007240556654828767,
+      "pressure": 5.828320463716633e-05,
+      "physics": 0.02379779099900152,
+      "boundary": 0.00047108941814127394
+    },
+    "physics_unweighted_mse_pre_step": 0.02379779099900152,
+    "gradient_norm_pre_clip": 0.0897359515252209,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 76,
+    "validation": 0.05115784606038755,
+    "training_total_pre_step": 0.09687335546861986,
+    "losses_pre_step": {
+      "permeability": 0.007204980377033138,
+      "pressure": 5.8587985139226136e-05,
+      "physics": 0.023757588680996186,
+      "boundary": 0.0004800831659000316
+    },
+    "physics_unweighted_mse_pre_step": 0.023757588680996186,
+    "gradient_norm_pre_clip": 0.08899395956604278,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 77,
+    "validation": 0.0511403994437705,
+    "training_total_pre_step": 0.09650395024104003,
+    "losses_pre_step": {
+      "permeability": 0.007181050739087186,
+      "pressure": 5.890201739110408e-05,
+      "physics": 0.023615335267735894,
+      "boundary": 0.0004890874085212394
+    },
+    "physics_unweighted_mse_pre_step": 0.023615335267735894,
+    "gradient_norm_pre_clip": 0.0879260762847439,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 78,
+    "validation": 0.051175588259023005,
+    "training_total_pre_step": 0.09614701559463104,
+    "losses_pre_step": {
+      "permeability": 0.00716671059964077,
+      "pressure": 5.915245676861597e-05,
+      "physics": 0.023390293526294577,
+      "boundary": 0.000498091504242596
+    },
+    "physics_unweighted_mse_pre_step": 0.023390293526294577,
+    "gradient_norm_pre_clip": 0.08597086114891754,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 79,
+    "validation": 0.05124824759216108,
+    "training_total_pre_step": 0.09580242882632393,
+    "losses_pre_step": {
+      "permeability": 0.007159488314201421,
+      "pressure": 5.9284752748599486e-05,
+      "physics": 0.02310762211386116,
+      "boundary": 0.0005070760429625632
+    },
+    "physics_unweighted_mse_pre_step": 0.02310762211386116,
+    "gradient_norm_pre_clip": 0.08298553528515883,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 80,
+    "validation": 0.05134415721685387,
+    "training_total_pre_step": 0.09547143627025663,
+    "losses_pre_step": {
+      "permeability": 0.007156763439121992,
+      "pressure": 5.9270968340117265e-05,
+      "physics": 0.02279507243810347,
+      "boundary": 0.0005160197575320645
+    },
+    "physics_unweighted_mse_pre_step": 0.02279507243810347,
+    "gradient_norm_pre_clip": 0.0792608730216577,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 81,
+    "validation": 0.05145085131736387,
+    "training_total_pre_step": 0.0951556145552698,
+    "losses_pre_step": {
+      "permeability": 0.007156017916100596,
+      "pressure": 5.911271791431668e-05,
+      "physics": 0.02247940294952163,
+      "boundary": 0.0005249052655990294
+    },
+    "physics_unweighted_mse_pre_step": 0.02247940294952163,
+    "gradient_norm_pre_clip": 0.07542590037478861,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 82,
+    "validation": 0.051558185808427866,
+    "training_total_pre_step": 0.09485576937327352,
+    "losses_pre_step": {
+      "permeability": 0.007155051394909041,
+      "pressure": 5.883810708580821e-05,
+      "physics": 0.022183151187935353,
+      "boundary": 0.0005337231653896799
+    },
+    "physics_unweighted_mse_pre_step": 0.022183151187935353,
+    "gradient_norm_pre_clip": 0.07223862883802308,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 83,
+    "validation": 0.05165864993284493,
+    "training_total_pre_step": 0.09457117509579983,
+    "losses_pre_step": {
+      "permeability": 0.007152142075914977,
+      "pressure": 5.8494032137476056e-05,
+      "physics": 0.02192233942081134,
+      "boundary": 0.000542474594463957
+    },
+    "physics_unweighted_mse_pre_step": 0.02192233942081134,
+    "gradient_norm_pre_clip": 0.07027150661831572,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 84,
+    "validation": 0.05174742330501718,
+    "training_total_pre_step": 0.09429941041694037,
+    "losses_pre_step": {
+      "permeability": 0.007146140332928448,
+      "pressure": 5.813631670083399e-05,
+      "physics": 0.021705471287619113,
+      "boundary": 0.000551172633028437
+    },
+    "physics_unweighted_mse_pre_step": 0.021705471287619113,
+    "gradient_norm_pre_clip": 0.06961573082918772,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 85,
+    "validation": 0.051822191444698934,
+    "training_total_pre_step": 0.09403681902742166,
+    "losses_pre_step": {
+      "permeability": 0.007136490969823081,
+      "pressure": 5.782019744694588e-05,
+      "physics": 0.02153386451027508,
+      "boundary": 0.0005598428444463047
+    },
+    "physics_unweighted_mse_pre_step": 0.02153386451027508,
+    "gradient_norm_pre_clip": 0.06982338868818733,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 86,
+    "validation": 0.05188274312886085,
+    "training_total_pre_step": 0.09377939414965607,
+    "losses_pre_step": {
+      "permeability": 0.007123188860532302,
+      "pressure": 5.759285706106263e-05,
+      "physics": 0.021403054031294118,
+      "boundary": 0.0005685229424282994
+    },
+    "physics_unweighted_mse_pre_step": 0.021403054031294118,
+    "gradient_norm_pre_clip": 0.0701571380288501,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 87,
+    "validation": 0.05193038763746006,
+    "training_total_pre_step": 0.09352373417373562,
+    "losses_pre_step": {
+      "permeability": 0.007106679761638877,
+      "pressure": 5.748856816566596e-05,
+      "physics": 0.021304789574766756,
+      "boundary": 0.0005772613009234291
+    },
+    "physics_unweighted_mse_pre_step": 0.021304789574766756,
+    "gradient_norm_pre_clip": 0.06995785348648256,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 88,
+    "validation": 0.05196725515179916,
+    "training_total_pre_step": 0.09326770656947997,
+    "losses_pre_step": {
+      "permeability": 0.007087722795683683,
+      "pressure": 5.7526105422859134e-05,
+      "physics": 0.021229103583748597,
+      "boundary": 0.0005861139746659628
+    },
+    "physics_unweighted_mse_pre_step": 0.021229103583748597,
+    "gradient_norm_pre_clip": 0.068912421799492,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 89,
+    "validation": 0.05199557615727509,
+    "training_total_pre_step": 0.09301059720194088,
+    "losses_pre_step": {
+      "permeability": 0.007067234187080912,
+      "pressure": 5.770773660707174e-05,
+      "physics": 0.021166037843866267,
+      "boundary": 0.0005951401211947824
+    },
+    "physics_unweighted_mse_pre_step": 0.021166037843866267,
+    "gradient_norm_pre_clip": 0.06714780831532424,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 90,
+    "validation": 0.05201706065110394,
+    "training_total_pre_step": 0.09275275122923675,
+    "losses_pre_step": {
+      "permeability": 0.007046133642520062,
+      "pressure": 5.801931287972463e-05,
+      "physics": 0.021106825574787158,
+      "boundary": 0.0006043961004517288
+    },
+    "physics_unweighted_mse_pre_step": 0.021106825574787158,
+    "gradient_norm_pre_clip": 0.06516236945966936,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 91,
+    "validation": 0.05203249538816401,
+    "training_total_pre_step": 0.092494923880808,
+    "losses_pre_step": {
+      "permeability": 0.007025214454938117,
+      "pressure": 5.843145575159715e-05,
+      "physics": 0.021044535877528824,
+      "boundary": 0.0006139288963820571
+    },
+    "physics_unweighted_mse_pre_step": 0.021044535877528824,
+    "gradient_norm_pre_clip": 0.06361210304755441,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 92,
+    "validation": 0.0520416356603099,
+    "training_total_pre_step": 0.0922376574874914,
+    "losses_pre_step": {
+      "permeability": 0.007005054553618192,
+      "pressure": 5.8902196916757835e-05,
+      "physics": 0.020974320271632842,
+      "boundary": 0.0006237697105090504
+    },
+    "physics_unweighted_mse_pre_step": 0.020974320271632842,
+    "gradient_norm_pre_clip": 0.06299930007213463,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 93,
+    "validation": 0.052043393797048455,
+    "training_total_pre_step": 0.0919809475603081,
+    "losses_pre_step": {
+      "permeability": 0.006985977794908942,
+      "pressure": 5.938139630775038e-05,
+      "physics": 0.020893427079884185,
+      "boundary": 0.0006339285682569841
+    },
+    "physics_unweighted_mse_pre_step": 0.020893427079884185,
+    "gradient_norm_pre_clip": 0.06340938141136614,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 94,
+    "validation": 0.05203624471501666,
+    "training_total_pre_step": 0.09172429398677966,
+    "losses_pre_step": {
+      "permeability": 0.006968064191961163,
+      "pressure": 5.981681886546666e-05,
+      "physics": 0.020801093285022533,
+      "boundary": 0.0006443905934908203
+    },
+    "physics_unweighted_mse_pre_step": 0.020801093285022533,
+    "gradient_norm_pre_clip": 0.06448043689544652,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 95,
+    "validation": 0.05201871195247842,
+    "training_total_pre_step": 0.09146704334653634,
+    "losses_pre_step": {
+      "permeability": 0.006951197621913219,
+      "pressure": 6.016110631573534e-05,
+      "physics": 0.02069834173062847,
+      "boundary": 0.0006551143336183246
+    },
+    "physics_unweighted_mse_pre_step": 0.02069834173062847,
+    "gradient_norm_pre_clip": 0.06562087001673506,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 96,
+    "validation": 0.051989789112238706,
+    "training_total_pre_step": 0.09120880676642006,
+    "losses_pre_step": {
+      "permeability": 0.006935133213114682,
+      "pressure": 6.0378363659796575e-05,
+      "physics": 0.02058765874890405,
+      "boundary": 0.0006660322497712247
+    },
+    "physics_unweighted_mse_pre_step": 0.02058765874890405,
+    "gradient_norm_pre_clip": 0.06629301073299974,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 97,
+    "validation": 0.0519491931668408,
+    "training_total_pre_step": 0.09094973288189907,
+    "losses_pre_step": {
+      "permeability": 0.006919566044026763,
+      "pressure": 6.0448958773329915e-05,
+      "physics": 0.020472529564671854,
+      "boundary": 0.0006770532892262985
+    },
+    "physics_unweighted_mse_pre_step": 0.020472529564671854,
+    "gradient_norm_pre_clip": 0.06619750853592819,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 98,
+    "validation": 0.051897416942284405,
+    "training_total_pre_step": 0.09069051367754706,
+    "losses_pre_step": {
+      "permeability": 0.006904187507564405,
+      "pressure": 6.037148897418767e-05,
+      "physics": 0.020356856363817337,
+      "boundary": 0.0006880673483438038
+    },
+    "physics_unweighted_mse_pre_step": 0.020356856363817337,
+    "gradient_norm_pre_clip": 0.06532222879874877,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 99,
+    "validation": 0.05183561675496558,
+    "training_total_pre_step": 0.09043214196904226,
+    "losses_pre_step": {
+      "permeability": 0.006888723187427139,
+      "pressure": 6.016157159991062e-05,
+      "physics": 0.020244342997416592,
+      "boundary": 0.0006989513813551621
+    },
+    "physics_unweighted_mse_pre_step": 0.020244342997416592,
+    "gradient_norm_pre_clip": 0.06388914508267918,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 100,
+    "validation": 0.05176541132670873,
+    "training_total_pre_step": 0.09017555214274198,
+    "losses_pre_step": {
+      "permeability": 0.006872953150221117,
+      "pressure": 5.984790335623535e-05,
+      "physics": 0.02013796475787856,
+      "boundary": 0.0007095768490898915
+    },
+    "physics_unweighted_mse_pre_step": 0.02013796475787856,
+    "gradient_norm_pre_clip": 0.06224034725446252,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 101,
+    "validation": 0.05168866996063475,
+    "training_total_pre_step": 0.08992131354542235,
+    "losses_pre_step": {
+      "permeability": 0.006856719778627182,
+      "pressure": 5.946663381408996e-05,
+      "physics": 0.020039631345640786,
+      "boundary": 0.0007198180753688534
+    },
+    "physics_unweighted_mse_pre_step": 0.020039631345640786,
+    "gradient_norm_pre_clip": 0.06070284212321941,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 102,
+    "validation": 0.05160733998509555,
+    "training_total_pre_step": 0.08966950256108856,
+    "losses_pre_step": {
+      "permeability": 0.006839928914859597,
+      "pressure": 5.9055341462813885e-05,
+      "physics": 0.01995009911893928,
+      "boundary": 0.0007295608789251527
+    },
+    "physics_unweighted_mse_pre_step": 0.01995009911893928,
+    "gradient_norm_pre_clip": 0.059479260116086397,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 103,
+    "validation": 0.05152332546261933,
+    "training_total_pre_step": 0.08941978547100307,
+    "losses_pre_step": {
+      "permeability": 0.006822548043444389,
+      "pressure": 5.864776677292189e-05,
+      "physics": 0.019869116736225833,
+      "boundary": 0.000738710632604126
+    },
+    "physics_unweighted_mse_pre_step": 0.019869116736225833,
+    "gradient_norm_pre_clip": 0.05860971137941047,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 104,
+    "validation": 0.05143840125518549,
+    "training_total_pre_step": 0.08917164797824396,
+    "losses_pre_step": {
+      "permeability": 0.0068046023492834935,
+      "pressure": 5.827005893285555e-05,
+      "physics": 0.019795725124909243,
+      "boundary": 0.0007471987711712222
+    },
+    "physics_unweighted_mse_pre_step": 0.019795725124909243,
+    "gradient_norm_pre_clip": 0.05801662401614197,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 105,
+    "validation": 0.05135413965465115,
+    "training_total_pre_step": 0.08892465174696848,
+    "losses_pre_step": {
+      "permeability": 0.006786167536222226,
+      "pressure": 5.793881006788683e-05,
+      "physics": 0.019728601463220183,
+      "boundary": 0.0007549868208471722
+    },
+    "physics_unweighted_mse_pre_step": 0.019728601463220183,
+    "gradient_norm_pre_clip": 0.05759466123173528,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 106,
+    "validation": 0.0512718388517165,
+    "training_total_pre_step": 0.08867860319917607,
+    "losses_pre_step": {
+      "permeability": 0.006767358214891461,
+      "pressure": 5.766074684535637e-05,
+      "physics": 0.019666346284183185,
+      "boundary": 0.000762067297624715
+    },
+    "physics_unweighted_mse_pre_step": 0.019666346284183185,
+    "gradient_norm_pre_clip": 0.05728579994566568,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 107,
+    "validation": 0.05119246173618166,
+    "training_total_pre_step": 0.08843357560213058,
+    "losses_pre_step": {
+      "permeability": 0.00674831220441927,
+      "pressure": 5.743371487522779e-05,
+      "physics": 0.019607655131718495,
+      "boundary": 0.0007684612774671031
+    },
+    "physics_unweighted_mse_pre_step": 0.019607655131718495,
+    "gradient_norm_pre_clip": 0.05710043125159139,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 108,
+    "validation": 0.05111660619246374,
+    "training_total_pre_step": 0.08818980077704221,
+    "losses_pre_step": {
+      "permeability": 0.00672917308188839,
+      "pressure": 5.7248527183342036e-05,
+      "physics": 0.019551371711215987,
+      "boundary": 0.0007742129751089045
+    },
+    "physics_unweighted_mse_pre_step": 0.019551371711215987,
+    "gradient_norm_pre_clip": 0.05708379609796125,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 109,
+    "validation": 0.051044526149020615,
+    "training_total_pre_step": 0.08794750481827508,
+    "losses_pre_step": {
+      "permeability": 0.00671007443786423,
+      "pressure": 5.7091291955658894e-05,
+      "physics": 0.01949646536775599,
+      "boundary": 0.0007793821523201896
+    },
+    "physics_unweighted_mse_pre_step": 0.01949646536775599,
+    "gradient_norm_pre_clip": 0.05725725647387171,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 110,
+    "validation": 0.050976207216232854,
+    "training_total_pre_step": 0.08770677818885453,
+    "losses_pre_step": {
+      "permeability": 0.00669112882943286,
+      "pressure": 5.694590905730405e-05,
+      "physics": 0.01944199529811543,
+      "boundary": 0.0007840355058374552
+    },
+    "physics_unweighted_mse_pre_step": 0.01944199529811543,
+    "gradient_norm_pre_clip": 0.0575746219436622,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 111,
+    "validation": 0.05091148018476759,
+    "training_total_pre_step": 0.08746754160797857,
+    "losses_pre_step": {
+      "permeability": 0.006672422585682035,
+      "pressure": 5.679647848390164e-05,
+      "physics": 0.019387112662951046,
+      "boundary": 0.0007882383033681598
+    },
+    "physics_unweighted_mse_pre_step": 0.019387112662951046,
+    "gradient_norm_pre_clip": 0.057921152540654906,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 112,
+    "validation": 0.050850140565143025,
+    "training_total_pre_step": 0.08722961365164002,
+    "losses_pre_step": {
+      "permeability": 0.006654015392213021,
+      "pressure": 5.662938926796185e-05,
+      "physics": 0.01933111839631666,
+      "boundary": 0.0007920474405135132
+    },
+    "physics_unweighted_mse_pre_step": 0.01933111839631666,
+    "gradient_norm_pre_clip": 0.05815438001486219,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 113,
+    "validation": 0.050792040139046826,
+    "training_total_pre_step": 0.0869928332787326,
+    "losses_pre_step": {
+      "permeability": 0.006635942111859007,
+      "pressure": 5.6434879328857655e-05,
+      "physics": 0.019273556545683516,
+      "boundary": 0.0007955068211704224
+    },
+    "physics_unweighted_mse_pre_step": 0.019273556545683516,
+    "gradient_norm_pre_clip": 0.05816186251879915,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 114,
+    "validation": 0.050737128067964786,
+    "training_total_pre_step": 0.08675716620319411,
+    "losses_pre_step": {
+      "permeability": 0.006618214283194074,
+      "pressure": 5.620790653554328e-05,
+      "physics": 0.019214298725387838,
+      "boundary": 0.0007986455805100964
+    },
+    "physics_unweighted_mse_pre_step": 0.019214298725387838,
+    "gradient_norm_pre_clip": 0.057906195836212634,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 115,
+    "validation": 0.05068543882337683,
+    "training_total_pre_step": 0.0865227378972852,
+    "losses_pre_step": {
+      "permeability": 0.006600820075308923,
+      "pressure": 5.5948262390084995e-05,
+      "physics": 0.019153575281292384,
+      "boundary": 0.0008014792390027586
+    },
+    "physics_unweighted_mse_pre_step": 0.019153575281292384,
+    "gradient_norm_pre_clip": 0.057438409000705785,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 116,
+    "validation": 0.05063704286271236,
+    "training_total_pre_step": 0.08628977797873297,
+    "losses_pre_step": {
+      "permeability": 0.0065837233714395255,
+      "pressure": 5.5659978870745986e-05,
+      "physics": 0.019091931018725194,
+      "boundary": 0.0008040134569050417
+    },
+    "physics_unweighted_mse_pre_step": 0.019091931018725194,
+    "gradient_norm_pre_clip": 0.05687598326384795,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 117,
+    "validation": 0.05059198538340409,
+    "training_total_pre_step": 0.08605850723164563,
+    "losses_pre_step": {
+      "permeability": 0.0065668640687158485,
+      "pressure": 5.5350193546837015e-05,
+      "physics": 0.019030114910220892,
+      "boundary": 0.0008062496987978861
+    },
+    "physics_unweighted_mse_pre_step": 0.019030114910220892,
+    "gradient_norm_pre_clip": 0.05635532094718619,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 118,
+    "validation": 0.05055023544354079,
+    "training_total_pre_step": 0.08582902539703946,
+    "losses_pre_step": {
+      "permeability": 0.006550161874602588,
+      "pressure": 5.502771398818911e-05,
+      "physics": 0.018968937655343215,
+      "boundary": 0.000808191855788485
+    },
+    "physics_unweighted_mse_pre_step": 0.018968937655343215,
+    "gradient_norm_pre_clip": 0.05597907735718906,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 119,
+    "validation": 0.05051165542993961,
+    "training_total_pre_step": 0.0856012529773621,
+    "losses_pre_step": {
+      "permeability": 0.006533524748794235,
+      "pressure": 5.47015407387677e-05,
+      "physics": 0.01890913734070003,
+      "boundary": 0.00080985274133204
+    },
+    "physics_unweighted_mse_pre_step": 0.01890913734070003,
+    "gradient_norm_pre_clip": 0.0557823579217661,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 120,
+    "validation": 0.0504759869113509,
+    "training_total_pre_step": 0.08537494894557884,
+    "losses_pre_step": {
+      "permeability": 0.006516861226128358,
+      "pressure": 5.4379572026542e-05,
+      "physics": 0.01885128156428342,
+      "boundary": 0.0008112593997464203
+    },
+    "physics_unweighted_mse_pre_step": 0.01885128156428342,
+    "gradient_norm_pre_clip": 0.05573279229982602,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 121,
+    "validation": 0.050442841151052194,
+    "training_total_pre_step": 0.08514978714076245,
+    "losses_pre_step": {
+      "permeability": 0.006500094060805502,
+      "pressure": 5.406764403376711e-05,
+      "physics": 0.018795713739899446,
+      "boundary": 0.0008124563524703118
+    },
+    "physics_unweighted_mse_pre_step": 0.018795713739899446,
+    "gradient_norm_pre_clip": 0.05576039433728227,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 122,
+    "validation": 0.05041168477091366,
+    "training_total_pre_step": 0.08492544835136547,
+    "losses_pre_step": {
+      "permeability": 0.006483171775596948,
+      "pressure": 5.3768984494876515e-05,
+      "physics": 0.01874253451364019,
+      "boundary": 0.0008135062368070197
+    },
+    "physics_unweighted_mse_pre_step": 0.01874253451364019,
+    "gradient_norm_pre_clip": 0.055797191785899765,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 123,
+    "validation": 0.05038182122795819,
+    "training_total_pre_step": 0.08470168449904987,
+    "losses_pre_step": {
+      "permeability": 0.0064660751514462695,
+      "pressure": 5.348409391794747e-05,
+      "physics": 0.01869160433178208,
+      "boundary": 0.0008144877136256199
+    },
+    "physics_unweighted_mse_pre_step": 0.01869160433178208,
+    "gradient_norm_pre_clip": 0.05580507571723504,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 124,
+    "validation": 0.05035238047347759,
+    "training_total_pre_step": 0.08447833296012468,
+    "losses_pre_step": {
+      "permeability": 0.0064488172276749856,
+      "pressure": 5.3211023457148044e-05,
+      "physics": 0.018642559491921448,
+      "boundary": 0.0008154909568818919
+    },
+    "physics_unweighted_mse_pre_step": 0.018642559491921448,
+    "gradient_norm_pre_clip": 0.05578127396058608,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 125,
+    "validation": 0.050322335308115244,
+    "training_total_pre_step": 0.08425528829944431,
+    "losses_pre_step": {
+      "permeability": 0.00643143732329185,
+      "pressure": 5.294598561924051e-05,
+      "physics": 0.018594843805660878,
+      "boundary": 0.0008166114046725364
+    },
+    "physics_unweighted_mse_pre_step": 0.018594843805660878,
+    "gradient_norm_pre_clip": 0.05574453797083708,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 126,
+    "validation": 0.05029055947153835,
+    "training_total_pre_step": 0.08403245883807539,
+    "losses_pre_step": {
+      "permeability": 0.006413991150848018,
+      "pressure": 5.26842047304617e-05,
+      "physics": 0.018547762600956447,
+      "boundary": 0.0008179426813341461
+    },
+    "physics_unweighted_mse_pre_step": 0.018547762600956447,
+    "gradient_norm_pre_clip": 0.055713920707995725,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 127,
+    "validation": 0.05025593028964532,
+    "training_total_pre_step": 0.08380973730423172,
+    "losses_pre_step": {
+      "permeability": 0.006396539747879937,
+      "pressure": 5.242088512753275e-05,
+      "physics": 0.01850056131424714,
+      "boundary": 0.0008195696599098872
+    },
+    "physics_unweighted_mse_pre_step": 0.01850056131424714,
+    "gradient_norm_pre_clip": 0.055693160560154345,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 128,
+    "validation": 0.05021746283986334,
+    "training_total_pre_step": 0.08358700059236507,
+    "losses_pre_step": {
+      "permeability": 0.006379139627676268,
+      "pressure": 5.2152152186772995e-05,
+      "physics": 0.01845252026262345,
+      "boundary": 0.0008215625311112102
+    },
+    "physics_unweighted_mse_pre_step": 0.01845252026262345,
+    "gradient_norm_pre_clip": 0.05566805924230223,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 129,
+    "validation": 0.05017444972839196,
+    "training_total_pre_step": 0.08336413401000838,
+    "losses_pre_step": {
+      "permeability": 0.006361835597343032,
+      "pressure": 5.187581626805846e-05,
+      "physics": 0.018403047355840398,
+      "boundary": 0.0008239725180570587
+    },
+    "physics_unweighted_mse_pre_step": 0.018403047355840398,
+    "gradient_norm_pre_clip": 0.05561570332971155,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 130,
+    "validation": 0.05012657575092113,
+    "training_total_pre_step": 0.0831410619809879,
+    "losses_pre_step": {
+      "permeability": 0.006344656635220162,
+      "pressure": 5.159183242685883e-05,
+      "physics": 0.01835174772240539,
+      "boundary": 0.0008268295821123222
+    },
+    "physics_unweighted_mse_pre_step": 0.01835174772240539,
+    "gradient_norm_pre_clip": 0.055518105955947465,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 131,
+    "validation": 0.05007398132891765,
+    "training_total_pre_step": 0.08291776605847796,
+    "losses_pre_step": {
+      "permeability": 0.006327614490327216,
+      "pressure": 5.130238053633973e-05,
+      "physics": 0.01829845518801295,
+      "boundary": 0.0008301421618294544
+    },
+    "physics_unweighted_mse_pre_step": 0.01829845518801295,
+    "gradient_norm_pre_clip": 0.05537196698109522,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 132,
+    "validation": 0.05001726033122992,
+    "training_total_pre_step": 0.08269428051859203,
+    "losses_pre_step": {
+      "permeability": 0.0063107044140917265,
+      "pressure": 5.101156121324708e-05,
+      "physics": 0.018243222043798517,
+      "boundary": 0.0008338987217437594
+    },
+    "physics_unweighted_mse_pre_step": 0.018243222043798517,
+    "gradient_norm_pre_clip": 0.05519000495567818,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 133,
+    "validation": 0.049957392258354674,
+    "training_total_pre_step": 0.0824706687256566,
+    "losses_pre_step": {
+      "permeability": 0.006293907529967164,
+      "pressure": 5.072477480690167e-05,
+      "physics": 0.01818627498562362,
+      "boundary": 0.0008380706922923174
+    },
+    "physics_unweighted_mse_pre_step": 0.01818627498562362,
+    "gradient_norm_pre_clip": 0.05499455488098712,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 134,
+    "validation": 0.04989562149041373,
+    "training_total_pre_step": 0.08224699247705441,
+    "losses_pre_step": {
+      "permeability": 0.006277194525036299,
+      "pressure": 5.0447905282191726e-05,
+      "physics": 0.018127951901746018,
+      "boundary": 0.0008426162721234925
+    },
+    "physics_unweighted_mse_pre_step": 0.018127951901746018,
+    "gradient_norm_pre_clip": 0.054807898395324864,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 135,
+    "validation": 0.04983330482604966,
+    "training_total_pre_step": 0.08202328783246098,
+    "losses_pre_step": {
+      "permeability": 0.006260530392850793,
+      "pressure": 5.018645623737028e-05,
+      "physics": 0.018068634800034965,
+      "boundary": 0.0008474845415443771
+    },
+    "physics_unweighted_mse_pre_step": 0.018068634800034965,
+    "gradient_norm_pre_clip": 0.05464463098842773,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 136,
+    "validation": 0.04977175232155412,
+    "training_total_pre_step": 0.08179955541060602,
+    "losses_pre_step": {
+      "permeability": 0.006243879814690069,
+      "pressure": 4.994478072192429e-05,
+      "physics": 0.018008690064702668,
+      "boundary": 0.0008526193917834173
+    },
+    "physics_unweighted_mse_pre_step": 0.018008690064702668,
+    "gradient_norm_pre_clip": 0.05450939499989061,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 137,
+    "validation": 0.04971208614055355,
+    "training_total_pre_step": 0.08157576486333594,
+    "losses_pre_step": {
+      "permeability": 0.006227212541109288,
+      "pressure": 4.972551688603961e-05,
+      "physics": 0.017948421392254263,
+      "boundary": 0.0008579628911284008
+    },
+    "physics_unweighted_mse_pre_step": 0.017948421392254263,
+    "gradient_norm_pre_clip": 0.054399915807769386,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 138,
+    "validation": 0.04965513857293838,
+    "training_total_pre_step": 0.0813518667498033,
+    "losses_pre_step": {
+      "permeability": 0.006210507992048912,
+      "pressure": 4.952929880402917e-05,
+      "physics": 0.01788803598039963,
+      "boundary": 0.0008634578608742417
+    },
+    "physics_unweighted_mse_pre_step": 0.01788803598039963,
+    "gradient_norm_pre_clip": 0.054312445311028516,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 139,
+    "validation": 0.049601404034531664,
+    "training_total_pre_step": 0.08112780311980555,
+    "losses_pre_step": {
+      "permeability": 0.00619375834369442,
+      "pressure": 4.935476603533376e-05,
+      "physics": 0.017827622429974765,
+      "boundary": 0.0008690495925332536
+    },
+    "physics_unweighted_mse_pre_step": 0.017827622429974765,
+    "gradient_norm_pre_clip": 0.05424590977881134,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 140,
+    "validation": 0.04955105100735438,
+    "training_total_pre_step": 0.0809035109010051,
+    "losses_pre_step": {
+      "permeability": 0.00617696961221927,
+      "pressure": 4.919885268950598e-05,
+      "physics": 0.017767139476928595,
+      "boundary": 0.0008746867749887389
+    },
+    "physics_unweighted_mse_pre_step": 0.017767139476928595,
+    "gradient_norm_pre_clip": 0.054202453428298346,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 141,
+    "validation": 0.04950398927408386,
+    "training_total_pre_step": 0.08067891754368497,
+    "losses_pre_step": {
+      "permeability": 0.0061601605839231134,
+      "pressure": 4.905729949854587e-05,
+      "physics": 0.017706416914479363,
+      "boundary": 0.0008803217949890201
+    },
+    "physics_unweighted_mse_pre_step": 0.017706416914479363,
+    "gradient_norm_pre_clip": 0.054184617255716855,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 142,
+    "validation": 0.04945997711122083,
+    "training_total_pre_step": 0.08045393320768957,
+    "losses_pre_step": {
+      "permeability": 0.006143359763493128,
+      "pressure": 4.892530223065598e-05,
+      "physics": 0.017645171933520307,
+      "boundary": 0.0008859106169314177
+    },
+    "physics_unweighted_mse_pre_step": 0.017645171933520307,
+    "gradient_norm_pre_clip": 0.05419153952947209,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 143,
+    "validation": 0.04941874478780682,
+    "training_total_pre_step": 0.08022844557134158,
+    "losses_pre_step": {
+      "permeability": 0.006126600752555614,
+      "pressure": 4.879818967353936e-05,
+      "physics": 0.0175830437070612,
+      "boundary": 0.000891412441988851
+    },
+    "physics_unweighted_mse_pre_step": 0.0175830437070612,
+    "gradient_norm_pre_clip": 0.054217085413885036,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 144,
+    "validation": 0.04938010722559476,
+    "training_total_pre_step": 0.08000232141431801,
+    "losses_pre_step": {
+      "permeability": 0.006109916636098093,
+      "pressure": 4.86720190852328e-05,
+      "physics": 0.017519645555407578,
+      "boundary": 0.0008967893070771593
+    },
+    "physics_unweighted_mse_pre_step": 0.017519645555407578,
+    "gradient_norm_pre_clip": 0.05425146279079443,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 145,
+    "validation": 0.04934404142075024,
+    "training_total_pre_step": 0.07977541490653103,
+    "losses_pre_step": {
+      "permeability": 0.006093334088309741,
+      "pressure": 4.854399077048065e-05,
+      "physics": 0.017454628384585374,
+      "boundary": 0.0009020057311434462
+    },
+    "physics_unweighted_mse_pre_step": 0.017454628384585374,
+    "gradient_norm_pre_clip": 0.054285568038273384,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 146,
+    "validation": 0.049310712816772594,
+    "training_total_pre_step": 0.07954757869423264,
+    "losses_pre_step": {
+      "permeability": 0.006076868033183416,
+      "pressure": 4.8412616942177856e-05,
+      "physics": 0.01738774372455707,
+      "boundary": 0.0009070284684196328
+    },
+    "physics_unweighted_mse_pre_step": 0.01738774372455707,
+    "gradient_norm_pre_clip": 0.054315538353848,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 147,
+    "validation": 0.04928044703634638,
+    "training_total_pre_step": 0.07931867269162426,
+    "losses_pre_step": {
+      "permeability": 0.006060517769730443,
+      "pressure": 4.827762807615236e-05,
+      "physics": 0.017318892316538048,
+      "boundary": 0.0009118263970202485
+    },
+    "physics_unweighted_mse_pre_step": 0.017318892316538048,
+    "gradient_norm_pre_clip": 0.05434486028908646,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 148,
+    "validation": 0.04925365591791742,
+    "training_total_pre_step": 0.07908856744889305,
+    "losses_pre_step": {
+      "permeability": 0.006044265409091437,
+      "pressure": 4.813965206121954e-05,
+      "physics": 0.017248146279206733,
+      "boundary": 0.000916370558159756
+    },
+    "physics_unweighted_mse_pre_step": 0.017248146279206733,
+    "gradient_norm_pre_clip": 0.05438287630525132,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 149,
+    "validation": 0.04923073641264196,
+    "training_total_pre_step": 0.0788571425472374,
+    "losses_pre_step": {
+      "permeability": 0.006028077190106022,
+      "pressure": 4.7999745050450106e-05,
+      "physics": 0.01717573883629004,
+      "boundary": 0.0009206343593826456
+    },
+    "physics_unweighted_mse_pre_step": 0.01717573883629004,
+    "gradient_norm_pre_clip": 0.054440619439412474,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 150,
+    "validation": 0.04921196542893089,
+    "training_total_pre_step": 0.07862428324077216,
+    "losses_pre_step": {
+      "permeability": 0.006011907730479972,
+      "pressure": 4.785887786602422e-05,
+      "physics": 0.017102023203939023,
+      "boundary": 0.0009245939533731789
+    },
+    "physics_unweighted_mse_pre_step": 0.017102023203939023,
+    "gradient_norm_pre_clip": 0.05452628973048967,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 151,
+    "validation": 0.04919741262815455,
+    "training_total_pre_step": 0.07838987886651543,
+    "losses_pre_step": {
+      "permeability": 0.005995706624314843,
+      "pressure": 4.7717483594181244e-05,
+      "physics": 0.017027408995201165,
+      "boundary": 0.0009282287922240252
+    },
+    "physics_unweighted_mse_pre_step": 0.017027408995201165,
+    "gradient_norm_pre_clip": 0.05464259602841621,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 152,
+    "validation": 0.0491868874407473,
+    "training_total_pre_step": 0.07815382452149525,
+    "losses_pre_step": {
+      "permeability": 0.005979426186806473,
+      "pressure": 4.757515251081097e-05,
+      "physics": 0.016952288797043275,
+      "boundary": 0.0009315223312791277
+    },
+    "physics_unweighted_mse_pre_step": 0.016952288797043275,
+    "gradient_norm_pre_clip": 0.0547868334732611,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 153,
+    "validation": 0.04917992810495854,
+    "training_total_pre_step": 0.07791602481926473,
+    "losses_pre_step": {
+      "permeability": 0.005963028765321918,
+      "pressure": 4.743052620658116e-05,
+      "physics": 0.016876969083853038,
+      "boundary": 0.0009344628201266913
+    },
+    "physics_unweighted_mse_pre_step": 0.016876969083853038,
+    "gradient_norm_pre_clip": 0.05495294835904578,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 154,
+    "validation": 0.04917583153151608,
+    "training_total_pre_step": 0.07767639706528355,
+    "losses_pre_step": {
+      "permeability": 0.005946492019855397,
+      "pressure": 4.728140199341426e-05,
+      "physics": 0.016801618766211238,
+      "boundary": 0.0009370440805842097
+    },
+    "physics_unweighted_mse_pre_step": 0.016801618766211238,
+    "gradient_norm_pre_clip": 0.055134002760586484,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 155,
+    "validation": 0.04917371520618801,
+    "training_total_pre_step": 0.07743487174060552,
+    "losses_pre_step": {
+      "permeability": 0.005929810956666118,
+      "pressure": 4.7125019058380755e-05,
+      "physics": 0.01672624583839953,
+      "boundary": 0.0009392661449610135
+    },
+    "physics_unweighted_mse_pre_step": 0.01672624583839953,
+    "gradient_norm_pre_clip": 0.05532375194857331,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 156,
+    "validation": 0.04917259751405893,
+    "training_total_pre_step": 0.07719139010741491,
+    "losses_pre_step": {
+      "permeability": 0.005912996193480066,
+      "pressure": 4.695846553066138e-05,
+      "physics": 0.016650707893927745,
+      "boundary": 0.0009411356233798864
+    },
+    "physics_unweighted_mse_pre_step": 0.016650707893927745,
+    "gradient_norm_pre_clip": 0.05551703019381862,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 157,
+    "validation": 0.04917148143857835,
+    "training_total_pre_step": 0.07694590059156872,
+    "losses_pre_step": {
+      "permeability": 0.005896068773973636,
+      "pressure": 4.6779125292685475e-05,
+      "physics": 0.016574755906700708,
+      "boundary": 0.000942665692204797
+    },
+    "physics_unweighted_mse_pre_step": 0.016574755906700708,
+    "gradient_norm_pre_clip": 0.055709508363769034,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 158,
+    "validation": 0.04916942844813416,
+    "training_total_pre_step": 0.0766983561709278,
+    "losses_pre_step": {
+      "permeability": 0.005879052629974381,
+      "pressure": 4.6585078242362054e-05,
+      "physics": 0.016498103443605912,
+      "boundary": 0.0009438756451544577
+    },
+    "physics_unweighted_mse_pre_step": 0.016498103443605912,
+    "gradient_norm_pre_clip": 0.055897610956090825,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 159,
+    "validation": 0.04916561374828826,
+    "training_total_pre_step": 0.07644871410672008,
+    "losses_pre_step": {
+      "permeability": 0.005861966328812332,
+      "pressure": 4.637537907439546e-05,
+      "physics": 0.016420507012123498,
+      "boundary": 0.0009447900157293048
+    },
+    "physics_unweighted_mse_pre_step": 0.016420507012123498,
+    "gradient_norm_pre_clip": 0.05607897581629108,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 160,
+    "validation": 0.04915935964708947,
+    "training_total_pre_step": 0.07619693775272994,
+    "losses_pre_step": {
+      "permeability": 0.005844815920674262,
+      "pressure": 4.6150165782011156e-05,
+      "physics": 0.016341839538070457,
+      "boundary": 0.0009454373500967519
+    },
+    "physics_unweighted_mse_pre_step": 0.016341839538070457,
+    "gradient_norm_pre_clip": 0.05625322167557815,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 161,
+    "validation": 0.049150149015832714,
+    "training_total_pre_step": 0.07594299895185067,
+    "losses_pre_step": {
+      "permeability": 0.005827590482874414,
+      "pressure": 4.591058472432812e-05,
+      "physics": 0.01626213950815833,
+      "boundary": 0.0009458487677049063
+    },
+    "physics_unweighted_mse_pre_step": 0.01626213950815833,
+    "gradient_norm_pre_clip": 0.05642241904862728,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 162,
+    "validation": 0.04913762433884464,
+    "training_total_pre_step": 0.0756868793899133,
+    "losses_pre_step": {
+      "permeability": 0.005810261397426658,
+      "pressure": 4.565855621544619e-05,
+      "physics": 0.016181623374377903,
+      "boundary": 0.0009460564791143438
+    },
+    "physics_unweighted_mse_pre_step": 0.016181623374377903,
+    "gradient_norm_pre_clip": 0.05659075854338576,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 163,
+    "validation": 0.04912157880531185,
+    "training_total_pre_step": 0.07542857017049763,
+    "losses_pre_step": {
+      "permeability": 0.0057927856163579655,
+      "pressure": 4.539643452311707e-05,
+      "physics": 0.016100657232253512,
+      "boundary": 0.0009460924294332862
+    },
+    "physics_unweighted_mse_pre_step": 0.016100657232253512,
+    "gradient_norm_pre_clip": 0.05676337296572162,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 164,
+    "validation": 0.04910194434330284,
+    "training_total_pre_step": 0.07516807010362307,
+    "losses_pre_step": {
+      "permeability": 0.005775112327124396,
+      "pressure": 4.512663240100753e-05,
+      "physics": 0.01601969330615085,
+      "boundary": 0.0009459872022181774
+    },
+    "physics_unweighted_mse_pre_step": 0.01601969330615085,
+    "gradient_norm_pre_clip": 0.0569447775627136,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 165,
+    "validation": 0.04907877838665111,
+    "training_total_pre_step": 0.07490538391612685,
+    "losses_pre_step": {
+      "permeability": 0.0057571916998797835,
+      "pressure": 4.485128042109414e-05,
+      "physics": 0.015939184851225058,
+      "boundary": 0.0009457692618930094
+    },
+    "physics_unweighted_mse_pre_step": 0.015939184851225058,
+    "gradient_norm_pre_clip": 0.05713761863639325,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 166,
+    "validation": 0.04905224806787868,
+    "training_total_pre_step": 0.07464052135662463,
+    "losses_pre_step": {
+      "permeability": 0.005738983933513257,
+      "pressure": 4.4571977468090285e-05,
+      "physics": 0.01585949769936963,
+      "boundary": 0.0009454645474415471
+    },
+    "physics_unweighted_mse_pre_step": 0.01585949769936963,
+    "gradient_norm_pre_clip": 0.05734222484696825,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 167,
+    "validation": 0.04902260901735349,
+    "training_total_pre_step": 0.07437349724360186,
+    "losses_pre_step": {
+      "permeability": 0.00572046672794549,
+      "pressure": 4.4289665946451686e-05,
+      "physics": 0.015780836932271378,
+      "boundary": 0.0009450963724110732
+    },
+    "physics_unweighted_mse_pre_step": 0.015780836932271378,
+    "gradient_norm_pre_clip": 0.05755697774562375,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 168,
+    "validation": 0.04899017690393191,
+    "training_total_pre_step": 0.07410433164254328,
+    "losses_pre_step": {
+      "permeability": 0.0057016396328653796,
+      "pressure": 4.40046395804918e-05,
+      "physics": 0.015703203369409186,
+      "boundary": 0.000944685548675386
+    },
+    "physics_unweighted_mse_pre_step": 0.015703203369409186,
+    "gradient_norm_pre_clip": 0.05777908945466538,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 169,
+    "validation": 0.04895529301653501,
+    "training_total_pre_step": 0.07383304922804808,
+    "losses_pre_step": {
+      "permeability": 0.005682524399867897,
+      "pressure": 4.3716668222870896e-05,
+      "physics": 0.015626387907767176,
+      "boundary": 0.0009442506393732269
+    },
+    "physics_unweighted_mse_pre_step": 0.015626387907767176,
+    "gradient_norm_pre_clip": 0.05800528172143741,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 170,
+    "validation": 0.04891828919727935,
+    "training_total_pre_step": 0.07355967756148112,
+    "losses_pre_step": {
+      "permeability": 0.00566316134271701,
+      "pressure": 4.3425206056445796e-05,
+      "physics": 0.015550003816486671,
+      "boundary": 0.0009438082572598884
+    },
+    "physics_unweighted_mse_pre_step": 0.015550003816486671,
+    "gradient_norm_pre_clip": 0.05823212668422206,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 171,
+    "validation": 0.0488794603817126,
+    "training_total_pre_step": 0.07328424491831044,
+    "losses_pre_step": {
+      "permeability": 0.005643602573870621,
+      "pressure": 4.312963858023056e-05,
+      "physics": 0.015473549444413044,
+      "boundary": 0.0009433733493888741
+    },
+    "physics_unweighted_mse_pre_step": 0.015473549444413044,
+    "gradient_norm_pre_clip": 0.0584561858732436,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 172,
+    "validation": 0.048839053238592604,
+    "training_total_pre_step": 0.0730067786892226,
+    "losses_pre_step": {
+      "permeability": 0.005623903618360452,
+      "pressure": 4.2829520446764474e-05,
+      "physics": 0.015396487864930098,
+      "boundary": 0.000942959436220338
+    },
+    "physics_unweighted_mse_pre_step": 0.015396487864930098,
+    "gradient_norm_pre_clip": 0.058674255519806186,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 173,
+    "validation": 0.048797276279252434,
+    "training_total_pre_step": 0.07272730496175556,
+    "losses_pre_step": {
+      "permeability": 0.0056041151588377405,
+      "pressure": 4.2524760653382344e-05,
+      "physics": 0.015318326973250947,
+      "boundary": 0.0009425787935933693
+    },
+    "physics_unweighted_mse_pre_step": 0.015318326973250947,
+    "gradient_norm_pre_clip": 0.05888387275372012,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 174,
+    "validation": 0.04875433097725982,
+    "training_total_pre_step": 0.07244584904546486,
+    "losses_pre_step": {
+      "permeability": 0.00558427649843738,
+      "pressure": 4.221572319041753e-05,
+      "physics": 0.01523868425390204,
+      "boundary": 0.0009422425752848382
+    },
+    "physics_unweighted_mse_pre_step": 0.01523868425390204,
+    "gradient_norm_pre_clip": 0.05908392016246405,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 175,
+    "validation": 0.048710456667201425,
+    "training_total_pre_step": 0.07216243613442838,
+    "losses_pre_step": {
+      "permeability": 0.005564411815077326,
+      "pressure": 4.190322830215033e-05,
+      "physics": 0.015157324826841788,
+      "boundary": 0.0009419608737918424
+    },
+    "physics_unweighted_mse_pre_step": 0.015157324826841788,
+    "gradient_norm_pre_clip": 0.05927497341062277,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 176,
+    "validation": 0.048665976563496506,
+    "training_total_pre_step": 0.07187709141987103,
+    "losses_pre_step": {
+      "permeability": 0.005544529576629295,
+      "pressure": 4.158845900297824e-05,
+      "physics": 0.015074168350045897,
+      "boundary": 0.0009417427135023985
+    },
+    "physics_unweighted_mse_pre_step": 0.015074168350045897,
+    "gradient_norm_pre_clip": 0.05945913047510593,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 177,
+    "validation": 0.04862133019586945,
+    "training_total_pre_step": 0.07158983958263748,
+    "losses_pre_step": {
+      "permeability": 0.0055246247759880435,
+      "pressure": 4.1272795551524635e-05,
+      "physics": 0.014989267896512656,
+      "boundary": 0.0009415959707291512
+    },
+    "physics_unweighted_mse_pre_step": 0.014989267896512656,
+    "gradient_norm_pre_clip": 0.05963935515465242,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 178,
+    "validation": 0.0485770799803744,
+    "training_total_pre_step": 0.07130070414417189,
+    "losses_pre_step": {
+      "permeability": 0.005504683094756803,
+      "pressure": 4.095761353778647e-05,
+      "physics": 0.014902769837072123,
+      "boundary": 0.0009415272241538716
+    },
+    "physics_unweighted_mse_pre_step": 0.014902769837072123,
+    "gradient_norm_pre_clip": 0.05981862623894689,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 179,
+    "validation": 0.04853388621657238,
+    "training_total_pre_step": 0.07100970721425866,
+    "losses_pre_step": {
+      "permeability": 0.005484685825419021,
+      "pressure": 4.0644086642155045e-05,
+      "physics": 0.014814866536234574,
+      "boundary": 0.0009415415574123198
+    },
+    "physics_unweighted_mse_pre_step": 0.014814866536234574,
+    "gradient_norm_pre_clip": 0.059999231268720525,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 180,
+    "validation": 0.048492453782856014,
+    "training_total_pre_step": 0.07071686979279265,
+    "losses_pre_step": {
+      "permeability": 0.0054646144099991046,
+      "pressure": 4.033303233199005e-05,
+      "physics": 0.01472575301162574,
+      "boundary": 0.0009416423578559702
+    },
+    "physics_unweighted_mse_pre_step": 0.01472575301162574,
+    "gradient_norm_pre_clip": 0.06018239069121087,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 181,
+    "validation": 0.04845346248562814,
+    "training_total_pre_step": 0.07042221235715655,
+    "losses_pre_step": {
+      "permeability": 0.005444453744351412,
+      "pressure": 4.002482877661083e-05,
+      "physics": 0.014635595452841172,
+      "boundary": 0.000941831173035141
+    },
+    "physics_unweighted_mse_pre_step": 0.014635595452841172,
+    "gradient_norm_pre_clip": 0.0603681954309288,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 182,
+    "validation": 0.04841749856743347,
+    "training_total_pre_step": 0.07012575534727176,
+    "losses_pre_step": {
+      "permeability": 0.005424193843758454,
+      "pressure": 3.971941619359811e-05,
+      "physics": 0.014544515058239138,
+      "boundary": 0.000942107689512106
+    },
+    "physics_unweighted_mse_pre_step": 0.014544515058239138,
+    "gradient_norm_pre_clip": 0.060555734416996035,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 183,
+    "validation": 0.04838500529428644,
+    "training_total_pre_step": 0.06982751937399927,
+    "losses_pre_step": {
+      "permeability": 0.00540382993001981,
+      "pressure": 3.941637839658223e-05,
+      "physics": 0.014452586408850108,
+      "boundary": 0.0009424698809852342
+    },
+    "physics_unweighted_mse_pre_step": 0.014452586408850108,
+    "gradient_norm_pre_clip": 0.06074331298268973,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 184,
+    "validation": 0.04835626541372683,
+    "training_total_pre_step": 0.06952752527164469,
+    "losses_pre_step": {
+      "permeability": 0.005383361357466288,
+      "pressure": 3.9115083576346385e-05,
+      "physics": 0.014359846526170745,
+      "boundary": 0.0009429143350475912
+    },
+    "physics_unweighted_mse_pre_step": 0.014359846526170745,
+    "gradient_norm_pre_clip": 0.06092874584238055,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 185,
+    "validation": 0.04833141903261097,
+    "training_total_pre_step": 0.06922579422437354,
+    "losses_pre_step": {
+      "permeability": 0.005362789967847573,
+      "pressure": 3.8814850626127076e-05,
+      "physics": 0.014266309320564122,
+      "boundary": 0.0009434367190724207
+    },
+    "physics_unweighted_mse_pre_step": 0.014266309320564122,
+    "gradient_norm_pre_clip": 0.06110975051073666,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 186,
+    "validation": 0.04831050999391024,
+    "training_total_pre_step": 0.06892234805683986,
+    "losses_pre_step": {
+      "permeability": 0.005342118438741557,
+      "pressure": 3.851510173908499e-05,
+      "physics": 0.014171980351208691,
+      "boundary": 0.0009440323008247471
+    },
+    "physics_unweighted_mse_pre_step": 0.014171980351208691,
+    "gradient_norm_pre_clip": 0.06128442210152783,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 187,
+    "validation": 0.0482935455513627,
+    "training_total_pre_step": 0.06861720954947023,
+    "losses_pre_step": {
+      "permeability": 0.005321349013013083,
+      "pressure": 3.8215465605912325e-05,
+      "physics": 0.01407686834838133,
+      "boundary": 0.0009446964148989418
+    },
+    "physics_unweighted_mse_pre_step": 0.01407686834838133,
+    "gradient_norm_pre_clip": 0.06145167364889303,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 188,
+    "validation": 0.04828055081716534,
+    "training_total_pre_step": 0.06831040253868981,
+    "losses_pre_step": {
+      "permeability": 0.005300482750802932,
+      "pressure": 3.791580825704831e-05,
+      "physics": 0.013980992174565835,
+      "boundary": 0.0009454247735241778
+    },
+    "physics_unweighted_mse_pre_step": 0.013980992174565835,
+    "gradient_norm_pre_clip": 0.06161146564733714,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 189,
+    "validation": 0.048271602195099364,
+    "training_total_pre_step": 0.06800195168732744,
+    "losses_pre_step": {
+      "permeability": 0.005279519220473203,
+      "pressure": 3.7616187693929443e-05,
+      "physics": 0.013884384044511314,
+      "boundary": 0.0009462135611448041
+    },
+    "physics_unweighted_mse_pre_step": 0.013884384044511314,
+    "gradient_norm_pre_clip": 0.06176469745082109,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 190,
+    "validation": 0.04826683180280929,
+    "training_total_pre_step": 0.06769188205678875,
+    "losses_pre_step": {
+      "permeability": 0.005258456409541599,
+      "pressure": 3.731674897466648e-05,
+      "physics": 0.013787091155564295,
+      "boundary": 0.0009470593160617949
+    },
+    "physics_unweighted_mse_pre_step": 0.013787091155564295,
+    "gradient_norm_pre_clip": 0.06191278344588948,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 191,
+    "validation": 0.048266404948235725,
+    "training_total_pre_step": 0.06738021876687218,
+    "losses_pre_step": {
+      "permeability": 0.005237290619747206,
+      "pressure": 3.7017592592784815e-05,
+      "physics": 0.013689177973881908,
+      "boundary": 0.0009479586695903682
+    },
+    "physics_unweighted_mse_pre_step": 0.013689177973881908,
+    "gradient_norm_pre_clip": 0.062057091736423625,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 192,
+    "validation": 0.04827048151125424,
+    "training_total_pre_step": 0.0670669869544939,
+    "losses_pre_step": {
+      "permeability": 0.0052160161974602074,
+      "pressure": 3.6718656089943865e-05,
+      "physics": 0.01359073035802434,
+      "boundary": 0.0009489080609680466
+    },
+    "physics_unweighted_mse_pre_step": 0.01359073035802434,
+    "gradient_norm_pre_clip": 0.06219847104633982,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 193,
+    "validation": 0.048279176594580434,
+    "training_total_pre_step": 0.06675221200750862,
+    "losses_pre_step": {
+      "permeability": 0.005194625095034145,
+      "pressure": 3.641964471709652e-05,
+      "physics": 0.013491861052979483,
+      "boundary": 0.0009499035570167218
+    },
+    "physics_unweighted_mse_pre_step": 0.013491861052979483,
+    "gradient_norm_pre_clip": 0.062337006803569586,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 194,
+    "validation": 0.04829253468358557,
+    "training_total_pre_step": 0.06643591987111876,
+    "losses_pre_step": {
+      "permeability": 0.005173106401412294,
+      "pressure": 3.612003266903282e-05,
+      "physics": 0.013392714656779905,
+      "boundary": 0.0009509408735255856
+    },
+    "physics_unweighted_mse_pre_step": 0.013392714656779905,
+    "gradient_norm_pre_clip": 0.062472014684875204,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 195,
+    "validation": 0.04831052551617833,
+    "training_total_pre_step": 0.06611813726030812,
+    "losses_pre_step": {
+      "permeability": 0.0051514460694349895,
+      "pressure": 3.58191359442439e-05,
+      "physics": 0.01329346957712332,
+      "boundary": 0.0009520156293924594
+    },
+    "physics_unweighted_mse_pre_step": 0.01329346957712332,
+    "gradient_norm_pre_clip": 0.06260220790511152,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 196,
+    "validation": 0.04833306139482571,
+    "training_total_pre_step": 0.06579889180425808,
+    "losses_pre_step": {
+      "permeability": 0.005129627071547794,
+      "pressure": 3.551623704084012e-05,
+      "physics": 0.01319433493236142,
+      "boundary": 0.0009531237860103158
+    },
+    "physics_unweighted_mse_pre_step": 0.01319433493236142,
+    "gradient_norm_pre_clip": 0.0627259853060058,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 197,
+    "validation": 0.048360028044244115,
+    "training_total_pre_step": 0.06547821228639765,
+    "losses_pre_step": {
+      "permeability": 0.005107630131087465,
+      "pressure": 3.521072657692687e-05,
+      "physics": 0.01309554154997418,
+      "boundary": 0.0009542621597795492
+    },
+    "physics_unweighted_mse_pre_step": 0.01309554154997418,
+    "gradient_norm_pre_clip": 0.06284180724856155,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 198,
+    "validation": 0.04839131712876939,
+    "training_total_pre_step": 0.06515612908780845,
+    "losses_pre_step": {
+      "permeability": 0.005085435027381985,
+      "pressure": 3.490222212652832e-05,
+      "physics": 0.012997327725303816,
+      "boundary": 0.0009554288674195085
+    },
+    "physics_unweighted_mse_pre_step": 0.012997327725303816,
+    "gradient_norm_pre_clip": 0.06294858908010961,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 199,
+    "validation": 0.048426849439564976,
+    "training_total_pre_step": 0.06483267476991679,
+    "losses_pre_step": {
+      "permeability": 0.005063022305984454,
+      "pressure": 3.459063168496975e-05,
+      "physics": 0.012899921811225646,
+      "boundary": 0.0009566235819968943
+    },
+    "physics_unweighted_mse_pre_step": 0.012899921811225646,
+    "gradient_norm_pre_clip": 0.06304597811616713,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 200,
+    "validation": 0.048466582776813,
+    "training_total_pre_step": 0.06450788464099001,
+    "losses_pre_step": {
+      "permeability": 0.005040375094740468,
+      "pressure": 3.427614605766557e-05,
+      "physics": 0.012803524696994717,
+      "boundary": 0.0009578475360139576
+    },
+    "physics_unweighted_mse_pre_step": 0.012803524696994717,
+    "gradient_norm_pre_clip": 0.06313438269176731,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 201,
+    "validation": 0.04851050528550344,
+    "training_total_pre_step": 0.06418179723041981,
+    "losses_pre_step": {
+      "permeability": 0.005017480675138408,
+      "pressure": 3.395916570151733e-05,
+      "physics": 0.012708295535948468,
+      "boundary": 0.0009591032860720794
+    },
+    "physics_unweighted_mse_pre_step": 0.012708295535948468,
+    "gradient_norm_pre_clip": 0.06321472941920979,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 202,
+    "validation": 0.0485586205086752,
+    "training_total_pre_step": 0.0638544547375222,
+    "losses_pre_step": {
+      "permeability": 0.004994331502897592,
+      "pressure": 3.36401862982994e-05,
+      "physics": 0.012614343521069106,
+      "boundary": 0.0009603943244941814
+    },
+    "physics_unweighted_mse_pre_step": 0.012614343521069106,
+    "gradient_norm_pre_clip": 0.06328806502065062,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 203,
+    "validation": 0.04861093251581595,
+    "training_total_pre_step": 0.06352590355784689,
+    "losses_pre_step": {
+      "permeability": 0.004970925497462808,
+      "pressure": 3.331967776530363e-05,
+      "physics": 0.012521727142370641,
+      "boundary": 0.0009617246631951375
+    },
+    "physics_unweighted_mse_pre_step": 0.012521727142370641,
+    "gradient_norm_pre_clip": 0.06335518085397555,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 204,
+    "validation": 0.048667437643976255,
+    "training_total_pre_step": 0.06319619488206307,
+    "losses_pre_step": {
+      "permeability": 0.004947265589439812,
+      "pressure": 3.299799071016193e-05,
+      "physics": 0.012430460568293153,
+      "boundary": 0.0009630985122701759
+    },
+    "physics_unweighted_mse_pre_step": 0.012430460568293153,
+    "gradient_norm_pre_clip": 0.06341638543190563,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 205,
+    "validation": 0.04872812493135227,
+    "training_total_pre_step": 0.06286538523504213,
+    "losses_pre_step": {
+      "permeability": 0.004923358681521582,
+      "pressure": 3.267531353353981e-05,
+      "physics": 0.012340525150464729,
+      "boundary": 0.0009645201340261828
+    },
+    "physics_unweighted_mse_pre_step": 0.012340525150464729,
+    "gradient_norm_pre_clip": 0.06347144817925428,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 206,
+    "validation": 0.04879298255339657,
+    "training_total_pre_step": 0.06253353681267337,
+    "losses_pre_step": {
+      "permeability": 0.00489921429971835,
+      "pressure": 3.2351686630467296e-05,
+      "physics": 0.01225188305971647,
+      "boundary": 0.0009659938894687263
+    },
+    "physics_unweighted_mse_pre_step": 0.01225188305971647,
+    "gradient_norm_pre_clip": 0.06351967325323081,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 207,
+    "validation": 0.04886200470366806,
+    "training_total_pre_step": 0.062200717584167564,
+    "losses_pre_step": {
+      "permeability": 0.004874843258454604,
+      "pressure": 3.202706304713928e-05,
+      "physics": 0.01216448993761418,
+      "boundary": 0.0009675244315359398
+    },
+    "physics_unweighted_mse_pre_step": 0.01216448993761418,
+    "gradient_norm_pre_clip": 0.06356005818054249,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 208,
+    "validation": 0.04893519348377793,
+    "training_total_pre_step": 0.06186700124062333,
+    "losses_pre_step": {
+      "permeability": 0.00485025662505949,
+      "pressure": 3.170139266193611e-05,
+      "physics": 0.012078304105569877,
+      "boundary": 0.0009691169578391874
+    },
+    "physics_unweighted_mse_pre_step": 0.012078304105569877,
+    "gradient_norm_pre_clip": 0.06359150592331944,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 209,
+    "validation": 0.04901255304540332,
+    "training_total_pre_step": 0.061532467084913896,
+    "losses_pre_step": {
+      "permeability": 0.00482546515825038,
+      "pressure": 3.137470266119835e-05,
+      "physics": 0.011993291049825437,
+      "boundary": 0.0009707774259726759
+    },
+    "physics_unweighted_mse_pre_step": 0.011993291049825437,
+    "gradient_norm_pre_clip": 0.06361304988591002,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 210,
+    "validation": 0.04909407687570484,
+    "training_total_pre_step": 0.061197199887593,
+    "losses_pre_step": {
+      "permeability": 0.004800479243927988,
+      "pressure": 3.104715125260923e-05,
+      "physics": 0.011909423280541516,
+      "boundary": 0.0009725126552455098
+    },
+    "physics_unweighted_mse_pre_step": 0.011909423280541516,
+    "gradient_norm_pre_clip": 0.06362402852319654,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 211,
+    "validation": 0.04917973190148496,
+    "training_total_pre_step": 0.06086128967385937,
+    "losses_pre_step": {
+      "permeability": 0.004775309204673664,
+      "pressure": 3.071904208542907e-05,
+      "physics": 0.011826676927330637,
+      "boundary": 0.0009743302789378085
+    },
+    "physics_unweighted_mse_pre_step": 0.011826676927330637,
+    "gradient_norm_pre_clip": 0.06362415001178734,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 212,
+    "validation": 0.049269443883161214,
+    "training_total_pre_step": 0.060524831419664436,
+    "losses_pre_step": {
+      "permeability": 0.004749965759824817,
+      "pressure": 3.0390799874212738e-05,
+      "physics": 0.011745027267093656,
+      "boundary": 0.0009762385555804808
+    },
+    "physics_unweighted_mse_pre_step": 0.011745027267093656,
+    "gradient_norm_pre_clip": 0.06361343473264781,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 213,
+    "validation": 0.04936308746492869,
+    "training_total_pre_step": 0.0601879246862192,
+    "losses_pre_step": {
+      "permeability": 0.004724460388917346,
+      "pressure": 3.0062919006917357e-05,
+      "physics": 0.0116644455243698,
+      "boundary": 0.0009782460826067718
+    },
+    "physics_unweighted_mse_pre_step": 0.0116644455243698,
+    "gradient_norm_pre_clip": 0.06359208237551707,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 214,
+    "validation": 0.04946048232204007,
+    "training_total_pre_step": 0.05985067323354429,
+    "losses_pre_step": {
+      "permeability": 0.004698805408150951,
+      "pressure": 2.97359032112564e-05,
+      "physics": 0.011584898646986138,
+      "boundary": 0.0009803614729360817
+    },
+    "physics_unweighted_mse_pre_step": 0.011584898646986138,
+    "gradient_norm_pre_clip": 0.06356033314631929,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 215,
+    "validation": 0.049561395375875256,
+    "training_total_pre_step": 0.05951318460517615,
+    "losses_pre_step": {
+      "permeability": 0.0046730136898516786,
+      "pressure": 2.941021433956781e-05,
+      "physics": 0.011506352510021014,
+      "boundary": 0.000982593053242673
+    },
+    "physics_unweighted_mse_pre_step": 0.011506352510021014,
+    "gradient_norm_pre_clip": 0.06351836636891985,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 216,
+    "validation": 0.049665548638004015,
+    "training_total_pre_step": 0.05917556963008045,
+    "losses_pre_step": {
+      "permeability": 0.0046470981019807005,
+      "pressure": 2.9086242811891415e-05,
+      "physics": 0.011428777556341023,
+      "boundary": 0.000984948625813511
+    },
+    "physics_unweighted_mse_pre_step": 0.011428777556341023,
+    "gradient_norm_pre_clip": 0.06346624005760407,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 217,
+    "validation": 0.04977263246861893,
+    "training_total_pre_step": 0.05883794180685987,
+    "losses_pre_step": {
+      "permeability": 0.0046210708699392445,
+      "pressure": 2.8764303609691856e-05,
+      "physics": 0.011352154760403065,
+      "boundary": 0.000987435310967441
+    },
+    "physics_unweighted_mse_pre_step": 0.011352154760403065,
+    "gradient_norm_pre_clip": 0.06340386229957151,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 218,
+    "validation": 0.049882323837479786,
+    "training_total_pre_step": 0.05850041659994618,
+    "losses_pre_step": {
+      "permeability": 0.004594943118566616,
+      "pressure": 2.8444652971071193e-05,
+      "physics": 0.01127647942280629,
+      "boundary": 0.0009900594617630182
+    },
+    "physics_unweighted_mse_pre_step": 0.01127647942280629,
+    "gradient_norm_pre_clip": 0.06333099921024773,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 219,
+    "validation": 0.0499943077879626,
+    "training_total_pre_step": 0.0581631107120843,
+    "losses_pre_step": {
+      "permeability": 0.00456872481004499,
+      "pressure": 2.8127514836057697e-05,
+      "physics": 0.011201760839023888,
+      "boundary": 0.0009928266242499313
+    },
+    "physics_unweighted_mse_pre_step": 0.011201760839023888,
+    "gradient_norm_pre_clip": 0.063247330774328,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 220,
+    "validation": 0.050108298027936406,
+    "training_total_pre_step": 0.05782614136847725,
+    "losses_pre_step": {
+      "permeability": 0.004542425160942998,
+      "pressure": 2.781310432861232e-05,
+      "physics": 0.011128017205727382,
+      "boundary": 0.0009957415100337672
+    },
+    "physics_unweighted_mse_pre_step": 0.011128017205727382,
+    "gradient_norm_pre_clip": 0.06315254568353279,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 221,
+    "validation": 0.050224050830798526,
+    "training_total_pre_step": 0.057489625600517825,
+    "losses_pre_step": {
+      "permeability": 0.0045160534449533996,
+      "pressure": 2.7501638391054446e-05,
+      "physics": 0.011055266811631038,
+      "boundary": 0.0009988079554422474
+    },
+    "physics_unweighted_mse_pre_step": 0.011055266811631038,
+    "gradient_norm_pre_clip": 0.06304643929400687,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 222,
+    "validation": 0.050341366961020026,
+    "training_total_pre_step": 0.05715367950690775,
+    "losses_pre_step": {
+      "permeability": 0.004489619935549157,
+      "pressure": 2.719332986540698e-05,
+      "physics": 0.01098351799211532,
+      "boundary": 0.0010020288606468002
+    },
+    "physics_unweighted_mse_pre_step": 0.01098351799211532,
+    "gradient_norm_pre_clip": 0.06292897569685998,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 223,
+    "validation": 0.050460079943781294,
+    "training_total_pre_step": 0.056818417493103436,
+    "losses_pre_step": {
+      "permeability": 0.004463136677385762,
+      "pressure": 2.6888368497849524e-05,
+      "physics": 0.01091276090875271,
+      "boundary": 0.0010054061255146086
+    },
+    "physics_unweighted_mse_pre_step": 0.01091276090875271,
+    "gradient_norm_pre_clip": 0.06280029801673435,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 224,
+    "validation": 0.050580034673082315,
+    "training_total_pre_step": 0.05648395150241523,
+    "losses_pre_step": {
+      "permeability": 0.004436617826394831,
+      "pressure": 2.6586897849150587e-05,
+      "physics": 0.010842963643369915,
+      "boundary": 0.0010089406166054926
+    },
+    "physics_unweighted_mse_pre_step": 0.010842963643369915,
+    "gradient_norm_pre_clip": 0.0626606961829941,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 225,
+    "validation": 0.050701065442908304,
+    "training_total_pre_step": 0.05615039023801667,
+    "losses_pre_step": {
+      "permeability": 0.004410079448859189,
+      "pressure": 2.628899886684051e-05,
+      "physics": 0.010774073558326321,
+      "boundary": 0.001012632202430047
+    },
+    "physics_unweighted_mse_pre_step": 0.010774073558326321,
+    "gradient_norm_pre_clip": 0.06251055041844947,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 226,
+    "validation": 0.0508229839790626,
+    "training_total_pre_step": 0.05581783836411429,
+    "losses_pre_step": {
+      "permeability": 0.004383538860322701,
+      "pressure": 2.5994688257726987e-05,
+      "physics": 0.010706022999995575,
+      "boundary": 0.0010164798783144262
+    },
+    "physics_unweighted_mse_pre_step": 0.010706022999995575,
+    "gradient_norm_pre_clip": 0.06235026697524046,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 227,
+    "validation": 0.05094558437716245,
+    "training_total_pre_step": 0.055486395694122295,
+    "losses_pre_step": {
+      "permeability": 0.004357013738629008,
+      "pressure": 2.5703933833688367e-05,
+      "physics": 0.010638736996587312,
+      "boundary": 0.0010204819729080212
+    },
+    "physics_unweighted_mse_pre_step": 0.010638736996587312,
+    "gradient_norm_pre_clip": 0.06218022420207684,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 228,
+    "validation": 0.05106866413974013,
+    "training_total_pre_step": 0.05515615641068826,
+    "losses_pre_step": {
+      "permeability": 0.004330521299634293,
+      "pressure": 2.541668208096712e-05,
+      "physics": 0.010572140195701686,
+      "boundary": 0.0010246363978339789
+    },
+    "physics_unweighted_mse_pre_step": 0.010572140195701686,
+    "gradient_norm_pre_clip": 0.062000752378986064,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 229,
+    "validation": 0.05119205236678902,
+    "training_total_pre_step": 0.05482720837959481,
+    "losses_pre_step": {
+      "permeability": 0.004304077761432449,
+      "pressure": 2.5132888157052995e-05,
+      "physics": 0.010506160999111764,
+      "boundary": 0.001028940884588029
+    },
+    "physics_unweighted_mse_pre_step": 0.010506160999111764,
+    "gradient_norm_pre_clip": 0.061812165780093575,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 230,
+    "validation": 0.05131563192767854,
+    "training_total_pre_step": 0.05449963259963294,
+    "losses_pre_step": {
+      "permeability": 0.00427769817874819,
+      "pressure": 2.485253747286133e-05,
+      "physics": 0.010440732279720677,
+      "boundary": 0.0010333931577017502
+    },
+    "physics_unweighted_mse_pre_step": 0.010440732279720677,
+    "gradient_norm_pre_clip": 0.06161484108864042,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 231,
+    "validation": 0.051439344736996184,
+    "training_total_pre_step": 0.05417350279443145,
+    "losses_pre_step": {
+      "permeability": 0.004251396574487651,
+      "pressure": 2.457565145083243e-05,
+      "physics": 0.010375789515997448,
+      "boundary": 0.0010379910190491664
+    },
+    "physics_unweighted_mse_pre_step": 0.010375789515997448,
+    "gradient_norm_pre_clip": 0.06140930542889702,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 232,
+    "validation": 0.05156317725231356,
+    "training_total_pre_step": 0.053848885133513325,
+    "losses_pre_step": {
+      "permeability": 0.004225186200430129,
+      "pressure": 2.430227652341835e-05,
+      "physics": 0.010311268010884528,
+      "boundary": 0.00104273235309332
+    },
+    "physics_unweighted_mse_pre_step": 0.010311268010884528,
+    "gradient_norm_pre_clip": 0.061196285517529904,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 233,
+    "validation": 0.05168713295466604,
+    "training_total_pre_step": 0.0535258380765003,
+    "losses_pre_step": {
+      "permeability": 0.004199079757677239,
+      "pressure": 2.4032462170677556e-05,
+      "physics": 0.010247100787804594,
+      "boundary": 0.0010476150902165382
+    },
+    "physics_unweighted_mse_pre_step": 0.010247100787804594,
+    "gradient_norm_pre_clip": 0.060976687376279266,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 234,
+    "validation": 0.05181120472417452,
+    "training_total_pre_step": 0.05320441234495108,
+    "losses_pre_step": {
+      "permeability": 0.004173089483339516,
+      "pressure": 2.3766237888608964e-05,
+      "physics": 0.010183217960209792,
+      "boundary": 0.001052637172460048
+    },
+    "physics_unweighted_mse_pre_step": 0.010183217960209792,
+    "gradient_norm_pre_clip": 0.06075150819977312,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 235,
+    "validation": 0.051935359380331614,
+    "training_total_pre_step": 0.05288465102419655,
+    "losses_pre_step": {
+      "permeability": 0.0041472271105491695,
+      "pressure": 2.3503598726428362e-05,
+      "physics": 0.0101195473801927,
+      "boundary": 0.0010577965512478683
+    },
+    "physics_unweighted_mse_pre_step": 0.0101195473801927,
+    "gradient_norm_pre_clip": 0.06052170801734076,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 236,
+    "validation": 0.05205953969354697,
+    "training_total_pre_step": 0.05256658979241463,
+    "losses_pre_step": {
+      "permeability": 0.004121503778084149,
+      "pressure": 2.3244504706224225e-05,
+      "physics": 0.01005601574466891,
+      "boundary": 0.0010630912198419961
+    },
+    "physics_unweighted_mse_pre_step": 0.01005601574466891,
+    "gradient_norm_pre_clip": 0.060288084365033946,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 237,
+    "validation": 0.052183679886622265,
+    "training_total_pre_step": 0.05225025727861934,
+    "losses_pre_step": {
+      "permeability": 0.004095929973703052,
+      "pressure": 2.2988893155009723e-05,
+      "physics": 0.009992549349995692,
+      "boundary": 0.0010685192600430283
+    },
+    "physics_unweighted_mse_pre_step": 0.009992549349995692,
+    "gradient_norm_pre_clip": 0.060051199469361285,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 238,
+    "validation": 0.05230772419970038,
+    "training_total_pre_step": 0.051935675554069145,
+    "losses_pre_step": {
+      "permeability": 0.004070515549129606,
+      "pressure": 2.2736697673343448e-05,
+      "physics": 0.009929074210572382,
+      "boundary": 0.0010740788754672668
+    },
+    "physics_unweighted_mse_pre_step": 0.009929074210572382,
+    "gradient_norm_pre_clip": 0.059811396386124996,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 239,
+    "validation": 0.05243163780566898,
+    "training_total_pre_step": 0.05162286074543475,
+    "losses_pre_step": {
+      "permeability": 0.004045269779197533,
+      "pressure": 2.2487865489514936e-05,
+      "physics": 0.009865515903619932,
+      "boundary": 0.001079768394944335
+    },
+    "physics_unweighted_mse_pre_step": 0.009865515903619932,
+    "gradient_norm_pre_clip": 0.05956890072018252,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 240,
+    "validation": 0.052555404851581486,
+    "training_total_pre_step": 0.05131182373136117,
+    "losses_pre_step": {
+      "permeability": 0.00402020139271684,
+      "pressure": 2.224236695686981e-05,
+      "physics": 0.009801799883907713,
+      "boundary": 0.0010855862507163632
+    },
+    "physics_unweighted_mse_pre_step": 0.009801799883907713,
+    "gradient_norm_pre_clip": 0.05932395707871274,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 241,
+    "validation": 0.05267901603619346,
+    "training_total_pre_step": 0.05100257087289537,
+    "losses_pre_step": {
+      "permeability": 0.003995318501831726,
+      "pressure": 2.200019563215902e-05,
+      "physics": 0.009737852944726465,
+      "boundary": 0.001091530953530063
+    },
+    "physics_unweighted_mse_pre_step": 0.009737852944726465,
+    "gradient_norm_pre_clip": 0.059076928843852405,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 242,
+    "validation": 0.05280245344382134,
+    "training_total_pre_step": 0.05069510474122753,
+    "losses_pre_step": {
+      "permeability": 0.003970628398263079,
+      "pressure": 2.1761362181608473e-05,
+      "physics": 0.00967360604694345,
+      "boundary": 0.0010976010898372042
+    },
+    "physics_unweighted_mse_pre_step": 0.00967360604694345,
+    "gradient_norm_pre_clip": 0.05882831055158419,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 243,
+    "validation": 0.052925680772989474,
+    "training_total_pre_step": 0.0503894248269228,
+    "losses_pre_step": {
+      "permeability": 0.003946137247052756,
+      "pressure": 2.1525887878259248e-05,
+      "physics": 0.009608998124130533,
+      "boundary": 0.0011037953534821208
+    },
+    "physics_unweighted_mse_pre_step": 0.009608998124130533,
+    "gradient_norm_pre_clip": 0.05857864695527362,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 244,
+    "validation": 0.05304864325543016,
+    "training_total_pre_step": 0.05008552822667853,
+    "losses_pre_step": {
+      "permeability": 0.003921849763434544,
+      "pressure": 2.129380262512558e-05,
+      "physics": 0.009543979963262846,
+      "boundary": 0.0011101126028189951
+    },
+    "physics_unweighted_mse_pre_step": 0.009543979963262846,
+    "gradient_norm_pre_clip": 0.05832839503878168,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 245,
+    "validation": 0.05317127640228763,
+    "training_total_pre_step": 0.04978341030667237,
+    "losses_pre_step": {
+      "permeability": 0.0038977689850567786,
+      "pressure": 2.1065149035728466e-05,
+      "physics": 0.00947851705004944,
+      "boundary": 0.001116551915697859
+    },
+    "physics_unweighted_mse_pre_step": 0.00947851705004944,
+    "gradient_norm_pre_clip": 0.058077789169946444,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 246,
+    "validation": 0.05329351925357244,
+    "training_total_pre_step": 0.04948306534372704,
+    "losses_pre_step": {
+      "permeability": 0.003873896240419998,
+      "pressure": 2.0839990178678235e-05,
+      "physics": 0.00941259042919174,
+      "boundary": 0.0011231126085485422
+    },
+    "physics_unweighted_mse_pre_step": 0.00941259042919174,
+    "gradient_norm_pre_clip": 0.05782677058016094,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 247,
+    "validation": 0.05341532722896241,
+    "training_total_pre_step": 0.04918448714789341,
+    "losses_pre_step": {
+      "permeability": 0.003850231366418012,
+      "pressure": 2.0618416285736264e-05,
+      "physics": 0.009346195125871893,
+      "boundary": 0.001129794194984041
+    },
+    "physics_unweighted_mse_pre_step": 0.009346195125871893,
+    "gradient_norm_pre_clip": 0.057575019626153225,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 248,
+    "validation": 0.053536681089116626,
+    "training_total_pre_step": 0.048887669666550254,
+    "losses_pre_step": {
+      "permeability": 0.0038267731546790143,
+      "pressure": 2.0400546122338684e-05,
+      "physics": 0.00927933637811907,
+      "boundary": 0.0011365962804176575
+    },
+    "physics_unweighted_mse_pre_step": 0.00927933637811907,
+    "gradient_norm_pre_clip": 0.05732208670787978,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 249,
+    "validation": 0.053657590264290234,
+    "training_total_pre_step": 0.04859260756000435,
+    "losses_pre_step": {
+      "permeability": 0.0038035199299288097,
+      "pressure": 2.0186521399750567e-05,
+      "physics": 0.009212024632506127,
+      "boundary": 0.0011435184142126235
+    },
+    "physics_unweighted_mse_pre_step": 0.009212024632506127,
+    "gradient_norm_pre_clip": 0.05706757006514089,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 250,
+    "validation": 0.05377809006014456,
+    "training_total_pre_step": 0.048299296731969366,
+    "losses_pre_step": {
+      "permeability": 0.0037804701132481897,
+      "pressure": 1.9976496018813984e-05,
+      "physics": 0.009144270698913284,
+      "boundary": 0.0011505599403860427
+    },
+    "physics_unweighted_mse_pre_step": 0.009144270698913284,
+    "gradient_norm_pre_clip": 0.05681126022330172,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 251,
+    "validation": 0.0538982334350362,
+    "training_total_pre_step": 0.04800773480337157,
+    "losses_pre_step": {
+      "permeability": 0.003757622624540971,
+      "pressure": 1.9770624334634033e-05,
+      "physics": 0.009076082421123512,
+      "boundary": 0.001157719893492002
+    },
+    "physics_unweighted_mse_pre_step": 0.009076082421123512,
+    "gradient_norm_pre_clip": 0.056553180298031955,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 252,
+    "validation": 0.054018079840853814,
+    "training_total_pre_step": 0.04771792152924638,
+    "losses_pre_step": {
+      "permeability": 0.0037349770380324583,
+      "pressure": 1.956905297984041e-05,
+      "physics": 0.009007463645582376,
+      "boundary": 0.0011649969735410132
+    },
+    "physics_unweighted_mse_pre_step": 0.009007463645582376,
+    "gradient_norm_pre_clip": 0.056293497032245184,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 253,
+    "validation": 0.05413768561687805,
+    "training_total_pre_step": 0.04742985916655483,
+    "losses_pre_step": {
+      "permeability": 0.00371253349995264,
+      "pressure": 1.9371919131883977e-05,
+      "physics": 0.008938415370561746,
+      "boundary": 0.0011723896051478414
+    },
+    "physics_unweighted_mse_pre_step": 0.008938415370561746,
+    "gradient_norm_pre_clip": 0.05603233919822386,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 254,
+    "validation": 0.05425710091116855,
+    "training_total_pre_step": 0.047143552805038645,
+    "losses_pre_step": {
+      "permeability": 0.003690292504892932,
+      "pressure": 1.917935538070014e-05,
+      "physics": 0.008868938149919993,
+      "boundary": 0.0011798960523823278
+    },
+    "physics_unweighted_mse_pre_step": 0.008868938149919993,
+    "gradient_norm_pre_clip": 0.05576961083516596,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 255,
+    "validation": 0.05437637550854373,
+    "training_total_pre_step": 0.046859010675753605,
+    "losses_pre_step": {
+      "permeability": 0.0036682546635778326,
+      "pressure": 1.8991498777984143e-05,
+      "physics": 0.008799034513989994,
+      "boundary": 0.0011875145382054392
+    },
+    "physics_unweighted_mse_pre_step": 0.008799034513989994,
+    "gradient_norm_pre_clip": 0.05550489984071992,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 256,
+    "validation": 0.05449557077950772,
+    "training_total_pre_step": 0.04657624444750792,
+    "losses_pre_step": {
+      "permeability": 0.003646420563651159,
+      "pressure": 1.8808500220945466e-05,
+      "physics": 0.008728710489615195,
+      "boundary": 0.0011952433191716805
+    },
+    "physics_unweighted_mse_pre_step": 0.008728710489615195,
+    "gradient_norm_pre_clip": 0.05523754035808739,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 257,
+    "validation": 0.05461477031103376,
+    "training_total_pre_step": 0.04629526950630963,
+    "losses_pre_step": {
+      "permeability": 0.0036247907493391907,
+      "pressure": 1.8630530488096714e-05,
+      "physics": 0.008657976014890203,
+      "boundary": 0.0012030806931465584
+    },
+    "physics_unweighted_mse_pre_step": 0.008657976014890203,
+    "gradient_norm_pre_clip": 0.05496680135297226,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 258,
+    "validation": 0.0547340813827131,
+    "training_total_pre_step": 0.046016105196061155,
+    "losses_pre_step": {
+      "permeability": 0.0036033657747911643,
+      "pressure": 1.8457780835919008e-05,
+      "physics": 0.008586844684616119,
+      "boundary": 0.0012110249551742051
+    },
+    "physics_unweighted_mse_pre_step": 0.008586844684616119,
+    "gradient_norm_pre_clip": 0.054692091445654886,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 259,
+    "validation": 0.05485362460199906,
+    "training_total_pre_step": 0.0457387749946589,
+    "losses_pre_step": {
+      "permeability": 0.00358214626310635,
+      "pressure": 1.8290458397066554e-05,
+      "physics": 0.008515333438513302,
+      "boundary": 0.001219074341111429
+    },
+    "physics_unweighted_mse_pre_step": 0.008515333438513302,
+    "gradient_norm_pre_clip": 0.05441305019688862,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 260,
+    "validation": 0.054973516837812826,
+    "training_total_pre_step": 0.045463306612105604,
+    "losses_pre_step": {
+      "permeability": 0.003561132936471719,
+      "pressure": 1.8128778709719577e-05,
+      "physics": 0.008443462466023982,
+      "boundary": 0.0012272269942672342
+    },
+    "physics_unweighted_mse_pre_step": 0.008443462466023982,
+    "gradient_norm_pre_clip": 0.054129462505480584,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 261,
+    "validation": 0.05509385761189348,
+    "training_total_pre_step": 0.045189732015356435,
+    "losses_pre_step": {
+      "permeability": 0.00354032663970821,
+      "pressure": 1.7972958635137363e-05,
+      "physics": 0.008371255070837602,
+      "boundary": 0.0012354809610853638
+    },
+    "physics_unweighted_mse_pre_step": 0.008371255070837602,
+    "gradient_norm_pre_clip": 0.05384104851933586,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 262,
+    "validation": 0.05521472728612136,
+    "training_total_pre_step": 0.04491808739480386,
+    "losses_pre_step": {
+      "permeability": 0.003519728411393452,
+      "pressure": 1.782321226549508e-05,
+      "physics": 0.008298736967474376,
+      "boundary": 0.0012438341907400148
+    },
+    "physics_unweighted_mse_pre_step": 0.008298736967474376,
+    "gradient_norm_pre_clip": 0.05354726972914332,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 263,
+    "validation": 0.055336197557143196,
+    "training_total_pre_step": 0.04464841308512573,
+    "losses_pre_step": {
+      "permeability": 0.003499339635850528,
+      "pressure": 1.767975055127927e-05,
+      "physics": 0.00822593471550022,
+      "boundary": 0.001252284505607444
+    },
+    "physics_unweighted_mse_pre_step": 0.00822593471550022,
+    "gradient_norm_pre_clip": 0.05324728986430775,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 264,
+    "validation": 0.0554583464367989,
+    "training_total_pre_step": 0.04438075344231041,
+    "losses_pre_step": {
+      "permeability": 0.003479162248742984,
+      "pressure": 1.7542783326147005e-05,
+      "physics": 0.008152873589309249,
+      "boundary": 0.0012608295323098442
+    },
+    "physics_unweighted_mse_pre_step": 0.008152873589309249,
+    "gradient_norm_pre_clip": 0.052940131986167545,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 265,
+    "validation": 0.05558126718041043,
+    "training_total_pre_step": 0.04411515666516037,
+    "losses_pre_step": {
+      "permeability": 0.003459198912204267,
+      "pressure": 1.7412521328719898e-05,
+      "physics": 0.008079575711253891,
+      "boundary": 0.0012694666185766104
+    },
+    "physics_unweighted_mse_pre_step": 0.008079575711253891,
+    "gradient_norm_pre_clip": 0.05262494080298869,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 266,
+    "validation": 0.05570506547319848,
+    "training_total_pre_step": 0.04385167454271478,
+    "losses_pre_step": {
+      "permeability": 0.0034394530644126474,
+      "pressure": 1.7289176259458123e-05,
+      "physics": 0.008006059356319418,
+      "boundary": 0.001278192779674311
+    },
+    "physics_unweighted_mse_pre_step": 0.008006059356319418,
+    "gradient_norm_pre_clip": 0.05230118315262135,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 267,
+    "validation": 0.0558298477808236,
+    "training_total_pre_step": 0.04359036211740069,
+    "losses_pre_step": {
+      "permeability": 0.003419928794674402,
+      "pressure": 1.717295843134617e-05,
+      "physics": 0.007932339884251407,
+      "boundary": 0.001287004702091806
+    },
+    "physics_unweighted_mse_pre_step": 0.007932339884251407,
+    "gradient_norm_pre_clip": 0.05196865928458672,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 268,
+    "validation": 0.055955709584042806,
+    "training_total_pre_step": 0.043331277273260076,
+    "losses_pre_step": {
+      "permeability": 0.0034006305721420993,
+      "pressure": 1.7064073064365526e-05,
+      "physics": 0.007858432029396536,
+      "boundary": 0.001295898791798887
+    },
+    "physics_unweighted_mse_pre_step": 0.007858432029396536,
+    "gradient_norm_pre_clip": 0.051627327827628355,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 269,
+    "validation": 0.05608273121866217,
+    "training_total_pre_step": 0.04307448027342014,
+    "losses_pre_step": {
+      "permeability": 0.0033815629192680175,
+      "pressure": 1.6962716754324764e-05,
+      "physics": 0.00778435269272827,
+      "boundary": 0.0013048712204684425
+    },
+    "physics_unweighted_mse_pre_step": 0.00778435269272827,
+    "gradient_norm_pre_clip": 0.051277072363145874,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 270,
+    "validation": 0.05621098269685721,
+    "training_total_pre_step": 0.04282003327087761,
+    "losses_pre_step": {
+      "permeability": 0.003362730135956862,
+      "pressure": 1.68690749700458e-05,
+      "physics": 0.007710123239667761,
+      "boundary": 0.0013139179219407617
+    },
+    "physics_unweighted_mse_pre_step": 0.007710123239667761,
+    "gradient_norm_pre_clip": 0.05091756845642111,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 271,
+    "validation": 0.05634053252706933,
+    "training_total_pre_step": 0.042567999805846315,
+    "losses_pre_step": {
+      "permeability": 0.0033441361433480302,
+      "pressure": 1.6783320329282368e-05,
+      "physics": 0.007635770645590075,
+      "boundary": 0.0013230345234831102
+    },
+    "physics_unweighted_mse_pre_step": 0.007635770645590075,
+    "gradient_norm_pre_clip": 0.05054833232330671,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 272,
+    "validation": 0.05647145376452673,
+    "training_total_pre_step": 0.042318444291243054,
+    "losses_pre_step": {
+      "permeability": 0.0033257844518990247,
+      "pressure": 1.6705610829880515e-05,
+      "physics": 0.007561327426781728,
+      "boundary": 0.0013322162371722686
+    },
+    "physics_unweighted_mse_pre_step": 0.007561327426781728,
+    "gradient_norm_pre_clip": 0.05016890801751282,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 273,
+    "validation": 0.0566038236919592,
+    "training_total_pre_step": 0.042071431481894114,
+    "losses_pre_step": {
+      "permeability": 0.003307678202925229,
+      "pressure": 1.6636087563879458e-05,
+      "physics": 0.007486830819999813,
+      "boundary": 0.0013414577570032248
+    },
+    "physics_unweighted_mse_pre_step": 0.007486830819999813,
+    "gradient_norm_pre_clip": 0.0497790657865958,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 274,
+    "validation": 0.05673771829254086,
+    "training_total_pre_step": 0.04182702592499294,
+    "losses_pre_step": {
+      "permeability": 0.00328982021322947,
+      "pressure": 1.6574872289454654e-05,
+      "physics": 0.007412321872803948,
+      "boundary": 0.001350753196999754
+    },
+    "physics_unweighted_mse_pre_step": 0.007412321872803948,
+    "gradient_norm_pre_clip": 0.04937889055181695,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 275,
+    "validation": 0.056873205379614156,
+    "training_total_pre_step": 0.04158529139771559,
+    "losses_pre_step": {
+      "permeability": 0.0032722129743484735,
+      "pressure": 1.6522065776582367e-05,
+      "physics": 0.007337844918134823,
+      "boundary": 0.0013600960783302144
+    },
+    "physics_unweighted_mse_pre_step": 0.007337844918134823,
+    "gradient_norm_pre_clip": 0.04896872124738462,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 276,
+    "validation": 0.057010339854767944,
+    "training_total_pre_step": 0.041346290346773805,
+    "losses_pre_step": {
+      "permeability": 0.003254858603457001,
+      "pressure": 1.6477747623040436e-05,
+      "physics": 0.007263447484651891,
+      "boundary": 0.001369479351321497
+    },
+    "physics_unweighted_mse_pre_step": 0.007263447484651891,
+    "gradient_norm_pre_clip": 0.0485489968652383,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 277,
+    "validation": 0.05714916258644538,
+    "training_total_pre_step": 0.04111008334720371,
+    "losses_pre_step": {
+      "permeability": 0.0032377587819081145,
+      "pressure": 1.644197749181495e-05,
+      "physics": 0.007189180320419871,
+      "boundary": 0.0013788954327845452
+    },
+    "physics_unweighted_mse_pre_step": 0.007189180320419871,
+    "gradient_norm_pre_clip": 0.04812011273688492,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 278,
+    "validation": 0.057289702625176235,
+    "training_total_pre_step": 0.04087672859332585,
+    "losses_pre_step": {
+      "permeability": 0.0032209147252928116,
+      "pressure": 1.641479707353662e-05,
+      "physics": 0.007115097123888548,
+      "boundary": 0.0013883362457738245
+    },
+    "physics_unweighted_mse_pre_step": 0.007115097123888548,
+    "gradient_norm_pre_clip": 0.04768237074753154,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 279,
+    "validation": 0.057431981328279286,
+    "training_total_pre_step": 0.040646281428825905,
+    "losses_pre_step": {
+      "permeability": 0.0032043272025468346,
+      "pressure": 1.6396231955240805e-05,
+      "physics": 0.007041253826273509,
+      "boundary": 0.0013977932575316356
+    },
+    "physics_unweighted_mse_pre_step": 0.007041253826273509,
+    "gradient_norm_pre_clip": 0.04723604239842943,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 280,
+    "validation": 0.05757601608155876,
+    "training_total_pre_step": 0.04041879391822905,
+    "losses_pre_step": {
+      "permeability": 0.0031879965816268437,
+      "pressure": 1.6386292902231246e-05,
+      "physics": 0.006967707655605299,
+      "boundary": 0.0014072575173329968
+    },
+    "physics_unweighted_mse_pre_step": 0.006967707655605299,
+    "gradient_norm_pre_clip": 0.04678149397859467,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 281,
+    "validation": 0.057721820979148054,
+    "training_total_pre_step": 0.04019431445840735,
+    "losses_pre_step": {
+      "permeability": 0.003171922856332295,
+      "pressure": 1.6384976454805326e-05,
+      "physics": 0.006894516429781653,
+      "boundary": 0.001416719700754696
+    },
+    "physics_unweighted_mse_pre_step": 0.006894516429781653,
+    "gradient_norm_pre_clip": 0.046319285189393204,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 282,
+    "validation": 0.05786940310754344,
+    "training_total_pre_step": 0.03997288742776683,
+    "losses_pre_step": {
+      "permeability": 0.0031561056213903482,
+      "pressure": 1.6392264946270518e-05,
+      "physics": 0.006821738394232169,
+      "boundary": 0.0014261701701684753
+    },
+    "physics_unweighted_mse_pre_step": 0.006821738394232169,
+    "gradient_norm_pre_clip": 0.045850169065211055,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 283,
+    "validation": 0.05801875609293474,
+    "training_total_pre_step": 0.03975455287360751,
+    "losses_pre_step": {
+      "permeability": 0.0031405440022482457,
+      "pressure": 1.6408126102332226e-05,
+      "physics": 0.00674943253253883,
+      "boundary": 0.0014355990575628931
+    },
+    "physics_unweighted_mse_pre_step": 0.00674943253253883,
+    "gradient_norm_pre_clip": 0.04537498689119592,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 284,
+    "validation": 0.05816985527482808,
+    "training_total_pre_step": 0.039539346241536016,
+    "losses_pre_step": {
+      "permeability": 0.003125236582150873,
+      "pressure": 1.6432512437328652e-05,
+      "physics": 0.006677658933347663,
+      "boundary": 0.0014449963623063312
+    },
+    "physics_unweighted_mse_pre_step": 0.006677658933347663,
+    "gradient_norm_pre_clip": 0.04489452678193686,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 285,
+    "validation": 0.05832265844154795,
+    "training_total_pre_step": 0.039327298150830484,
+    "losses_pre_step": {
+      "permeability": 0.0031101813743598223,
+      "pressure": 1.646536072535602e-05,
+      "physics": 0.006606478758292272,
+      "boundary": 0.0014543520416864214
+    },
+    "physics_unweighted_mse_pre_step": 0.006606478758292272,
+    "gradient_norm_pre_clip": 0.04440944408141948,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 286,
+    "validation": 0.058477111961863996,
+    "training_total_pre_step": 0.03911843421613342,
+    "losses_pre_step": {
+      "permeability": 0.0030953758585951503,
+      "pressure": 1.6506591749616665e-05,
+      "physics": 0.006535953641150021,
+      "boundary": 0.001463656071535722
+    },
+    "physics_unweighted_mse_pre_step": 0.006535953641150021,
+    "gradient_norm_pre_clip": 0.04392029843712359,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 287,
+    "validation": 0.05863315748096074,
+    "training_total_pre_step": 0.038912774910927865,
+    "losses_pre_step": {
+      "permeability": 0.003080817061027022,
+      "pressure": 1.6556110267332563e-05,
+      "physics": 0.006466144724045007,
+      "boundary": 0.0014728984739393138
+    },
+    "physics_unweighted_mse_pre_step": 0.006466144724045007,
+    "gradient_norm_pre_clip": 0.04342767385689552,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 288,
+    "validation": 0.05879073344141216,
+    "training_total_pre_step": 0.038710335464539065,
+    "losses_pre_step": {
+      "permeability": 0.0030665016361624796,
+      "pressure": 1.661380486241501e-05,
+      "physics": 0.006397111719782305,
+      "boundary": 0.0014820693345078137
+    },
+    "physics_unweighted_mse_pre_step": 0.006397111719782305,
+    "gradient_norm_pre_clip": 0.04293228243791565,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 289,
+    "validation": 0.05894976981059949,
+    "training_total_pre_step": 0.038511125784632255,
+    "losses_pre_step": {
+      "permeability": 0.003052425919485966,
+      "pressure": 1.667954737087389e-05,
+      "physics": 0.006328912277251414,
+      "boundary": 0.0014911588388124442
+    },
+    "physics_unweighted_mse_pre_step": 0.006328912277251414,
+    "gradient_norm_pre_clip": 0.04243496584011864,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 290,
+    "validation": 0.05911018009221573,
+    "training_total_pre_step": 0.03831515040174919,
+    "losses_pre_step": {
+      "permeability": 0.003038585949236009,
+      "pressure": 1.675319189792651e-05,
+      "physics": 0.0062616016535180785,
+      "boundary": 0.0015001573368917552
+    },
+    "physics_unweighted_mse_pre_step": 0.0062616016535180785,
+    "gradient_norm_pre_clip": 0.04193659338014674,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 291,
+    "validation": 0.0592718568450804,
+    "training_total_pre_step": 0.038122408437191294,
+    "losses_pre_step": {
+      "permeability": 0.003024977479102127,
+      "pressure": 1.683457381128853e-05,
+      "physics": 0.006195232493913875,
+      "boundary": 0.0015090554141432662
+    },
+    "physics_unweighted_mse_pre_step": 0.006195232493913875,
+    "gradient_norm_pre_clip": 0.04143794040069962,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 292,
+    "validation": 0.05943467367460989,
+    "training_total_pre_step": 0.03793289359602906,
+    "losses_pre_step": {
+      "permeability": 0.003011596004135301,
+      "pressure": 1.692350914100263e-05,
+      "physics": 0.006129854527287874,
+      "boundary": 0.0015178439359781531
+    },
+    "physics_unweighted_mse_pre_step": 0.006129854527287874,
+    "gradient_norm_pre_clip": 0.040939642217970106,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 293,
+    "validation": 0.05959849121897448,
+    "training_total_pre_step": 0.03774659418383815,
+    "losses_pre_step": {
+      "permeability": 0.0029984368029252906,
+      "pressure": 1.7019794496159953e-05,
+      "physics": 0.006065514155946434,
+      "boundary": 0.0015265140536772056
+    },
+    "physics_unweighted_mse_pre_step": 0.006065514155946434,
+    "gradient_norm_pre_clip": 0.04044225073290411,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 294,
+    "validation": 0.05976316206328546,
+    "training_total_pre_step": 0.03756349314289131,
+    "losses_pre_step": {
+      "permeability": 0.0029854949777483202,
+      "pressure": 1.712320723840651e-05,
+      "physics": 0.0060022541026164685,
+      "boundary": 0.001535057190407581
+    },
+    "physics_unweighted_mse_pre_step": 0.0060022541026164685,
+    "gradient_norm_pre_clip": 0.03994633607075565,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 295,
+    "validation": 0.05992853171487452,
+    "training_total_pre_step": 0.03738356810351784,
+    "losses_pre_step": {
+      "permeability": 0.002972765468183205,
+      "pressure": 1.7233505581456338e-05,
+      "physics": 0.00594011332745654,
+      "boundary": 0.0015434650384146915
+    },
+    "physics_unweighted_mse_pre_step": 0.00594011332745654,
+    "gradient_norm_pre_clip": 0.03945254674303573,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 296,
+    "validation": 0.06009443702912482,
+    "training_total_pre_step": 0.03720679144928291,
+    "losses_pre_step": {
+      "permeability": 0.002960243027666643,
+      "pressure": 1.7350428541116772e-05,
+      "physics": 0.005879127306776761,
+      "boundary": 0.0015517295804285524
+    },
+    "physics_unweighted_mse_pre_step": 0.005879127306776761,
+    "gradient_norm_pre_clip": 0.038961586975965495,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 297,
+    "validation": 0.060260705549795866,
+    "training_total_pre_step": 0.03703313039845682,
+    "losses_pre_step": {
+      "permeability": 0.002947922177256005,
+      "pressure": 1.7473695939927902e-05,
+      "physics": 0.005819328546237645,
+      "boundary": 0.0015598431202598455
+    },
+    "physics_unweighted_mse_pre_step": 0.005819328546237645,
+    "gradient_norm_pre_clip": 0.038474142561129625,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 298,
+    "validation": 0.06042715764297468,
+    "training_total_pre_step": 0.03686254710585657,
+    "losses_pre_step": {
+      "permeability": 0.0029357971694965335,
+      "pressure": 1.7603008687488646e-05,
+      "physics": 0.0057607470262256814,
+      "boundary": 0.001567798297790659
+    },
+    "physics_unweighted_mse_pre_step": 0.0057607470262256814,
+    "gradient_norm_pre_clip": 0.037990822685728676,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 299,
+    "validation": 0.06059361029373709,
+    "training_total_pre_step": 0.03669499878763535,
+    "losses_pre_step": {
+      "permeability": 0.0029238619940940274,
+      "pressure": 1.7738049341278427e-05,
+      "physics": 0.005703410274013893,
+      "boundary": 0.001575588079268403
+    },
+    "physics_unweighted_mse_pre_step": 0.005703410274013893,
+    "gradient_norm_pre_clip": 0.03751216106996606,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  },
+  {
+    "epoch": 300,
+    "validation": 0.060759880082835366,
+    "training_total_pre_step": 0.0365304378691817,
+    "losses_pre_step": {
+      "permeability": 0.0029121104350036814,
+      "pressure": 1.7878482784568698e-05,
+      "physics": 0.005647342955507927,
+      "boundary": 0.0015832057357912754
+    },
+    "physics_unweighted_mse_pre_step": 0.005647342955507927,
+    "gradient_norm_pre_clip": 0.037038666221557166,
+    "rba_weight_min": 1.0,
+    "rba_weight_max": 1.0,
+    "active_features": 4
+  }
+]

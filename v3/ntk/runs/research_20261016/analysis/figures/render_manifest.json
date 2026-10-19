@@ -1,0 +1,23 @@
+{
+  "backend": "matplotlib",
+  "source_sha256": "5e491c8ba6395ef6bf1783397ffeae667e679c686d88d8a57a1c39e28b1f489e",
+  "versions": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "PyMuPDF": "1.28.2"
+  },
+  "data_sha256": {
+    "field_paired.csv": "c17c5130d90e8f8c836e7004e94ac359594769868b2caa95a220c2063055936f",
+    "checkpoint_metrics.csv": "db8d70e42d13238c68694a0ede8d38b218d1f19592803e53241e8d9144eeb1be",
+    "eigenspectra.csv": "ff586db7c4e1bb08af3406d992051c506b3eb0cf663b5d6eb8466705c3ed4fc6"
+  },
+  "excluded_rows": "only nonpositive roundoff spectrum entries omitted from logarithmic display",
+  "spectral_field_means_before_log_display": 768,
+  "spectral_field_means_after_log_display": 768,
+  "unit": "independent field, repeats averaged within field",
+  "independent_fields": 6,
+  "repeats_per_field": 3,
+  "uncertainty": "sample SD across field means for fixed-epoch curves; other plots show all fields",
+  "width_mm": 132.08,
+  "target": "project diagnostic report, not journal submission"
+}

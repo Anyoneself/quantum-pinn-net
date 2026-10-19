@@ -1,0 +1,72 @@
+{
+  "field_seed": 22,
+  "method": "classical_rba_mc",
+  "seed": 303,
+  "epochs": 300,
+  "best_epoch": 299,
+  "initial_validation": 2.6294831474509732,
+  "best_validation": 0.799605455243394,
+  "training_seconds": 1.0510254999971949,
+  "screening_seconds": 0.23756858202978037,
+  "parameter_counts": {
+    "total": 1054,
+    "feature_block": 40,
+    "pressure": 697
+  },
+  "active_features_at_best": 4,
+  "quantum_forward_calls_training": 0,
+  "quantum_sample_evaluations_training": 0,
+  "model_config": {
+    "features": 4,
+    "feature_layers": 2,
+    "hidden": 24,
+    "pressure_depth": 2
+  },
+  "train_config": {
+    "epochs": 300,
+    "learning_rate": 0.001,
+    "gradient_clip": 5.0,
+    "threads": 1
+  },
+  "strategy_config": {
+    "warmup": 20,
+    "rba_decay": 0.9,
+    "rba_gain": 4.0,
+    "mc_every": 20,
+    "mc_trials": 4,
+    "mc_batch": 32,
+    "mc_fraction": 0.25,
+    "mc_threshold": 0.01,
+    "min_features": 2
+  },
+  "loss_weights": {
+    "permeability": 10.0,
+    "pressure": 0.0,
+    "physics": 1.0,
+    "boundary": 1.0
+  },
+  "selection_rule": "minimum noisy validation observation loss, including epoch 0",
+  "observed_variables": [
+    "log_k"
+  ],
+  "pressure_supervision": false,
+  "quantum_backend": null,
+  "training_view_has_test_labels": false,
+  "log_k_rmse": 0.3197671135729845,
+  "k_rmse": 0.40596600694013946,
+  "k_relative_l2": 0.3219079675354289,
+  "pressure_rmse": 0.0297511373904884,
+  "downstream_pressure_rmse": 0.022714795915672156,
+  "downstream_flux_relative_error": 0.013789015256546976,
+  "downstream_solver_residual": 3.1086244689504383e-15,
+  "downstream_flux_imbalance": 7.56009903250251e-15,
+  "test_k_points": 504,
+  "test_p_points": 576,
+  "pde_residual_rmse": 0.15595320745480207,
+  "neumann_flux_rmse": 0.069725329375233,
+  "network_inlet_flux": 1.0224254580783008,
+  "network_outlet_flux": 1.096219953205368,
+  "network_flux_imbalance": 0.07217591712335457,
+  "network_flux_relative_error": 0.07297491117394388,
+  "prediction_seconds": 0.000498790992423892
+}

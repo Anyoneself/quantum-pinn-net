@@ -1,0 +1,137 @@
+{
+  "archive": "experiments/quantum_pinn_v3_gstools_konly_20261007",
+  "new_training": false,
+  "runs": 72,
+  "independent_fields": 3,
+  "manifest_sha256": "9943101c57bbebce8451e39c7de22291c1b35fbcc069f2ac5c855a681b9cedb3",
+  "script_sha256": "7aecc8342cc9306997f9b01a4472cdccfa86baa0f578a9401308b693ab958af1",
+  "backend": "Python/Matplotlib",
+  "figures": [
+    {
+      "name": "fig03_paired_effects",
+      "size_inches": [
+        7.204724,
+        5.0
+      ],
+      "panels": 4,
+      "alignment_verdict": "PASS",
+      "claim": "Average improvement is not a uniform paired improvement.",
+      "source": "paired_effects_source.csv",
+      "rows": 36,
+      "uncertainty": "all paired observations and within-field means; no CI",
+      "axis_rule": "same y range in all four panels; negative favors candidate"
+    },
+    {
+      "name": "fig04_spatial_maps",
+      "size_inches": [
+        7.204724,
+        10.6
+      ],
+      "panels": 15,
+      "alignment_verdict": "PASS",
+      "claim": "Reconstruction differences are spatially nonuniform across all three fields.",
+      "source": "spatial_results_source.csv",
+      "selection": "all fields, first manifest seed, no best-case selection",
+      "uncertainty": "single selected checkpoint per field/method; not an aggregate",
+      "field_scale": [
+        0.13379566823714423,
+        3.2378868276750725
+      ],
+      "error_scale": [
+        0,
+        2.251039207738012
+      ],
+      "layout": "columns: all three fields; rows: truth, C, Q, C error, Q error",
+      "processing": "exp(log_k); nearest cell rendering, no clipping/interpolation",
+      "error_mask": "training and validation positions masked in gray"
+    },
+    {
+      "name": "fig05_spatial_profiles",
+      "size_inches": [
+        7.204724,
+        5.8
+      ],
+      "panels": 3,
+      "alignment_verdict": "PASS",
+      "claim": "An aggregate gain does not ensure every local peak or trough is recovered.",
+      "source": "profile_results_source.csv",
+      "rows": 72,
+      "selection": "all fields, first manifest seed, fixed middle grid row",
+      "y": 0.5208333333333334,
+      "uncertainty": "single selected checkpoint, no uncertainty band",
+      "scope": "all split types on section, not a held-out-only metric"
+    },
+    {
+      "name": "fig06_training_curves",
+      "size_inches": [
+        7.204724,
+        5.2
+      ],
+      "panels": 4,
+      "alignment_verdict": "PASS",
+      "claim": "Observation fitting and physical-residual optimization follow distinct trajectories.",
+      "source": "training_results_source.csv",
+      "summary": "training_results_summary.csv",
+      "rows": 43272,
+      "runs": 72,
+      "uncertainty": "median and 25th-75th run percentiles, descriptive only",
+      "scope": "validation after update; training PDE before update, not held-out PDE",
+      "processing": "all logged epochs, no smoothing; positive log axes"
+    },
+    {
+      "name": "fig07_physics_cost",
+      "size_inches": [
+        7.204724,
+        4.1
+      ],
+      "panels": 2,
+      "alignment_verdict": "PASS",
+      "claim": "Physical-residual gains and simulation cost must be evaluated jointly.",
+      "source": "result_run_metrics.csv",
+      "summary": "physics_cost_summary.csv",
+      "runs": 72,
+      "uncertainty": "all runs plus mean and sample SD; no CI",
+      "scope": "selected-checkpoint independent residual; full training-loop cost"
+    }
+  ],
+  "artifact_sha256": {
+    "result_run_metrics.csv": "df2330ba1917ea5ff5a6f16f782392fb1b7ad9e71e9157fbfbf17c1375b82249",
+    "paired_effects_source.csv": "5e3a70d0c1d200bc0b91a7387328cd9f3744428f626dc42a7a63804744872327",
+    "spatial_results_source.csv": "d322e6d41f23c0e09fa23129edb2c9e933d2cf502197213974b1338678d7a5ed",
+    "profile_results_source.csv": "ef133433033a9c72a59a17fd9386a4197d6309ed04cb0a15546ca833d9ca05ba",
+    "training_results_source.csv": "16a90f03ea6a9821b245728ef64bdb963e70f24e9336f668370fef8854ae5d44",
+    "training_results_summary.csv": "390dadbc5ca0300306eb97e7b36042797379f06872b22e644d63182bee35ab5e",
+    "physics_cost_summary.csv": "66ec6532955576ed013bb5853cb6169f764b2d3821a52be18665473ca784eba9",
+    "fig03_paired_effects.png": "944825cb3a7cd66d8c4ef511714416c48a587df2a38683ffbd4a1b2dbe3b66c4",
+    "fig03_paired_effects.preview.png": "320678778cfac6f0f8a224209992dd181f92ba32c7225fe5b0bb822b3d0d6d14",
+    "fig03_paired_effects.pdf": "6e08280a891b2701ea6f8a7a75f1947efe5fd73e3be32aadfa635dfab61273f3",
+    "fig03_paired_effects.svg": "880da83bfc107061266ade2d7889ac625648cee5cdfaf932e266dd6940d44124",
+    "fig03_paired_effects.alignment.json": "4df6b26da60cf4d8770a9044e32892b3e3584582606b0488feede639cea6ebbb",
+    "fig03_paired_effects.alignment.svg": "b3cb047bd0b54f7910a9bff3c8f2c7b3bb3d89ca2526c28b5ab67e7df4c12f26",
+    "fig04_spatial_maps.png": "85c84099fd2bbb509b968378fec35b314068e47ec35fd2c48909308b0c43cfea",
+    "fig04_spatial_maps.preview.png": "74b0d50cdab794a116889934723b42c356e4ee53e79fe1b40883f4797dc52145",
+    "fig04_spatial_maps.pdf": "5ac1a3e375853a215139c1ec8d510f51c5371bdbd914f0fa1cce65ce98a29bfa",
+    "fig04_spatial_maps.svg": "0cf9eb606b16df3a0d4a79bb945892f51b831b4533ba75bdcc669cb379b747dd",
+    "fig04_spatial_maps.alignment.json": "3bb7beee110c15af06088cd3cd963b022a096ebe1beeb28ca4bad7da83a14c8b",
+    "fig04_spatial_maps.alignment.svg": "e002a00a76fd142eb04e8ebfefa848ad7b6dd716956fc3589b2795d7614ecfa1",
+    "fig05_spatial_profiles.png": "42ee48449cc0e39fbf68c582642108d493772bae28422e5fc524bb88dba94356",
+    "fig05_spatial_profiles.preview.png": "32358d1af0c59cf7f311c0fed339d906d577015efb2d872c56d3f7a926816c24",
+    "fig05_spatial_profiles.pdf": "1ed2cd2a6aace32edceed3a22f3d15918dc493d3addd2bb3175d0e00cb382c01",
+    "fig05_spatial_profiles.svg": "a3f1a16b0f31f35a2395feceb1570b367ca59c28d6e6a1683b4aec4728ba5706",
+    "fig05_spatial_profiles.alignment.json": "817f83a480bbd0935784e51f0ed5081d43dad24d510555a8fdcfbd4c82e8211d",
+    "fig05_spatial_profiles.alignment.svg": "9aba808d3bcec5c3dd73dfd2f13576594e2413c91f076bf12b9368778062be8c",
+    "fig06_training_curves.png": "f49920af1168d73ab8703764e08f20715f1bfd7b5ca6096a72320af983b9f1c7",
+    "fig06_training_curves.preview.png": "b26c0f529c8d70e5469a15ac27bac38833bc9a6913b105521ff3597ec1e3020a",
+    "fig06_training_curves.pdf": "10985daa17282023b36c67085d8dd7fa78e2f1b92b4ac91b4fdf6732c30ffaa8",
+    "fig06_training_curves.svg": "e2abb1a0fc3c66cc790152bff01982d49421a94e8560afba04d27a1538cee074",
+    "fig06_training_curves.alignment.json": "5a912399917c22364556241c0d434b472c3e367062a600f50c269289e7c30185",
+    "fig06_training_curves.alignment.svg": "48520c33e26b562adbd655ecb3095c58d7aa7516e248965d2c26708168607aab",
+    "fig07_physics_cost.png": "51853357f46b47fb7f90e558b8f5e6e05c0ccc21daebfbc3d74200a1ae2a5cc4",
+    "fig07_physics_cost.preview.png": "1fcb7c405cf6084a5108b545a7208e00f79ba383488ade4972af676d4e05e49c",
+    "fig07_physics_cost.pdf": "e7264b3fa018692d85baccb8007180f5d42b7ab7028c90ac771109fcd74b2fbf",
+    "fig07_physics_cost.svg": "52434f9aca6b52b54db50dfc70e789fd425f708cc7efccbab0f3abfa5d4a128c",
+    "fig07_physics_cost.alignment.json": "59ea33f165cb20de847f43d9e7c723d3c13067c65672101218ef38f065038ce7",
+    "fig07_physics_cost.alignment.svg": "7f08c689bee3e1023db3f971171415691adf5c5580848bef89d70bcae83e5e3f"
+  },
+  "note": "Descriptive figures from saved runs; no significance claim or retraining."
+}

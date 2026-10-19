@@ -1,0 +1,206 @@
+{
+  "deck_name": "quantum_darcy_pinn_v3_deck",
+  "language": "Chinese",
+  "goal": "基于2026-10-07版《量子特征增强物理信息神经网络的渗透率场重建》制作15页科研答辩演示：背景简洁，按传统PINN、量子特征的潜在作用、架构训练推理、实验效果依次展开。仅使用V3论文的事实与数值。",
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 4,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "previously approved sparse background slide in this Codex conversation, reused as slide 2 for the V3 deck",
+    "size": "16:9 landscape, built-in default",
+    "quality": "built-in default",
+    "model_config": "not exposed by built-in tool",
+    "approved_sample_path": "origin_image/slide_02.png",
+    "input_context_preparation": "approved generated background slide was inspected with view_image and copied unchanged; use only as a visual style reference for all other pages",
+    "handoff_rule": "Use built-in image_gen generation mode for every remaining page and the approved sample only as a style reference. If unavailable, return a blocker."
+  },
+  "approved_style_reference": {
+    "path": "origin_image/slide_02.png",
+    "role": "approved sample slide, style reference only",
+    "fidelity": "white background, deep academic blue Chinese typography, thin blue rule with short red accent, scientific clarity; do not copy its field layout, and use more information on slides 3–15 than the deliberately sparse background"
+  },
+  "style": {
+    "name": "科研答辩风",
+    "visual_direction": "formal Chinese academic defense; content-specific diagrams with a clear reading order, never marketing styling",
+    "color_palette": "white #FFFFFF, deep blue #003F8F, restrained red #B5121B; teal/green/purple limited to conceptual field visualizations; gray for quiet structural lines",
+    "typography": "large readable simplified Chinese title, medium-size concise body, exact numbers and Latin symbols, no tiny captions",
+    "texture_and_finish": "flat scientific presentation, thin rules, no decorative gradients or rounded card layouts",
+    "density_rule": "slide 2 has only two large cues and abundant whitespace; slides 3–15 have 3–5 grouped speaking cues and one meaningful figure or evidence arrangement; allow legible room for every phrase",
+    "deck_consistency": "repeat typography, palette and academic restraint, vary visual composition by page role"
+  },
+  "deck_context": {
+    "source_summary": "V3 manuscript studies within-field reconstruction from sparse log-permeability observations on three independent GSTools Gaussian synthetic fields, each with three observation/initialization repeats. A dual-network Darcy PINN predicts log-permeability and auxiliary pressure, using real PDE and boundary residual losses. A PennyLane differentiable parameterized quantum circuit simulated by exact state vectors replaces only the classical Tanh permeability feature block. The experiment crosses C/Q representation with RBA and MC training enhancements and evaluates held-out k-space relative L2 error, independent equation residual, auxiliary pressure, downstream coarse-grid FVM flux, and training time.",
+    "core_claim": "Q improves mean held-out permeability relative L2 error from 0.337094 to 0.306759 (9.00%) versus C at fixed epochs, but not every field/run. RBA greatly reduces independent PDE residual but scarcely improves k error; MC alone does not improve primary error and costs time. Downstream flux and simulation time do not follow k-error ranking.",
+    "canonical_terms": ["Darcy双网络PINN", "对数渗透率", "辅助压力", "经典特征C", "量子特征Q", "参数化量子线路的精确模拟", "RBA残差注意力", "MC配对特征筛选", "渗透率相对L2误差 E_k", "独立点方程残差 E_r", "FVM通量相对误差 E_Q"],
+    "scientific_boundaries": "This is a differentiable quantum circuit simulated on a classical CPU, not a sine-based quantum-inspired phase network or real quantum hardware. The actual V3 training includes Darcy strong-form and no-flow boundary losses, but no internal pressure labels. The only supervised observations are sparse log-permeability. No V2 residual spatial correction, known-point backfilling or full-field calibration. Three synthetic fields and nine fits per method are not nine independent fields. No generalization to unseen fields, field measurements, quantum speedup, hardware advantage or universal superiority. Numerical plots must not invent training traces, error bars, or field measurements."
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "量子特征增强物理信息神经网络的渗透率场重建",
+      "role": "cover",
+      "intent": "Present the actual V3 manuscript title, with no V2 method implication.",
+      "key_points": ["稀疏观测 · Darcy物理约束 · 经典/量子特征替换"],
+      "local_context": "Quantum circuit is simulated on a classical computer. No institution, author, real hardware or site photograph.",
+      "layout": {"composition": "Large left-aligned manuscript title in upper and middle area, restrained subtitle beneath, conceptual heterogeneous two-dimensional field and subtle dual-network connection in lower-right.", "spacing": "generous, no title clipping"},
+      "visual_elements": {"main_visual": "conceptual non-measured synthetic permeability field and subtle paired network strands", "supporting_elements": "academic blue rule"},
+      "constraints": ["Do not draw a physical quantum computer or imply hardware acceleration.", "No logo, date, slide number or fabricated author."]
+    },
+    {
+      "number": 2,
+      "title": "研究背景",
+      "role": "context",
+      "intent": "Approved sparse conceptual background slide retained unchanged.",
+      "key_points": ["空间非均质：局部变化复杂", "观测有限：难以覆盖完整区域"],
+      "sample_approved": true,
+      "local_context": "The conceptual field and two short cues are intentionally sparse. Presenter notes explain effects on pressure and flow.",
+      "layout": {"composition": "Reuse approved origin_image/slide_02.png exactly."},
+      "visual_elements": {"main_visual": "approved conceptual field with sparse observation points"}
+    },
+    {
+      "number": 3,
+      "title": "传统PINN如何表示Darcy流动",
+      "role": "concept",
+      "intent": "Bridge general PINN principles to actual V3 dual-network physics.",
+      "key_points": ["坐标网络表示渗透率与压力", "自动微分提供空间导数", "Darcy通量与守恒方程耦合双网络", "观测、域内方程、边界共同约束"],
+      "local_context": "Pressure is an auxiliary unknown; no internal pressure labels are required. In this V3 project, actual PDE and no-flow boundary losses participate in training.",
+      "layout": {"composition": "Central left-to-right diagram splits coordinates into k and p functions, joins at Darcy flux, then three loss branches; four concise speaking cues around it.", "spacing": "medium readable text"},
+      "visual_elements": {"main_visual": "dual-function physics-informed mechanism with non-overlapping arrows"},
+      "constraints": ["Do not show pressure observations.", "Do not claim PDE is only background here."]
+    },
+    {
+      "number": 4,
+      "title": "传统PINN的重建难点",
+      "role": "problem framing",
+      "intent": "Motivate representation and optimization under sparse observations.",
+      "key_points": ["稀疏场值不能唯一确定空白区域", "网络表达与物理优化共同影响重建", "观测、方程、边界目标可能失衡", "可比实验须控制观测与训练协议"],
+      "local_context": "These are limitations and methodological motivations, not evidence that all PINNs fail or that quantum features are guaranteed better.",
+      "layout": {"composition": "Left conceptual field with observed and unknown regions; right a clean vertical three-way constraint balance; bottom protocol takeaway.", "spacing": "four readable cues"},
+      "visual_elements": {"main_visual": "conceptual sparse field and loss-balance diagram"},
+      "constraints": ["No invented improvement percentage or precise field scale."]
+    },
+    {
+      "number": 5,
+      "title": "参数化量子特征的设计动机",
+      "role": "concept comparison",
+      "intent": "Explain what the simulated quantum module replaces and what it might change.",
+      "key_points": ["输入编码为旋转角", "Rot与CNOT形成可训练线路", "Z期望值进入经典读出器", "仅替换渗透率特征块；优势待验证"],
+      "local_context": "Classical feature C is a fully connected Tanh block. Q uses RY input encoding once, trainable Rot/CNOT layers, Pauli-Z expectation values. It is a PennyLane exact-state simulation on classical CPU, not V2's sine phase network or hardware.",
+      "layout": {"composition": "A mutually exclusive two-route feature-block replacement on the same encoder/readout backbone; clean quantum circuit detail on right, no hardware illustration.", "spacing": "four prominent cues"},
+      "visual_elements": {"main_visual": "simple technically correct RY–Rot–CNOT–Z expectation circuit as a feature map, paired with classical Tanh feature block"},
+      "constraints": ["No quantum speedup or proven standalone advantage.", "Circuit outputs features, not permeability directly."]
+    },
+    {
+      "number": 6,
+      "title": "如何检验表示与训练增强",
+      "role": "comparison framework",
+      "intent": "Define the 2×4 comparison before results.",
+      "key_points": ["基础Q对C检验特征替换", "RBA与MC对两类模型对称启用", "场值、物理残差、通量、时间分别评价", "同轮数不等于等参数或等耗时"],
+      "local_context": "Eight exact groups: C, C+RBA, C+MC, C+RBA+MC and Q counterparts. Compare Q+RBA to Q for RBA's increment, and Q+MC to Q for MC's increment.",
+      "layout": {"composition": "A clear 2×4 matrix with C/Q rows and base/RBA/MC/RBA+MC columns; concise interpretation and evaluation axes beneath.", "spacing": "compact but legible"},
+      "visual_elements": {"main_visual": "experimental matrix, not an invented accuracy chart"},
+      "constraints": ["Do not label all enhancements beneficial.", "No results on this page."]
+    },
+    {
+      "number": 7,
+      "title": "V3实验工作的整体链条",
+      "role": "process overview",
+      "intent": "Make information boundaries visible before detailed methods.",
+      "key_points": ["GSTools生成合成场；FVM建立独立参考", "稀疏渗透率观测与无标签配置点训练", "验证观测选参数与掩码", "最佳状态恢复后独立评价"],
+      "local_context": "FVM reference pressure and complete permeability are unavailable to training. Validation log-permeability is used for MC acceptance and checkpoint selection. Test labels only final evaluation. No invented experimental curves.",
+      "layout": {"composition": "Four-stage pipeline with separate lower reference/evaluation lane, no plotted curves; labels distinguish training, validation and held-out evaluation.", "spacing": "four speaker cues"},
+      "visual_elements": {"main_visual": "source → train → select → evaluate pipeline with clear non-leaking arrows"},
+      "constraints": ["No test or pressure reference arrow into training.", "No invented training traces."]
+    },
+    {
+      "number": 8,
+      "title": "双网络PINN与可替换特征块",
+      "role": "architecture",
+      "intent": "Explain the actual V3 model dataflow precisely.",
+      "key_points": ["同一坐标进入渗透率与压力两条路径", "渗透率：编码→C或Q→掩码→读出→exp", "压力：经典网络嵌入左右定压", "Darcy通量与散度耦合两条路径"],
+      "local_context": "C and Q feature blocks are mutually exclusive, not fused. Pressure network has no internal pressure labels. Upper/lower no-flow boundary still in loss. Classical encoder/readout and pressure net share structure/initialization across groups but update independently.",
+      "layout": {"composition": "Wide academic architecture diagram: two parallel branches from coordinate input, one red-emphasized replaceable permeability feature block, join at physical residual; sparse labels and bottom boundary cue.", "spacing": "no line crossing interpreted as connection"},
+      "visual_elements": {"main_visual": "dual network flow, C/Q switch, observed log-k supervision and physics loss"},
+      "constraints": ["No V2 phase/sine/gated residual backbone.", "No pressure observation supervision.", "No raw-corrected postprocessing."]
+    },
+    {
+      "number": 9,
+      "title": "量子特征模块如何工作",
+      "role": "mechanism",
+      "intent": "Give the presenter a legible circuit walk-through.",
+      "key_points": ["RY将有界角度写入初始态", "可训练Rot与CNOT构成层内变换", "Z期望值形成实值特征向量", "经典读出预测；仅初始编码一次"],
+      "local_context": "PennyLane exact-state-vector and exact expectation simulation with Torch backprop. Each layer applies Rot with three trainable angles per qubit, then fixed CNOT chain including wraparound. No shots, real device, or data re-upload.",
+      "layout": {"composition": "Large left-to-right circuit of a few wire rows, only essential gate labels; lower line shows expectation vector to classical readout with four numbered oral cues.", "spacing": "large gate labels, no tiny equations"},
+      "visual_elements": {"main_visual": "technically plausible RY, Rot, CNOT and Z-expectation schematic"},
+      "constraints": ["Do not claim Z expectation is permeability.", "No physical processor or hardware photograph."]
+    },
+    {
+      "number": 10,
+      "title": "联合训练：观测与Darcy约束",
+      "role": "training process",
+      "intent": "Show the actual three-term V3 PINN objective and differentiation.",
+      "key_points": ["对数渗透率观测拟合", "域内Darcy强形式残差", "上下无流边界损失", "自动微分与统一优化更新双网络"],
+      "local_context": "No interior pressure label term. Left/right Dirichlet pressure is hard embedded in p=1−x+x(1−x)Np, upper/lower flux no-flow is soft. Fixed global lambda weights same groups; RBA optional point weights only in its groups.",
+      "layout": {"composition": "Three vertically aligned loss strands feed a shared optimizer and two network paths, validation side lane separate; one clear hard/soft boundary distinction.", "spacing": "four speaking cues, no fabricated loss curves"},
+      "visual_elements": {"main_visual": "differentiable physics training loop"},
+      "constraints": ["Do not depict pressure reference entering loss.", "Do not invent additional losses."]
+    },
+    {
+      "number": 11,
+      "title": "RBA与MC分别改变什么",
+      "role": "training enhancements",
+      "intent": "Explain two interventions separately and symmetrically.",
+      "key_points": ["RBA：物理残差决定配置点权重", "MC：同批次配对屏蔽读出特征", "验证决定掩码是否接受", "MC不删量子门或比特；成本计入训练"],
+      "local_context": "RBA uses detached residuals and bounded weights; no location resampling. MC uses random subbatches, not quantum measurement sampling, and masks output features only. Same algorithms are available to C and Q.",
+      "layout": {"composition": "Left RBA weighting of fixed residual dots; right paired MC masked/unmasked loss comparison with validation gate; bottom symmetric C/Q application note.", "spacing": "two distinct halves, no tiny procedural text"},
+      "visual_elements": {"main_visual": "two mechanistic diagrams, not outcomes"},
+      "constraints": ["No quantum circuit pruning claim.", "No claim that screening always improves accuracy."]
+    },
+    {
+      "number": 12,
+      "title": "推理与独立评价",
+      "role": "inference process",
+      "intent": "Distinguish direct prediction from post-training metrics and reference data.",
+      "key_points": ["恢复验证最佳参数与掩码", "查询坐标直接输出预测渗透率", "独立点检验未加权方程残差", "同一粗网格FVM评估预测场的通量"],
+      "local_context": "No spatial residual correction, known-point backfill or full-field calibration. Full reference k and pressure only for final evaluation. E_p refers to pressure network vs fine-grid FVM reference, whereas downstream FVM pressure/flux use predicted and reference k on the same coarse grid.",
+      "layout": {"composition": "One direct output path fans into held-out field, independent physics, and coarse-FVM response evaluation branches; reference inputs attach only to the evaluation side.", "spacing": "clear information boundary"},
+      "visual_elements": {"main_visual": "direct query and three evaluation lanes, no exact experimental traces"},
+      "constraints": ["No test labels entering prediction.", "Do not show V2 correction stage."]
+    },
+    {
+      "number": 13,
+      "title": "实验设置与基础重建结果",
+      "role": "data evidence",
+      "intent": "Present the exact primary result and its variation boundary.",
+      "key_points": ["3个无噪声合成场 × 每场3次拟合", "留出渗透率相对L2误差 E_k", "C 0.337094 → Q 0.306759：降低9.00%", "9次配对七优两劣；场2未改善"],
+      "local_context": "Mean values from V3 Table 3; three independent fields, nine fits per method not independent fields. Relative reduction computed from group means. Field 2 C 0.318048, Q 0.326464. No interpolation correction or old RMSE values.",
+      "layout": {"composition": "Two large exact metric columns with a simple 9.00% annotation; small 3-field directional comparison marks two improved and one worse without invented per-run points.", "spacing": "numeric evidence prominent, four readable cues"},
+      "visual_elements": {"main_visual": "typographic exact comparison and discrete field-level direction summary"},
+      "constraints": ["Exact digits 0.337094, 0.306759, 9.00%.", "Do not imply all fields improve.", "No fake statistical error bars."]
+    },
+    {
+      "number": 14,
+      "title": "RBA与MC的增量效果",
+      "role": "data analysis",
+      "intent": "Separate physics improvement from primary field metric and screening cost.",
+      "key_points": ["Q+RBA：E_r 0.260069→0.197464（−24.07%）", "对应 E_k 0.306759→0.305936（−0.27%）", "Q+MC 的 E_k 0.306767：未改善", "Q+RBA+MC 0.305882：最低均值、增量小"],
+      "local_context": "All exact V3 means. RBA Q nine paired fits: three improve/six worsen E_k. Q+MC eight unchanged/one worse. MC is costly, discussed next slide. Independent residual E_r is unweighted on separate points.",
+      "layout": {"composition": "Two aligned metric lanes, left equation residual and field error, right MC/no-gain and combination facts; four numbered cues; not a fake bar chart.", "spacing": "exact numbers large and separated"},
+      "visual_elements": {"main_visual": "typographic quantitative comparison with restrained red caveat"},
+      "constraints": ["Render six-digit values and percentages exactly.", "No claim RBA reliably improves field error."]
+    },
+    {
+      "number": 15,
+      "title": "流动响应、成本与结论",
+      "role": "summary evidence",
+      "intent": "Close with metric trade-offs and limits instead of universal quantum advantage.",
+      "key_points": ["通量误差 E_Q：C 0.041240，Q 0.048361", "训练时间：C 0.806676s，Q 6.324138s（约7.84倍）", "Q+MC比Q多耗时40.01%，主指标无收益", "仅支持当前合成场的平均重建改善"],
+      "local_context": "CPU double precision exact quantum simulation. E_Q is relative inlet flux error from coarse-grid FVM rerun, not network flux imbalance. No unknown-field generalization, universal advantage or hardware speedup. Training time includes MC screening, not data generation/final test.",
+      "layout": {"composition": "Three horizontal metric rows for k field, downstream flux, simulation time with a short evidence-boundary conclusion band; no plotted fabricated curves.", "spacing": "conclusive but readable"},
+      "visual_elements": {"main_visual": "compact trade-off table with exact values and simple flow schematic"},
+      "constraints": ["Exact 0.041240, 0.048361, 0.806676s, 6.324138s, 40.01%.", "No real hardware speedup claim."]
+    }
+  ]
+}

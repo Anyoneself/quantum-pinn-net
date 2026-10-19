@@ -1,0 +1,59 @@
+{
+  "data_config": {
+    "grid": 24,
+    "refinement": 3,
+    "modes": 4,
+    "log_amplitude": 0.6,
+    "k_train": 48,
+    "k_validation": 24,
+    "p_train": 0,
+    "p_validation": 0,
+    "collocation": 128,
+    "boundary": 32,
+    "noise": 0.0,
+    "field_generator": "gstools",
+    "log_variance": 0.4,
+    "correlation_length": 0.25,
+    "anisotropy": 0.6,
+    "angle": 0.0,
+    "log_mean": 0.0,
+    "gstools_modes": 1000
+  },
+  "generator": {
+    "library": "gstools",
+    "library_version": "1.7.0",
+    "covariance": "Gaussian",
+    "dimension": 2,
+    "generator": "RandMeth",
+    "seed": 466,
+    "mode_no": 1000,
+    "log_variance": 0.4,
+    "correlation_length": 0.25,
+    "anisotropy": 0.6,
+    "angle_radians": 0.0,
+    "log_mean": 0.0,
+    "formula": "log(k/k_ref)=GSTools.SRF(Gaussian covariance, mean=log_mean)",
+    "normalization": "none; natural log, k_ref=1, mu=1, L_ref=1, delta_p_ref=1",
+    "v2_arrays_reused": false
+  },
+  "equation": "q=-k*grad(p), div(q)=0",
+  "boundary_conditions": {
+    "left_p": 1,
+    "right_p": 0,
+    "top_qn": 0,
+    "bottom_qn": 0
+  },
+  "fine_grid": 72,
+  "reference_inlet_fine": 1.5674757685861664,
+  "reference_inlet_coarse": 1.5674852337010738,
+  "fine_solver_residual": 5.329070518200751e-15,
+  "fine_flux_balance": 5.6662976072749465e-15,
+  "coarse_fine_pressure_rmse": 0.0003815324438187573,
+  "coarse_fine_flux_relative_difference": 6.038444164237741e-06,
+  "permeability_contrast": 8.254739867852969,
+  "task": "per-field inverse reconstruction, not zero-shot unseen-field prediction",
+  "observed_variables": [
+    "log_k"
+  ],
+  "reference_pressure_role": "evaluation_only"
+}

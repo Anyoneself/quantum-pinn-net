@@ -1,0 +1,72 @@
+{
+  "field_seed": 11,
+  "method": "quantum_mc",
+  "seed": 101,
+  "epochs": 30,
+  "best_epoch": 0,
+  "initial_validation": 1.1128910347042487,
+  "best_validation": 1.1128910347042487,
+  "training_seconds": 0.8214470420061843,
+  "screening_seconds": 0.20439070899738,
+  "parameter_counts": {
+    "total": 1038,
+    "feature_block": 24,
+    "pressure": 697
+  },
+  "active_features_at_best": 4,
+  "quantum_forward_calls_training": 185,
+  "quantum_sample_evaluations_training": 2680,
+  "model_config": {
+    "features": 4,
+    "feature_layers": 2,
+    "hidden": 24,
+    "pressure_depth": 2
+  },
+  "train_config": {
+    "epochs": 30,
+    "learning_rate": 0.001,
+    "gradient_clip": 5.0,
+    "threads": 1
+  },
+  "strategy_config": {
+    "warmup": 5,
+    "rba_decay": 0.9,
+    "rba_gain": 4.0,
+    "mc_every": 10,
+    "mc_trials": 2,
+    "mc_batch": 8,
+    "mc_fraction": 0.25,
+    "mc_threshold": 0.01,
+    "min_features": 2
+  },
+  "loss_weights": {
+    "permeability": 10.0,
+    "pressure": 0.0,
+    "physics": 1.0,
+    "boundary": 1.0
+  },
+  "selection_rule": "minimum noisy validation observation loss, including epoch 0",
+  "observed_variables": [
+    "log_k"
+  ],
+  "pressure_supervision": false,
+  "quantum_backend": "default.qubit, exact expectations, torch backprop",
+  "training_view_has_test_labels": false,
+  "log_k_rmse": 0.4864302931457223,
+  "k_rmse": 0.5061227671115438,
+  "k_relative_l2": 0.4460779191499409,
+  "pressure_rmse": 0.05986781738711689,
+  "downstream_pressure_rmse": 0.05307758014007259,
+  "downstream_flux_relative_error": 0.039549054880961616,
+  "downstream_solver_residual": 1.3422414667658957e-15,
+  "downstream_flux_imbalance": 4.4459095832930405e-15,
+  "test_k_points": 120,
+  "test_p_points": 144,
+  "pde_residual_rmse": 0.45586075586110836,
+  "neumann_flux_rmse": 0.055934008277194205,
+  "network_inlet_flux": 0.8791679556218364,
+  "network_outlet_flux": 1.1392818496864803,
+  "network_flux_imbalance": 0.29586371113886323,
+  "network_flux_relative_error": 0.03987401104963532,
+  "prediction_seconds": 0.002260124994791113
+}

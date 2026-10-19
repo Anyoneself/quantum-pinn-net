@@ -1,0 +1,72 @@
+{
+  "field_seed": 11,
+  "method": "quantum_plain",
+  "seed": 101,
+  "epochs": 5000,
+  "best_epoch": 4981,
+  "initial_validation": 2.356262246163492,
+  "best_validation": 0.19060729779490537,
+  "training_seconds": 109.68300579099741,
+  "screening_seconds": 0.0,
+  "parameter_counts": {
+    "total": 1038,
+    "feature_block": 24,
+    "pressure": 697
+  },
+  "active_features_at_best": 4,
+  "quantum_forward_calls_training": 20001,
+  "quantum_sample_evaluations_training": 1320024,
+  "model_config": {
+    "features": 4,
+    "feature_layers": 2,
+    "hidden": 24,
+    "pressure_depth": 2
+  },
+  "train_config": {
+    "epochs": 5000,
+    "learning_rate": 0.001,
+    "gradient_clip": 5.0,
+    "threads": 1
+  },
+  "strategy_config": {
+    "warmup": 20,
+    "rba_decay": 0.9,
+    "rba_gain": 4.0,
+    "mc_every": 20,
+    "mc_trials": 4,
+    "mc_batch": 32,
+    "mc_fraction": 0.25,
+    "mc_threshold": 0.01,
+    "min_features": 2
+  },
+  "loss_weights": {
+    "permeability": 10.0,
+    "pressure": 0.0,
+    "physics": 1.0,
+    "boundary": 1.0
+  },
+  "selection_rule": "minimum noisy validation observation loss, including epoch 0",
+  "observed_variables": [
+    "log_k"
+  ],
+  "pressure_supervision": false,
+  "quantum_backend": "default.qubit, exact expectations, torch backprop",
+  "training_view_has_test_labels": false,
+  "log_k_rmse": 0.18913495687599802,
+  "k_rmse": 0.19066835892679135,
+  "k_relative_l2": 0.16638056144669588,
+  "pressure_rmse": 0.01239415071614858,
+  "downstream_pressure_rmse": 0.014612783378300506,
+  "downstream_flux_relative_error": 0.029764705021268857,
+  "downstream_solver_residual": 1.7763568394002505e-15,
+  "downstream_flux_imbalance": 6.501451914202965e-15,
+  "test_k_points": 504,
+  "test_p_points": 576,
+  "pde_residual_rmse": 0.14653220272920098,
+  "neumann_flux_rmse": 0.039191788535176776,
+  "network_inlet_flux": 0.8881942837955731,
+  "network_outlet_flux": 0.9243690806713839,
+  "network_flux_imbalance": 0.0407284729656477,
+  "network_flux_relative_error": 0.030310592455556205,
+  "prediction_seconds": 0.006043916000635363
+}

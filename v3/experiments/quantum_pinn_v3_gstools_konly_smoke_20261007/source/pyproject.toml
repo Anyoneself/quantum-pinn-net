@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "darcy-quantum-pinn"
+version = "0.1.0"
+description = "Controlled classical and quantum-feature PINNs for a synthetic Darcy inverse problem"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2,<3",
+    "scipy>=1.14,<2",
+    "torch>=2.5,<3",
+    "pennylane>=0.40,<0.46",
+    "gstools>=1.7,<1.8",
+]
+
+[project.optional-dependencies]
+legacy-tests = ["matplotlib>=3.9,<4", "pandas>=2.2,<3", "Pillow>=11,<13"]
+
+[project.scripts]
+qpinn = "qpinn.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["qpinn*"]

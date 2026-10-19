@@ -1,0 +1,101 @@
+import argparse
+import json
+from pathlib import Path
+
+from dataset.cases import DataConfig
+from experiment.runner import run_experiment, verify_experiment
+from models.darcy_pinn import ModelConfig
+from metrics.physics import LossWeights
+from .strategies import StrategyConfig
+from .training import METHODS, TrainConfig
+
+
+def parser():
+    root = argparse.ArgumentParser(description="V3 quantum-feature Darcy PINN experiments")
+    commands = root.add_subparsers(dest="command", required=True)
+    run = commands.add_parser("run", help="run a controlled matrix in a NEW output directory")
+    run.add_argument("--output", type=Path, required=True)
+    run.add_argument("--smoke", action="store_true", help="small implementation check, not research evidence")
+    run.add_argument("--field-seeds", type=int, nargs="+")
+    run.add_argument("--seeds", type=int, nargs="+")
+    run.add_argument("--methods", choices=METHODS, nargs="+", default=list(METHODS))
+    run.add_argument("--epochs", type=int)
+    run.add_argument("--grid", type=int)
+    run.add_argument("--refinement", type=int, default=3)
+    run.add_argument("--field-generator", choices=("gstools", "trigonometric"), default="gstools",
+                     help="GSTools by default; trigonometric is the historical V3 generator")
+    run.add_argument("--modes", type=int, default=4, help="legacy trigonometric generator only")
+    run.add_argument("--log-amplitude", type=float, default=0.6, help="legacy generator only")
+    run.add_argument("--log-variance", type=float, default=0.4)
+    run.add_argument("--correlation-length", type=float, default=0.25,
+                     help="GSTools Gaussian len_scale in unit-domain coordinates")
+    run.add_argument("--anisotropy", type=float, default=0.6)
+    run.add_argument("--angle", type=float, default=0.0, help="covariance rotation in radians")
+    run.add_argument("--log-mean", type=float, default=0.0)
+    run.add_argument("--gstools-modes", type=int, default=1000)
+    run.add_argument("--k-train", type=int)
+    run.add_argument("--p-train", type=int, default=0,
+                     help="0: permeability-only supervision; >0 explicitly adds pressure labels")
+    run.add_argument("--validation-points", type=int)
+    run.add_argument("--collocation", type=int)
+    run.add_argument("--boundary", type=int)
+    run.add_argument("--noise", type=float, default=0.0)
+    run.add_argument("--qubits", type=int, default=4, help="also the classical feature count")
+    run.add_argument("--feature-layers", type=int, default=2)
+    run.add_argument("--hidden", type=int, default=24)
+    run.add_argument("--learning-rate", type=float, default=0.001)
+    run.add_argument("--threads", type=int, default=1)
+    run.add_argument("--warmup", type=int)
+    run.add_argument("--mc-every", type=int)
+    run.add_argument("--mc-trials", type=int)
+    run.add_argument("--mc-batch", type=int)
+    run.add_argument("--mc-threshold", type=float, default=0.01)
+    run.add_argument("--mc-fraction", type=float, default=0.25)
+    run.add_argument("--min-features", type=int, default=2)
+    run.add_argument("--rba-decay", type=float, default=0.9)
+    run.add_argument("--rba-gain", type=float, default=4.0)
+    check = commands.add_parser("verify", help="read-only verification of a completed archive")
+    check.add_argument("--output", type=Path, required=True)
+    return root
+
+
+def main(argv=None):
+    args = parser().parse_args(argv)
+    if args.command == "verify":
+        print(json.dumps(verify_experiment(args.output), indent=2))
+        return
+
+    def setting(name, smoke, research):
+        value = getattr(args, name)
+        return value if value is not None else (smoke if args.smoke else research)
+
+    validation = setting("validation_points", 8, 24)
+    data = DataConfig(
+        grid=setting("grid", 12, 24), refinement=args.refinement, modes=args.modes,
+        log_amplitude=args.log_amplitude, k_train=setting("k_train", 16, 48),
+        k_validation=validation, p_train=args.p_train,
+        p_validation=validation if args.p_train else 0,
+        collocation=setting("collocation", 32, 128), boundary=setting("boundary", 8, 32),
+        noise=args.noise, field_generator=args.field_generator,
+        log_variance=args.log_variance, correlation_length=args.correlation_length,
+        anisotropy=args.anisotropy, angle=args.angle, log_mean=args.log_mean,
+        gstools_modes=args.gstools_modes,
+    )
+    model = ModelConfig(features=args.qubits, feature_layers=args.feature_layers, hidden=args.hidden)
+    train = TrainConfig(epochs=setting("epochs", 30, 300), learning_rate=args.learning_rate, threads=args.threads)
+    strategy = StrategyConfig(
+        warmup=setting("warmup", 5, 20), mc_every=setting("mc_every", 10, 20),
+        mc_trials=setting("mc_trials", 2, 4), mc_batch=setting("mc_batch", 8, 32),
+        mc_threshold=args.mc_threshold, mc_fraction=args.mc_fraction, min_features=args.min_features,
+        rba_decay=args.rba_decay, rba_gain=args.rba_gain,
+    )
+    run_experiment(args.output, data, model, train, strategy,
+                   LossWeights(pressure=10.0 if args.p_train else 0.0),
+                   setting("field_seeds", [11], [11, 22, 33]),
+                   setting("seeds", [101], [101, 202, 303]), args.methods,
+                   profile="smoke" if args.smoke else "research")
+    print(json.dumps(verify_experiment(args.output), indent=2))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,72 @@
+{
+  "field_seed": 22,
+  "method": "classical_mc",
+  "seed": 101,
+  "epochs": 300,
+  "best_epoch": 300,
+  "initial_validation": 2.9303490416271765,
+  "best_validation": 1.780432090570756,
+  "training_seconds": 0.9781019579968415,
+  "screening_seconds": 0.18785941699752584,
+  "parameter_counts": {
+    "total": 1054,
+    "feature_block": 40,
+    "pressure": 697
+  },
+  "active_features_at_best": 2,
+  "quantum_forward_calls_training": 0,
+  "quantum_sample_evaluations_training": 0,
+  "model_config": {
+    "features": 4,
+    "feature_layers": 2,
+    "hidden": 24,
+    "pressure_depth": 2
+  },
+  "train_config": {
+    "epochs": 300,
+    "learning_rate": 0.001,
+    "gradient_clip": 5.0,
+    "threads": 1
+  },
+  "strategy_config": {
+    "warmup": 20,
+    "rba_decay": 0.9,
+    "rba_gain": 4.0,
+    "mc_every": 20,
+    "mc_trials": 4,
+    "mc_batch": 32,
+    "mc_fraction": 0.25,
+    "mc_threshold": 0.01,
+    "min_features": 2
+  },
+  "loss_weights": {
+    "permeability": 10.0,
+    "pressure": 0.0,
+    "physics": 1.0,
+    "boundary": 1.0
+  },
+  "selection_rule": "minimum noisy validation observation loss, including epoch 0",
+  "observed_variables": [
+    "log_k"
+  ],
+  "pressure_supervision": false,
+  "quantum_backend": null,
+  "training_view_has_test_labels": false,
+  "log_k_rmse": 0.3168000145711037,
+  "k_rmse": 0.409329992351144,
+  "k_relative_l2": 0.3271339321481415,
+  "pressure_rmse": 0.018824129176659498,
+  "downstream_pressure_rmse": 0.017607903265582047,
+  "downstream_flux_relative_error": 0.07555264912870721,
+  "downstream_solver_residual": 1.7763568394002505e-15,
+  "downstream_flux_imbalance": 9.15509181496989e-15,
+  "test_k_points": 504,
+  "test_p_points": 576,
+  "pde_residual_rmse": 0.17991480745186694,
+  "neumann_flux_rmse": 0.06839408387054004,
+  "network_inlet_flux": 0.9457115319920673,
+  "network_outlet_flux": 1.0891719376885214,
+  "network_flux_imbalance": 0.1516957347387591,
+  "network_flux_relative_error": 0.14253082215248275,
+  "prediction_seconds": 0.0005065000004833564
+}

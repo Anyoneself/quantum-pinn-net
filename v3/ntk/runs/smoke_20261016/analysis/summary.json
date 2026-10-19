@@ -1,0 +1,64 @@
+{
+  "profile": "smoke",
+  "primary": {
+    "independent_fields": 1,
+    "classical_mean": 0.6524629950140212,
+    "quantum_mean": 0.650379884748856,
+    "mean_quantum_minus_classical": -0.0020831102651651667,
+    "relative_reduction_of_means_percent": 0.3192687219173873,
+    "field_bootstrap_95_percentile_ci_difference": [
+      -0.0020831102651651667,
+      -0.0020831102651651667
+    ],
+    "exact_field_sign_flip_two_sided_p": 1.0,
+    "quantum_better_fields": 1,
+    "quantum_worse_fields": 0,
+    "field_differences": [
+      -0.0020831102651651667
+    ]
+  },
+  "paired_run_wins": 1,
+  "paired_runs": 1,
+  "exploratory_field_spearman": {
+    "classical_plain:output_raw_drift": null,
+    "classical_plain:output_shape_drift": null,
+    "classical_plain:output_direction_alignment": null,
+    "quantum_plain:output_raw_drift": null,
+    "quantum_plain:output_shape_drift": null,
+    "quantum_plain:output_direction_alignment": null
+  },
+  "best_at_budget_end": {
+    "classical_plain": 1,
+    "quantum_plain": 0
+  },
+  "secondary_means": {
+    "classical_plain": {
+      "log_k_rmse": 0.5964149200326518,
+      "pressure_rmse": 0.07674651340341361,
+      "pde_residual_rmse": 0.7565936485970874,
+      "downstream_flux_relative_error": 0.20303565425943165,
+      "training_seconds": 0.007436874999712018,
+      "output_raw_drift": 0.0022325434056085095,
+      "output_shape_drift": 0.002013736031184563,
+      "output_direction_alignment": 0.0005950583299577927
+    },
+    "quantum_plain": {
+      "log_k_rmse": 0.5932405690257057,
+      "pressure_rmse": 0.07813479762094733,
+      "pde_residual_rmse": 0.7817921637356029,
+      "downstream_flux_relative_error": 0.19669323424946764,
+      "training_seconds": 0.016016707999369828,
+      "output_raw_drift": 0.0,
+      "output_shape_drift": 0.0,
+      "output_direction_alignment": 0.011468403429014519
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "verified_snapshots": 6,
+    "artifact_hashes": 23,
+    "source_hashes": 25,
+    "reloaded_autodiff_snapshots": 3
+  },
+  "analysis_source_sha256": "8ef660f78521cb92b31b82946da97fa1aadcd780bb30992d00c9ed654131dd54"
+}

@@ -1,0 +1,93 @@
+{
+  "methods": {
+    "classical_plain": {
+      "runs": 3,
+      "log_k_rmse": {
+        "mean": 0.28011765473708194,
+        "sd": 0.08684557793966532
+      },
+      "k_relative_l2": {
+        "mean": 0.24912081230582905,
+        "sd": 0.08085430547756792
+      },
+      "pressure_rmse": {
+        "mean": 0.018764489238237026,
+        "sd": 0.0051440949120177834
+      },
+      "pde_residual_rmse": {
+        "mean": 0.27703672654628797,
+        "sd": 0.11208271575176004
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.02764530766407448,
+        "sd": 0.021170878533312246
+      },
+      "training_seconds": {
+        "mean": 13.123231347334999,
+        "sd": 0.8777386668772174
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.15901428921829777,
+        "22": 0.31534078325533405,
+        "33": 0.2730073644438553
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_plain": {
+      "runs": 3,
+      "log_k_rmse": {
+        "mean": 0.271399673479745,
+        "sd": 0.07343125943778392
+      },
+      "k_relative_l2": {
+        "mean": 0.2329232781884976,
+        "sd": 0.07321744189918238
+      },
+      "pressure_rmse": {
+        "mean": 0.01649821149639891,
+        "sd": 0.0075632597215702785
+      },
+      "pde_residual_rmse": {
+        "mean": 0.19795782052909053,
+        "sd": 0.0627558487000317
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.027145049171269767,
+        "sd": 0.016392656773090538
+      },
+      "training_seconds": {
+        "mean": 108.90409977766588,
+        "sd": 1.3339560073650176
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.16638056144669588,
+        "22": 0.3113592680172705,
+        "33": 0.22103000510152646
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    }
+  },
+  "paired_comparisons": {
+    "quantum_plain_vs_classical_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": 0.007366272228398113
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.00398151523806356
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": -0.05197735934232886
+        }
+      ],
+      "mean_difference": -0.016197534117331436
+    }
+  }
+}

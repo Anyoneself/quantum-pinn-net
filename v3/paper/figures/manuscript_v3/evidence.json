@@ -1,0 +1,501 @@
+{
+  "archive": "experiments/quantum_pinn_v3_initial_20261007",
+  "runs": 72,
+  "summary_sha256": "301023b2427ed28db339f3ab80f75b1210c9c7914cb158df99cd452c89537c4f",
+  "comparisons": {
+    "quantum_plain_vs_classical_plain": {
+      "relative_reduction_percent": 3.0906367784516093,
+      "better_equal_worse": [
+        7,
+        0,
+        2
+      ]
+    },
+    "quantum_rba_vs_classical_rba": {
+      "relative_reduction_percent": 2.776108714718593,
+      "better_equal_worse": [
+        6,
+        0,
+        3
+      ]
+    },
+    "quantum_mc_vs_classical_mc": {
+      "relative_reduction_percent": 4.1098821748182655,
+      "better_equal_worse": [
+        7,
+        0,
+        2
+      ]
+    },
+    "quantum_rba_mc_vs_classical_rba_mc": {
+      "relative_reduction_percent": 2.9169221315299354,
+      "better_equal_worse": [
+        6,
+        0,
+        3
+      ]
+    },
+    "classical_rba_vs_classical_plain": {
+      "relative_reduction_percent": -0.572691364751288,
+      "better_equal_worse": [
+        3,
+        2,
+        4
+      ]
+    },
+    "classical_mc_vs_classical_plain": {
+      "relative_reduction_percent": -0.5693258362301824,
+      "better_equal_worse": [
+        2,
+        4,
+        3
+      ]
+    },
+    "classical_rba_mc_vs_classical_plain": {
+      "relative_reduction_percent": -0.7179319609676996,
+      "better_equal_worse": [
+        2,
+        2,
+        5
+      ]
+    },
+    "quantum_rba_vs_quantum_plain": {
+      "relative_reduction_percent": -0.8991090898069789,
+      "better_equal_worse": [
+        2,
+        1,
+        6
+      ]
+    },
+    "quantum_mc_vs_quantum_plain": {
+      "relative_reduction_percent": 0.4884132610739189,
+      "better_equal_worse": [
+        1,
+        5,
+        3
+      ]
+    },
+    "quantum_rba_mc_vs_quantum_plain": {
+      "relative_reduction_percent": -0.8984736486607864,
+      "better_equal_worse": [
+        2,
+        1,
+        6
+      ]
+    }
+  },
+  "screening": {
+    "classical_plain": {
+      "accepted_events": 0,
+      "logged_events": 0,
+      "selected_mask_reduced_runs": 0,
+      "best_epoch_300_runs": 4,
+      "mean_screening_seconds": 0.0,
+      "active_features_at_best": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "classical_rba": {
+      "accepted_events": 0,
+      "logged_events": 0,
+      "selected_mask_reduced_runs": 0,
+      "best_epoch_300_runs": 3,
+      "mean_screening_seconds": 0.0,
+      "active_features_at_best": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "classical_mc": {
+      "accepted_events": 11,
+      "logged_events": 126,
+      "selected_mask_reduced_runs": 5,
+      "best_epoch_300_runs": 4,
+      "mean_screening_seconds": 0.17911671299953014,
+      "active_features_at_best": [
+        3,
+        3,
+        4,
+        3,
+        2,
+        4,
+        4,
+        4,
+        2
+      ]
+    },
+    "classical_rba_mc": {
+      "accepted_events": 11,
+      "logged_events": 126,
+      "selected_mask_reduced_runs": 5,
+      "best_epoch_300_runs": 3,
+      "mean_screening_seconds": 0.1812146393446407,
+      "active_features_at_best": [
+        3,
+        3,
+        4,
+        3,
+        2,
+        4,
+        4,
+        4,
+        2
+      ]
+    },
+    "quantum_plain": {
+      "accepted_events": 0,
+      "logged_events": 0,
+      "selected_mask_reduced_runs": 0,
+      "best_epoch_300_runs": 4,
+      "mean_screening_seconds": 0.0,
+      "active_features_at_best": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "quantum_rba": {
+      "accepted_events": 0,
+      "logged_events": 0,
+      "selected_mask_reduced_runs": 0,
+      "best_epoch_300_runs": 3,
+      "mean_screening_seconds": 0.0,
+      "active_features_at_best": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "quantum_mc": {
+      "accepted_events": 7,
+      "logged_events": 126,
+      "selected_mask_reduced_runs": 4,
+      "best_epoch_300_runs": 4,
+      "mean_screening_seconds": 2.3488257823402012,
+      "active_features_at_best": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        4,
+        4
+      ]
+    },
+    "quantum_rba_mc": {
+      "accepted_events": 5,
+      "logged_events": 126,
+      "selected_mask_reduced_runs": 2,
+      "best_epoch_300_runs": 3,
+      "mean_screening_seconds": 2.4073448007709684,
+      "active_features_at_best": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  },
+  "methods": {
+    "classical_plain": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.10632220300397992,
+        "sd": 0.010285967174013299
+      },
+      "k_relative_l2": {
+        "mean": 0.10570981316799902,
+        "sd": 0.010794168658589518
+      },
+      "pressure_rmse": {
+        "mean": 0.008259392215451364,
+        "sd": 0.0014576280333191195
+      },
+      "pde_residual_rmse": {
+        "mean": 0.093851160870039,
+        "sd": 0.03175885711969779
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.011126535299386385,
+        "sd": 0.011811826946027561
+      },
+      "training_seconds": {
+        "mean": 0.8329107826640312,
+        "sd": 0.029170938095497482
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.11398280249875198,
+        "22": 0.09251951672052978,
+        "33": 0.11062712028471526
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "classical_rba": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.10691906818896918,
+        "sd": 0.009428299442540363
+      },
+      "k_relative_l2": {
+        "mean": 0.10631520413970687,
+        "sd": 0.00995065174653525
+      },
+      "pressure_rmse": {
+        "mean": 0.008583679917020068,
+        "sd": 0.0014752635869730102
+      },
+      "pde_residual_rmse": {
+        "mean": 0.08506483481833614,
+        "sd": 0.034361323429809465
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.011297138366344188,
+        "sd": 0.011750129221245005
+      },
+      "training_seconds": {
+        "mean": 0.8759243241090897,
+        "sd": 0.06876061887683427
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.1141405474377838,
+        "22": 0.09421437654416152,
+        "33": 0.11059068843717527
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "classical_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.1069109779279896,
+        "sd": 0.009470981237782792
+      },
+      "k_relative_l2": {
+        "mean": 0.10631164644579509,
+        "sd": 0.009890887717128717
+      },
+      "pressure_rmse": {
+        "mean": 0.00788753995773167,
+        "sd": 0.0016028488114893107
+      },
+      "pde_residual_rmse": {
+        "mean": 0.09580894709543158,
+        "sd": 0.031117813140556335
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.010530030075949668,
+        "sd": 0.011888891992232125
+      },
+      "training_seconds": {
+        "mean": 1.0453505786669364,
+        "sd": 0.1141216669973115
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.11385896029323801,
+        "22": 0.0942326390306526,
+        "33": 0.11084334001349465
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "classical_rba_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.10709784341566347,
+        "sd": 0.00906210541800096
+      },
+      "k_relative_l2": {
+        "mean": 0.10646873770261132,
+        "sd": 0.00959532734248945
+      },
+      "pressure_rmse": {
+        "mean": 0.008499881408687923,
+        "sd": 0.0014325246101056098
+      },
+      "pde_residual_rmse": {
+        "mean": 0.08485078546083473,
+        "sd": 0.034944589194093344
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.010994775138167477,
+        "sd": 0.011694823820541765
+      },
+      "training_seconds": {
+        "mean": 1.0429416853375086,
+        "sd": 0.12224096973266256
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.11407574077598491,
+        "22": 0.0947093811895719,
+        "33": 0.11062109114227721
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_plain": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.10352247815064371,
+        "sd": 0.013087839496070485
+      },
+      "k_relative_l2": {
+        "mean": 0.10244270680379636,
+        "sd": 0.013657219964484196
+      },
+      "pressure_rmse": {
+        "mean": 0.010562991664426705,
+        "sd": 0.009551521311369812
+      },
+      "pde_residual_rmse": {
+        "mean": 0.12322826210597082,
+        "sd": 0.08930942655217149
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.01466813661224565,
+        "sd": 0.012116149278136378
+      },
+      "training_seconds": {
+        "mean": 6.648782902888747,
+        "sd": 0.2404204650074136
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.11256369362420804,
+        "22": 0.08516266239667991,
+        "33": 0.10960176439050108
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_rba": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.1042903411736946,
+        "sd": 0.012507801467666816
+      },
+      "k_relative_l2": {
+        "mean": 0.1033637784925136,
+        "sd": 0.013182993115077436
+      },
+      "pressure_rmse": {
+        "mean": 0.010943874670625502,
+        "sd": 0.009405302440393625
+      },
+      "pde_residual_rmse": {
+        "mean": 0.11581026042091772,
+        "sd": 0.0931772334230527
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.011220054545250928,
+        "sd": 0.01110803394782629
+      },
+      "training_seconds": {
+        "mean": 6.629680102000647,
+        "sd": 0.27777997986015596
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.11310772154301345,
+        "22": 0.0866103095128918,
+        "33": 0.11037330442163558
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.1030505845186846,
+        "sd": 0.012411804710452421
+      },
+      "k_relative_l2": {
+        "mean": 0.10194236303876354,
+        "sd": 0.012996282800418337
+      },
+      "pressure_rmse": {
+        "mean": 0.010410287979712414,
+        "sd": 0.009619452200369546
+      },
+      "pde_residual_rmse": {
+        "mean": 0.12426440839651375,
+        "sd": 0.09059454263189444
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.015167874216637255,
+        "sd": 0.012529533440904975
+      },
+      "training_seconds": {
+        "mean": 9.020514661886004,
+        "sd": 0.5946872427390436
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.11025462701836215,
+        "22": 0.08594274057359852,
+        "33": 0.10962972152432998
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_rba_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.10429030205755015,
+        "sd": 0.012436533372681444
+      },
+      "k_relative_l2": {
+        "mean": 0.1033631275294033,
+        "sd": 0.013097135008605522
+      },
+      "pressure_rmse": {
+        "mean": 0.01089977394752814,
+        "sd": 0.009432458182858471
+      },
+      "pde_residual_rmse": {
+        "mean": 0.115033333657093,
+        "sd": 0.09378658050134267
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.011090211081683139,
+        "sd": 0.011279910455416691
+      },
+      "training_seconds": {
+        "mean": 8.933588161888313,
+        "sd": 0.49965763097659477
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.11293920839511708,
+        "22": 0.08677686977145722,
+        "33": 0.11037330442163558
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    }
+  },
+  "statistical_scope": "3 fields x 3 repeated fits; descriptive SD, no significance test",
+  "new_training": false
+}

@@ -1,0 +1,65 @@
+{
+  "archive_manifest_sha256": {
+    "quantum_pinn_v3_gstools_konly_20261007": "9943101c57bbebce8451e39c7de22291c1b35fbcc069f2ac5c855a681b9cedb3",
+    "quantum_pinn_v3_reconstruction_budget_20261007": "1b7d61f6c4db8296e93ab294cb199a0ea91d15d506e63ba578f254cab6176dcd"
+  },
+  "source_sha256": {
+    "gen-figures/analyze_v3_reconstruction_budget.py": "1ae90526d2c525d191e7384a7914c79a3a13ba3410246575c36089d5c0fef7d2",
+    "gen-figures/analyze_v3_gstools_results.py": "7aecc8342cc9306997f9b01a4472cdccfa86baa0f578a9401308b693ab958af1"
+  },
+  "figures": [
+    {
+      "name": "fig04_spatial_maps",
+      "size_inches": [
+        7.204724,
+        10.6
+      ],
+      "panels": 15,
+      "alignment_verdict": "PASS",
+      "claim": "Reconstruction differences are spatially nonuniform across all three fields.",
+      "source": "spatial_results_source.csv",
+      "selection": "all fields, first manifest seed, no best-case selection",
+      "uncertainty": "single selected checkpoint per field/method; not an aggregate",
+      "field_scale": [
+        0.13379566823714423,
+        3.2378868276750725
+      ],
+      "error_scale": [
+        0,
+        1.7721874447806647
+      ],
+      "layout": "columns: all three fields; rows: truth, C, Q, C error, Q error",
+      "processing": "exp(log_k); nearest cell rendering, no clipping/interpolation",
+      "error_mask": "training and validation positions masked in gray"
+    }
+  ],
+  "audit": {
+    "pdf_sha256": "a19b932540d5c5e749d83567374cd1ad8c1c7947dcbe7f52f7fc12263cb78d61",
+    "collision_verdict": "PASS",
+    "text_exit_code": 0,
+    "source_preflight": {
+      "ready": true,
+      "strict": false,
+      "counts": {
+        "PASS": 19,
+        "WARN": 2,
+        "FAIL": 0
+      }
+    }
+  },
+  "scope": "exploratory budget-only comparison on previously inspected fields; six fits",
+  "artifact_sha256": {
+    "RECONSTRUCTION_BUDGET_REPORT.md": "688f639006cc6a977a56eedcc52cb3ddb9d7fe0d82daaacc5423c83ac5e2b28a",
+    "budget_comparison.csv": "18bac56196866e79d72422d7c34afee3daca3181d1f69ac8635f0fa28b04f6d3",
+    "fig04_spatial_maps.alignment.json": "3bb7beee110c15af06088cd3cd963b022a096ebe1beeb28ca4bad7da83a14c8b",
+    "fig04_spatial_maps.alignment.svg": "e002a00a76fd142eb04e8ebfefa848ad7b6dd716956fc3589b2795d7614ecfa1",
+    "fig04_spatial_maps.collision-audit.json": "7e1792eb7d1f3b997f75455570ff22e88d7cf36b87748bf23fa4069a7961dffd",
+    "fig04_spatial_maps.pdf": "a19b932540d5c5e749d83567374cd1ad8c1c7947dcbe7f52f7fc12263cb78d61",
+    "fig04_spatial_maps.png": "56b3ac5789212a52f3d4aca8f88d83aee42037b37d5f417ff25d0c790183d374",
+    "fig04_spatial_maps.preview.png": "b7bdf181154d91743b5ca15b04455bcb5c678fa61a02fe514ecdfe3e85f713e6",
+    "fig04_spatial_maps.svg": "e42e52220c57302b968a99f37dc091567cb15443b2424d6d2e8db5918dd39c3e",
+    "fig04_spatial_maps.text-audit.json": "8be667bbc2d58a3db8b4e112b6e670efa3c67e7097cc4fa6d4e27b6f91b68a75",
+    "source_preflight.json": "f56138893a83178fb00b021b10960ba79e931d0c1e6e545ce42ca147e627a628",
+    "spatial_results_source.csv": "a9b87b5f72491315571d8993f5a9547e639db7a56d357005b6badc142d256f9c"
+  }
+}

@@ -1,0 +1,780 @@
+{
+  "methods": {
+    "classical_plain": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.3406758721601422,
+        "sd": 0.052467868798371335
+      },
+      "k_relative_l2": {
+        "mean": 0.3370944299036753,
+        "sd": 0.04546683419697376
+      },
+      "pressure_rmse": {
+        "mean": 0.025162445447432,
+        "sd": 0.005702877836831636
+      },
+      "pde_residual_rmse": {
+        "mean": 0.25334462973106975,
+        "sd": 0.08820000001662551
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.041239693233356314,
+        "sd": 0.026580854178214403
+      },
+      "training_seconds": {
+        "mean": 0.8066764258902468,
+        "sd": 0.0397453305695395
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.317747193845563,
+        "22": 0.31804771395432874,
+        "33": 0.3754883819111341
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "classical_rba": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.3439662809058718,
+        "sd": 0.052075431607609274
+      },
+      "k_relative_l2": {
+        "mean": 0.3383054935612352,
+        "sd": 0.044028824024737984
+      },
+      "pressure_rmse": {
+        "mean": 0.02565181646765151,
+        "sd": 0.006153301900842252
+      },
+      "pde_residual_rmse": {
+        "mean": 0.20541200654115688,
+        "sd": 0.06916838950031708
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.03719902138118994,
+        "sd": 0.024119731499000034
+      },
+      "training_seconds": {
+        "mean": 0.8296552825567132,
+        "sd": 0.04007275287705055
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.3196028046515789,
+        "22": 0.3184103290659663,
+        "33": 0.3769033469661603
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "classical_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.3415458794617911,
+        "sd": 0.05467481006748254
+      },
+      "k_relative_l2": {
+        "mean": 0.33653150120999503,
+        "sd": 0.045394758272694125
+      },
+      "pressure_rmse": {
+        "mean": 0.025978912178230652,
+        "sd": 0.006217386209259315
+      },
+      "pde_residual_rmse": {
+        "mean": 0.2565943492525398,
+        "sd": 0.10236794912576663
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.03902550526411372,
+        "sd": 0.02386877801578612
+      },
+      "training_seconds": {
+        "mean": 0.994966958334165,
+        "sd": 0.13016241521353603
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.3183138924650264,
+        "22": 0.31862821061839847,
+        "33": 0.3726524005465602
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "classical_rba_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.34508498198689513,
+        "sd": 0.05521231689407497
+      },
+      "k_relative_l2": {
+        "mean": 0.3377175055406664,
+        "sd": 0.04470850877726483
+      },
+      "pressure_rmse": {
+        "mean": 0.0261823504627184,
+        "sd": 0.006506550013825519
+      },
+      "pde_residual_rmse": {
+        "mean": 0.20177390793119965,
+        "sd": 0.08232013115010259
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.03524460565463859,
+        "sd": 0.023625792954696263
+      },
+      "training_seconds": {
+        "mean": 0.9952767037789777,
+        "sd": 0.10012354355192221
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.32070630107844655,
+        "22": 0.3201923319704334,
+        "33": 0.3722538835731191
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_plain": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.32182150713668023,
+        "sd": 0.0523566703800846
+      },
+      "k_relative_l2": {
+        "mean": 0.3067594422039104,
+        "sd": 0.03962554263356592
+      },
+      "pressure_rmse": {
+        "mean": 0.022394341309499712,
+        "sd": 0.003940585050802419
+      },
+      "pde_residual_rmse": {
+        "mean": 0.26006920093306374,
+        "sd": 0.07957491327432716
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.04836081181255732,
+        "sd": 0.021607487786864804
+      },
+      "training_seconds": {
+        "mean": 6.324138338003347,
+        "sd": 0.11266017199027263
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.2620470758012623,
+        "22": 0.3264635465240333,
+        "33": 0.3317677042864354
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_rba": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.3216454957634467,
+        "sd": 0.06353118278501381
+      },
+      "k_relative_l2": {
+        "mean": 0.30593558451773106,
+        "sd": 0.04295552499106428
+      },
+      "pressure_rmse": {
+        "mean": 0.021979843187085027,
+        "sd": 0.004550291184244696
+      },
+      "pde_residual_rmse": {
+        "mean": 0.19746432018348603,
+        "sd": 0.06786701786867867
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.0471015743810799,
+        "sd": 0.01931221900942253
+      },
+      "training_seconds": {
+        "mean": 6.3511363979972275,
+        "sd": 0.08964851786792472
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.25887711385592593,
+        "22": 0.3176168706930169,
+        "33": 0.3413127690042503
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.32258410026922957,
+        "sd": 0.052759680279867445
+      },
+      "k_relative_l2": {
+        "mean": 0.30676677632583865,
+        "sd": 0.039631190866559425
+      },
+      "pressure_rmse": {
+        "mean": 0.023439070197318664,
+        "sd": 0.004714863317965024
+      },
+      "pde_residual_rmse": {
+        "mean": 0.2465909339011995,
+        "sd": 0.09068401223826682
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.04833530778007303,
+        "sd": 0.021626054950376703
+      },
+      "training_seconds": {
+        "mean": 8.854527750220667,
+        "sd": 0.17674148696534744
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.2620470758012623,
+        "22": 0.32648554888981834,
+        "33": 0.3317677042864354
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    },
+    "quantum_rba_mc": {
+      "runs": 9,
+      "log_k_rmse": {
+        "mean": 0.32116767370155297,
+        "sd": 0.0629861669419524
+      },
+      "k_relative_l2": {
+        "mean": 0.3058821349132784,
+        "sd": 0.0428951377804616
+      },
+      "pressure_rmse": {
+        "mean": 0.021230222893323172,
+        "sd": 0.003522720513110382
+      },
+      "pde_residual_rmse": {
+        "mean": 0.2095733821892878,
+        "sd": 0.05568363863952961
+      },
+      "downstream_flux_relative_error": {
+        "mean": 0.0474604489842886,
+        "sd": 0.018987012659945738
+      },
+      "training_seconds": {
+        "mean": 8.771514782332815,
+        "sd": 0.17168102460719342
+      },
+      "field_mean_k_relative_l2": {
+        "11": 0.25887711385592593,
+        "22": 0.31760751506193596,
+        "33": 0.3411617758219732
+      },
+      "uncertainty_note": "descriptive run SD; fields and repeated fits are not all independent"
+    }
+  },
+  "paired_comparisons": {
+    "quantum_plain_vs_classical_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.06625015338848461
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": -0.06459379788183689
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": -0.036256402862580694
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.02150148623160908
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.03514442798334039
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 0.011604555957382523
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": -0.09860221006769299
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": -0.025731034965846722
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": -0.0068287878405562386
+        }
+      ],
+      "mean_difference": -0.030334987699764924
+    },
+    "quantum_rba_vs_classical_rba": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.08082438834858166
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": -0.06405748611428147
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": -0.03729519792409586
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.030983852222530972
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.014858119580655693
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 0.013745357523027135
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": -0.07671177849772459
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": -0.0233203079988083
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": -0.00673964738919719
+        }
+      ],
+      "mean_difference": -0.03236990904350413
+    },
+    "quantum_mc_vs_classical_mc": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.06625015338848461
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": -0.0662938937402271
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": -0.036256402862580694
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.023242976223818324
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.03514442798334039
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 0.011670563054737515
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": -0.09879524228267711
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": -0.02204185850770135
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": -0.0018169879899960217
+        }
+      ],
+      "mean_difference": -0.029764724884156366
+    },
+    "quantum_rba_mc_vs_classical_rba_mc": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.08082438834858166
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": -0.06736797539488437
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": -0.03729519792409586
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.03632986093593221
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.014858119580655693
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 0.013717290629784329
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": -0.0783276954507785
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": -0.01951988837827967
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": 0.004571260575620406
+        }
+      ],
+      "mean_difference": -0.031835370627387984
+    },
+    "classical_rba_vs_classical_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.005463316722686906
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0030026497565719956
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": 0.00802749938416275
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.0010033654193262187
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.002436814966241152
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": -0.00034560421200224845
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": -0.00041766650435270947
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0006769218698945978
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": 0.003985639799536866
+        }
+      ],
+      "mean_difference": 0.00121106365755992
+    },
+    "classical_mc_vs_classical_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0017000958583902048
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": 0.0017414899922092442
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": 0.00019303221498412348
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": -0.003689176458145371
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": -0.005011799850560217
+        }
+      ],
+      "mean_difference": -0.0005629286936802239
+    },
+    "classical_rba_mc_vs_classical_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.005463316722686906
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0063131390371748974
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": 0.00802749938416275
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": 0.0043426432940750215
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.002436814966241152
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": -0.00034560421200224845
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": 0.0007452709018699877
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": -0.00312349775063403
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": -0.0073252681652807294
+        }
+      ],
+      "mean_difference": 0.0006230756369910995
+    },
+    "quantum_rba_vs_quantum_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.020037551682783955
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0035389615241274153
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0069887043226475876
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.010485731410248111
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": -0.017849493436443542
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0017951973536423638
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": 0.021472765065615684
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0030876488369330213
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": 0.004074780250895915
+        }
+      ],
+      "mean_difference": -0.0008238576861792912
+    },
+    "quantum_mc_vs_quantum_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 6.6007097354992e-05
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0
+        }
+      ],
+      "mean_difference": 7.334121928332444e-06
+    },
+    "quantum_rba_mc_vs_quantum_plain": {
+      "metric": "held-out k_relative_l2; negative favors candidate",
+      "runs": [
+        {
+          "field_seed": 11,
+          "seed": 101,
+          "candidate_minus_baseline": -0.020037551682783955
+        },
+        {
+          "field_seed": 11,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0035389615241274153
+        },
+        {
+          "field_seed": 11,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0069887043226475876
+        },
+        {
+          "field_seed": 22,
+          "seed": 101,
+          "candidate_minus_baseline": -0.010485731410248111
+        },
+        {
+          "field_seed": 22,
+          "seed": 202,
+          "candidate_minus_baseline": -0.017849493436443542
+        },
+        {
+          "field_seed": 22,
+          "seed": 303,
+          "candidate_minus_baseline": 0.0017671304603995575
+        },
+        {
+          "field_seed": 33,
+          "seed": 101,
+          "candidate_minus_baseline": 0.021019785518784473
+        },
+        {
+          "field_seed": 33,
+          "seed": 202,
+          "candidate_minus_baseline": 0.0030876488369330213
+        },
+        {
+          "field_seed": 33,
+          "seed": 303,
+          "candidate_minus_baseline": 0.004074780250895915
+        }
+      ],
+      "mean_difference": -0.0008773072906319598
+    }
+  }
+}
