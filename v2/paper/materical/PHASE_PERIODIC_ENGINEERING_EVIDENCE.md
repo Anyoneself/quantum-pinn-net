@@ -2,15 +2,15 @@
 
 整理日期：2026-09-30
 
-对应稿件：[周期相位网络的渗透率场内补全与自适应加权分析](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/paper/PHASE_PERIODIC_ENGINEERING_MANUSCRIPT.md)。
+对应稿件：[周期相位网络的渗透率场内补全与自适应加权分析](../PHASE_PERIODIC_ENGINEERING_MANUSCRIPT.md)。
 
 本文件用于保留写作依据和检查记录，不属于论文正文，也不替代投稿就绪审核。
 
 ## 1. 写作依据与定位
 
 - 使用 `quantum-pinn-paper` 核对项目任务、模型实现和结论边界，使用 `research-writing-skill` 组织中文学术表达。
-- 按 [reference.md](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/paper/materical/reference.md) 的要求贯通工程对象、数学任务、方法设计、验证和任务意义；未修改该规范。
-- 使用 [既有研究说明](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/docs/RBA_QPINN_SUBMISSION_MANUSCRIPT.md) 识别问题，但数值回到归档结果，方法回到代码核对，未直接沿用其全部表述。
+- 按 [reference.md](reference.md) 的要求贯通工程对象、数学任务、方法设计、验证和任务意义；未修改该规范。
+- 使用当时的研究说明`docs/RBA_QPINN_SUBMISSION_MANUSCRIPT.md`识别问题，但数值回到归档结果，方法回到代码核对，未直接沿用其全部表述。该旧文件已不在当前目录中，历史导航见[项目历史](../../../docs/PROJECT_HISTORY.md)。
 - 稿件是基于既有五种子实验的探索性研究初稿，不是确认性研究或投稿定稿。本轮没有重训模型，也没有改变归档实验、数据、图表或其他稿件。
 - 论文关注完整架构比较和自适应配置的非单调表现，不把完整模块组合包装为最优方法。
 
@@ -51,29 +51,29 @@
 
 主要数据文件：
 
-- [原始输出聚合表](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v1/experiments/rba_qpinn_submission_v1/aggregate/aggregate_metrics_raw.csv)
-- [校正输出聚合表](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v1/experiments/rba_qpinn_submission_v1/aggregate/aggregate_metrics_corrected.csv)
-- [种子级统计](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v1/experiments/rba_qpinn_submission_v1/aggregate/statistical_tests.json)
-- [数据说明](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v1/experiments/rba_qpinn_submission_v1/seed_42/processed/dataset_summary.json)
-- [运行配置](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v1/experiments/rba_qpinn_submission_v1/seed_42/experiment_manifest.json)
-- [训练耗时](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v1/experiments/rba_qpinn_submission_v1/seed_42/training_time_table.csv)
+- [原始输出聚合表](../../../v1/experiments/rba_qpinn_submission_v1/aggregate/aggregate_metrics_raw.csv)
+- [校正输出聚合表](../../../v1/experiments/rba_qpinn_submission_v1/aggregate/aggregate_metrics_corrected.csv)
+- [种子级统计](../../../v1/experiments/rba_qpinn_submission_v1/aggregate/statistical_tests.json)
+- [数据说明](../../../v1/experiments/rba_qpinn_submission_v1/seed_42/processed/dataset_summary.json)
+- [运行配置](../../../v1/experiments/rba_qpinn_submission_v1/seed_42/experiment_manifest.json)
+- [训练耗时](../../../v1/experiments/rba_qpinn_submission_v1/seed_42/training_time_table.csv)
 
 主要实现：
 
-- [训练与评价](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/src/experiment/run_pinn_experiment.py)
-- [周期相位网络与动态权重](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/src/models/qmodel/quantum_pinn.py)
-- [Fourier对照网络](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/src/models/baseline_model/standard_pinn.py)
-- [工程条件经验关系](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/src/dataset/physics_constraints.py)
+- [训练与评价](../../src/experiment/run_pinn_experiment.py)
+- [周期相位网络与动态权重](../../src/models/qmodel/quantum_pinn.py)
+- [Fourier对照网络](../../src/models/baseline_model/standard_pinn.py)
+- [工程条件经验关系](../../src/dataset/physics_constraints.py)
 
 ## 4. 图的使用范围
 
 **图1：** 使用全部128个场的五次平均误差，没有筛除个别场；排序只为展示配对差异。阴影不是置信区间。
 
-对应记录：[图1数据](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/paper/figures/manuscript/field_average_rmse_distribution.csv)、[图1来源说明](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/paper/figures/manuscript/field_average_rmse_distribution.json)。
+对应记录：[图1数据](../figures/manuscript/field_average_rmse_distribution.csv)、[图1来源说明](../figures/manuscript/field_average_rmse_distribution.json)。
 
 **图2：** 使用种子42中按误差改善分位数后验选出的3个案例。正文与图注均披露选择方式，不称为随机或预先指定的代表案例；也说明误差图的空白位置和色标截断。
 
-对应记录：[图2选择规则与数值](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/paper/figures/manuscript/raw_spatial_comparison.json)。
+对应记录：[图2选择规则与数值](../figures/manuscript/raw_spatial_comparison.json)。
 
 两幅图均已直接查看。没有采用依靠最大测试收益筛选的旧案例图，也没有将旧单次实验图标为五种子主结果。已有结构示意图未纳入正文，以避免附带未在本稿展开的频谱性质表述。
 
@@ -109,9 +109,9 @@ v2/src/scripts/analyze_manuscript_evidence.py
 
 复算覆盖5个种子、6个模型、原始与校正两种输出。主要指标与归档逐次指标的最大绝对差为约 `4.47e-8`；原始和校正聚合指标最大差分别约为 `3.27e-8` 和 `8.42e-9`，均低于检查阈值 `1e-6`。此检查验证结果文件的一致性，不证明实验协议无偏。
 
-另执行稿件检查：[检查脚本](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/tmp/verify_manuscript_20260930.py)。检查内容包括表格数值、百分比、权重记录时序、章节与公式编号、数学定界符、引用覆盖、图片文件和篇幅。
+另执行稿件检查：[检查脚本](../../../tmp/verify_manuscript_20260930.py)。检查内容包括表格数值、百分比、权重记录时序、章节与公式编号、数学定界符、引用覆盖、图片文件和篇幅。
 
-结果文件：[指标复算记录](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/tmp/manuscript_20260930_supporting_statistics.json)、[稿件检查记录](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/tmp/manuscript_20260930_qa.json)。
+结果文件：[指标复算记录](../../../tmp/manuscript_20260930_supporting_statistics.json)、[稿件检查记录](../../../tmp/manuscript_20260930_qa.json)。`tmp/`为本地临时材料，不作为可移植复现的必要依赖。
 
 参数量采用源码形状复算；当前文档运行环境没有PyTorch，未在本轮实例化训练模型。数学表达已按实现及编号检查，未生成独立LaTeX、Word或排版PDF。
 

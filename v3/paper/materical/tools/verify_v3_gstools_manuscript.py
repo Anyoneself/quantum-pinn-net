@@ -181,7 +181,11 @@ def verify_result_figures(manifest):
 
 def verify_budget_extension(body):
     folder = ROOT / "v3/paper/figures/manuscript_v3_budget5000"
-    if str(folder / "fig04_spatial_maps.png") not in body:
+    # 按稿件目录解析图像引用，避免相对路径导致预算核验被跳过。
+    images = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", body)
+    if folder / "fig04_spatial_maps.png" not in {
+        (PAPER.parent / link).resolve() for link in images
+    }:
         return None
     checked = subprocess.run(
         [sys.executable, "-B", str(ROOT / "v3/src/scripts/analyze_v3_reconstruction_budget.py"),
@@ -261,6 +265,9 @@ def main():
                 f"trailing whitespace: {path.name}")
         for link in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", content):
             require(not link.startswith(("https://", "http://")), "unexpected remote link")
+            # 文档本地引用须可随仓库迁移，禁止绝对路径及文件协议。
+            require(not Path(link).is_absolute() and not link.startswith("file:"),
+                    f"use document-relative local links: {link}")
             require((path.parent / link).resolve().exists(), f"missing link: {link}")
             link_count += 1
     for stale in ("0.102443", "0.105710", "3.09%", "4.11%",

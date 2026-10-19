@@ -329,7 +329,7 @@ $$
 
 为检查总体改善是否只由少数场贡献，图1纳入全部128个场，先对每个场的五次RMSE取平均，再按F的误差排序。所有场的P误差均较低。进一步查看640个场与种子的配对记录，差异方向同样一致，单场单次RMSE的中位数由0.1519降至0.0611。这里的逐场平均与式(16)先汇总平方误差再开方的口径不同，二者不应混用。
 
-![图1 全部场的五次平均空间留出RMSE](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/paper/figures/manuscript/field_average_rmse_distribution.png)
+![图1 全部场的五次平均空间留出RMSE](figures/manuscript/field_average_rmse_distribution.png)
 
 **图1 全部128个场的原始输出误差。** 每个场取5次运行RMSE的算术平均，按Fourier对照误差排序，未删除任何场；阴影表示同场两种架构的误差差值，不是置信区间。
 
@@ -337,7 +337,7 @@ $$
 
 图2给出种子42中的三个案例。周期相位网络较好地保留了所示场的高低值变化，Fourier对照在部分极值附近出现较大偏差。场80的底部高值区中，两者差异尤为直观；但这一局部观察只能说明所示案例中的场值恢复，不能直接证明连通结构或下游流动响应得到改善。
 
-![图2 原始输出的空间补全及测试位置误差](/Users/yuanzhi.liu/Desktop/quantum-pinn-net/v2/paper/figures/manuscript/raw_spatial_comparison.png)
+![图2 原始输出的空间补全及测试位置误差](figures/manuscript/raw_spatial_comparison.png)
 
 **图2 种子42的空间补全案例。** 根据P相对F的逐场测试RMSE改善，后验选取接近25%、50%、75%分位数的场35、39和80，不代表预先指定的典型样本。预测列为完整原始输出，未把训练位置替换为真实值；误差列只显示测试位置，空白处不表示零误差。误差色标上限取所选案例误差的98%分位数，超过上限的值显示为饱和颜色。
 

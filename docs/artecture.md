@@ -21,16 +21,17 @@
 | `v3/src/scripts/analyze_v3_gstools_results.py`、`audit_v3_gstools_results.py` | 当前 V3 图源分析及渲染审计。 |
 | `v3/src/scripts/analyze_v3_reconstruction_budget.py` | 延长预算的独立对照。 |
 | `v3/src/scripts/verify_manuscript_v3.py` | V3 文稿核验入口。 |
-| `v3/docs/QUANTUM_PINN_V3.md` | 模型、物理问题和受控实验协议。 |
+| `v3/README.md` | V3最短导航及当前叙事规则入口。 |
+| `v3/docs/QUANTUM_PINN_V3.md` | 模型、物理问题、受控实验协议及证据分工。 |
 | `v3/docs/V3_PROJECT_EXPLANATION.md`、`V3_RECONSTRUCTION_BUDGET_PROTOCOL.md` | 项目解释与预算诊断协议。 |
 | `v3/ntk/core.py`、`run_experiment.py` | 有限宽度经验NTK、配对训练、中间检查点及独立实验归档。 |
 | `v3/ntk/analyze_results.py`、`plot_results.py`、`test_ntk.py` | NTK数值复核、场级统计、诊断绘图与测试；`README.md`、`PROTOCOL.md`说明入口和固定方案，`runs/`保存新数据。 |
-| `v3/paper/QUANTUM_DARCY_PINN_MANUSCRIPT_V3.md`、`V3_MANUSCRIPT_OUTLINE.md` | 主稿和大纲。 |
+| `v3/paper/QUANTUM_DARCY_PINN_MANUSCRIPT_V3.md`、`V3_MANUSCRIPT_OUTLINE.md` | 以平均重建收益为主线的主稿和大纲，三场主对照、预算诊断及六场补充证据分别报告。 |
 | `v3/paper/materical/`、`v3/paper/history/` | 补充材料、阅读/核验记录和重写前稿件。`materical` 延续原目录拼写。 |
 | `v3/paper/materical/tools/verify_v3_gstools_manuscript.py` | 稿件数值和图件来源检查。 |
 | `v3/paper/figures/manuscript_v3_gstools/` | 当前 GSTools 图、图源与渲染检查。 |
 | `v3/paper/figures/manuscript_v3_budget5000/`、`manuscript_v3/` | 延长预算图和首轮历史图。 |
-| `v3/ppt/quantum_darcy_pinn_v3_deck/` | V3 汇报大纲、讲稿、逐页图和配置。 |
+| `v3/ppt/quantum_darcy_pinn_v3_deck/` | V3 汇报大纲、讲稿、逐页图和配置；2026年10月19日文字已更新，原图片和生成配置尚未同步。 |
 
 ## V2：场内空间补全
 
