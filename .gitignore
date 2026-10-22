@@ -59,10 +59,9 @@ v3/ntk/runs/**/analysis/frequency_responses.csv
 v3/ntk/runs/**/analysis/loss_kernel_blocks.csv
 v3/ntk/runs/*smoke*/
 
-# 汇报导出和逐页制作位图保留本地，论文图件与文字源稿仍可跟踪。
+# 整个汇报文件夹及PPT导出保留本地，论文图件仍可跟踪。
 *.pptx
-v[123]/ppt/**/origin_image/
-v[123]/ppt/**/drafts/
+ppt/
 
 # Third-party reading copies stay local; publish notes and source metadata.
 v2/paper/output/pdf/chinese_core_references/
