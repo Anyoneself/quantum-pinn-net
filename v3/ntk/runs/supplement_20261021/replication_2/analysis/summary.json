@@ -1,0 +1,69 @@
+{
+  "profile": "supplement",
+  "primary": {
+    "independent_fields": 6,
+    "classical_mean": 0.2676256003410649,
+    "quantum_mean": 0.2320210577342979,
+    "mean_quantum_minus_classical": -0.035604542606767,
+    "relative_reduction_of_means_percent": 13.303862770001151,
+    "field_bootstrap_95_percentile_ci_difference": [
+      -0.05341356146110956,
+      -0.015904105676076544
+    ],
+    "exact_field_sign_flip_two_sided_p": 0.03125,
+    "quantum_better_fields": 6,
+    "quantum_worse_fields": 0,
+    "field_differences": [
+      -0.006552355175154401,
+      -0.05749453970349594,
+      -0.007242902230111703,
+      -0.02168808800051855,
+      -0.06059121701581535,
+      -0.06005815351550606
+    ]
+  },
+  "paired_run_wins": 12,
+  "paired_runs": 18,
+  "exploratory_field_spearman": {
+    "classical_plain:output_raw_drift": -0.2571428571428572,
+    "classical_plain:output_shape_drift": -0.4285714285714286,
+    "classical_plain:output_direction_alignment": -0.14285714285714288,
+    "quantum_plain:output_raw_drift": 0.4285714285714286,
+    "quantum_plain:output_shape_drift": -0.2571428571428572,
+    "quantum_plain:output_direction_alignment": 0.6
+  },
+  "best_at_budget_end": {
+    "classical_plain": 5,
+    "quantum_plain": 5
+  },
+  "secondary_means": {
+    "classical_plain": {
+      "log_k_rmse": 0.27634716847400553,
+      "pressure_rmse": 0.0234129712284142,
+      "pde_residual_rmse": 0.3724486264294076,
+      "downstream_flux_relative_error": 0.03137780629922023,
+      "training_seconds": 3.1334339652821654,
+      "output_raw_drift": 45.61904041879532,
+      "output_shape_drift": 0.694542393266502,
+      "output_direction_alignment": 0.05959524331434112
+    },
+    "quantum_plain": {
+      "log_k_rmse": 0.24587508245991505,
+      "pressure_rmse": 0.019139884591860334,
+      "pde_residual_rmse": 0.2937741571252852,
+      "downstream_flux_relative_error": 0.03359059523413547,
+      "training_seconds": 24.953476677941378,
+      "output_raw_drift": 10.468997004754701,
+      "output_shape_drift": 0.9065591434420642,
+      "output_direction_alignment": 0.08905251325769266
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "verified_snapshots": 170,
+    "artifact_hashes": 497,
+    "source_hashes": 27,
+    "reloaded_autodiff_snapshots": 4
+  },
+  "analysis_source_sha256": "6b21f183fffabc1c75f5714c6f0d3276ef3c03f9fe6508b521b94e1beab7131c"
+}

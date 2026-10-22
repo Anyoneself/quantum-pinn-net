@@ -1,6 +1,8 @@
 """经验NTK的解析、数值和训练无干扰测试。"""
 
 import copy
+from dataclasses import asdict
+from itertools import product
 import unittest
 
 import numpy as np
@@ -17,6 +19,53 @@ from models.qmodel import QDarcyPINN
 from qpinn.strategies import StrategyConfig
 from qpinn.training import TrainConfig, fit
 from run_experiment import probe_indices
+from run_supplement import groups
+
+
+class SupplementTests(unittest.TestCase):
+    """补充方案不因结果改变；大场数精确检验与原定义保持一致。"""
+
+    def test_fixed_groups_and_paired_conditions(self):
+        specs = groups()
+        self.assertEqual(len(specs), 8)
+        fields = [field for spec in specs[:4] for field in spec["field_seeds"]]
+        self.assertEqual(len(set(fields)), 24)
+        self.assertEqual(specs[0]["field_seeds"], [511, 522, 533, 544, 555, 566])
+        self.assertFalse(set(fields) & {11, 22, 33, 411, 422, 433, 444, 455, 466})
+        defaults = asdict(DataConfig())
+        changes = {"sparse": "k_train", "noise10": "noise",
+                   "short_correlation": "correlation_length", "strong_anisotropy": "anisotropy"}
+        for spec in specs:
+            self.assertEqual(spec["seeds"], [101, 202, 303])
+            if spec["name"] in changes:
+                self.assertEqual(spec["field_seeds"], specs[0]["field_seeds"])
+                self.assertEqual([key for key in defaults if defaults[key] != spec["data_config"][key]],
+                                 [changes[spec["name"]]])
+            else:
+                self.assertEqual(spec["data_config"], defaults)
+        self.assertEqual(sum(len(spec["field_seeds"]) * len(spec["seeds"]) * 2
+                             for spec in specs), 288)
+
+    def test_smoke_exercises_all_conditions(self):
+        specs = groups(smoke=True)
+        self.assertEqual(len(specs), 8)
+        self.assertEqual(sum(len(spec["field_seeds"]) * len(spec["seeds"]) * 2
+                             for spec in specs), 16)
+        for spec in specs:
+            DataConfig(**spec["data_config"]).validate()
+        self.assertEqual(specs[4]["data_config"]["k_train"], 4)
+
+    def test_large_exact_sign_flip_matches_enumeration(self):
+        # 17场跨过原算法分支，用混合方向和相同方向分别校验双侧精确p。
+        differences = np.arange(1, 18, dtype=float) / 100
+        differences[::3] *= -1
+        null = np.array([np.mean(differences * signs)
+                         for signs in product((-1, 1), repeat=17)])
+        expected = np.mean(np.abs(null) >= abs(differences.mean()) - 1e-14)
+        result = paired_summary(np.ones(17), 1 + differences)
+        self.assertAlmostEqual(result["exact_field_sign_flip_two_sided_p"], expected)
+        same_direction = paired_summary(np.ones(17), np.full(17, 0.9))
+        self.assertAlmostEqual(same_direction["exact_field_sign_flip_two_sided_p"], 2 / 2**17)
 
 
 class NTKTests(unittest.TestCase):

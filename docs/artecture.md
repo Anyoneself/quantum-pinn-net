@@ -26,6 +26,7 @@
 | `v3/docs/V3_PROJECT_EXPLANATION.md`、`V3_RECONSTRUCTION_BUDGET_PROTOCOL.md` | 项目解释与预算诊断协议。 |
 | `v3/ntk/core.py`、`run_experiment.py` | 有限宽度经验NTK、配对训练、中间检查点及独立实验归档。 |
 | `v3/ntk/analyze_results.py`、`plot_results.py`、`test_ntk.py` | NTK数值复核、场级统计、诊断绘图与测试；`README.md`、`PROTOCOL.md`说明入口和固定方案，`runs/`保存新数据。 |
+| `v3/ntk/run_supplement.py`、`SUPPLEMENT_PROTOCOL.md` | 固定四组新场复验和四种单因素条件，批量训练、逐组深度核验及24场主要统计。 |
 | `v3/paper/QUANTUM_DARCY_PINN_MANUSCRIPT_V3.md`、`V3_MANUSCRIPT_OUTLINE.md` | 以平均重建收益为主线的主稿和大纲，三场主对照、预算诊断及六场补充证据分别报告。 |
 | `v3/paper/materical/`、`v3/paper/history/` | 补充材料、阅读/核验记录和重写前稿件。`materical` 延续原目录拼写。 |
 | `v3/paper/materical/tools/verify_v3_gstools_manuscript.py` | 稿件数值和图件来源检查。 |
@@ -58,6 +59,8 @@
 ## 实验归档与 V1
 
 实验结果分别保留在各版本的 `v1/experiments/`、`v2/experiments/` 和 `v3/experiments/`。仅移动归档目录，不重写已有 `manifest.json`、哈希和运行来源字段。
+
+Git 远端发布轻量版本：保留代码、冻结配置与来源清单、逐次和场级统计表、报告及论文图件。模型权重、NumPy/HDF5原始数组、逐步训练日志、NTK原始检查点和高维诊断表、大型PPT导出及逐页位图由根目录`.gitignore`排除，完整文件仍保留本地。历史清单及核验报告不追溯修改；其中的原始文件哈希与`passed`结果对应当时的完整本地归档，远端轻量副本不能单独执行全量原始数据核验。移除跟踪不改写旧提交历史。
 
 | 文件或目录 | 作用 |
 | --- | --- |

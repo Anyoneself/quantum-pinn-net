@@ -1,0 +1,341 @@
+{
+  "schema": 1,
+  "profile": "research",
+  "created_utc": "2026-10-21T11:16:10.507466+00:00",
+  "groups": [
+    {
+      "name": "replication_1",
+      "field_seeds": [
+        511,
+        522,
+        533,
+        544,
+        555,
+        566
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 48,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.0,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.25,
+        "anisotropy": 0.6,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    },
+    {
+      "name": "replication_2",
+      "field_seeds": [
+        611,
+        622,
+        633,
+        644,
+        655,
+        666
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 48,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.0,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.25,
+        "anisotropy": 0.6,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    },
+    {
+      "name": "replication_3",
+      "field_seeds": [
+        711,
+        722,
+        733,
+        744,
+        755,
+        766
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 48,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.0,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.25,
+        "anisotropy": 0.6,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    },
+    {
+      "name": "replication_4",
+      "field_seeds": [
+        811,
+        822,
+        833,
+        844,
+        855,
+        866
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 48,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.0,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.25,
+        "anisotropy": 0.6,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    },
+    {
+      "name": "sparse",
+      "field_seeds": [
+        511,
+        522,
+        533,
+        544,
+        555,
+        566
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 24,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.0,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.25,
+        "anisotropy": 0.6,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    },
+    {
+      "name": "noise10",
+      "field_seeds": [
+        511,
+        522,
+        533,
+        544,
+        555,
+        566
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 48,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.1,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.25,
+        "anisotropy": 0.6,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    },
+    {
+      "name": "short_correlation",
+      "field_seeds": [
+        511,
+        522,
+        533,
+        544,
+        555,
+        566
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 48,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.0,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.125,
+        "anisotropy": 0.6,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    },
+    {
+      "name": "strong_anisotropy",
+      "field_seeds": [
+        511,
+        522,
+        533,
+        544,
+        555,
+        566
+      ],
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "data_config": {
+        "grid": 24,
+        "refinement": 3,
+        "modes": 4,
+        "log_amplitude": 0.6,
+        "k_train": 48,
+        "k_validation": 24,
+        "p_train": 0,
+        "p_validation": 0,
+        "collocation": 128,
+        "boundary": 32,
+        "noise": 0.0,
+        "field_generator": "gstools",
+        "log_variance": 0.4,
+        "correlation_length": 0.25,
+        "anisotropy": 0.3,
+        "angle": 0.0,
+        "log_mean": 0.0,
+        "gstools_modes": 1000
+      }
+    }
+  ],
+  "epochs": 1000,
+  "model_config": {
+    "features": 4,
+    "feature_layers": 2,
+    "hidden": 24,
+    "pressure_depth": 2
+  },
+  "checkpoint_epochs": [
+    0,
+    100,
+    300,
+    1000
+  ],
+  "workers": 4,
+  "expected_runs": 288,
+  "primary": "all new replication fields; exclude historical and robustness fields",
+  "multiple_comparisons": "Bonferroni, five planned comparisons",
+  "source_sha256": {
+    "v3/ntk/analyze_results.py": "6b21f183fffabc1c75f5714c6f0d3276ef3c03f9fe6508b521b94e1beab7131c",
+    "v3/ntk/core.py": "b4a6231951c3466c5d96e795acbf4342b3530c7b4119a2e6b991fe35f7c535b6",
+    "v3/ntk/run_supplement.py": "65a53eb52081c28d32cd1fc78f7fb509748f29801c45e43bfb82b2eed6dac1ef",
+    "v3/ntk/test_ntk.py": "0a9b299182a33cf80a114f8f3f062c801a0d90077d39c080fc0c01811f176396",
+    "v3/ntk/run_experiment.py": "1448e3b5130ef989fec48c5b87311c5d4ef15f07794a8531fb8f00518bc69738",
+    "v3/ntk/plot_results.py": "5e491c8ba6395ef6bf1783397ffeae667e679c686d88d8a57a1c39e28b1f489e",
+    "v3/ntk/SUPPLEMENT_PROTOCOL.md": "0415647474e8f037b48fde76492496aa86d9b29003114feb5c189136a9c6ab2d",
+    "v3/ntk/README.md": "1bfb969b263579a2117603d9cb15fede6a1ac7633e1e09eea19fa6fa745c499b",
+    "v3/ntk/PROTOCOL.md": "8d5ee2db11ae47a84c93932193aa0a9931c520f286609213be18853e58887b7d",
+    "v3/src/qpinn/strategies.py": "d84cb86be725deae9d69a0c782aefba0c7f6bc7ea2f4ac2625df1ba684d82f7f",
+    "v3/src/qpinn/__init__.py": "8c3fa9387342172fead01c5a91a33b441e0073041e2c06cc2840c867880631e0",
+    "v3/src/qpinn/cli.py": "bcdcfb98d55ac7ad8dc5a64af57bfd3504a161f392868a28db01d7be0165c6c2",
+    "v3/src/qpinn/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "v3/src/qpinn/training.py": "d0369e192245a36a87db818e57f7278cca16e05261232a4126026a505262c6bb",
+    "v3/src/models/__init__.py": "6bee253b1b5f93dceb9f5bda7352791af2acdc866b8d1b3ecf57e57f46dfec57",
+    "v3/src/models/darcy_pinn.py": "550b863038c8dc29716fd8d6e13bce2e58fb2a3c9d84e0e3033c0ac9e8d423fa",
+    "v3/src/models/qmodel.py": "a1e2cc7f2afbb4b4c8405ed62a920afca78fd65cab1bd3149c599ad8792b47c0",
+    "v3/src/models/quantum_pinn.py": "31c0b0ece51ef7c9e70b5cf26d635be6c6eeafca95a7e83df73e8f5f29006a47",
+    "v3/src/models/baseline_model.py": "1faa07a33b7a46b742f302c79170ab9129341485eb75b8f48ffec6134c6cdca1",
+    "v3/src/metrics/__init__.py": "3a6eb6588c8d120354bce95e0e2fce5292163f73e14b1472128855910bfca1c2",
+    "v3/src/metrics/physics.py": "2f00e1186917eea4c847667d69ad7ea63939fe87dc97bf1580356b51372afefc",
+    "v3/src/dataset/__init__.py": "3fda4531916f924571aeb29b6ff4f1bb2b16d56d9d937068bd3b289a1acd30f3",
+    "v3/src/dataset/cases.py": "00ee9dc783bb5858785432ec624fd8184cbb1445407333f96f0b13439663d260",
+    "v3/src/experiment/runner.py": "9337cbf0d0985dbe111b75fa634d5cfb265cb68fae8d1a59bce6ad841b8c5542",
+    "v3/src/experiment/__init__.py": "d84f4a69558806483717c484dc8ac50977ac9d087eca3b9ad43b293519773b0e",
+    "pyproject.toml": "6cd07c62a431c211ed206552ad72e5edb111dd72d27f35ff0bf863b6d8dd76dd",
+    "v3/requirements-v3.lock": "e5552c795e06c9958160de12fd885b9e708a17ee292a896b10301ad0ee53fbd3"
+  }
+}

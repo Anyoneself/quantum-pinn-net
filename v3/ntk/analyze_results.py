@@ -9,7 +9,7 @@ import shutil
 from types import SimpleNamespace
 
 import numpy as np
-from scipy.stats import spearmanr
+from scipy.stats import permutation_test, spearmanr
 import torch
 
 from core import GROUPS, analyze_checkpoint, kernel_statistics
@@ -37,11 +37,18 @@ def paired_summary(classical, quantum):
     rng = np.random.default_rng(20261016)
     samples = rng.choice(differences, size=(20000, len(differences)), replace=True).mean(axis=1)
     ci = np.quantile(samples, [0.025, 0.975])
-    if len(differences) > 16:
-        raise ValueError("exact field-level sign-flip is limited to 16 fields")
-    null = np.array([np.mean(differences * signs)
-                     for signs in product((-1, 1), repeat=len(differences))])
-    pvalue = float(np.mean(np.abs(null) >= abs(differences.mean()) - 1e-14))
+    if len(differences) > 24:
+        raise ValueError("exact field-level sign-flip is limited to 24 fields")
+    if len(differences) <= 16:
+        null = np.array([np.mean(differences * signs)
+                         for signs in product((-1, 1), repeat=len(differences))])
+        pvalue = float(np.mean(np.abs(null) >= abs(differences.mean()) - 1e-14))
+    else:
+        # 大样本分批枚举全部符号，避免一次创建2^24行的符号矩阵。
+        pvalue = float(permutation_test(
+            (differences,), lambda values, axis: np.mean(values, axis=axis),
+            permutation_type="samples", vectorized=True, n_resamples=np.inf,
+            batch=16384, alternative="two-sided").pvalue)
     return {
         "independent_fields": len(differences),
         "classical_mean": float(classical.mean()), "quantum_mean": float(quantum.mean()),
